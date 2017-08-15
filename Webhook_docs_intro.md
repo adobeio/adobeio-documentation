@@ -193,15 +193,16 @@ For development and testing you can find an OAuth2 token corresponding to your o
 
 In a real-world application you would use the [Creative SDK](http://creativesdk.adobe.com/) to acquire an OAuth2 Token for the currently authenticated user. How to do that depends on your platform (iOS, Android, or Web), and is beyond the scope of this introduction.
 
-The token, `APPLICATION_ID`, and `CONSUMER_ID` are included in each request as HTTP headers:
+The token, `CLIENT_ID`, `APPLICATION_ID`, and `CONSUMER_ID` are included in each request as HTTP headers:
 
 ```restclient
 Authorization: Bearer OAUTH2_TOKEN
+x-api-key: CLIENT_ID
 x-ams-application-id: APPLICATION_ID
 x-ams-consumer-id: CONSUMER_ID
 ```
 
-The `CLIENT_ID` is included in the request body.
+The `CLIENT_ID` is also included in the request body.
 
 
 <a id="org226a51a"></a>
@@ -210,9 +211,12 @@ The `CLIENT_ID` is included in the request body.
 
 Instead of going through the Adobe I/O Console, you can use the CSM (Channel & Subscription Management) API to do the same thing. This cURL command registers a webhook. Make sure to replace `OAUTH2_TOKEN`, `APPLICATION_ID`, `CONSUMER_ID`, and `CLIENT_ID` with their actual values.
 
+_Note: In order to run the cURL commands and call the APIs directly, you need to contact the Adobe I/O Events team to make sure your client ID is whitelisted for those APIs. You can do that via the email address that invited you to the beta._
+
 ```shell
 curl https://csm.adobe.io/csm/webhooks \
   -H 'Authorization: Bearer OAUTH2_TOKEN' \
+  -H 'x-api-key: CLIENT_ID'
   -H 'x-ams-application-id: APPLICATION_ID' \
   -H 'x-ams-consumer-id: CONSUMER_ID' \
   -H 'Content-Type: application/json' \
@@ -274,6 +278,7 @@ This uses a GET request, so there is no request body. Instead the `CLIENT_ID` is
 ```shell
 curl https://csm.adobe.io/csm/webhooks/CLIENT_ID \
   -H 'Authorization: Bearer OAUTH2_TOKEN' \
+  -H 'x-api-key: CLIENT_ID'
   -H 'x-ams-application-id: APPLICATION_ID' \
   -H 'x-ams-consumer-id: CONSUMER_ID'
 ```
