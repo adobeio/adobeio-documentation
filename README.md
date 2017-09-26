@@ -1,4 +1,4 @@
-# Integrate Analytics Triggers with Adobe IO Events
+# Integrate Analytics Triggers with Adobe I/O Events
 
 These instructions describe how to use Adobe Analytics triggers to notify you of Adobe IO events, including the behavior of your site's users. Follow the instructions to try the solution yourself. You will need an Adobe Experience Manager license to complete this solution.
 
