@@ -1,5 +1,17 @@
 # Set up AEM for Adobe I/O Events
 
+These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O events. 
+
+## Introduction
+
+Use Adobe I/O for notification for events such as AEM page or asset changes.
+
+These instruction include the following tasks:
+
+1. Set up the Analytics triggers environment
+1. Configure triggers and rules
+1. Integrate with Adobe I/O
+1. View event notifications through webhooks
 
 
 Instructions for AEM Setup for Adobe IO Events
