@@ -23,7 +23,7 @@ For more information on triggers, see the [Triggers Help Page](https://marketing
 
 ## <a name="What's-Needed">What's Needed</a>
 
-To complete this demo, you will need authorization to use the following services:
+To complete this solution, you will need authorization to use the following services:
 *   Adobe Analytics, including Triggers
 *	Adobe Marketing Cloud Activation Core Services
 *   Adobe Experience Manager (AEM), or an external website that connects to Analytics
