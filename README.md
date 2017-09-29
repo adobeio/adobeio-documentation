@@ -21,7 +21,7 @@ To complete this solution, you will need authorization to use the following serv
 *   An Adobe ID, if you do not already have one
 *   Adobe I/O Console setup, with administrative permissions for your enterprise organization
 
-### Administrative Privileges
+### Administrative Permissions
 
 If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
