@@ -18,7 +18,7 @@ To complete this solution, you will need authorization to use the following serv
 
 *   Adobe Marketing Cloud Activation Core Services, with administrative permissions
 *   AEM instance setup with version 6.2 or 6.3, with administrative permissions
-*   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not already have one.
+*   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not already have one
 *   Adobe I/O Console setup, with administrative permissions for your enterprise organization
 
 ### Administrative Permissions
