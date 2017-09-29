@@ -32,12 +32,12 @@ To complete this demo, you will need authorization to use the following services
 
 ### Administrative Privileges
 
-You will also need administrative entitlements for the following:
+You will also need administrative permissions for the following:
 * Adobe Analytics
 * Your enterprise organization
 * AEM, if using that service to connect to Analytics
 
-After requesting administrative entitlements, watch for an email from Adobe Systems Incorporated, as shown:
+If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
