@@ -18,13 +18,14 @@ To complete this solution, you will need authorization to use the following serv
 
 *   Adobe Marketing Cloud Activation Core Services, with administrative permissions
 *   AEM instance setup with version 6.2 or 6.3, with administrative permissions
-*   An Adobe ID, if you do not already have one
+*   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not already have one.
 *   Adobe I/O Console setup, with administrative permissions for your enterprise organization
 
 ### Administrative Permissions
 
 If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
+![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
 
 
