@@ -16,14 +16,12 @@ These instruction include the following sections:
 
 To complete this solution, you will need authorization to use the following services:
 
-*Adobe Marketing Cloud Activation Core Services, with administrative permissions
-*AEM instance setup for version 6.2 or 6.3, with administrative permissions
-*An Adobe ID, if you do not already have one
-*Adobe I/O Console setup, with administrative permissions for your enterprise organization
+*   Adobe Marketing Cloud Activation Core Services, with administrative permissions
+*   AEM instance setup for version 6.2 or 6.3, with administrative permissions
+*   An Adobe ID, if you do not already have one
+*   Adobe I/O Console setup, with administrative permissions for your enterprise organization
 
 ### Administrative Privileges
-
-You will also need administrative permissions for the following:
 
 If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
@@ -47,13 +45,30 @@ Register Webhook in Integration
 Webhook Health Check
 Test the WebhookSubcription
  
+
  
-System Requirement
-AEM 6.2 or 6.3 instance set up
-Adobe I/O Console permission set up
-Please note that in order to create an integration between their AEM instance and the “Event Service” using I/O Console, the user must be the admin of an enterprise org. If you don’t have the correct permission, please contact ioevents-beta@adobe.com
- 
-Register an AEM Event Publisher
+## Register an AEM Event Publisher
+To register an AEM Event Publisher:
+
+1. Install the AEM Event Proxy Package
+1. Configure Adobe I/O Events Cloud Service
+1. Perform an AEM Health and Configuration Check
+
+
+
+### Install the AEM Event Proxy Package
+
+To install the AEM Event Proxy Package:
+
+Download the latest version of the package from the pre-release site.
+
+
+
+
+
+
+
+
 Install aem-event-proxy Package
 
 Install Package
