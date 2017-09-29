@@ -17,7 +17,7 @@ These instruction include the following sections:
 To complete this solution, you will need authorization to use the following services:
 
 *   Adobe Marketing Cloud Activation Core Services, with administrative permissions
-*   AEM instance setup for version 6.2 or 6.3, with administrative permissions
+*   AEM instance setup with version 6.2 or 6.3, with administrative permissions
 *   An Adobe ID, if you do not already have one
 *   Adobe I/O Console setup, with administrative permissions for your enterprise organization
 
