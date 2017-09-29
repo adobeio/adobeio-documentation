@@ -6,17 +6,26 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 
 Use Adobe I/O for notification of events such as AEM page or asset changes.
 
-These instruction include the following tasks:
+These instruction include the following sections:
 
-1. Set up the Analytics triggers environment
-1. Configure triggers and rules
-1. Integrate with Adobe I/O
-1. View event notifications through webhooks
+1. What's Needed
+1. Register an AEM Event Publisher
+1. Register an AEM Consumer App
 
+## What's Needed
 
-Instructions for AEM Setup for Adobe IO Events
+To complete this solution, you will need authorization to use the following services:
 
+*Adobe Marketing Cloud Activation Core Services, with administrative permissions
+*AEM instance setup for version 6.2 or 6.3, with administrative permissions
+*An Adobe ID, if you do not already have one
+*Adobe I/O Console setup, with administrative permissions for your enterprise organization
 
+### Administrative Privileges
+
+You will also need administrative permissions for the following:
+
+If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
 
 
