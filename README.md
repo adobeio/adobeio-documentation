@@ -85,7 +85,7 @@ Note: If you have an older version of the package, delete it to avoid potential 
 
 For more information on installing packages in AEM, see [How to Work with Packages](https://docs.adobe.com/content/docs/en/cq/5-6-1/administering/package_manager.html#Access20Package%20Share).
 
-###Additional Package Installation Notes####
+### Additional Package Installation Notes ####
 
 1. If you are upgrading the package, delete the previous .jar file from the following location: **/apps/eventproxy/install**
 
@@ -99,7 +99,7 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 
 3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
 
-
+![crxdelite](https://user-images.githubusercontent.com/29133525/31087331-dbd0ac58-a759-11e7-9a0d-199d088763f3.png)
 
 
 
