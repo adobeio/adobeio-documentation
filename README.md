@@ -62,7 +62,7 @@ To install the AEM Event Proxy Package:
 
 1. Download the latest version of the package from the [pre-release site](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
 
-2. In AEM, click the **Tools** icon and then click **Deployment** and **Packages**.
+2. Open AEM Package Manager at http://localhost:4502/crx/packmgr/index.jsp; or click the **Tools** icon and then click **Deployment** and **Packages**.
 
 ![package manager navi](https://user-images.githubusercontent.com/29133525/31083270-7f0f6ece-a74e-11e7-87d8-da73464104d7.png)
 
