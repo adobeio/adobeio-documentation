@@ -62,11 +62,11 @@ To install the AEM Event Proxy Package:
 
 1. Download the latest version of the package from the [pre-release site](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
 
-1. In AEM, click the **Tools** icon, then click **Deployment** and then **Packages**.
+2. In AEM, click the **Tools** icon, then click **Deployment** and then **Packages**.
 
 ![package manager navi](https://user-images.githubusercontent.com/29133525/31083270-7f0f6ece-a74e-11e7-87d8-da73464104d7.png)
 
-1. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
+3. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
 
 
 Note: If you have an older version of the package, delete it to avoid potential conflicts. You can delete it from the following location: 
@@ -74,15 +74,15 @@ Note: If you have an older version of the package, delete it to avoid potential 
 ```
 crx/de/index.jsp#/apps/eventproxy/install
 ```
-1. Click **Install**.
+4. Click **Install**.
 
 ![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
 
-1. In the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and click **Install**.
+5. In the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and click **Install**.
 
 ![install package](https://user-images.githubusercontent.com/29133525/31085363-242d22e8-a754-11e7-9927-a8c7c43d8184.png)
 
-1. Watch the **Activity Log** to verify that the package is installed. If installed, log reports that it is imported.
+6. Watch the **Activity Log** to verify that the package is installed. If installed, log reports that it is imported.
 
 ![activity log](https://user-images.githubusercontent.com/29133525/31085648-ff7f2c92-a754-11e7-832a-350e116d6f54.png)
 
