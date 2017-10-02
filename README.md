@@ -155,7 +155,7 @@ Note: On Windows systems, this command expression may vary. For more inforation,
 
 To add the keystore to the AEM Eventproxy-service user group:
 
-In AEM, click the **Tools** icon and then click **Security** and **Users**.
+1. In AEM, open the User Management group list at http://localhost:4502/libs/granite/security/content/useradmin.html; or click the **Tools** icon and then click **Security** and **Users**.
 
 
 
