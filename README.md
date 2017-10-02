@@ -69,11 +69,8 @@ To install the AEM Event Proxy Package:
 3. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
 
 
-Note: If you have an older version of the package, delete it to avoid potential conflicts. You can delete it from the following location: 
+Note: If you have an older version of the package, delete it to avoid potential conflicts. You can delete it from the following location: **crx/de/index.jsp#/apps/eventproxy/install**.
 
-```
-crx/de/index.jsp#/apps/eventproxy/install
-```
 4. Click **Install**.
 
 ![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
@@ -88,8 +85,19 @@ crx/de/index.jsp#/apps/eventproxy/install
 
 For more information on installing packages in AEM, see [How to Work with Packages](https://docs.adobe.com/content/docs/en/cq/5-6-1/administering/package_manager.html#Access20Package%20Share).
 
+###Additional Package Installation Notes####
 
+1. If you are upgrading the package, delete the previous .jar file from the following location: **/apps/eventproxy/install**
 
+2. Verify that the Access Control Handling is properly applied by checking permissions for the eventproxy-service user group at **/useradmin**. If applied correctly, the eventproxy-service user is added to the following:
+
+*   /home/users/system/eventproxy/eventproxy-service with jrc:read and rep:write authorizations
+*   /etc/cloudservices/eventproxy with jrc:read and rep:write authorizations
+*   /content with jrc:read authorization
+
+For more information, see AEM [User and Group Administration](https://docs.adobe.com/docs/en/cq/5-6-1/touch-ui/granite-user-group-admin.html).
+
+3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
 
 
 
