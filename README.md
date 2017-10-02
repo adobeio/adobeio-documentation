@@ -82,8 +82,9 @@ crx/de/index.jsp#/apps/eventproxy/install
 
 ![install package](https://user-images.githubusercontent.com/29133525/31085363-242d22e8-a754-11e7-9927-a8c7c43d8184.png)
 
-Watch the **Activity Log** to verify that the package is installed. If installed, log reports that it is imported.
+1. Watch the **Activity Log** to verify that the package is installed. If installed, log reports that it is imported.
 
+![activity log](https://user-images.githubusercontent.com/29133525/31085648-ff7f2c92-a754-11e7-832a-350e116d6f54.png)
 
 
 
