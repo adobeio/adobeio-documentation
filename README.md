@@ -79,7 +79,7 @@ crx/de/index.jsp#/apps/eventproxy/install
 
 1. In the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list.
 
-
+![install package](https://user-images.githubusercontent.com/29133525/31085363-242d22e8-a754-11e7-9927-a8c7c43d8184.png)
 
 
 
