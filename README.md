@@ -61,7 +61,17 @@ To register an AEM Event Publisher:
 
 To install the AEM Event Proxy Package:
 
-Download the latest version of the package from the [pre-release site](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
+1. Download the latest version of the package from the [pre-release site](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
+
+1. In AEM, click the **Tools** icon, then click **Deployment** and then **Packages**.
+
+1. In **Package Manager**, upload the package and then install it.
+
+
+
+
+
+
 
 
 
