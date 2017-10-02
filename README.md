@@ -86,7 +86,7 @@ crx/de/index.jsp#/apps/eventproxy/install
 
 ![activity log](https://user-images.githubusercontent.com/29133525/31085648-ff7f2c92-a754-11e7-832a-350e116d6f54.png)
 
-
+For more information on installing packages in AEM, see [How to Work with Packages](https://docs.adobe.com/content/docs/en/cq/5-6-1/administering/package_manager.html#Access20Package%20Share).
 
 
 
