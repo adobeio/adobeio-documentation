@@ -85,7 +85,7 @@ Note: If you have an older version of the package, delete it to avoid potential 
 
 For more information on installing packages in AEM, see [How to Work with Packages](https://docs.adobe.com/content/docs/en/cq/5-6-1/administering/package_manager.html#Access20Package%20Share).
 
-### Additional Package Installation Notes ####
+#### Additional Package Installation Notes
 
 1. If you are upgrading the package, delete the previous .jar file from the following location: **/apps/eventproxy/install**
 
@@ -101,39 +101,8 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 
 ![crxdelite](https://user-images.githubusercontent.com/29133525/31087331-dbd0ac58-a759-11e7-9a0d-199d088763f3.png)
 
+### Configure Adobe I/O Events Cloud Service
 
-
-
-
-Install aem-event-proxy Package
-
-Install Package
-Please download the latest version of the package from the prerelease site. 
-Upload and install the package
-Navigate to the package manager of your local AEM instance (/crx/packmgr/index.jsp)
-Upload
-Click “Upload Package”
-Note: if you have an older version, to avoid conflict, please delete it from crx/de/index.jsp#/apps/eventproxy/install
-Install
-Once the package is uploaded, click “Install” (right hand upper corner)
-In the Install Dialog Menu, click on Advanced Settings
-Select Merge in the Access Control Handling dropdown select
-Click on Install
-Watch the activity log, it should end with Package installed in some_ms.
-AEM Package Installation Documentations
- 
-Note:
-If you are doing a package upgrade :
-please delete the old version (the old jars) from `/apps/eventproxy/install`
-please verify the ACL (see below) 
-If the Access Control Handling are properly applied, the eventproxy-service user should be added to
-/home/users/system/eventproxy/eventproxy-service with jrc:read and rep:write authorizations
-/etc/cloudservices/eventproxy with jrc:read and rep:write authorizations
-/content with jrc:read 
-You can validate this by checking the permissions for eventproxy-service user group at /useradmin
-AEM User Administration Documentations
- 
-If you don't see the correct permission, you can also manually updated the permission by going to CRXDE Lite at /crx/de/index.jsp#/etc/cloudservices/eventproxy
 
  
 Configure Adobe I/O Events Cloud Service
