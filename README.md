@@ -75,10 +75,14 @@ Note: If you have an older version of the package, delete it to avoid potential 
 crx/de/index.jsp#/apps/eventproxy/install
 ```
 1. Click **Install**.
+
 ![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
 
-1. In the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list.
+1. In the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and click **Install**.
+
 ![install package](https://user-images.githubusercontent.com/29133525/31085363-242d22e8-a754-11e7-9927-a8c7c43d8184.png)
+
+Watch the **Activity Log** to verify that the package is installed. If installed, the log shows the name of the .ms file.
 
 
 
