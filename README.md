@@ -28,7 +28,6 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
 
-
 System Requirement
 Register an AEM Event Publisher
 Install aem-event-proxy Package
@@ -71,6 +70,11 @@ To install the AEM Event Proxy Package:
 
 ![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
 
+Note: If you have an older version of the package, delete it to avoid potential conflicts. You can delete it from the following location: 
+
+```
+crx/de/index.jsp#/apps/eventproxy/install
+```
 
 
 
