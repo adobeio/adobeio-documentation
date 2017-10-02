@@ -62,7 +62,7 @@ To install the AEM Event Proxy Package:
 
 1. Download the latest version of the package from the [pre-release site](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
 
-2. In AEM, click the **Tools** icon, then click **Deployment** and then **Packages**.
+2. In AEM, click the **Tools** icon and then click **Deployment** and **Packages**.
 
 ![package manager navi](https://user-images.githubusercontent.com/29133525/31083270-7f0f6ece-a74e-11e7-87d8-da73464104d7.png)
 
@@ -91,9 +91,9 @@ For more information on installing packages in AEM, see [How to Work with Packag
 
 2. Verify that the Access Control Handling is properly applied by checking permissions for the eventproxy-service user group at **/useradmin**. If applied correctly, the eventproxy-service user is added to the following:
 
-*   /home/users/system/eventproxy/eventproxy-service with jrc:read and rep:write authorizations
-*   /etc/cloudservices/eventproxy with jrc:read and rep:write authorizations
-*   /content with jrc:read authorization
+*   **/home/users/system/eventproxy/eventproxy-service with jrc:read and rep:write authorizations**
+*   **/etc/cloudservices/eventproxy with jrc:read and rep:write authorizations**
+*   **/content with jrc:read authorization**
 
 For more information, see AEM [User and Group Administration](https://docs.adobe.com/docs/en/cq/5-6-1/touch-ui/granite-user-group-admin.html).
 
@@ -115,8 +115,8 @@ To configure Adobe I/O Events Cloud Service:
 
 To configure OAuth and IMS authentication:
 
-1. Create a Certificate and Keystore.
-2. Add the Keystore to the AEM Eventproxy-service User Group.
+1. Create a certificate and keystore.
+2. Add the keystore to the AEM eventproxy-service user group.
 3. Configure the AEM Link Externalizer.
 
 #### Create a Certificate and Keystore
@@ -151,7 +151,11 @@ openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -n
 Note: On Windows systems, this command expression may vary. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
 
-#### Add the keystore to the AEM eventproxy-service user group 
+#### Add the Keystore to the AEM Eventproxy-service User Group 
+
+To add the keystore to the AEM Eventproxy-service user group:
+
+In AEM, click the **Tools** icon and then click **Security** and **Users**.
 
 
 
