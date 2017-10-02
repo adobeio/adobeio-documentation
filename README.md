@@ -50,9 +50,9 @@ Test the WebhookSubcription
 ## Register an AEM Event Publisher
 To register an AEM Event Publisher:
 
-1. Install the AEM Event Proxy Package
-1. Configure Adobe I/O Events Cloud Service
-1. Perform an AEM Health and Configuration Check
+1. Install the AEM Event Proxy Package.
+1. Configure Adobe I/O Events Cloud Service.
+1. Perform an AEM Health and Configuration Check.
 
 
 
@@ -101,10 +101,60 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 
 ![crxdelite](https://user-images.githubusercontent.com/29133525/31087331-dbd0ac58-a759-11e7-9a0d-199d088763f3.png)
 
-### Configure Adobe I/O Events Cloud Service
+## Configure Adobe I/O Events Cloud Service
+
+To configure Adobe I/O Events Cloud Service:
+
+1. Configure oAuth and IMS Authorization and Authentication.
+2. Create an Adobe I/O Console Integration.
+3. Configure Adobe I/O Events as a Cloud Service in AEM.
+4. Configure Advanced Adobe I/O Events.
 
 
- 
+### Configure OAuth and IMS Authentication
+
+To configure OAuth and IMS authentication:
+
+1. Create a certificate
+2. Create a Keystore.
+3. Add the Keystore to the Eventproxy-service User Group.
+4. Configure the AEM Link Externalizer.
+
+1. Create a an RSA private/public certificate in OpenSSL with the following command:
+
+```
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt
+```
+
+2. Add the private key and signed crtificate to a PKCS#12 file with the following command:
+
+```
+openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certificate_pub.crt -inkey private.key -out author.pfx -name "author"
+```
+3. When prompted, create an export password and store it for later use.
+
+4. Create a keystore fromt the generated keys with the following command:
+
+```
+cat private.key certificate_pub.crt > private-key-crt
+```
+
+Note: On some Windows systems, you may need to concatenate the files manually or provide an alternate command. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
+
+5. Set the alias as eventproxy and a non-empty keystore password (such as admin), with the following command:
+
+```
+openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -noiter -nomaciter
+```
+Note: For some Windows systems, this command expression may vary. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
+
+
+
+
+
+
+
+
 Configure Adobe I/O Events Cloud Service
 Configure oAuth/IMS 
 Create Certificate
