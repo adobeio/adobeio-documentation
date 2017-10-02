@@ -65,7 +65,7 @@ To install the AEM Event Proxy Package:
 
 1. In AEM, click the **Tools** icon, then click **Deployment** and then **Packages**.
 
-
+![package manager navi](https://user-images.githubusercontent.com/29133525/31083270-7f0f6ece-a74e-11e7-87d8-da73464104d7.png)
 
 1. In **Package Manager**, upload the package and then install it.
 
