@@ -115,10 +115,12 @@ To configure Adobe I/O Events Cloud Service:
 
 To configure OAuth and IMS authentication:
 
-1. Create a certificate
-2. Create a Keystore.
-3. Add the Keystore to the Eventproxy-service User Group.
-4. Configure the AEM Link Externalizer.
+1. Create a Certificate and Keystore.
+2. Add the Keystore to the AEM Eventproxy-service User Group.
+3. Configure the AEM Link Externalizer.
+
+#### Create a Certificate and Keystore
+To create a certificate and keystore:
 
 1. Create a an RSA private/public certificate in OpenSSL with the following command:
 
@@ -139,17 +141,17 @@ openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certific
 cat private.key certificate_pub.crt > private-key-crt
 ```
 
-Note: On some Windows systems, you may need to concatenate the files manually or provide an alternate command. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
+Note: On Windows systems, you may need to concatenate the files manually or provide an alternate command. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
 5. Set the alias as eventproxy and a non-empty keystore password (such as admin), with the following command:
 
 ```
 openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -noiter -nomaciter
 ```
-Note: For some Windows systems, this command expression may vary. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
+Note: On Windows systems, this command expression may vary. For more inforation, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
 
-
+#### Add the keystore to the AEM eventproxy-service user group 
 
 
 
