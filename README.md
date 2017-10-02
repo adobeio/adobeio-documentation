@@ -66,15 +66,19 @@ To install the AEM Event Proxy Package:
 
 ![package manager navi](https://user-images.githubusercontent.com/29133525/31083270-7f0f6ece-a74e-11e7-87d8-da73464104d7.png)
 
-1. In **Package Manager**, upload the package and then install it.
+1. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
 
-![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
 
 Note: If you have an older version of the package, delete it to avoid potential conflicts. You can delete it from the following location: 
 
 ```
 crx/de/index.jsp#/apps/eventproxy/install
 ```
+1. Click **Install**.
+![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
+
+1. In the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list.
+
 
 
 
