@@ -198,9 +198,13 @@ and then map these OSGI events to the Adobe I/O Event Model before forwarding th
 If you have the configuration done properly, then you are all set, you can trigger AEM events and register webhooks to listen to them (see the next section). If you have issues figuring the right configuration out, or if you want to double check or reload/reset the configuration you may use the various Sling Health Check available in this bundle.
 First, check that all your configurations are proper and properly loaded: execute the Health Check tagged with eventproxy, conf
 http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
+
+
 Second, check that this AEMinstanceisisableto exchange JWT exchange tokens with Adobe I/O IMS (Identity Management System) execute the Health Check tagged with eventproxy,ims
 http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+ims&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
 this will validate that all your IMS related configurations are correct and working as expected (Meaning you got the eventproxy-service user KeyStore properly configured, as well as all the adobe.io console originated API key, Technical Account ID, Organization ID and Client Secret)
+
+
 Third, check that the event metadata and the provider associated with this AEM instance are registered in Adobe I/O CSM (Channel & Subscription Management), execute the Health Check tagged with eventproxy,csm
 http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
 this will validate that your AEM instance is successfully registered as an event provider against Adobe IO CSM (Channel & Subscription Management),
