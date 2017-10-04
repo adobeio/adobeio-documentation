@@ -164,7 +164,7 @@ To add the key store to the AEM Eventproxy-service user group:
 ### Configure AEM Link Externalizer
 The AEM Link Externalizer name can be **author** or any other alias specified in the [Adobe Experience Manager Web Console](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl).
 
-Note: Do not use the word “localhost” only as the default name because others may use it. This will then cause confusion and make it difficult to determine which instance is yours. 
+Note: Do not use only the word “localhost” as the default name because others may use it. This will then cause confusion and make it difficult to determine which instance is yours. 
 
 The base url that you specify appears on the AEM Web Console. 
 
