@@ -171,12 +171,14 @@ The base url that you specify appears on the AEM Web Console.
 ![localhost name](https://user-images.githubusercontent.com/29133525/31195096-62db2bc6-a906-11e7-8271-94908f33ff65.png)
  
  
- 
- 
 ## Create Adobe I/O Console Integration
-1. Go to https://adobe.io/console
-2. Click New Integration.
-3. Select the following options:
+
+To create an Adobe I/O Console Integration:
+1. On the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
+
+2. Select **Access an API** and then click **Continue**.
+
+the following options:
 *   "Access an API"
 *   Select "Adobe I/O events"
 *   New integration
