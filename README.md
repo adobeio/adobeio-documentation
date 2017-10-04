@@ -146,7 +146,17 @@ To add the keystore to the AEM Eventproxy-service user group:
 ![eventproxy service](https://user-images.githubusercontent.com/29133525/31091250-91d7788a-a767-11e7-9187-c55d8b04c4f4.png)
  
  
-3. On Account settings, click Create Keystore.
+3. On **Account settings**, click **Create Keystore** and create the keystore.
+
+4. Click KeyStore Management and 
+ 
+ 
+ ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
+ 
+ 
+ 
+ 
+ 
  
  
 ## Create Adobe I/O Console Integration
