@@ -193,19 +193,10 @@ To create an Adobe I/O Console Integration:
 
 
 
-the following options:
-*   "Access an API"
-*   Select "Adobe I/O events"
-*   New integration
-*   Specify a name for the integration gateway and add a description.
-*   Upload the file certificate_pub.crt to the integration service.
+## Configuring Adobe I/O Events as a Cloud Services in AEM
 
- 
- 
+To configure Adobe I/O events as a cloud service in AEM:
 
-
-
-## Configuring Adobe I/O Events as one of the Cloud Services in AEM
 1. Open the Cloud Services console (/libs/cq/core/content/tools/cloudservices.html)
 2. Click "Configure Now" under Adobe I/O Events to create a new configuration.
 configuration with the following:
