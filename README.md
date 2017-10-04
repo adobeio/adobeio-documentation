@@ -212,6 +212,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 *   For **Client Secret**: Click the **Retrieve client secret** button on the **Integration Details** page of the Adobe I/O Console and provide the secret as shown on the console.
 
 ![api key](https://user-images.githubusercontent.com/29133525/31204451-17fa305c-a929-11e7-86c2-2a1610a0b264.png)
+
 **API Key and Client Secret on Adobe I/O Console**
 
 
