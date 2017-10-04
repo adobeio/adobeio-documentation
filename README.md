@@ -197,7 +197,16 @@ To create an Adobe I/O Console Integration:
 
 To configure Adobe I/O events as a cloud service in AEM:
 
-1. Open the Cloud Services console (/libs/cq/core/content/tools/cloudservices.html)
+1. Open the [Cloud Services console](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html), or click the **Tools** icon, then click **Deployment** and **Cloud Services**. 
+
+
+
+
+
+
+
+
+(/libs/cq/core/content/tools/cloudservices.html)
 2. Click "Configure Now" under Adobe I/O Events to create a new configuration.
 configuration with the following:
 *   Day CQ Link externalizer name: author (or any other alias you configured in the AEM Link Externalizer see above)
