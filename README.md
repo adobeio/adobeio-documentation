@@ -206,13 +206,12 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 *   For **Day CQ Link externalizer name**: specify **author** (or any other alias previously onfigured in the AEM Link Externalizer).
 *   For **API key**: Provide the key shown on the **Integration Details** page of the Adobe I/O Console. 
+*   For **Technical Account ID**: Provide the ID shown on the Adobe I/O Console.
+*   For **Organization ID**: Provide the ID shown on the Adobe I/O Console.
+*   For **Client Secret**: Click the **Retrieve client secret** button on the **Integration Details** page of the Adobe I/O Console and provide the secret as shown on the console.
 
 
 
-
-*   Technical Account ID: the_one_from_adobe_io_console
-*   Organization ID: the_one_from_adobe_io_console
-*   Client Secret: the_one_from_adobe_io_console
  
 ## Advanced Adobe I/O Events configurations
 Note that you can also do advanced configuration through the osgi configuration panel, search for: Adobe I/O Events' CSM Registration:
