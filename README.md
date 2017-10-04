@@ -218,19 +218,20 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 
  
-## Configure Advanced Adobe I/O Events
-Note that you can also do advanced configuration through the osgi configuration panel, search for: Adobe I/O Events' CSM Registration:
-For all the Adobe I/O event types known to the Adobe I/O Event Model.
+## Perform Advanced Configuration for Adobe I/O Events
 
-You can change/edit:
-*   the OSGI event `topic` 
-*   the `filter` used in the OSGI event handler
-*   as well as the observed path
-*   defaulted to `/content/dam` for `asset` events
-*   and `/content` for `page` events
+For all the Adobe I/O event types known to the Adobe I/O Event Model, you can change:
+*   the OSGI event **topic** 
+*   the **filter** used in the OSGI event handler
+*   the default observed path to **/content/dam** for **asset** events, and **/content** for **page** events
+
+The OSGI event handler intercepts the events according to these values and then maps the OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
+
+Note: You can also perform advanced configuration of events through the osgi configuration panel.
+
+To use the panel, search for: **Adobe I/O Events' CSM Registration**
   
-The various OSGI event handler will intercept the events according to these values 
-and then map these OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
+
  
  
 ## AEM Health Check and Configuration Check
