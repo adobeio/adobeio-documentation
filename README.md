@@ -168,7 +168,7 @@ Note: Do not use the word “localhost” only as the default name because other
 
 The base url that you specify appears on the AEM Web Console. 
 
-
+![localhost name](https://user-images.githubusercontent.com/29133525/31195096-62db2bc6-a906-11e7-8271-94908f33ff65.png)
  
  
  
