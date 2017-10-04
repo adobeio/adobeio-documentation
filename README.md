@@ -180,6 +180,15 @@ To create an Adobe I/O Console Integration:
 
 3. On the **Create a new integration** page, select **Adobe I/O Events**.
 
+![create new integration](https://user-images.githubusercontent.com/29133525/31202727-035a3578-a921-11e7-8f69-78881c95de46.png)
+
+4. Click **New integration**.
+
+5. On the **New Integration** dialog box, specify a name for the integration gateway and add a description.
+
+6. Upload the file **certificate_pub.crt** to the integration service.
+
+
 
 
 
