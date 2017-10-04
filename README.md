@@ -210,10 +210,12 @@ To configure Adobe I/O events as a cloud service in AEM:
 *   For **Organization ID**: Provide the ID shown on the Adobe I/O Console.
 *   For **Client Secret**: Click the **Retrieve client secret** button on the **Integration Details** page of the Adobe I/O Console and provide the secret as shown on the console.
 
+![api key](https://user-images.githubusercontent.com/29133525/31204451-17fa305c-a929-11e7-86c2-2a1610a0b264.png)
+
 
 
  
-## Advanced Adobe I/O Events configurations
+## Configure Advanced Adobe I/O Events
 Note that you can also do advanced configuration through the osgi configuration panel, search for: Adobe I/O Events' CSM Registration:
 For all the Adobe I/O event types known to the Adobe I/O Event Model.
 
