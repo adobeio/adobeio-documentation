@@ -125,7 +125,7 @@ cat private.key certificate_pub.crt > private-key-crt
 
 Note: On Windows systems, you may need to concatenate the files manually or provide an alternate command. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
-5. Set the alias as eventproxy and a non-empty keystore password (such as admin), with the following command:
+5. Set the alias as **eventproxy** and a non-empty keystore password (such as admin), with the following command:
 
 ```
 openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -noiter -nomaciter
@@ -133,9 +133,9 @@ openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -n
 Note: On Windows systems, this command expression may vary. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
 
-#### Add the Keystore to the AEM Eventproxy-service User Group 
+#### Add the Key Store to the AEM Eventproxy-service User Group 
 
-To add the keystore to the AEM Eventproxy-service user group:
+To add the key store to the AEM Eventproxy-service user group:
 
 1. In AEM, open the **User Management** group list at http://localhost:4502/libs/granite/security/content/useradmin.html; or click the **Tools** icon and then click **Security** and **Users**.
 
@@ -146,9 +146,17 @@ To add the keystore to the AEM Eventproxy-service user group:
 ![eventproxy service](https://user-images.githubusercontent.com/29133525/31091250-91d7788a-a767-11e7-9187-c55d8b04c4f4.png)
  
  
-3. On **Account settings**, click **Create Keystore** and create the keystore.
+3. On **Account settings**, click **Create KeyStore** and create the key store.
 
-4. Click KeyStore Management and 
+4. Click **Manage KeyStore** and then click to expand the section for **Add Private Key for Key Store file.** 
+
+5. Add the keystore.p12 file by setting the key pair alias to **eventproxy** or the alias specified previously. 
+
+6. Provide the keystore password (the same one provided when generating the key store).
+
+7. Provide the private key password and then provide the private key alias **eventproxy**.
+
+8. Click **Submit**.
  
  
  ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
