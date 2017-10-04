@@ -190,9 +190,6 @@ To create an Adobe I/O Console Integration:
 
 <img width="1318" alt="new integration dialog box" src="https://user-images.githubusercontent.com/29133525/31202886-c98730de-a921-11e7-8e86-44f9fa6759b9.png">
 
-
-
-
 ## Configuring Adobe I/O Events as a Cloud Services in AEM
 
 To configure Adobe I/O events as a cloud service in AEM:
@@ -203,12 +200,16 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 2. For AEM, click **Configure Now** to create a new configuration.
 
+![cloud service configure now](https://user-images.githubusercontent.com/29133525/31203596-0f7713ea-a925-11e7-8916-6dc492181f60.png)
+
+3. Configure the service as follows:
+
+*   For **Day CQ Link externalizer name**: specify **author** (or any other alias previously onfigured in the AEM Link Externalizer).
+*   For **API key**: Provide the key shown on the **Integration Details** page of the Adobe I/O Console. 
 
 
-2. Click "Configure Now" under Adobe I/O Events to create a new configuration.
-configuration with the following:
-*   Day CQ Link externalizer name: author (or any other alias you configured in the AEM Link Externalizer see above)
-*   API key: the_one_from_adobe_io_console
+
+
 *   Technical Account ID: the_one_from_adobe_io_console
 *   Organization ID: the_one_from_adobe_io_console
 *   Client Secret: the_one_from_adobe_io_console
