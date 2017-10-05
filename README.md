@@ -225,8 +225,7 @@ For all the Adobe I/O event types known to the Adobe I/O event model, you can ch
 *   the default path for asset events: **/content/dam**
 *   the default path for page events:**/content**
 
-
-
+![osgi config default path](https://user-images.githubusercontent.com/29133525/31209678-ea371a1a-a949-11e7-8b61-ad409b8119a8.png)
 
 The OSGI event handler intercepts the events according to these values and then maps the OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
 
