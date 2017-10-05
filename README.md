@@ -234,20 +234,22 @@ To use the panel, search for: **Adobe I/O Events' CSM Registration**
  
 ## Perform AEM Health and Configuration Check
 
-You can use the [AEM Web Console Sling Health Check](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000) to verify your configurations, authorization, and I/O registrations, as well as proper loading. 
+You can use the [AEM Web Console Sling Health Check](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000) to verify your configurations are correct.
 
 To check:
 
- 1. Execute the Health Check tagged with eventproxy, conf
-
-
-First, check that all your configurations are proper and properly loaded: execute the Health Check tagged with eventproxy, conf
+1. Check that all your configurations properly load by execute the Health Check tagged with **eventproxy, conf**.
 
 
 
-Second, check that this AEMinstanceisisableto exchange JWT exchange tokens with Adobe I/O IMS (Identity Management System) execute the Health Check tagged with eventproxy,ims
-http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+ims&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
-this will validate that all your IMS related configurations are correct and working as expected (Meaning you got the eventproxy-service user KeyStore properly configured, as well as all the adobe.io console originated API key, Technical Account ID, Organization ID and Client Secret)
+2. Check that the AEM instance is is able to exchange JWT tokens with Adobe I/O IMS (Identity Management System). To do this, execute the Health Check tagged with [**eventproxy,ims**](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+ims&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
+This validates your IMS related configurations are correct and working, including the eventproxy-service user KeyStore configuration, the Adobe I/O console-originated API key, the Technical Account ID, the Organization ID and the client secret.
+
+![health check ims](https://user-images.githubusercontent.com/29133525/31208648-bc00f73e-a943-11e7-9c12-04cbd85797d4.png)
+
+
+
+
 
 
 Third, check that the event metadata and the provider associated with this AEM instance are registered in Adobe I/O CSM (Channel & Subscription Management), execute the Health Check tagged with eventproxy,csm
