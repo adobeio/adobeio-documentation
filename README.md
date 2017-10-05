@@ -303,24 +303,28 @@ Test your integration by registering your webhook with the Adobe I/O Console and
 Once you have your webhook ready, use the adobe.io console to register it:
 1. On the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
 2. Select **Subscribe to events** and click **Continue**.
-3. Select **AEM-<your-day-cq-link-externalizer-base-server-url>** and click **Continue**.
+3. Select **AEM-your-day-cq-link-externalizer-base-server-url** and click **Continue**.
 4. Select **Create new integration** and fill in the **Configure Integration** detail form.
 5. Click the **Add webhook** button and complete the **Add a new Webhook** form.
 6. Select the events you want to subscribe to and click **Save**.
-7. Click **Create new Inrtegration** and then click **Continue to Integration detail**.
+7. Click **Create new Integration** and then click **Continue to Integration detail**.
 
 Note: If you upgraded from version 0.16 of the package to 0.18, your AEM registered event provider ID has changed
 as a result. You will need to re-register your webhook and use the latest provider. The label should start with **AEM-** but not with **AEM_DAM**, as it was used in version 0.16.
 
 ### Webhook Health Check
 
-1. Check that events are sent to and received by Adobe I/O event receiver (the AEM ingress adapater): execute the Health Check tagged with eventproxy, eventreceiver
-http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+evre&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
+To perform a webhook health check:
+
+1. Check that events are sent to and received by Adobe I/O event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with [**eventproxy, eventreceiver**](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+evre&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000)
+
+
 2. Test the WebhookSubcription
-*   by publishing/unpublishing AEM pages
-*   by editing/adding/removing an asset in the AEM DAM
+*   by publishing or unpublishing AEM pages
+*   by editing, adding, or removing an asset in the AEM DAM
 *   or by using the aem asset API [1] https://docs.adobe.com/docs/en/aem/6-2/develop/extending/mac-api-assets.html
-You can see responses in your webhook.
+
+The responses appear in your webhook.
  
  
  
