@@ -6,7 +6,7 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 
 Use Adobe I/O for notification of AEM events such as page or asset changes.
 
-These instruction include the following sections:
+These instructions include the following sections:
 
 1. What's Needed
 1. Register an AEM Event Publisher
