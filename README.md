@@ -225,7 +225,7 @@ For all the Adobe I/O event types known to the Adobe I/O event model, you can ch
 *   the default path for asset events:  **/content/dam**
 *   the default path for page events:  **/content**
 
-The OSGI event handler intercepts the events according to these values and then maps the OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
+The OSGI event handler intercepts the events according to these values and then maps the OSGI events to the Adobe I/O event model before forwarding them to Adobe I/O.
 
 You can also perform advanced configuration of events through the OSGI configuration panel.
 
@@ -242,6 +242,10 @@ To use the panel:
 Or, simply search for: **Adobe I/O Events' CSM Registration**.
 
 3. For **Adobe I/O CSM Registration**, click the **Edit** button.
+
+
+
+The default paths for asset and page events are listed near the top of the page.
 
 ![osgi config default path](https://user-images.githubusercontent.com/29133525/31209678-ea371a1a-a949-11e7-8b61-ad409b8119a8.png)
 
