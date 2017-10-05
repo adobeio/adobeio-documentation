@@ -309,6 +309,8 @@ Once you have your webhook ready, use the adobe.io console to register it:
 6. Select the events you want to subscribe to and click **Save**.
 7. Click **Create new Integration** and then click **Continue to Integration detail**.
 
+![integration health check](https://user-images.githubusercontent.com/29133525/31210441-8455506c-a94f-11e7-8099-1a9b766af9b8.png)
+
 Note: If you upgraded from version 0.16 of the package to 0.18, your AEM registered event provider ID has changed
 as a result. You will need to re-register your webhook and use the latest provider. The label should start with **AEM-** but not with **AEM_DAM**, as it was used in version 0.16.
 
