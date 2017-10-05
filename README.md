@@ -320,6 +320,8 @@ To perform a webhook health check:
 
 1. Check that events are sent to and received by Adobe I/O event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with [**eventproxy, eventreceiver**](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+evre&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000)
 
+![check webhook evre](https://user-images.githubusercontent.com/29133525/31210557-496f319c-a950-11e7-9744-e28aba9a74d1.png)
+
 
 2. Test the WebhookSubcription
 *   by publishing or unpublishing AEM pages
