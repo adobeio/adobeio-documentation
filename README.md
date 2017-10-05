@@ -274,9 +274,10 @@ This verifies that the AEM instance is successfully registered as an event provi
  
 ## Register an AEM Event Consumer App
 
-### Set up Webhook
-Your webhook should be able to accept and reply a challenge http request parameter sent by CSM (Channel & Subscription Management).
-For instance: to create a webhook at webscript.io, use this script to configure it:
+To register an AEM event consumer App, you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe CSM.
+
+### Set up Webhook: Example
+To create a webhook at webscript.io, you can use the following script to configure it:
 
 ```local request  = request
 local method = request.method
@@ -296,25 +297,20 @@ end
 
 ## Test Integration 
 
-### Register Webhook in Integration
-Once you have your webhook ready, use the adobe.io console to register it:
-1. Go to https://adobe.io/console
-2. Click New Integration
-3. Select Subscribe to events
-4. Click Continue
-5. Select AEM-<your-day-cq-link-externalizer-base-server-url>
-6. Click Continue
-7. Select Create new integration
-8. Fill in the Configure Integration detail form
-9. Click the Add webhook button
-10. Fill-intheAdd a new Webhook form
-11. Select the events you want to subscribe to
-12. Click Save
-13. Click Create newInrtegration
-14. Click Continue to Integration detail
+Test your integration by registering your webhook with the Adobe I/O Console and performing a webhook health check.
 
-Note that if you went through an upgrade fro version 0.16 of the package to 0.18, your AEM registered event provider id has changed
-as a result, you will need to re-register your webhook and use the latest provider (his label should start with AEM- and not with AEM_DAM, used in version 0.16)
+### Register Webhook with the Adobe I/O Console
+Once you have your webhook ready, use the adobe.io console to register it:
+1. On the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
+2. Select **Subscribe to events** and click **Continue**.
+3. Select **AEM-<your-day-cq-link-externalizer-base-server-url>** and click **Continue**.
+4. Select **Create new integration** and fill in the **Configure Integration** detail form.
+5. Click the **Add webhook** button and complete the **Add a new Webhook** form.
+6. Select the events you want to subscribe to and click **Save**.
+7. Click **Create new Inrtegration** and then click **Continue to Integration detail**.
+
+Note: If you upgraded from version 0.16 of the package to 0.18, your AEM registered event provider ID has changed
+as a result. You will need to re-register your webhook and use the latest provider. The label should start with **AEM-** but not with **AEM_DAM**, as it was used in version 0.16.
 
 ### Webhook Health Check
 
