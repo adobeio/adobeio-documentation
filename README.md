@@ -231,9 +231,11 @@ The OSGI event handler intercepts the events according to these values and then 
 
 You can also perform advanced configuration of events through the OSGI configuration panel.
 
-To use the panel, search for: **Adobe I/O Events' CSM Registration**, or 
-  
+To use the panel, search for: **Adobe I/O Events' CSM Registration**, or click the Tools icon in AEM; then click Operations and Web Console.
 
+
+  
+![osgi configuration](https://user-images.githubusercontent.com/29133525/31209724-46af87e6-a94a-11e7-8ca0-65eaecf5114c.png)
  
  
 ## Perform AEM Health and Configuration Check
