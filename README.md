@@ -255,7 +255,7 @@ http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+csm&debug=tr
 this will validate that your AEM instance is successfully registered as an event provider against Adobe IO CSM (Channel & Subscription Management),
 
 
-
+<img width="1287" alt="sling health check ui" src="https://user-images.githubusercontent.com/29133525/31208577-26c4b9f8-a943-11e7-84f0-67a4aa67d0b7.png">
 
 
  
