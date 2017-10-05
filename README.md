@@ -234,15 +234,15 @@ To use the panel, search for: **Adobe I/O Events' CSM Registration**
  
 ## Perform AEM Health and Configuration Check
 
-You can use the AEM Web Console Sling Health Check to verify your configurations, authorization, and I/O registrations, as well as proper loading. 
+You can use the [AEM Web Console Sling Health Check](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000) to verify your configurations, authorization, and I/O registrations, as well as proper loading. 
 
 To check:
 
-
+ 1. Execute the Health Check tagged with eventproxy, conf
 
 
 First, check that all your configurations are proper and properly loaded: execute the Health Check tagged with eventproxy, conf
-http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
+
 
 
 Second, check that this AEMinstanceisisableto exchange JWT exchange tokens with Adobe I/O IMS (Identity Management System) execute the Health Check tagged with eventproxy,ims
@@ -253,6 +253,10 @@ this will validate that all your IMS related configurations are correct and work
 Third, check that the event metadata and the provider associated with this AEM instance are registered in Adobe I/O CSM (Channel & Subscription Management), execute the Health Check tagged with eventproxy,csm
 http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
 this will validate that your AEM instance is successfully registered as an event provider against Adobe IO CSM (Channel & Subscription Management),
+
+
+
+
 
  
 ## Register an AEM Event Consumer App
