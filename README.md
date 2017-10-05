@@ -323,14 +323,16 @@ To perform a webhook health check:
 ![check webhook evre](https://user-images.githubusercontent.com/29133525/31210557-496f319c-a950-11e7-9744-e28aba9a74d1.png)
 
 
-2. Test the WebhookSubcription
+2. Test the Webhook Subcription by doing the following:
 *   by publishing or unpublishing AEM pages
 *   by editing, adding, or removing an asset in the AEM DAM
-*   or by using the aem asset API [1] https://docs.adobe.com/docs/en/aem/6-2/develop/extending/mac-api-assets.html
+*   or by using the [AEM Assets HTTP API](https://docs.adobe.com/docs/en/aem/6-2/develop/extending/mac-api-assets.html)
 
 The responses appear in your webhook.
 
 <img width="1226" alt="webscript webhook" src="https://user-images.githubusercontent.com/29133525/31210683-35593846-a951-11e7-8681-2557a0bdcdbd.png">
+
+<img width="908" alt="webhook report log" src="https://user-images.githubusercontent.com/29133525/31210699-57b6f6bc-a951-11e7-8199-f1731125ee35.png">
 
 
  
