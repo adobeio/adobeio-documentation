@@ -238,7 +238,7 @@ You can use the [AEM Web Console Sling Health Check](http://localhost:4502/syste
 
 To verify your configurations:
 
-1. Check that all your configurations properly load by executing the Health Check tagged with **eventproxy, conf**.
+1. Check that all your configurations properly load by executing the Health Check tagged with [**eventproxy, conf**](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
 
 ![health check conf](https://user-images.githubusercontent.com/29133525/31209103-04b8a6be-a946-11e7-8c4f-e144a39bee3e.png)
 
@@ -251,9 +251,7 @@ This verifies that your IMS related configurations are correct and working, incl
 3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the Health Check tagged with [**eventproxy,csm**](http://localhost:4502/system/console/healthchecktags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000)
 This verifies that the AEM instance is successfully registered as an event provider with Adobe IO CSM.
 
-
-<img width="1287" alt="sling health check ui" src="https://user-images.githubusercontent.com/29133525/31208577-26c4b9f8-a943-11e7-84f0-67a4aa67d0b7.png">
-
+![health check csm](https://user-images.githubusercontent.com/29133525/31209225-cd500554-a946-11e7-9538-29e43c611bc5.png)
 
  
 ## Register an AEM Event Consumer App
