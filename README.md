@@ -218,7 +218,6 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 ### Perform Advanced Configuration for Adobe I/O Events
 
-
 For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
 *   the OSGI event **topic** 
 *   the **filter** used in the OSGI event handler
@@ -243,7 +242,7 @@ Or, simply search for: **Adobe I/O Events' CSM Registration**.
 
 3. For **Adobe I/O CSM Registration**, click the **Edit** button.
 
-
+![edit csm registration](https://user-images.githubusercontent.com/29133525/31209952-da49b480-a94b-11e7-8c9e-70b12ffb7762.png)
 
 The default paths for asset and page events are listed near the top of the page.
 
