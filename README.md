@@ -222,21 +222,30 @@ To configure Adobe I/O events as a cloud service in AEM:
 For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
 *   the OSGI event **topic** 
 *   the **filter** used in the OSGI event handler
-*   the default path for asset events: **/content/dam**
-*   the default path for page events:**/content**
-
-![osgi config default path](https://user-images.githubusercontent.com/29133525/31209678-ea371a1a-a949-11e7-8b61-ad409b8119a8.png)
+*   the default path for asset events:  **/content/dam**
+*   the default path for page events:  **/content**
 
 The OSGI event handler intercepts the events according to these values and then maps the OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
 
 You can also perform advanced configuration of events through the OSGI configuration panel.
 
-To use the panel, search for: **Adobe I/O Events' CSM Registration**, or click the Tools icon in AEM; then click Operations and Web Console.
+To use the panel:
 
+1. Click the **Tools** icon in AEM and then click **Operations** and **Web Console**.
 
-  
+![web console navigation ui](https://user-images.githubusercontent.com/29133525/31209778-ac40df88-a94a-11e7-959f-1237b424cdd5.png)
+
+2. In the **OSGI** menu, select **Configuration**.
+
 ![osgi configuration](https://user-images.githubusercontent.com/29133525/31209724-46af87e6-a94a-11e7-8ca0-65eaecf5114c.png)
- 
+
+Or, simply search for: **Adobe I/O Events' CSM Registration**.
+
+3. For **Adobe I/O CSM Registration**, click the **Edit** button.
+
+![osgi config default path](https://user-images.githubusercontent.com/29133525/31209678-ea371a1a-a949-11e7-8b61-ad409b8119a8.png)
+
+
  
 ## Perform AEM Health and Configuration Check
 
