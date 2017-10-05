@@ -329,6 +329,11 @@ To perform a webhook health check:
 *   or by using the aem asset API [1] https://docs.adobe.com/docs/en/aem/6-2/develop/extending/mac-api-assets.html
 
 The responses appear in your webhook.
+
+<img width="1226" alt="webscript webhook" src="https://user-images.githubusercontent.com/29133525/31210683-35593846-a951-11e7-8681-2557a0bdcdbd.png">
+
+
+ 
  
  
  
