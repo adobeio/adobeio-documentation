@@ -191,7 +191,7 @@ To create an Adobe I/O Console Integration:
 
 <img width="1318" alt="new integration dialog box" src="https://user-images.githubusercontent.com/29133525/31202886-c98730de-a921-11e7-8e86-44f9fa6759b9.png">
 
-## Configuring Adobe I/O Events as a Cloud Services in AEM
+## Configuring Adobe I/O Events as a Cloud Service in AEM
 
 To configure Adobe I/O events as a cloud service in AEM:
 
