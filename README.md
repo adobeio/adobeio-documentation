@@ -248,7 +248,7 @@ This verifies that your IMS related configurations are correct and working, incl
 ![health check ims](https://user-images.githubusercontent.com/29133525/31208648-bc00f73e-a943-11e7-9c12-04cbd85797d4.png)
 
 
-3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the Health Check tagged with [**eventproxy,csm**](http://localhost:4502/system/console/healthchecktags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000)
+3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the Health Check tagged with [**eventproxy,csm**](http://localhost:4502/system/console/healthchecktags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
 This verifies that the AEM instance is successfully registered as an event provider with Adobe IO CSM.
 
 ![health check csm](https://user-images.githubusercontent.com/29133525/31209225-cd500554-a946-11e7-9538-29e43c611bc5.png)
