@@ -216,9 +216,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 **API Key and Client Secret on Adobe I/O Console**
 
 
-
- 
-## Perform Advanced Configuration for Adobe I/O Events
+### Perform Advanced Configuration for Adobe I/O Events
 
 For all the Adobe I/O event types known to the Adobe I/O Event Model, you can change:
 *   the OSGI event **topic** 
@@ -234,10 +232,15 @@ To use the panel, search for: **Adobe I/O Events' CSM Registration**
 
  
  
-## AEM Health Check and Configuration Check
+## Perform AEM Health and Configuration Check
 
-### AEM Health Check
-If you have the configuration done properly, then you are all set, you can trigger AEM events and register webhooks to listen to them (see the next section). If you have issues figuring the right configuration out, or if you want to double check or reload/reset the configuration you may use the various Sling Health Check available in this bundle.
+You can use the AEM Web Console Sling Health Check to verify your configurations, authorization, and I/O registrations, as well as proper loading. 
+
+To check:
+
+
+
+
 First, check that all your configurations are proper and properly loaded: execute the Health Check tagged with eventproxy, conf
 http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000
 
