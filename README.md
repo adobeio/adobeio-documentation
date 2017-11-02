@@ -48,7 +48,7 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 1. [Configure Adobe Dynamic Tag Management (DTM)](#Configure-DTM)
 1. [Specify a New Trigger](#Specify-a-New-Trigger)
 
-### <a name="Set-up-Triggers">Set up Triggers</a>
+### <a name="Set-up-Triggers">Set up Analytics Triggers</a>
 
 To set up Adobe Analytics triggers:
 
@@ -96,7 +96,7 @@ To get access through the Adobe Admin Console:
 
 
 
-### <a name="Reporting-for-Triggers">Configure Reporting for Triggers</a>
+#### <a name="Reporting-for-Triggers">Configure Reporting for Triggers</a>
 
 To configure reporting for Triggers:
 
@@ -119,7 +119,7 @@ To configure reporting for Triggers:
 
 
 
-## <a name="Integrate-AEM">Integrate AEM</a>
+### <a name="Integrate-AEM">Integrate AEM</a>
 
 To integrate Analytics triggers and DTM with AEM, follow the step-by-step video shown below:
 
@@ -128,7 +128,7 @@ To integrate Analytics triggers and DTM with AEM, follow the step-by-step video 
 
 
 
-## <a name="Configure-DTM">Configure DTM</a>
+### <a name="Configure-DTM">Configure DTM</a>
 
 To configure DTM:
 
@@ -244,7 +244,7 @@ To integrate with Adobe I/O:
     ![webhook details](https://user-images.githubusercontent.com/29133525/30292950-2c3854a4-96f5-11e7-9acb-21df39c44a02.png)
 
 
-## <a name="Watch-It-Work">Watch It Work</a>
+## <a name="Watch-It-Work">Watch The Solution Work</a>
 
 Your enterprise may have its own tool that you can use to subscribe and listen to webhook events. Alternatively, you can use the following procedure to set up notifications with Slack.
 To watch your trigger work on Slack:
