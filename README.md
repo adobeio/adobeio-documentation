@@ -4,10 +4,8 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 
 1. Introduction
 2. Set Up Products
-3. Integrate with Adobe I/O
-4. Watch it Work
-
-
+1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
+1. [Watch the Solution Work](#Watch-It-Work)
 
 ## Introduction
 
@@ -17,15 +15,13 @@ These instruction include the following sections:
 
 1. [What's Needed](#What's-Needed)
 
-1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
-1. [Watch the Solution Work](#Watch-It-Work)
 
 
 ### What are Triggers?
 Triggers is a Marketing Cloud Activation core service that enables marketers to identify, define, and monitor key consumer behaviors, and then generate cross-solution communication to re-engage visitors.
 For more information on triggers, see the [Triggers Help Page](https://marketing.adobe.com/resources/help/en_US/mcloud/triggers.html).
 
-## <a name="What's-Needed">What's Needed</a>
+### <a name="What's-Needed">What's Needed</a>
 
 To complete this solution, you will need authorization to use the following services:
 *   Adobe Analytics, including Triggers
@@ -45,8 +41,14 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
+## Set Up Products
 
-## <a name="Set-up-Triggers">Set up Triggers</a>
+1. [Set up Analytics Triggers](#Set-up-Triggers)
+1. [Integrate Adobe Experience Manager (AEM)](#Integrate-AEM)
+1. [Configure Adobe Dynamic Tag Management (DTM)](#Configure-DTM)
+1. [Specify a New Trigger](#Specify-a-New-Trigger)
+
+### <a name="Set-up-Triggers">Set up Triggers</a>
 
 To set up Adobe Analytics triggers:
 
@@ -56,7 +58,7 @@ To set up Adobe Analytics triggers:
 
 
 
-### <a name="Admin-Console">Get Product Access through Adobe Admin Console</a>	 
+#### <a name="Admin-Console">Get Product Access through Adobe Admin Console</a>	 
 
 To get access through the Adobe Admin Console:
 
