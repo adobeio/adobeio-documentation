@@ -3,7 +3,7 @@
   - [An example:](#org07fb732)
 - [Your first webhook](#orgbb36f22)
   - [The Challenge Request](#orgec22b7a)
-  - [Using webscript.io](#org1762841)
+  - [Using webtask.io](#org1762841)
 - [Create an Integration](#org926a538)
 - [Registering the Webhook](#orgef08b06)
 - [Receiving Events](#orgecb4ae5)
@@ -124,18 +124,35 @@ Content-type: application/json
 
 <a id="org1762841"></a>
 
-## Using webscript.io
+## Create a WebHook using Webtask.io
 
-[webscript.io](https://www.webscript.io/) lets you create simple scripts in Lua to handle HTTP requests. Scripts are directly accessible on webscripts.io, making it an easy way to set up a valid webhook for testing.
+Create a WebHook using [webtask.io](https://www.webstask.io/)
 
-So create a new webscript, with as body
+Add the following code to make sure the Challenge is echoed back. This is needed for the verification by CSM when we register the webhook URL later using CSM API
 
-```lua
-return request.query.challenge;
-```
+var express = require('express');
+var Webtask = require('webtask-tools');
+var bodyParser = require('body-parser');
+var app = express();
+app.use(bodyParser.json());
+app.get('/webhook', function (req, res) {
+var result = "No challenge";
+if (req.query["challenge"]){
+result = req.query["challenge"]
+console.log("got challenge: " + req.query["challenge"]);
+} else {
+console.log("no challenge")
+}
+res.status(200).send(result)
 
-Make a note of the script URL (click on the "chain link" icon), it will look like `http://some-name.webscript.io/script`.
+});
+app.post('/webhook', function (req, res) { 
+console.log(req.body)
+res.writeHead(200, { 'Content-Type': 'application/text' });
+res.end("pong");
 
+});
+module.exports = Webtask.fromExpress(app);
 
 <a id="org926a538"></a>
 
@@ -156,9 +173,9 @@ Choose a name and description for the integration. As a platform choose "web". Y
 
 On the integration overview page, click on the Events tab. Under "Available Event Providers" you can now add "Creative Cloud Assets".
 
-When that's done, click on "Add Webhook". Give the webhook a name and description. As webhook URL you fill in the webscript.io URL, but change the protocol to `https` e.g. `https://happy-camper.webscript.io/script`.
+When that's done, click on "Add Webhook". Give the webhook a name and description. As webhook URL you fill in the webtask.io URL, but change the protocol to `https` e.g. `https://happy-camper.webtask.io/script`.
 
-Also check the boxes for the three available event types: Asset Created, Updated, Deleted. Now hit "Save", and go check out the logs on webscript.io. You should see a `GET` request, including the `challenge` that was passed along in the URL.
+Also check the boxes for the three available event types: Asset Created, Updated, Deleted. Now hit "Save", and go check out the logs on webtaskt.io. You should see a `GET` request, including the `challenge` that was passed along in the URL.
 
 
 <a id="orgecb4ae5"></a>
@@ -169,7 +186,7 @@ Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.ad
 
 The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real world application you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user.
 
-Now upload a file, and check the webscript.io logs again. If all went well then an `asset_created` event was just delivered to your webhook.
+Now upload a file, and check the webtask.io logs again. If all went well then an `asset_created` event was just delivered to your webhook.
 
 
 <a id="orgd004238"></a>
@@ -224,7 +241,7 @@ curl https://csm.adobe.io/csm/webhooks \
   -d '{"client_id": "CLIENT_ID",
        "name": "My first webhook",
        "description": "My first webhook description",
-       "webhook_url": "https://sleeping-beauty.webscript.io/script",
+       "webhook_url": "https://sleeping-beauty.webtask.io/script",
        "events_of_interest": [
          {"provider": "ccstorage", "event_code": "asset_created"},
          {"provider": "ccstorage", "event_code": "asset_updated"},
@@ -244,7 +261,7 @@ curl https://csm.adobe.io/csm/webhooks \
   "status" : "VERIFIED",
   "delivery_type" : "WEBHOOK",
   "id" : 1049,
-  "webhook_url" : "https://demo-ddldny.webscript.io/script",
+  "webhook_url" : "https://demo-ddldny.webtask.io/script",
   "events_of_interest" : [
     {
       "event_code" : "asset_created",
@@ -297,7 +314,7 @@ curl https://csm.adobe.io/csm/webhooks/CLIENT_ID \
     "status" : "VERIFIED",
     "delivery_type" : "WEBHOOK",
     "id" : 1049,
-    "webhook_url" : "https://demo-ddldny.webscript.io/script",
+    "webhook_url" : "https://demo-ddldny.webtask.io/script",
     "events_of_interest" : [
       {
         "event_code" : "asset_created",
