@@ -1,21 +1,15 @@
 # Integrate Analytics Triggers with Adobe I/O Events
 
-These instructions describe how to use Adobe Analytics triggers to notify you of Adobe I/O events, including the behavior of your site's users. Follow the instructions to try the solution yourself.
+These instructions describe how to use Adobe Analytics triggers to notify you of Adobe I/O events, including the behavior of your site's users. Follow the instructions to try the solution yourself. The instructions contain the following sections:
 
-1. Introduction
-2. Set Up Products
+1. [Introduction](#Introduction)
+1. [Set Up Products](#Set-Up-Products)
 1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
 1. [Watch the Solution Work](#Watch-It-Work)
 
 ## Introduction
 
 Use Adobe I/O to integrate with Analytics triggers so that you can be notified of events on your website.
-
-These instruction include the following sections:
-
-1. [What's Needed](#What's-Needed)
-
-
 
 ### What are Triggers?
 Triggers is a Marketing Cloud Activation core service that enables marketers to identify, define, and monitor key consumer behaviors, and then generate cross-solution communication to re-engage visitors.
