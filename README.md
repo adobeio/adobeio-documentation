@@ -2,6 +2,13 @@
 
 These instructions describe how to use Adobe Analytics triggers to notify you of Adobe I/O events, including the behavior of your site's users. Follow the instructions to try the solution yourself.
 
+1. Introduction
+2. Set Up Products
+3. Integrate with Adobe I/O
+4. Watch it Work
+
+
+
 ## Introduction
 
 Use Adobe I/O to integrate with Analytics triggers so that you can be notified of events on your website.
@@ -9,10 +16,7 @@ Use Adobe I/O to integrate with Analytics triggers so that you can be notified o
 These instruction include the following sections:
 
 1. [What's Needed](#What's-Needed)
-1. [Set up Analytics Triggers](#Set-up-Triggers)
-1. [Integrate Adobe Experience Manager (AEM)](#Integrate-AEM)
-1. [Configure Adobe Dynamic Tag Management (DTM)](#Configure-DTM)
-1. [Specify a New Trigger](#Specify-a-New-Trigger)
+
 1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
 1. [Watch the Solution Work](#Watch-It-Work)
 
