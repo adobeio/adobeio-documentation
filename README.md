@@ -7,7 +7,7 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
 1. [Watch the Solution Work](#Watch-It-Work)
 
-<a name="Introduction">## Introduction</a>
+## <a name="Introduction">Introduction</a>
 
 Before setting up and integrating with Adobe I/O, read the following sections in this Introduction:
 
@@ -39,7 +39,7 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
-<a name="Set-Up-Products">## Set Up Products</a>
+## <a name="Set-Up-Products">Set Up Products</a>
 
 
 1. [Set up Analytics Triggers](#Set-up-Triggers)
