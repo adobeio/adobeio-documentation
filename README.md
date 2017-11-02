@@ -3,8 +3,11 @@
 These instructions describe how to use Adobe Analytics triggers to notify you of Adobe I/O events, including the behavior of your site's users. Follow the instructions to try the solution yourself. The instructions contain the following sections:
 
 1. [Introduction](#Introduction)
+
 1. [Set Up Products](#Set-Up-Products)
+
 1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
+
 1. [Watch the Solution Work](#Watch-It-Work)
 
 ## <a name="Introduction">Introduction</a>
@@ -41,20 +44,23 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
-
-1. [Set up Analytics Triggers](#Set-up-Triggers)
-1. [Integrate Adobe Experience Manager (AEM)](#Integrate-AEM)
-1. [Configure Adobe Dynamic Tag Management (DTM)](#Configure-DTM)
-1. [Specify a New Trigger](#Specify-a-New-Trigger)
+1. [Set Up AEM](#Integrate-AEM)
+1. [Set up Analytics](#Set-up-Triggers)
 
 ### <a name="Set-up-Triggers">Set up Analytics Triggers</a>
 
 To set up Adobe Analytics triggers:
 
 1. [Get Product Access from Admin Console](#Admin-Console).
+
 2. [Configure reporting for triggers](#Reporting-for-Triggers).
 
+### <a name="Integrate-AEM">Set Up AEM</a>
 
+To integrate Analytics triggers and DTM with AEM, follow the step-by-step video shown below:
+
+
+[![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
 
 
 #### <a name="Admin-Console">Get Product Access through Adobe Admin Console</a>	 
@@ -115,16 +121,6 @@ To configure reporting for Triggers:
 4. On the Reports Suites Manager page, click **Create New** and select **Report Suite**. Configure the new report suite so that it is accessible in Adobe Analytics.
 
     ![report suite manager](https://user-images.githubusercontent.com/29133525/30260977-9a224b50-9687-11e7-9bb9-c847a03e5735.png)
-
-
-
-### <a name="Integrate-AEM">Integrate AEM</a>
-
-To integrate Analytics triggers and DTM with AEM, follow the step-by-step video shown below:
-
-
-[![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
-
 
 
 ### <a name="Configure-DTM">Configure DTM</a>
