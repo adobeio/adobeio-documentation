@@ -1,3 +1,5 @@
+# Adobe I/O Events Webhooks
+
 - [Introduction](#org3786b01)
 - [Concepts](#org81068e4)
   - [An example:](#org07fb732)
@@ -18,16 +20,16 @@
 
 <a id="org3786b01"></a>
 
-# Introduction
+## Introduction
 
-With Adobe I/O Events webhooks your application can sign up to be notified whenever certain events occur. For example, when a user uploads a file to Adobe Creative Cloud Assets then this generates an event. With the right webhook in place your application is instantly notified that this event happened.
+With Adobe I/O Events webhooks, your application can sign up to be notified whenever certain events occur. For example, when a user uploads a file to Adobe Creative Cloud Assets, this action generates an event. With the right webhook in place, your application is instantly notified that this event happened.
 
-To start receiving events you register a webhook, specifying a Webhook URL and the types of events you want to receive. Each event will result in a HTTP request to the given URL, notifying your application.
+To start receiving events, you register a webhook, specifying a webhook URL and the types of events you want to receive. Each event will result in a HTTP request to the given URL, notifying your application.
 
 
 <a id="org81068e4"></a>
 
-# Concepts
+## Concepts
 
 An **Event** is a JSON object that describes something that happened.
 
@@ -40,7 +42,7 @@ You start receiving events by creating a **Webhook Registration**, providing a n
 
 <a id="org07fb732"></a>
 
-## An example:
+### An example:
 
 Acme Inc. wants to be notified when a new file is uploaded to Adobe Creative Cloud Assets, so it creates the following webhook registration:
 
@@ -81,7 +83,7 @@ Content-type: application/json
 
 <a id="orgbb36f22"></a>
 
-# Your first webhook
+## Your first webhook
 
 Before you can register a webhook, the webhook needs to be online and operational. If not then the registration will fail. So you need to take care of setting that up first.
 
@@ -94,7 +96,7 @@ Your webhook needs to
 
 <a id="orgec22b7a"></a>
 
-## The Challenge Request
+### The Challenge Request
 
 When registering a webhook, Adobe I/O Events will first try to verify that the URL is valid. To do this it sends a HTTP GET request, with a `challenge` query parameter. The webhook should respond with a body containing the value of the `challenge` query parameter.
 
@@ -102,7 +104,7 @@ When registering a webhook, Adobe I/O Events will first try to verify that the U
 GET https://acme.example.com?challenge=747-ff3a-998
 ```
 
-**Response**
+#### Response
 
 You can either respond by placing the challenge value directly in the response body
 
@@ -124,22 +126,19 @@ Content-type: application/json
 
 <a id="org1762841"></a>
 
-## Using webscript.io
+### Testing with ngrok
+[Ngrok](https://ngrok.com/) is a utility for enabling secure introspectable tunnels to your localhost. With ngrok, you can securely expose a local web server to the internet and run your own personal web services from your own machine, safely encrypted behind your local NAT or firewall. With ngrok, you can iterate quickly without redeploying your app or affecting your customers. 
 
-[webscript.io](https://www.webscript.io/) lets you create simple scripts in Lua to handle HTTP requests. Scripts are directly accessible on webscripts.io, making it an easy way to set up a valid webhook for testing.
+Among other things, ngrok is a great tool for testing webhooks. Once you've downloaded and installed [ngrok](https://ngrok.com/), you run it from a command line, specifying hte protocol and port you want to monitor:
+```ngrok http 4040```
 
-So create a new webscript, with as body
+![ngrok on port 4040](img/ngrok.png "ngrok on port 4040")
 
-```lua
-return request.query.challenge;
-```
-
-Make a note of the script URL (click on the "chain link" icon), it will look like `http://some-name.webscript.io/script`.
-
+In the ngrok UI, you can see the URL for your localhost, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly.
 
 <a id="org926a538"></a>
 
-# Create an Integration
+## Create an Integration
 
 Open the [Adobe I/O Console](http://console.adobe.io/), and click on [new integration](https://console.adobe.io/integrations/new). You have the choice between "Acess An API" or "Receive Realtime Events". Choose "Access an API", and click "Continue".
 
@@ -152,7 +151,7 @@ Choose a name and description for the integration. As a platform choose "web". Y
 
 <a id="orgef08b06"></a>
 
-# Registering the Webhook
+## Registering the Webhook
 
 On the integration overview page, click on the Events tab. Under "Available Event Providers" you can now add "Creative Cloud Assets".
 
@@ -163,7 +162,7 @@ Also check the boxes for the three available event types: Asset Created, Updated
 
 <a id="orgecb4ae5"></a>
 
-# Receiving Events
+## Receiving Events
 
 Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console.
 
@@ -174,14 +173,14 @@ Now upload a file, and check the webscript.io logs again. If all went well then 
 
 <a id="orgd004238"></a>
 
-# Using the API
+## Using the API
 
 You can also create webhooks, and retrieve information about them, using the Adobe I/O Events REST API. The following examples will use [cURL](https://curl.haxx.se/) to make HTTP requests from the terminal.
 
 
 <a id="org649c409"></a>
 
-## Authentication
+### Authentication
 
 All API requests must include four pieces of identifying information: the `CLIENT_ID`, `CONSUMER_ID`, and `APPLICATION_ID` of the integration, as well as a OAuth2 token.
 
@@ -207,7 +206,7 @@ The `CLIENT_ID` is also included in the request body.
 
 <a id="org226a51a"></a>
 
-## Creating the webhook
+### Creating the webhook
 
 Instead of going through the Adobe I/O Console, you can use the CSM (Channel & Subscription Management) API to do the same thing. This cURL command registers a webhook. Make sure to replace `OAUTH2_TOKEN`, `APPLICATION_ID`, `CONSUMER_ID`, and `CLIENT_ID` with their actual values.
 
@@ -234,7 +233,7 @@ curl https://csm.adobe.io/csm/webhooks \
 
 <a id="org85f36da"></a>
 
-### Response
+#### Response
 
 ```json
 {
@@ -269,7 +268,7 @@ curl https://csm.adobe.io/csm/webhooks \
 
 <a id="org1a8bf8b"></a>
 
-## Checking that it worked
+### Checking that it worked
 
 You can also use the API to get a list of all the webhooks, so you can verify that the webhook is really there.
 
