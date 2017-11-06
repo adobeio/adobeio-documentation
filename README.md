@@ -1,29 +1,33 @@
 # Set up AEM for Adobe I/O Events
 
-These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O events. 
+Use Adobe I/O for notification of Adobe Experience Manager (AEM) events, such as page or asset changes. These instructions describe how to set up AEM for Adobe I/O events and include the following sections:
+
+1. [Introduction](#Introduction)
+
+1. [Set Up Products](#Set-Up-Products)
+
+1. [Use Adobe I/O](#Use-Adobe-I/O)
+
+1. [Watch the Solution Work](#Watch-It-Work)
+
+## <a name="Introduction">Introduction</a>
 
 ## Introduction
 
-Use Adobe I/O for notification of AEM events such as page or asset changes.
-
-These instructions include the following sections:
+Before setting up and using AEM with Adobe I/O, read the following sections in this Introduction:
 
 1. What's Needed
 1. Register an AEM Event Publisher
 1. Register an AEM Consumer App
 
-## What's Needed
+### What's Needed
 
 To complete this solution, you will need authorization to use the following services:
 
 *   Adobe Marketing Cloud Activation Core Services, with administrative permissions
 *   AEM instance setup with version 6.2 or 6.3, with administrative permissions
 *   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not already have one
-*   Adobe I/O Console setup, with administrative permissions for your enterprise organization
-
-### Administrative Permissions
-
-If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
+*   Adobe I/O Console setup, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
