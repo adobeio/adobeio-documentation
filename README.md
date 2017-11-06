@@ -40,7 +40,7 @@ To register an AEM Event Publisher:
 
 ### Register an AEM Event Consumer App
 
-You will need to register an AEM event consumer App to see , you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe CSM.
+You will need to register an AEM event consumer App to see responses to AEM changes. To do this, you can set up a webhook is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
 
 
 ### Install the AEM Event Proxy Package
