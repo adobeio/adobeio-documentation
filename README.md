@@ -6,7 +6,7 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 
 1. [Set Up Products](#Set-Up-Products)
 
-1. [Integrate with Adobe I/O](#Integrate-with-Adobe-I/O)
+1. [Use Adobe I/O](#Use-Adobe-I/O)
 
 1. [Watch the Solution Work](#Watch-It-Work)
 
@@ -205,7 +205,7 @@ Once you save the trigger, any event in your report suite that meets the defined
 
 ![triggers listing](https://user-images.githubusercontent.com/29133525/30292257-af31b0ce-96f2-11e7-8e3c-32531e0d0d9e.png)
 
-## <a name="Integrate-with-Adobe-I/O">Integrate with Adobe I/O</a>
+## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
 To integrate with Adobe I/O:
 
