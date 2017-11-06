@@ -12,7 +12,7 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 
 ## <a name="Introduction">Introduction</a>
 
-Before setting up and integrating with Adobe I/O, read the following sections in this Introduction:
+Before setting up and using Adobe I/O, read the following sections in this Introduction:
 
 1. What are Triggers?
 2. What's Needed
