@@ -28,7 +28,7 @@ To complete this solution, you will need authorization to use the following serv
 *   Adobe Analytics, including Triggers
 *	Adobe Marketing Cloud Activation Core Services
 *   Adobe Experience Manager (AEM), or an external website that connects to Analytics
-*   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not have one already.
+*   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not have one already
 
 
 ### Administrative Permissions
@@ -60,13 +60,13 @@ To integrate Analytics triggers and DTM with AEM, follow the step-by-step video 
 
 To set up Adobe Analytics triggers:
 
-1. [Get Product Access from Admin Console](#Admin-Console).
+1. [Get Product Access from Admin Console](#Admin-Console)
 
-2. [Configure Reporting for Triggers](#Reporting-for-Triggers).
+2. [Configure Reporting for Triggers](#Reporting-for-Triggers)
 
-3. [Configure DTM](#Configure-DTM).
+3. [Configure DTM](#Configure-DTM)
 
-4. [Specify a New Trigger](#Specify-a-New-Trigger).
+4. [Specify a New Trigger](#Specify-a-New-Trigger)
 
 
 
@@ -207,7 +207,7 @@ Once you save the trigger, any event in your report suite that meets the defined
 
 ## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
-To integrate with Adobe I/O:
+To use Adobe I/O:
 
 1. On the Adobe I/O console, click **New Integration**.
 
