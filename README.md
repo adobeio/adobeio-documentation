@@ -31,13 +31,16 @@ To complete this solution, you will need authorization to use the following serv
 
 
  
-## Register an AEM Event Publisher
+### Register an AEM Event Publisher
 To register an AEM Event Publisher:
 
 1. Install the AEM Event Proxy Package.
 1. Configure Adobe I/O Events Cloud Service.
 1. Perform an AEM Health and Configuration Check.
 
+### Register an AEM Event Consumer App
+
+You will need to register an AEM event consumer App to see , you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe CSM.
 
 
 ### Install the AEM Event Proxy Package
