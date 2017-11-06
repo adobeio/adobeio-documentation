@@ -62,7 +62,12 @@ To set up Adobe Analytics triggers:
 
 1. [Get Product Access from Admin Console](#Admin-Console).
 
-2. [Configure reporting for triggers](#Reporting-for-Triggers).
+2. [Configure Reporting for Triggers](#Reporting-for-Triggers).
+
+3. [Configure DTM](#Configure-DTM).
+
+4. [Specify a New Trigger](#Specify-a-New-Trigger).
+
 
 
 #### <a name="Admin-Console">Get Product Access through Adobe Admin Console</a>	 
@@ -125,7 +130,7 @@ To configure reporting for Triggers:
     ![report suite manager](https://user-images.githubusercontent.com/29133525/30260977-9a224b50-9687-11e7-9bb9-c847a03e5735.png)
 
 
-### <a name="Configure-DTM">Configure DTM</a>
+#### <a name="Configure-DTM">Configure DTM</a>
 
 To configure DTM:
 
@@ -164,7 +169,7 @@ To configure DTM:
     ![publish button](https://user-images.githubusercontent.com/29133525/30290297-0f3a7cb4-96ec-11e7-8e68-2b45200e76ca.png)
 
 
-### <a name="Specify-a-New-Trigger">Specify a New Trigger</a>
+#### <a name="Specify-a-New-Trigger">Specify a New Trigger</a>
 
 You can specify triggers for many events on your site. For example, in this case, we will set notifications to be sent when  carts are abandoned. We will set a trigger for sessions when the user visits either a **cart.html**, **checkout.html** or **order.html** page, but never reaches the **thank-you.html** page within a ten minute session. The trigger indicates that the user added products to the cart, and was about to make a purchase, but later decided otherwise, or forgot to complete the purchase.
 
