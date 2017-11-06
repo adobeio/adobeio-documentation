@@ -12,8 +12,6 @@ Use Adobe I/O for notification of Adobe Experience Manager (AEM) events, such as
 
 ## <a name="Introduction">Introduction</a>
 
-## Introduction
-
 Before setting up and using AEM with Adobe I/O, read the following sections in this Introduction:
 
 1. What's Needed
