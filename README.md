@@ -46,7 +46,7 @@ To set up AEM for Adobe I/O Events:
 
 1. [Install the AEM Event Proxy Package](#Install-the-AEM-Event-Proxy-Package)
 
-1. [Configure OAuth and IMS Authentication](#Configure-OAuth-IMS-Authentication)
+1. [Configure OAuth and IMS Authentication](#Configure-OAuth-and-IMS-Authentication)
 
 
 ### <a name="Install-the-AEM-Event-Proxy-Package">Install the AEM Event Proxy Package</a>
