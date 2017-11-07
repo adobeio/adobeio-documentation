@@ -149,7 +149,7 @@ To configure DTM:
 
 3.	On the **Overview** tab, click the **Settings** icon.
 
-    ![analytics settings icon](https://user-images.githubusercontent.com/29133525/30289100-3ab1926e-96e8-11e7-9e7b-88d2c0e3b559.png)
+   ![settings icon](https://user-images.githubusercontent.com/29133525/32475040-fdcf1454-c32c-11e7-8e13-c5b1073b5325.png)
 
 4. On the Settings page, set the variable as follows:
 
