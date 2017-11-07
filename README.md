@@ -126,8 +126,7 @@ To configure reporting for Triggers:
     ![analytics launcher](https://user-images.githubusercontent.com/29133525/30260673-01c26c88-9686-11e7-8b31-5203c6386591.png)
 
 3. On the **Admin** tab of the Analytics home screen, click the **Report Suites** option. You must have administrative privileges for the **Admin** tab to appear on your screen.
-
-    ![admin tab for report suites](https://user-images.githubusercontent.com/29133525/30260836-e3d8b370-9686-11e7-99e6-8832f74b8578.png)
+    ![admin tab for report suites](https://user-images.githubusercontent.com/29133525/32473097-075ec802-c323-11e7-9f4e-371acf9f4914.png)
 
 
 4. On the Reports Suites Manager page, click **Create New** and select **Report Suite**. Configure the new report suite so that it is accessible in Adobe Analytics.
