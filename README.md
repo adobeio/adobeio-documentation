@@ -98,17 +98,18 @@ To get access through the Adobe Admin Console:
 
     4.	Under **Enabled Services**, select the option for **Triggers**.
 
-![admin console configure product](https://user-images.githubusercontent.com/29133525/30259707-086fdda0-9680-11e7-8ad9-e00e5a733cd1.png)
+    ![admin console configure product](https://user-images.githubusercontent.com/29133525/30259707-086fdda0-9680-11e7-8ad9-e00e5a733cd1.png)
 
   5. To give permissions to users who want access to Adobe services in the cloud:
 
      1. Click **User management** and then click **Users**.
      2. Click on user's name.
-![user name](https://user-images.githubusercontent.com/29133525/30260182-0e9e21ca-9683-11e7-8ce8-c6def3dcc2c6.png)
+     
+    ![user name](https://user-images.githubusercontent.com/29133525/30260182-0e9e21ca-9683-11e7-8ce8-c6def3dcc2c6.png)
 
      3. For the user's **Access and rights**, provide **Product Access** and **Admin Rights** from the drop-down for the available products and services.
 
-![user permissions](https://user-images.githubusercontent.com/29133525/30260361-258f91e2-9684-11e7-8d1b-4c58d1d22b8b.png)
+    ![user permissions](https://user-images.githubusercontent.com/29133525/30260361-258f91e2-9684-11e7-8d1b-4c58d1d22b8b.png)
 
 
 
@@ -126,6 +127,7 @@ To configure reporting for Triggers:
     ![analytics launcher](https://user-images.githubusercontent.com/29133525/30260673-01c26c88-9686-11e7-8b31-5203c6386591.png)
 
 3. On the **Admin** tab of the Analytics home screen, click the **Report Suites** option. You must have administrative privileges for the **Admin** tab to appear on your screen.
+
     ![admin tab for report suites](https://user-images.githubusercontent.com/29133525/32473097-075ec802-c323-11e7-9f4e-371acf9f4914.png)
 
 
@@ -186,6 +188,8 @@ To specify a new trigger:
 2. On the Triggers card, click the **Launch** button.
 
     ![dtm icon](https://user-images.githubusercontent.com/29133525/32473493-013ccfe4-c325-11e7-9ad1-ef887b98b917.png)
+    
+    ![resize trial](https://user-images.githubusercontent.com/29133525/32473593-76d257b0-c325-11e7-9060-a443c84a7d2a.png)
 
 3. On the **Triggers** page, click the **New Triggers** button and select **Abandonment**.
 
@@ -244,7 +248,6 @@ To use Adobe I/O:
 
 
 7. Add Webhook details and Click **Save**. For information on creating and registering webhooks, see [Introduction to Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
-
 
     ![webhook details](https://user-images.githubusercontent.com/29133525/30292950-2c3854a4-96f5-11e7-9acb-21df39c44a02.png)
 
