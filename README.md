@@ -32,9 +32,9 @@ To complete this solution, you will need authorization to use the following serv
 ### <a name="Register-an-AEM-Event-Publisher">Register an AEM Event Publisher</a>
 To register an AEM Event Publisher:
 
-1. Install the AEM Event Proxy Package.
-1. Configure Adobe I/O Events Cloud Service.
-1. Perform an AEM Health and Configuration Check.
+1. [Install the AEM Event Proxy Package](#Register-an-AEM-Event-Publisher)
+1. [Configure Adobe I/O Events Cloud Service]
+1. [Perform an AEM Health and Configuration Check]
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
@@ -42,8 +42,13 @@ You will need to register an AEM event consumer App to see responses to AEM chan
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
+To set up AEM for Adobe I/O Events, you will need to do the following:
 
-### Install the AEM Event Proxy Package
+1. [Install the AEM Event Proxy Package](#Install-the-AEM-Event-Proxy-Package)
+1. [Configure OAuth and IMS Authentication](#Configure-OAuth-IMS-Authentication)
+
+
+### <a name="Install-the-AEM-Event-Proxy-Package">Install the AEM Event Proxy Package</a>
 
 To install the AEM Event Proxy Package:
 
@@ -87,16 +92,6 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
 
 ![crxdelite](https://user-images.githubusercontent.com/29133525/31087331-dbd0ac58-a759-11e7-9a0d-199d088763f3.png)
-
-## Configure Adobe I/O Events Cloud Service
-
-To configure Adobe I/O Events Cloud Service:
-
-1. Configure oAuth and IMS Authorization and Authentication.
-2. Create an Adobe I/O Console Integration.
-3. Configure Adobe I/O Events as a Cloud Service in AEM.
-4. Configure Advanced Adobe I/O Events.
-
 
 ### Configure OAuth and IMS Authentication
 
@@ -150,7 +145,6 @@ To add the key store to the AEM Eventproxy-service user group:
 
 ![eventproxy service](https://user-images.githubusercontent.com/29133525/31091250-91d7788a-a767-11e7-9187-c55d8b04c4f4.png)
  
- 
 3. On **Account settings**, click **Create KeyStore** and create the key store.
 
 4. Click **Manage KeyStore** and then click to expand the section for **Add Private Key for Key Store file.** 
@@ -162,7 +156,6 @@ To add the key store to the AEM Eventproxy-service user group:
 7. Provide the private key password and then provide the private key alias **eventproxy**.
 
 8. Click **Submit**.
- 
  
  ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
  
@@ -177,6 +170,18 @@ The base url that you specify appears on the AEM Web Console.
  
  
 ## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
+
+
+## Configure Adobe I/O Events Cloud Service
+
+To configure Adobe I/O Events Cloud Service:
+
+1. Configure oAuth and IMS Authorization and Authentication.
+2. Create an Adobe I/O Console Integration.
+3. Configure Adobe I/O Events as a Cloud Service in AEM.
+4. Configure Advanced Adobe I/O Events.
+
+
 
 To create an Adobe I/O Console Integration:
 
