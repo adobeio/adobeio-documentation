@@ -47,11 +47,11 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
-To complete this solution:
+To use this solution, you will need to set up the following Adobe products:
 
-1. [Set Up AEM](#Integrate-AEM)
+1. [AEM](#Integrate-AEM)
 
-1. [Set Up Analytics](#Set-up-Triggers)
+1. [Analytics](#Set-up-Triggers)
 
 ### <a name="Integrate-AEM">Set Up AEM</a>
 
@@ -61,9 +61,9 @@ To integrate Analytics triggers and Dynamic Tag Management (DTM) with AEM, follo
    [![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
 
 
-### <a name="Set-up-Triggers">Set up Analytics Triggers</a>
+### <a name="Set-up-Triggers">Set up Analytics</a>
 
-To set up Adobe Analytics triggers:
+To set up Analytics:
 
 1. [Get Product Access from Admin Console](#Admin-Console)
 
