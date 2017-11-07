@@ -86,7 +86,7 @@ To get access through the Adobe Admin Console:
 
 3.	On the Products page of the console, verify that your requested products have been added to the site and then click the Adobe Analytics icon.
 
-![admin products page](https://user-images.githubusercontent.com/29133525/30259844-d5bfffce-9680-11e7-89fc-fee114664b1e.png)
+   ![admin products page](https://user-images.githubusercontent.com/29133525/30259844-d5bfffce-9680-11e7-89fc-fee114664b1e.png)
 
 4.	Click the **Configuration Details** tab and do the following:
 
@@ -98,14 +98,14 @@ To get access through the Adobe Admin Console:
 
     4.	Under **Enabled Services**, select the option for **Triggers**.
 
-    ![admin console configure product](https://user-images.githubusercontent.com/29133525/30259707-086fdda0-9680-11e7-8ad9-e00e5a733cd1.png)
+      ![admin console configure product](https://user-images.githubusercontent.com/29133525/30259707-086fdda0-9680-11e7-8ad9-e00e5a733cd1.png)
 
   5. To give permissions to users who want access to Adobe services in the cloud:
 
      1. Click **User management** and then click **Users**.
      2. Click on user's name.
      
-    ![user name](https://user-images.githubusercontent.com/29133525/30260182-0e9e21ca-9683-11e7-8ce8-c6def3dcc2c6.png)
+       ![user name](https://user-images.githubusercontent.com/29133525/30260182-0e9e21ca-9683-11e7-8ce8-c6def3dcc2c6.png)
 
      3. For the user's **Access and rights**, provide **Product Access** and **Admin Rights** from the drop-down for the available products and services.
 
