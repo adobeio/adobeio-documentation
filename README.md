@@ -252,7 +252,7 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
     ![webhook details](https://user-images.githubusercontent.com/29133525/32476125-b55c816a-c332-11e7-8edd-a5ca7d1d5611.png)
 
 
-## <a name="Watch-It-Work">Watch The Solution Work</a>
+## <a name="Watch-It-Work">Watch the Solution Work</a>
 
 Your enterprise may have its own tool that you can use to subscribe and listen to webhook events. Alternatively, you can use the following procedure to set up notifications with Slack.
 To watch your trigger work on Slack:
