@@ -42,9 +42,10 @@ You will need to register an AEM event consumer App to see responses to AEM chan
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
-To set up AEM for Adobe I/O Events, you will need to do the following:
+To set up AEM for Adobe I/O Events:
 
 1. [Install the AEM Event Proxy Package](#Install-the-AEM-Event-Proxy-Package)
+
 1. [Configure OAuth and IMS Authentication](#Configure-OAuth-IMS-Authentication)
 
 
@@ -93,15 +94,18 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 
 ![crxdelite](https://user-images.githubusercontent.com/29133525/31087331-dbd0ac58-a759-11e7-9a0d-199d088763f3.png)
 
-### Configure OAuth and IMS Authentication
+### <a name="Configure-OAuth-and-IMS-Authentication">Configure OAuth and IMS Authentication</a>
 
 To configure OAuth and IMS authentication:
 
-1. Create a certificate and keystore.
-2. Add the keystore to the AEM eventproxy-service user group.
-3. Configure the AEM Link Externalizer.
+1. [Create a certificate and keystore](#Create-a-certificate-and-keystore)
 
-#### Create a Certificate and Keystore
+2. [Add the keystore to the AEM eventproxy-service user group](#Add-the-keystore-to-the-AEM-eventproxy-service-user-group)
+
+3. [Configure the AEM Link Externalizer](#Configure-the-AEM-Link-Externalizer)
+
+#### <a name="Create-a-Certificate-and-Keystore">Create a Certificate and Keystore</a>
+
 To create a certificate and keystore:
 
 1. Create an RSA private/public certificate in OpenSSL with the following command:
@@ -133,7 +137,7 @@ openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -n
 Note: On Windows systems, this command expression may vary. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
 
-#### Add the Key Store to the AEM Eventproxy-service User Group 
+#### <a name="Add-the-Keystore-to-the-AEM-Eventproxy-service-user-group">Add the Keystore to the AEM Eventproxy-service User Group</a> 
 
 To add the key store to the AEM Eventproxy-service user group:
 
@@ -159,7 +163,8 @@ To add the key store to the AEM Eventproxy-service user group:
  
  ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
  
-### Configure AEM Link Externalizer
+### <a name="Configure-AEM-Link-Externalizer">Configure AEM Link Externalizer</a>
+
 The AEM Link Externalizer name can be **author** or any other alias specified in the [Adobe Experience Manager Web Console](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl).
 
 Note: Do not use only the word “localhost” as the default name because others may use it. This will then cause confusion and make it difficult to determine which instance is yours. 
