@@ -176,18 +176,11 @@ The base url that you specify appears on the AEM Web Console.
 
 Use Adobe I/O to do the following:
 
-1. [Configure Adobe I/O Events Cloud Service]
-1. [Perform Advanced Configuration for Adobe I/O Events]
+1. [Create an Adobe I/O Console Integration](#Create-an-Adobe-I/O-Console-Integration)
+1. [Configure Adobe I/O Events as a Cloud Service in AEM](#Configure-Adobe-I/O-Events-as-a-Cloud-Service-in-AEM)
+1. [Configure Advanced Adobe I/O Events](#Configure-Advanced-Adobe-I/O-Events)
 
-## Configure Adobe I/O Events Cloud Service
-
-To configure Adobe I/O Events Cloud Service:
-
-2. Create an Adobe I/O Console Integration.
-3. Configure Adobe I/O Events as a Cloud Service in AEM.
-4. Configure Advanced Adobe I/O Events.
-
-
+### <a name="Create-an-Adobe-I/O-Console-Integration">Create an Adobe I/O Console Integration</a>
 
 To create an Adobe I/O Console Integration:
 
@@ -207,7 +200,7 @@ To create an Adobe I/O Console Integration:
 
 <img width="1318" alt="new integration dialog box" src="https://user-images.githubusercontent.com/29133525/31202886-c98730de-a921-11e7-8e86-44f9fa6759b9.png">
 
-## Configuring Adobe I/O Events as a Cloud Service in AEM
+### <a name="Configure-Adobe-I/O-Events-as-a-Cloud-Service-in-AEM">Configure Adobe I/O Events as a Cloud Service in AEM</a>
 
 To configure Adobe I/O events as a cloud service in AEM:
 
@@ -232,7 +225,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 **API Key and Client Secret on Adobe I/O Console**
 
 
-### Perform Advanced Configuration for Adobe I/O Events
+### <a name="Configure-Advanced-Adobe-I/O Events">Configure Advanced Adobe I/O Events</a>
 
 For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
 *   the OSGI event **topic** 
@@ -266,7 +259,7 @@ The default paths for asset and page events are listed near the top of the confi
 
 
  
-## Perform AEM Health and Configuration Check
+## Perform an AEM Health and Configuration Check
 
 You can use the [AEM Web Console Sling Health Check](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000) to verify your configurations are correct.
 
