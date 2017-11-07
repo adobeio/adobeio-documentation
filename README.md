@@ -12,13 +12,13 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 
 ## <a name="Introduction">Introduction</a>
 
-Before setting up and using AEM with Adobe I/O, read the following sections in this Introduction:
+Before setting up and using AEM with Adobe I/O, you will need to do the following:
 
-1. What's Needed
+1. Obtain Authorization
 1. Register an AEM Event Publisher
 1. Register an AEM Consumer App
 
-### What's Needed
+### Obtain Authorization
 
 To complete this solution, you will need authorization to use the following services:
 
