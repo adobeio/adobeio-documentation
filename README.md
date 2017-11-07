@@ -189,6 +189,9 @@ To specify a new trigger:
 
     ![dtm icon](https://user-images.githubusercontent.com/29133525/32473493-013ccfe4-c325-11e7-9ad1-ef887b98b917.png)
     
+    ![resize 2 dtm card](https://user-images.githubusercontent.com/29133525/32473778-715a6588-c326-11e7-9114-f4a2b7da2fbf.png)
+
+    
     ![resize trial](https://user-images.githubusercontent.com/29133525/32473593-76d257b0-c325-11e7-9060-a443c84a7d2a.png)
 
 3. On the **Triggers** page, click the **New Triggers** button and select **Abandonment**.
