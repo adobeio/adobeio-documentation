@@ -131,7 +131,7 @@ To configure reporting for Triggers:
 
 4. On the Reports Suites Manager page, click **Create New** and select **Report Suite**. Configure the new report suite so that it is accessible in Adobe Analytics.
 
-    ![report suite manager](https://user-images.githubusercontent.com/29133525/32473215-acffebce-c323-11e7-8227-fe8d1d72bc97.png)
+    ![report suite manager](https://user-images.githubusercontent.com/29133525/32474884-36e55ee8-c32c-11e7-8a50-928b73efb2f8.png)
 
 
 #### <a name="Configure-DTM">Configure DTM</a>
