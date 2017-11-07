@@ -97,7 +97,7 @@ To get access through the Adobe Admin Console:
 
     4.	Under **Enabled Services**, select the option for **Triggers**.
 
-     ![admin console configure product](https://user-images.githubusercontent.com/29133525/30259707-086fdda0-9680-11e7-8ad9-e00e5a733cd1.png)
+     ![admin console configure product](https://user-images.githubusercontent.com/29133525/32474470-df2f94c2-c329-11e7-8db1-7b06a211fca8.png)
 
   5. To give permissions to users who want access to Adobe services in the cloud:
 
