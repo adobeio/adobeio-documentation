@@ -244,7 +244,7 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
         ```
     2. Upload the public certificate by clicking the **Select a File** link and then selecting the certificate from your computer:
 
-        ![public certificate](https://user-images.githubusercontent.com/29133525/30292851-d78ee8e6-96f4-11e7-82ea-61bd85eb4212.png)
+        ![public certificate](https://user-images.githubusercontent.com/29133525/32476036-2e563e40-c332-11e7-9fbd-889f1ba8054f.png)
 
 
 7. Add Webhook details and Click **Save**. For information on creating and registering webhooks, see [Introduction to Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
