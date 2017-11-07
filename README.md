@@ -98,10 +98,8 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 
 To configure OAuth and IMS authentication:
 
-1. [Create a certificate and keystore](#Create-a-certificate-and-keystore)
-
-2. [Add the keystore to the AEM eventproxy-service user group](#Add-the-keystore-to-the-AEM-eventproxy-service-user-group)
-
+1. [Create a Certificate and Keystore](#Create-a-certificate-and-keystore)
+2. [Add the Keystore to the AEM eventproxy-service User Group](#Add-the-keystore-to-the-AEM-eventproxy-service-user-group)
 3. [Configure the AEM Link Externalizer](#Configure-the-AEM-Link-Externalizer)
 
 #### <a name="Create-a-Certificate-and-Keystore">Create a Certificate and Keystore</a>
@@ -137,7 +135,7 @@ openssl pkcs12 -export -in private-key-crt -out keystore.p12 -name eventproxy -n
 Note: On Windows systems, this command expression may vary. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
 
-#### <a name="Add-the-Keystore-to-the-AEM-Eventproxy-service-user-group">Add the Keystore to the AEM Eventproxy-service User Group</a> 
+#### <a name="Add-the-Keystore-to-the-AEM-eventproxy-service-user-group">Add the Keystore to the AEM eventproxy-service User Group</a> 
 
 To add the key store to the AEM Eventproxy-service user group:
 
@@ -163,7 +161,7 @@ To add the key store to the AEM Eventproxy-service user group:
  
  ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
  
-### <a name="Configure-AEM-Link-Externalizer">Configure AEM Link Externalizer</a>
+### <a name="Configure-AEM-Link-Externalizer">Configure the AEM Link Externalizer</a>
 
 The AEM Link Externalizer name can be **author** or any other alias specified in the [Adobe Experience Manager Web Console](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl).
 
@@ -176,12 +174,15 @@ The base url that you specify appears on the AEM Web Console.
  
 ## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
+Use Adobe I/O to do the following:
+
+1. [Configure Adobe I/O Events Cloud Service]
+1. [Perform Advanced Configuration for Adobe I/O Events]
 
 ## Configure Adobe I/O Events Cloud Service
 
 To configure Adobe I/O Events Cloud Service:
 
-1. Configure oAuth and IMS Authorization and Authentication.
 2. Create an Adobe I/O Console Integration.
 3. Configure Adobe I/O Events as a Cloud Service in AEM.
 4. Configure Advanced Adobe I/O Events.
@@ -353,7 +354,7 @@ The responses appear in your webhook.
 
 <img width="908" alt="webhook report log" src="https://user-images.githubusercontent.com/29133525/31210699-57b6f6bc-a951-11e7-8199-f1731125ee35.png">
 
-
+Note: Please help us make this documentation as useful as possible. If you find an error or have a suggestion to improve it, please click the Issues tab on this Github repository and 
  
  
  
