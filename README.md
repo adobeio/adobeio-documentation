@@ -185,8 +185,7 @@ To specify a new trigger:
 
 2. On the Triggers card, click the **Launch** button.
 
-    ![trigges launcher](https://user-images.githubusercontent.com/29133525/30290916-5a4e58a4-96ee-11e7-8751-ce859cd75433.png)
-
+    ![dtm icon](https://user-images.githubusercontent.com/29133525/32473493-013ccfe4-c325-11e7-9ad1-ef887b98b917.png)
 
 3. On the **Triggers** page, click the **New Triggers** button and select **Abandonment**.
 
