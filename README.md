@@ -210,7 +210,10 @@ Once you save the trigger, any event in your report suite that meets the defined
 
 ## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
-To use Adobe I/O:
+Use Adobe I/O by creating a new integration with the console. To do this:
+
+1. Click the Console button at www.adobe.io.
+
 
 1. On the Adobe I/O console, click **New Integration**.
 
