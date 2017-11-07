@@ -249,7 +249,7 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 
 7. Add Webhook details and Click **Save**. For information on creating and registering webhooks, see [Introduction to Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
 
-    ![webhook details](https://user-images.githubusercontent.com/29133525/30292950-2c3854a4-96f5-11e7-9acb-21df39c44a02.png)
+    ![webhook details](https://user-images.githubusercontent.com/29133525/32476125-b55c816a-c332-11e7-8edd-a5ca7d1d5611.png)
 
 
 ## <a name="Watch-It-Work">Watch The Solution Work</a>
