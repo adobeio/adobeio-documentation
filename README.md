@@ -20,6 +20,7 @@ For more information on triggers, see the [Triggers Help Page](https://marketing
 Before setting up and using Adobe I/O, you will need to do the following:
 
 1. [Obtain Product Authorization](#Obtain-Product-Authorization)
+
 2. [Obtain Administrative Permissions](#Obtain-Administrative-Permissions)
 
 
@@ -45,6 +46,8 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
 
 ## <a name="Set-Up-Products">Set Up Products</a>
+
+To complete this solution, you will need to set up the following Adobe products:
 
 1. [Set Up AEM](#Integrate-AEM)
 
