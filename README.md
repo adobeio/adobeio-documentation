@@ -12,17 +12,19 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 
 ## <a name="Introduction">Introduction</a>
 
-Before setting up and using Adobe I/O, read the following sections in this Introduction:
-
-1. What are Triggers?
-2. What's Needed
-3. Administrative Permissions
-
 ### What are Triggers?
 Triggers is a Marketing Cloud Activation core service that enables marketers to identify, define, and monitor key consumer behaviors, and then generate cross-solution communication to re-engage visitors.
 For more information on triggers, see the [Triggers Help Page](https://marketing.adobe.com/resources/help/en_US/mcloud/triggers.html).
 
-### <a name="What's-Needed">What's Needed</a>
+
+Before setting up and using Adobe I/O, you will need to do the following:
+
+1. [Obtain Product Authorization](#Obtain-Product-Authorization)
+2. [Obtain Administrative Permissions](#Obtain-Administrative-Permissions)
+
+
+
+### <a name="Obtain-Product-Authorization">Obtain Product Authorization</a>
 
 To complete this solution, you will need authorization to use the following services:
 *   Adobe Analytics, including Triggers
@@ -31,7 +33,7 @@ To complete this solution, you will need authorization to use the following serv
 *   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not have one already
 
 
-### Administrative Permissions
+### <a name="Obtain-Administrative-Permissions">Obtain Administrative Permissions</a>
 
 You will also need administrative permissions for the following:
 * Adobe Analytics
