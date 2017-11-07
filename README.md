@@ -83,7 +83,6 @@ To get access through the Adobe Admin Console:
 
 2.	On the main screen of the Admin Console, click **Products**.
 
-
 3.	On the Products page of the console, verify that your requested products have been added to the site and then click the Adobe Analytics icon.
 
    ![admin products page](https://user-images.githubusercontent.com/29133525/30259844-d5bfffce-9680-11e7-89fc-fee114664b1e.png)
