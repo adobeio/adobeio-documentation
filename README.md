@@ -161,7 +161,7 @@ To add the key store to the AEM Eventproxy-service user group:
  
  ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
  
-### <a name="Configure-AEM-Link-Externalizer">Configure the AEM Link Externalizer</a>
+### <a name="Configure-the-AEM-Link-Externalizer">Configure the AEM Link Externalizer</a>
 
 The AEM Link Externalizer name can be **author** or any other alias specified in the [Adobe Experience Manager Web Console](http://localhost:4502/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl).
 
