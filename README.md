@@ -216,7 +216,7 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 
    ![console button](https://user-images.githubusercontent.com/29133525/32475769-c2eb9020-c330-11e7-98ce-c93753af22ec.png)
 
-1. On the Adobe I/O console, click **New Integration**.
+1. On the Adobe I/O Console, click **New Integration**.
 
     ![new integration button](https://user-images.githubusercontent.com/29133525/30292388-2ccdd986-96f3-11e7-93bd-93f74bb4e3a4.png)
 
@@ -242,7 +242,7 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
         ```
         openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt
         ```
-    2. Upload the public certificate as shown:
+    2. Upload the public certificate by clicking the **Select a file** link and then selecting the certificate from its folder:
 
         ![public certificate](https://user-images.githubusercontent.com/29133525/30292851-d78ee8e6-96f4-11e7-82ea-61bd85eb4212.png)
 
