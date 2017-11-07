@@ -162,7 +162,7 @@ To configure DTM:
         ```
     5. Click **Save eVar**.
 
-        ![set evar](https://user-images.githubusercontent.com/29133525/30289707-43110e1a-96ea-11e7-91a8-0eccac12ec1d.png)
+        ![set evar](https://user-images.githubusercontent.com/29133525/32475180-b6967356-c32d-11e7-8485-e761c5a4d323.png)
 
 5. On the **Approvals** tab, click the **Approve** button.    
 
