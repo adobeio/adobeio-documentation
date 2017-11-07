@@ -101,7 +101,7 @@ Your webhook needs to
 When registering a webhook, Adobe I/O Events will first try to verify that the URL is valid. To do this it sends a HTTP GET request, with a `challenge` query parameter. The webhook should respond with a body containing the value of the `challenge` query parameter.
 
 ```
-GET https://acme.example.com?challenge=747-ff3a-998
+GET https://acme.example.com?challenge=8ec8d794-e0ab-42df-9017-e3dada8e84f7
 ```
 
 #### Response
@@ -111,7 +111,7 @@ You can either respond by placing the challenge value directly in the response b
 ```restclient
 HTTP/1.1 200 OK
 
-747-ff3a-998
+8ec8d794-e0ab-42df-9017-e3dada8e84f7
 ```
 
 or by responding with a JSON object, including the correct `Content-Type` header
@@ -120,7 +120,7 @@ or by responding with a JSON object, including the correct `Content-Type` header
 HTTP/1.1 200 OK
 Content-type: application/json
 
-{"challenge":"747-ff3a-998"}
+{"challenge":"8ec8d794-e0ab-42df-9017-e3dada8e84f7"}
 ```
 
 
@@ -134,7 +134,7 @@ Among other things, ngrok is a great tool for testing webhooks. Once you've down
 
 ![ngrok on port 4040](img/ngrok.png "ngrok on port 4040")
 
-In the ngrok UI, you can see the URL for your localhost, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, you would then replace the ngrok URL with the public URL for your deployed app.
+In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, you would then replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
 
 <a id="org926a538"></a>
 
@@ -178,7 +178,7 @@ Now that you've created the integration, you need to register your webhook.
 
 2. Select "Add Webhook". Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`.  
 
-Also, check the boxes for the three available event types: Asset Created, Updated, Deleted. Now select "Save", and go check out the logs on webscript.io. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
+Also, check the boxes for the three available event types: Asset Created, Updated, Deleted. Now select "Save", and go check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
   
   ![Registering the webhook](img/Console_8.png "Registering the webhook")  
 
@@ -188,9 +188,9 @@ Also, check the boxes for the three available event types: Asset Created, Update
 
 Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console.
 
-The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real world application you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user.
+The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real-world application, you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user.
 
-Now upload a file, and check the webscript.io logs again. If all went well then an `asset_created` event was just delivered to your webhook.
+Now upload a file and check the ngrok logs again. If all went well, then an `asset_created` event was just delivered to your webhook.
 
 
 <a id="orgd004238"></a>
