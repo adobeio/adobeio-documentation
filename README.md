@@ -55,7 +55,7 @@ To complete this solution:
 
 ### <a name="Integrate-AEM">Set Up AEM</a>
 
-To integrate Analytics triggers and DTM with AEM, follow the step-by-step video shown below:
+To integrate Analytics triggers and Dynamic Tag Management (DTM) with AEM, follow the step-by-step video shown below:
 
 
 [![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
