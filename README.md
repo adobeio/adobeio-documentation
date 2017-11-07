@@ -242,7 +242,7 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
         ```
         openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt
         ```
-    2. Upload the public certificate by clicking the **Select a file** link and then selecting the certificate from its folder:
+    2. Upload the public certificate by clicking the **Select a File** link and then selecting the certificate from your computer:
 
         ![public certificate](https://user-images.githubusercontent.com/29133525/30292851-d78ee8e6-96f4-11e7-82ea-61bd85eb4212.png)
 
