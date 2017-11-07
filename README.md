@@ -170,7 +170,7 @@ To configure DTM:
 
 6. On the **Overview** tab, click the **Publish Queue** button.
 
-    ![publish button](https://user-images.githubusercontent.com/29133525/30290297-0f3a7cb4-96ec-11e7-8e68-2b45200e76ca.png)
+    ![publish button](https://user-images.githubusercontent.com/29133525/32475340-7ee8d178-c32e-11e7-9ba3-cab950bf2776.png)
 
 
 #### <a name="Specify-a-New-Trigger">Specify a New Trigger</a>
