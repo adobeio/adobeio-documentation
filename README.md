@@ -42,6 +42,8 @@ To register an AEM Event Publisher:
 
 You will need to register an AEM event consumer App to see responses to AEM changes. To do this, you can set up a webhook is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
 
+## <a name="Set-Up-Products">Set Up Products</a>
+
 
 ### Install the AEM Event Proxy Package
 
@@ -176,7 +178,7 @@ The base url that you specify appears on the AEM Web Console.
 ![localhost name](https://user-images.githubusercontent.com/29133525/31195096-62db2bc6-a906-11e7-8271-94908f33ff65.png)
  
  
-## Create Adobe I/O Console Integration
+## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
 To create an Adobe I/O Console Integration:
 
@@ -300,9 +302,13 @@ if method == "POST" then
 end
 ```
 
-## Test Integration 
+## <a name="Watch-It-Work">Watch The Solution Work</a> 
 
-Test your integration by registering your webhook with the Adobe I/O Console and performing a webhook health check.
+You can watch the solution work by testing your integration. To do this:
+
+1. Register your webhook with the Adobe I/O Console
+
+2. Perform a webhook health check
 
 ### Register Webhook with the Adobe I/O Console
 Once you have your webhook ready, use the adobe.io console to register it:
