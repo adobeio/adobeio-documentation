@@ -28,8 +28,6 @@ To complete this solution, you will need authorization to use the following serv
 *   Adobe I/O Console setup, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
-
-
  
 ### <a name="Register-an-AEM-Event-Publisher">Register an AEM Event Publisher</a>
 To register an AEM Event Publisher:
