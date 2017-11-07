@@ -213,7 +213,7 @@ Once you save the trigger, any event in your report suite that meets the defined
 Use Adobe I/O by creating a new integration with the console. To do this:
 
 1. Click the Console button at www.adobe.io.
-
+   ![console button](https://user-images.githubusercontent.com/29133525/32475769-c2eb9020-c330-11e7-98ce-c93753af22ec.png)
 
 1. On the Adobe I/O console, click **New Integration**.
 
