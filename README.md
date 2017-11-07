@@ -108,8 +108,7 @@ To get access through the Adobe Admin Console:
 
      3. For the user's **Access and rights**, provide **Product Access** and **Admin Rights** from the drop-down for the available products and services.
 
-      ![user permissions](https://user-images.githubusercontent.com/29133525/30260361-258f91e2-9684-11e7-8d1b-4c58d1d22b8b.png)
-
+      ![user permissions](https://user-images.githubusercontent.com/29133525/32474735-409e7d8a-c32b-11e7-879c-5f2bdf0825b2.png)
 
 
 
