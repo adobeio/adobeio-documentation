@@ -18,7 +18,7 @@ Before setting up and using AEM with Adobe I/O, you will need to do the followin
 1. [Register an AEM Event Publisher](#Register-an-AEM-Event-Publisher)
 1. [Register an AEM Consumer App](#Register-an-AEM-Consumer-App)
 
-### <a name="Introduction">Obtain Authorization</a>
+### <a name="Obtain-Authorization">Obtain Authorization</a>
 
 To complete this solution, you will need authorization to use the following services:
 
@@ -31,14 +31,14 @@ To complete this solution, you will need authorization to use the following serv
 
 
  
-### <a name="Introduction">Register an AEM Event Publisher</a>
+### <a name="Register-an-AEM-Event-Publisher">Register an AEM Event Publisher</a>
 To register an AEM Event Publisher:
 
 1. Install the AEM Event Proxy Package.
 1. Configure Adobe I/O Events Cloud Service.
 1. Perform an AEM Health and Configuration Check.
 
-### <a name="Introduction">Register an AEM Event Consumer App</a>
+### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
 You will need to register an AEM event consumer App to see responses to AEM changes. To do this, you can set up a webhook is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
 
