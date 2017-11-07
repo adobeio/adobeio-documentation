@@ -193,7 +193,7 @@ To specify a new trigger:
 
 4. On the **New Trigger** box, specify a **Name** and provide a **Description** for your trigger. Select the **Report Suite** that you previously setup from the drop-down field.
 
-    ![trigger dialog](https://user-images.githubusercontent.com/29133525/30291268-92d7eaa4-96ef-11e7-83db-d6c6da15dcf3.png)
+    ![trigger dialog](https://user-images.githubusercontent.com/29133525/32475528-7287302c-c32f-11e7-909f-b2c86313bf08.png)
 
 
 6. On the **Triggers Settings** page, define the business rules for your trigger. You can drag a dimension/metric box from the left panel to the right side of the screen and then specify the business rules for what must happen and what must not happen in a session. In this case, we set the trigger to fire after 10 minutes of inactivity after the rules are met.
