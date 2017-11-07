@@ -58,7 +58,7 @@ To complete this solution:
 To integrate Analytics triggers and Dynamic Tag Management (DTM) with AEM, follow the step-by-step video shown below:
 
 
-[![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
+   [![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
 
 
 ### <a name="Set-up-Triggers">Set up Analytics Triggers</a>
@@ -85,8 +85,7 @@ To get access through the Adobe Admin Console:
 
 3.	On the Products page of the console, verify that your requested products have been added to the site and then click the Adobe Analytics icon.
 
-   ![admin products page](https://user-images.githubusercontent.com/29133525/32474273-0b6c2272-c329-11e7-81be-aeb232549191.png)
-
+![admin products page](https://user-images.githubusercontent.com/29133525/32474273-0b6c2272-c329-11e7-81be-aeb232549191.png)
 
 4.	Click the **Configuration Details** tab and do the following:
 
