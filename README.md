@@ -354,7 +354,7 @@ The responses appear in your webhook.
 
 <img width="908" alt="webhook report log" src="https://user-images.githubusercontent.com/29133525/31210699-57b6f6bc-a951-11e7-8199-f1731125ee35.png">
 
-_Note: Please help us make this documentation as useful as possible. If you find an error or have a suggestion to improve it, please click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit issue** button._
+_Note: Please help us make this documentation as useful as possible. If you find an error or have a suggestion to improve it, please click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button._
 
 ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
  
