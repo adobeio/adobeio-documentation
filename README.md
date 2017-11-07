@@ -184,7 +184,7 @@ Use Adobe I/O to do the following:
 
 To create an Adobe I/O Console Integration:
 
-1. On the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
+1. After signing in to the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
 
 2. Select **Access an API** and then click **Continue**.
 
@@ -225,7 +225,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 **API Key and Client Secret on Adobe I/O Console**
 
 
-### <a name="Configure-Advanced-Adobe-I/O Events">Configure Advanced Adobe I/O Events</a>
+### <a name="Configure-Advanced-Adobe-I/O-Events">Configure Advanced Adobe I/O Events</a>
 
 For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
 *   the OSGI event **topic** 
