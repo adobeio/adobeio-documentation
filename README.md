@@ -311,7 +311,7 @@ if method == "POST" then
 end
 ```
 
-## <a name="Watch-It-Work">Watch The Solution Work</a> 
+## <a name="Watch-It-Work">Watch the Solution Work</a> 
 
 You can watch the solution work by testing your integration. To do this:
 
