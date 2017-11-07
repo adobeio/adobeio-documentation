@@ -166,7 +166,7 @@ To configure DTM:
 
 5. On the **Approvals** tab, click the **Approve** button.    
 
-    ![approve button](https://user-images.githubusercontent.com/29133525/30290129-8f44bd8a-96eb-11e7-9b31-87604beb8a53.png)
+    ![approve button](https://user-images.githubusercontent.com/29133525/32475284-36a8221a-c32e-11e7-8cba-62823e6e7038.png)
 
 6. On the **Overview** tab, click the **Publish Queue** button.
 
