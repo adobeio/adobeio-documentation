@@ -99,7 +99,7 @@ For more information, see AEM [User and Group Administration](https://docs.adobe
 To configure OAuth and IMS authentication:
 
 1. [Create a Certificate and Keystore](#Create-a-Certificate-and-Keystore)
-2. [Add the Keystore to the AEM eventproxy-service User Group](#Add-the-keystore-to-the-AEM-eventproxyservice-user-group)
+2. [Add the Keystore to the AEM eventproxyservice User Group](#Add-the-keystore-to-the-AEM-eventproxy-service-user-group)
 3. [Configure the AEM Link Externalizer](#Configure-the-AEM-Link-Externalizer)
 
 #### <a name="Create-a-Certificate-and-Keystore">Create a Certificate and Keystore</a>
