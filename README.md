@@ -145,7 +145,7 @@ To configure DTM:
 
 2.	On the Activation page, click **Dynamic Tag Management**.
 
-    ![dtm card](https://user-images.githubusercontent.com/29133525/30288581-87f3e362-96e6-11e7-9cad-df4229cf8645.png)
+    ![dtm card](https://user-images.githubusercontent.com/29133525/32473346-6460f0ec-c324-11e7-9338-e725fa86a9dd.png)
 
 3.	On the **Overview** tab, click the **Settings** icon.
 
