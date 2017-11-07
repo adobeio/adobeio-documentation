@@ -214,8 +214,6 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 
 1. After signing in to the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
 
-1. On the Adobe I/O Console, click **New Integration**.
-
     ![new integration button](https://user-images.githubusercontent.com/29133525/30292388-2ccdd986-96f3-11e7-93bd-93f74bb4e3a4.png)
 
 2. Select **Receive real-time events** and click **Continue**.
