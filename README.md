@@ -243,7 +243,7 @@ To use the panel:
 
 ![osgi configuration](https://user-images.githubusercontent.com/29133525/31209724-46af87e6-a94a-11e7-8ca0-65eaecf5114c.png)
 
-Or, simply search for: **Adobe I/O Events' CSM Registration**.
+Or, simply search for: **Adobe I/O Events CSM Registration**.
 
 3. For **Adobe I/O Events CSM Registration**, click the **Edit** button.
 
