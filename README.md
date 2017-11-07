@@ -16,7 +16,7 @@ Before setting up and using AEM with Adobe I/O, you will need to do the followin
 
 1. [Obtain Authorization](#Obtain-Authorization)
 1. [Register an AEM Event Publisher](#Register-an-AEM-Event-Publisher)
-1. [Register an AEM Consumer App](#Register-an-AEM-Consumer-App)
+1. [Register an AEM Event Consumer App](#Register-an-AEM-Event-Consumer-App)
 
 ### <a name="Obtain-Authorization">Obtain Authorization</a>
 
