@@ -188,9 +188,12 @@ To create an Adobe I/O Console Integration:
 
 2. Select **Access an API** and then click **Continue**.
 
+ ![access an api](https://user-images.githubusercontent.com/29133525/32519316-9580406a-c3c9-11e7-98bf-aabba0187250.png)
+
+
 3. On the **Create a new integration** page, select **Adobe I/O Events** and then click **Continue**.
 
-![create new integration](https://user-images.githubusercontent.com/29133525/31202727-035a3578-a921-11e7-8f69-78881c95de46.png)
+ ![create new integration](https://user-images.githubusercontent.com/29133525/31202727-035a3578-a921-11e7-8f69-78881c95de46.png)
 
 4. Click **New integration**.
 
