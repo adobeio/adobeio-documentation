@@ -47,7 +47,7 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
-To complete this solution, you will need to set up the following Adobe products:
+To complete this solution:
 
 1. [Set Up AEM](#Integrate-AEM)
 
