@@ -104,7 +104,7 @@ To get access through the Adobe Admin Console:
      1. Click **User management** and then click **Users**.
      2. Click on user's name.
      
-      ![user name](https://user-images.githubusercontent.com/29133525/30260182-0e9e21ca-9683-11e7-8ce8-c6def3dcc2c6.png)
+      ![user name](https://user-images.githubusercontent.com/29133525/32474586-7a7be066-c32a-11e7-80f1-5419d548d194.png)
 
      3. For the user's **Access and rights**, provide **Product Access** and **Admin Rights** from the drop-down for the available products and services.
 
