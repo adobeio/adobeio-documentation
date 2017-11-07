@@ -189,7 +189,7 @@ To specify a new trigger:
 
 3. On the **Triggers** page, click the **New Triggers** button and select **Abandonment**.
 
-    ![abandonment trigger](https://user-images.githubusercontent.com/29133525/30291142-16358d44-96ef-11e7-85f7-e3b30d809087.png)
+    ![abandonment trigger](https://user-images.githubusercontent.com/29133525/32475431-ee36a582-c32e-11e7-9803-f0216855b290.png)
 
 4. On the **New Trigger** box, specify a **Name** and provide a **Description** for your trigger. Select the **Report Suite** that you previously setup from the drop-down field.
 
