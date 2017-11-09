@@ -31,7 +31,7 @@ To complete this solution, you will need authorization to use the following serv
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
-You will need to register an AEM event consumer App to see responses to AEM changes, such as a webhook. These instructions include steps for setting up a webhook that is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
+You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
@@ -345,7 +345,9 @@ The responses appear in your webhook.
 
 <img width="908" alt="webhook report log" src="https://user-images.githubusercontent.com/29133525/31210699-57b6f6bc-a951-11e7-8199-f1731125ee35.png">
 
-_Note: Please help us make this documentation as useful as possible. If you find an error or have a suggestion to improve it, please click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button._
+## Feedback?
+
+Please help us make this solution as useful as possible. If you find a problem in the documentation or have a solution suggestion, please click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
 
 ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
  
