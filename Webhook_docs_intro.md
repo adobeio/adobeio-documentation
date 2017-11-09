@@ -122,17 +122,17 @@ Content-type: application/json
 
 {"challenge":"8ec8d794-e0ab-42df-9017-e3dada8e84f7"}
 ```
-
+**Note:** Make sure your response is given in the correct content-type. If your webhook script places the challenge value directly in the response body, make sure it's returned as plain text (`text/plain`). For a JSON response, make sure it's `application/json`. Returning a response in the incorrect content-type may cause extraneous code to be returned, which will not validate with Adobe I/O Events.
 
 <a id="org1762841"></a>
 
 ### Testing with ngrok
 [Ngrok](https://ngrok.com/) is a utility for enabling secure introspectable tunnels to your localhost. With ngrok, you can securely expose a local web server to the internet and run your own personal web services from your own machine, safely encrypted behind your local NAT or firewall. With ngrok, you can iterate quickly without redeploying your app or affecting your customers. 
 
-Among other things, ngrok is a great tool for testing webhooks. Once you've downloaded and installed [ngrok](https://ngrok.com/), you run it from a command line, specifying hte protocol and port you want to monitor:
-```ngrok http 4040```
+Among other things, ngrok is a great tool for testing webhooks. Once you've downloaded and installed [ngrok](https://ngrok.com/), you run it from a command line, specifying the protocol and port you want to monitor:
+```ngrok http 80```
 
-![ngrok on port 4040](img/ngrok.png "ngrok on port 4040")
+![ngrok on port 80](img/ngrok.png "ngrok on port 80")
 
 In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, you would then replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
 
@@ -176,11 +176,17 @@ Now that you've created the integration, you need to register your webhook.
   
   ![The Events tab](img/Console_7.png "The Events tab")  
 
-2. Select "Add Webhook". Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`.  
-
-Also, check the boxes for the three available event types: Asset Created, Updated, Deleted. Now select "Save", and go check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
+2. Select "Add Webhook". Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`. Also, check the boxes for the three available event types: Asset Created, Updated, Deleted.  
   
   ![Registering the webhook](img/Console_8.png "Registering the webhook")  
+
+3. Select "Save", and go check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
+  
+  ![The webhook request received in ngrok](img/ngrok_2.png "The webhook request received in ngrok")  
+
+4. Check the Adobe I/O Console and your webhook should be listed as "Active".  
+  
+  ![The active webhook in the Console](img/ngrok_2.png "The active webhook in the Console")  
 
 <a id="orgecb4ae5"></a>
 
