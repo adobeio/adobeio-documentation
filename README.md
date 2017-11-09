@@ -15,7 +15,6 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 Before setting up and using AEM with Adobe I/O, you will need to do the following:
 
 1. [Obtain Authorization](#Obtain-Authorization)
-1. [Register an AEM Event Publisher](#Register-an-AEM-Event-Publisher)
 1. [Register an AEM Event Consumer App](#Register-an-AEM-Event-Consumer-App)
 
 ### <a name="Obtain-Authorization">Obtain Authorization</a>
@@ -29,16 +28,10 @@ To complete this solution, you will need authorization to use the following serv
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
  
-### <a name="Register-an-AEM-Event-Publisher">Register an AEM Event Publisher</a>
-To register an AEM Event Publisher:
-
-1. [Install the AEM Event Proxy Package](#Register-an-AEM-Event-Publisher)
-1. [Configure Adobe I/O Events Cloud Service]
-1. [Perform an AEM Health and Configuration Check]
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
-You will need to register an AEM event consumer App to see responses to AEM changes. To do this, you can set up a webhook is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
+You will need to register an AEM event consumer App to see responses to AEM changes, such as a webhook. These instructions include steps for setting up a webhook that is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
