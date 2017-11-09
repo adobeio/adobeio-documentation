@@ -263,3 +263,9 @@ To watch your trigger work on Slack:
 
 
 Trigger messages are received as `POST` requests on this thread.
+
+## Feedback?
+
+Please help make this solution as useful as possible. If you find a problem in the documentation or have a solution suggestion, please click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
+
+![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
