@@ -186,7 +186,7 @@ Now that you've created the integration, you need to register your webhook.
 
 4. Check the Adobe I/O Console and your webhook should be listed as "Active".  
   
-  ![The active webhook in the Console](img/ngrok_2.png "The active webhook in the Console")  
+  ![The active webhook in the Console](img/Console_9.png "The active webhook in the Console")  
 
 <a id="orgecb4ae5"></a>
 
