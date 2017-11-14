@@ -29,7 +29,7 @@ To complete this solution, you will need authorization to use the following serv
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
-You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a challenge http request parameter sent by Adobe I/O Channel & Subscription Management (CSM).
+You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge http request](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
