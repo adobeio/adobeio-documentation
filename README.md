@@ -168,7 +168,9 @@ The base url that you specify appears on the AEM Web Console.
 Use Adobe I/O to do the following:
 
 1. [Create an Adobe I/O Console Integration](#Create-an-Adobe-I/O-Console-Integration)
+
 1. [Configure Adobe I/O Events as a Cloud Service in AEM](#Configure-Adobe-I/O-Events-as-a-Cloud-Service-in-AEM)
+
 1. [Configure Advanced Adobe I/O Events](#Configure-Advanced-Adobe-I/O-Events)
 
 ### <a name="Create-an-Adobe-I/O-Console-Integration">Create an Adobe I/O Console Integration</a>
