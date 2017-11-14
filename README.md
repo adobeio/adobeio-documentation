@@ -282,22 +282,33 @@ This verifies that the AEM instance is successfully registered as an event provi
 To register an AEM event consumer App, you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe I/O CSM.
 
 ### Set up Webhook: Example
-To create a webhook at webscript.io, you can use the following script to configure it:
+To create a webhook at webtask.io, add the following code to make sure the Challenge is echoed back. This is needed for the verification by Adobe I/O CSM when we register the webhook URL later using CSM API:
 
-```local request  = request
-local method = request.method
-if method == "GET" then
-    if (request.query["challenge"]) then
-        log("got challenge: " .. request.query["challenge"])
-    else
-        log("no challenge")
-    end
-    return request.query["challenge"]
-end
-if method == "POST" then
-    log("webhook invoked with: " .. request.body)
-    return request.body
-end
+```
+var express = require('express');
+var Webtask = require('webtask-tools');
+var bodyParser = require('body-parser');
+var app = express();
+
+app.use(bodyParser.json());
+app.get('/webhook', function (req, res) {
+   var result = "No challenge";
+   if (req.query["challenge"]){
+      result = req.query["challenge"]
+      console.log("got challenge: " + req.query["challenge"]);
+   } else {
+      console.log("no challenge")
+   }
+   res.status(200).send(result)
+});
+
+app.post('/webhook', function (req, res) { 
+   console.log(req.body)
+   res.writeHead(200, { 'Content-Type': 'application/text' });
+   res.end("pong");
+});
+
+module.exports = Webtask.fromExpress(app);
 ```
 
 ## <a name="Watch-It-Work">Watch the Solution Work</a> 
