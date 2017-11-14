@@ -21,17 +21,15 @@ Before setting up and using AEM with Adobe I/O, you will need to do the followin
 
 To complete this solution, you will need authorization to use the following services:
 
-*   Adobe Marketing Cloud Activation Core Services, with administrative permissions
-*   AEM instance setup with version 6.2 or 6.3, with administrative permissions
-*   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not already have one
-*   Adobe I/O Console setup, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
+*   AEM instance with version 6.2 or 6.3, with administrative permissions
+*   Adobe I/O Console access, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
 ![admin rights 2](https://user-images.githubusercontent.com/29133525/30258738-46dfb044-9679-11e7-9d0b-f724c32dacac.png)
  
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
-You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a challenge http request parameter sent by Adobe CSM.
+You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a challenge http request parameter sent by Adobe I/O Channel & Subscription Management (CSM).
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
@@ -46,7 +44,7 @@ To set up AEM for Adobe I/O Events:
 
 To install the AEM Event Proxy Package:
 
-1. Download the latest version of the package from the [pre-release site](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
+1. Download the latest version of the package [here](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
 
 2. Open AEM Package Manager at http://localhost:4502/crx/packmgr/index.jsp; or click the **Tools** icon and then click **Deployment** and **Packages**.
 
@@ -69,7 +67,7 @@ Note: If you have an older version of the package, delete it to avoid potential 
 
 ![activity log](https://user-images.githubusercontent.com/29133525/31085648-ff7f2c92-a754-11e7-832a-350e116d6f54.png)
 
-For more information on installing packages in AEM, see [How to Work with Packages](https://docs.adobe.com/content/docs/en/cq/5-6-1/administering/package_manager.html#Access20Package%20Share).
+For more information on installing packages in AEM, see [How to Work with Packages](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html).
 
 #### Additional Package Installation Notes
 
@@ -77,11 +75,11 @@ For more information on installing packages in AEM, see [How to Work with Packag
 
 2. Verify that the Access Control Handling is properly applied by checking permissions for the eventproxy-service user group at **/useradmin**. If applied correctly, the eventproxy-service user is added to the following:
 
-*   **/home/users/system/eventproxy/eventproxy-service with jrc:read and rep:write authorizations**
-*   **/etc/cloudservices/eventproxy with jrc:read and rep:write authorizations**
-*   **/content with jrc:read authorization**
+*   **/home/users/system/eventproxy/eventproxy-service with jcr:read and rep:write authorizations**
+*   **/etc/cloudservices/eventproxy with jcr:read and rep:write authorizations**
+*   **/content with jcr:read authorization**
 
-For more information, see AEM [User and Group Administration](https://docs.adobe.com/docs/en/cq/5-6-1/touch-ui/granite-user-group-admin.html).
+For more information, see AEM [User and Group Administration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/user-group-ac-admin.html).
 
 3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
 
@@ -223,7 +221,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 **API Key and Client Secret on Adobe I/O Console**
 
 
-### <a name="Configure-Advanced-Adobe-I/O-Events">Configure Advanced Adobe I/O Events</a>
+### <a name="Configure-Advanced-Adobe-I/O-Events">Configure Advanced Adobe I/O Events (Optional)</a>
 
 For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
 *   the OSGI event **topic** 
@@ -274,14 +272,14 @@ This verifies that your IMS related configurations are correct and working, incl
 
 
 3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the Health Check tagged with [**eventproxy,csm**](http://localhost:4502/system/console/healthchecktags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
-This verifies that the AEM instance is successfully registered as an event provider with Adobe IO CSM.
+This verifies that the AEM instance is successfully registered as an event provider with Adobe I/O CSM.
 
 ![health check csm](https://user-images.githubusercontent.com/29133525/31209225-cd500554-a946-11e7-9538-29e43c611bc5.png)
 
  
 ## Register an AEM Event Consumer App
 
-To register an AEM event consumer App, you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe CSM.
+To register an AEM event consumer App, you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe I/O CSM.
 
 ### Set up Webhook: Example
 To create a webhook at webscript.io, you can use the following script to configure it:
@@ -334,10 +332,9 @@ To perform a webhook health check:
 ![check webhook evre](https://user-images.githubusercontent.com/29133525/31210557-496f319c-a950-11e7-9744-e28aba9a74d1.png)
 
 
-2. Test the Webhook Subcription by doing the following:
+2. Test the Webhook Subscription by doing the following:
 *   by publishing or unpublishing AEM pages
-*   by editing, adding, or removing an asset in the AEM DAM
-*   or by using the [AEM Assets HTTP API](https://docs.adobe.com/docs/en/aem/6-2/develop/extending/mac-api-assets.html)
+*   by editing, adding, or removing an asset in the AEM DAM or by using the [AEM Assets HTTP API](https://helpx.adobe.com/experience-manager/6-3/assets/using/mac-api-assets.html)
 
 The responses appear in your webhook.
 
@@ -347,7 +344,7 @@ The responses appear in your webhook.
 
 ## Feedback?
 
-Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
+Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GitHub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
 
 ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
  
