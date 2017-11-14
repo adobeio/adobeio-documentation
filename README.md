@@ -206,6 +206,8 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 2. On the **Cloud Services** page, click **Show Configurations** for Adobe I/O Events. 
 
+![show configurations of adobe events](https://user-images.githubusercontent.com/29133525/32805318-499a990c-c946-11e7-938a-2ea8e803175b.png)
+
 
 
 For AEM, click **Configure Now** to create a new configuration.
