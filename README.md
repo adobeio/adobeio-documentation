@@ -103,7 +103,7 @@ To create a certificate and keystore:
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt
 ```
 
-2. Add the private key and signed crtificate to a PKCS#12 file with the following command:
+2. Add the private key and signed certificate to a PKCS#12 file with the following command:
 
 ```
 openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certificate_pub.crt -inkey private.key -out author.pfx -name "author"
