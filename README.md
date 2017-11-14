@@ -160,9 +160,8 @@ Note: Do not use only the word “localhost” as the default name because other
 
 The base url that you specify appears on the AEM Web Console. 
 
-![aem web console base url](https://user-images.githubusercontent.com/29133525/32803657-79f7280e-c941-11e7-9725-999084406bec.png)
+![aem web console base url](https://user-images.githubusercontent.com/29133525/32803801-f3dcce30-c941-11e7-8bf4-405c43d03f74.png)
 
- 
  
 ## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
