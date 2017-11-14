@@ -219,10 +219,6 @@ To configure Adobe I/O events as a cloud service in AEM:
     ![copy secrets](https://user-images.githubusercontent.com/29133525/32806941-7fde170a-c94b-11e7-9bf4-a237c1afb2c1.png) 
 ![edit configuration adobe io](https://user-images.githubusercontent.com/29133525/32806239-13fe90c0-c949-11e7-932d-4ba3d9d643f4.png)
 
-
-**API Key and Client Secret on Adobe I/O Console**
-
-
 ### <a name="Configure-Advanced-Adobe-I/O-Events">Configure Advanced Adobe I/O Events (Optional)</a>
 
 For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
