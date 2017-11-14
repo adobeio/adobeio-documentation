@@ -47,11 +47,11 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
-To use this solution, you will need to set up the following Adobe products:
+To set up Adobe products for this solution:
 
-1. [AEM](#Integrate-AEM)
+1. [Set Up AEM](#Integrate-AEM)
 
-1. [Analytics](#Set-up-Triggers)
+1. [Set Up Analytics](#Set-up-Triggers)
 
 ### <a name="Integrate-AEM">Set Up AEM</a>
 
