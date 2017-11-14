@@ -1,6 +1,6 @@
 # Set up AEM for Adobe I/O Events
 
-These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O events. You can use Adobe I/O for notification of  AEM events, such as page or asset changes.
+These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O Events. You can use Adobe I/O for notification of  AEM events, such as page or asset changes.
 
 1. [Introduction](#Introduction)
 
