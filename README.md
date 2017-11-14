@@ -44,7 +44,7 @@ To set up AEM for Adobe I/O Events:
 
 To install the AEM Event Proxy Package:
 
-1. Download the latest version of the package [here](https://artifactory.corp.adobe.com/artifactory/maven-cloud-action-local/com/day/cq/dam/aem-event-proxy/).
+1. Download the latest version of the package [here](https://github.com/adobeio/solutions-ioevents-aem-setup-documentation/files/1470817/aem-event-proxy-0.27.200.zip).
 
 2. Open AEM Package Manager at http://localhost:4502/crx/packmgr/index.jsp; or click the **Tools** icon and then click **Deployment** and **Packages**.
 
