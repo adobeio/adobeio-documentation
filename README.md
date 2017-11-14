@@ -210,14 +210,14 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 3. Configure the service by specifying each field in the **Edit Component** dialog box. You can copy your credentials from the Adobe I/O Console and paste them into each required field.
 
-![copy secrets](https://user-images.githubusercontent.com/29133525/32806941-7fde170a-c94b-11e7-9bf4-a237c1afb2c1.png)![edit configuration adobe io](https://user-images.githubusercontent.com/29133525/32806239-13fe90c0-c949-11e7-932d-4ba3d9d643f4.png)
-
-
 *   For **AEM Link externalizer**: specify **author** (or any other alias previously configured in the AEM Link Externalizer).
 *   For **API key**: Provide the key shown on the **Integration Details** page of the Adobe I/O Console. 
 *   For **Technical Account ID**: Provide the ID shown on the Adobe I/O Console.
 *   For **Organization ID**: Provide the ID shown on the Adobe I/O Console.
 *   For **Client Secret**: Click the **Retrieve client secret** button on the **Integration Details** page of the Adobe I/O Console and provide the secret as shown on the console.
+
+    ![copy secrets](https://user-images.githubusercontent.com/29133525/32806941-7fde170a-c94b-11e7-9bf4-a237c1afb2c1.png) 
+![edit configuration adobe io](https://user-images.githubusercontent.com/29133525/32806239-13fe90c0-c949-11e7-932d-4ba3d9d643f4.png)
 
 
 **API Key and Client Secret on Adobe I/O Console**
