@@ -253,7 +253,7 @@ Or, simply search for: **Adobe I/O Events CSM Registration**.
 
 The default paths for asset and page events are listed near the top of the configuration page.
 
-![osgi config default path](https://user-images.githubusercontent.com/29133525/31209678-ea371a1a-a949-11e7-8b61-ad409b8119a8.png)
+      ![osgi config default path](https://user-images.githubusercontent.com/29133525/32858195-eedafdd2-ca07-11e7-8016-4d1c98457068.png)
 
 
  
