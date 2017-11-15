@@ -47,7 +47,7 @@ To install the AEM Event Proxy Package:
 
 1. Download the latest version of the package [here](https://github.com/adobeio/solutions-ioevents-aem-setup-documentation/files/1470817/aem-event-proxy-0.27.200.zip).
 
-2. Open AEM Package Manager by clicking the **Tools** icon and then click **Deployment** and **Packages**.
+2. Open AEM Package Manager by clicking the **Tools** icon and then clicking **Deployment** and **Packages**.
 
    ![package manager navi](https://user-images.githubusercontent.com/29133525/32855537-36c7cd72-c9ff-11e7-9098-a5aba8f4493f.png)
 
@@ -131,7 +131,7 @@ Note: On Windows systems, this command expression may vary. For more information
 
 To add the key store to the AEM Eventproxy-service user group:
 
-1. In AEM, open the **User Management** group list at http://localhost:4502/libs/granite/security/content/useradmin.html; or click the **Tools** icon and then click **Security** and **Users**.
+1. In AEM, open the **User Management** group by clicking the **Tools** icon and then clicking **Security** and **Users**.
 
       ![user management navigation](https://user-images.githubusercontent.com/29133525/32856124-216ac180-ca01-11e7-9a57-ec815ab80fd8.png)
 
