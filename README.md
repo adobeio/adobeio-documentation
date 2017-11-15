@@ -259,7 +259,7 @@ The default paths for asset and page events are listed near the top of the confi
  
 ## Perform an AEM Health and Configuration Check
 
-You can use the [AEM Web Console Sling Health Check](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000) to verify your configurations are correct.
+You can use the **AEM Web Console Sling Health Check** to verify that your configurations are correct.
 
 To verify your configurations:
 
