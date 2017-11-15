@@ -58,7 +58,7 @@ Note: If you have an older version of the package, delete it to avoid potential 
 
 4. Click **Install**.
 
-![package manager ui](https://user-images.githubusercontent.com/29133525/31083485-0b10be82-a74f-11e7-85e4-4dae028946b9.png)
+      ![package manager ui](https://user-images.githubusercontent.com/29133525/32855716-cad2c24c-c9ff-11e7-8220-3366caaa528d.png)
 
 5. On the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and click **Install**.
 
