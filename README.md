@@ -133,7 +133,7 @@ To add the key store to the AEM Eventproxy-service user group:
 
 1. In AEM, open the **User Management** group list at http://localhost:4502/libs/granite/security/content/useradmin.html; or click the **Tools** icon and then click **Security** and **Users**.
 
-![user management navigation](https://user-images.githubusercontent.com/29133525/31091124-2264f1d0-a767-11e7-8c57-e2ff5a5723b6.png)
+      ![user management navigation](https://user-images.githubusercontent.com/29133525/32856124-216ac180-ca01-11e7-9a57-ec815ab80fd8.png)
 
 2. On the **User Management** group list, click **eventproxy-service** to open it.
 
