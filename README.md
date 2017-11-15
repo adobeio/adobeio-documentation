@@ -265,7 +265,7 @@ To verify your configurations:
 
 1. Check that all your configurations properly load by executing the Health Check tagged with **eventproxy, conf**.
 
-      ![health check conf](https://user-images.githubusercontent.com/29133525/32858796-d63878c0-ca09-11e7-9512-52ddde413f54.png)
+      ![health check conf](https://user-images.githubusercontent.com/29133525/32858983-6f86c61c-ca0a-11e7-8203-b5edf34d05af.png)
 
 2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the Health Check tagged with **eventproxy,ims**.
 This verifies that your IMS related configurations are correct and working, including the eventproxy-service user Keystore configuration, the Adobe I/O console-originated API key, the Technical Account ID, the Organization ID and the client secret.
