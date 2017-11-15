@@ -176,9 +176,9 @@ Use Adobe I/O to do the following:
 
 ### <a name="Create-an-Adobe-I/O-Console-Integration">Create an Adobe I/O Console Integration</a>
 
-To create an Adobe I/O Console Integration:
+To create an [Adobe I/O Console](https://adobe.io/console) Integration:
 
-1. After signing in to the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
+1. After signing in to the Adobe I/O Console, click **New Integration**.
 
 2. Select **Access an API** and then click **Continue**.
 
