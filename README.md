@@ -80,7 +80,7 @@ For more information on installing packages in AEM, see [How to Work with Packag
 *   **/etc/cloudservices/eventproxy with jcr:read and rep:write authorizations**
 *   **/content with jcr:read authorization**
 
-For more information, see AEM [User and Group Administration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/user-group-ac-admin.html).
+For more information, see AEM [User, Group and Access Rights Administration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/user-group-ac-admin.html).
 
 3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
 
