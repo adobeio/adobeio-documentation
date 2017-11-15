@@ -328,7 +328,9 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
 2. Select **Receive near-real time events** and click **Continue**.
 
-3. Select **AEM-your-day-cq-link-externalizer-base-server-url** and click **Continue**.
+      ![receive near real time events](https://user-images.githubusercontent.com/29133525/32859993-63f51472-ca0d-11e7-9ce8-c5570a324c86.png)
+
+3. Select the AEM Externalizer base URL you previously specified and then click **Continue**.
 
 4. Select **Create new integration** and fill in the **Configure Integration** detail form.
 
