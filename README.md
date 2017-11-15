@@ -238,7 +238,7 @@ To use the panel:
 
 1. Click the **Tools** icon in AEM and then click **Operations** and **Web Console**.
 
-![web console navigation ui](https://user-images.githubusercontent.com/29133525/31209778-ac40df88-a94a-11e7-959f-1237b424cdd5.png)
+      ![web console navigation ui](https://user-images.githubusercontent.com/29133525/32857842-82113b22-ca06-11e7-9c90-52a1882c6298.png)
 
 2. In the **OSGI** menu, select **Configuration**.
 
