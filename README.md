@@ -25,7 +25,7 @@ To complete this solution, you will need authorization to use the following serv
 *   AEM instance with version 6.2 or 6.3, with administrative permissions
 *   Adobe I/O Console access, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
-![admin rights 2](https://user-images.githubusercontent.com/29133525/32855060-ddbbe8cc-c9fd-11e7-88b9-1aa1fb1ab380.png)
+   ![admin rights 2](https://user-images.githubusercontent.com/29133525/32855060-ddbbe8cc-c9fd-11e7-88b9-1aa1fb1ab380.png)
  
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
@@ -49,7 +49,7 @@ To install the AEM Event Proxy Package:
 
 2. Open AEM Package Manager at http://localhost:4502/crx/packmgr/index.jsp; or click the **Tools** icon and then click **Deployment** and **Packages**.
 
-![package manager navi](https://user-images.githubusercontent.com/29133525/32855537-36c7cd72-c9ff-11e7-9098-a5aba8f4493f.png)
+   ![package manager navi](https://user-images.githubusercontent.com/29133525/32855537-36c7cd72-c9ff-11e7-9098-a5aba8f4493f.png)
 
 3. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
 
