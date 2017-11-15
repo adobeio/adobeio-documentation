@@ -359,6 +359,8 @@ To perform a webhook health check:
 
       The responses appear in your webhook.
       
+      <img width="389" alt="webscript webhook redo" src="https://user-images.githubusercontent.com/29133525/32862566-be8ae8dc-ca15-11e7-92c1-bbbbfcccc4c3.png">
+
       
       
 ## Feedback?
