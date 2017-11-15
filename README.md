@@ -182,16 +182,16 @@ To create an Adobe I/O Console Integration:
 
 2. Select **Access an API** and then click **Continue**.
 
-  ![access an api](https://user-images.githubusercontent.com/29133525/32519316-9580406a-c3c9-11e7-98bf-aabba0187250.png)
+      ![access an api](https://user-images.githubusercontent.com/29133525/32519316-9580406a-c3c9-11e7-98bf-aabba0187250.png)
 
 
 3. On the **Create a new integration** page, select **Adobe I/O Events** and then click **Continue**.
 
-  ![io events integration](https://user-images.githubusercontent.com/29133525/32520095-0967bb3c-c3cc-11e7-9c9e-8a730c07b3c9.png)
+      ![io events integration](https://user-images.githubusercontent.com/29133525/32520095-0967bb3c-c3cc-11e7-9c9e-8a730c07b3c9.png)
 
 4. Click **New integration**.
 
-  ![create new integration option](https://user-images.githubusercontent.com/29133525/32520604-d00d9eea-c3cd-11e7-88d7-a35175ae5b91.png)
+      ![create new integration option](https://user-images.githubusercontent.com/29133525/32520604-d00d9eea-c3cd-11e7-88d7-a35175ae5b91.png)
 
 5. On the **Create new integration** dialog box, specify a name for the integration and add a description. To add **Public keys**, click **Select a File** and navigate to the **certificate_pub.crt** to upload it.
 
