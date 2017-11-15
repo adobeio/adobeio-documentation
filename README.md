@@ -47,7 +47,7 @@ To install the AEM Event Proxy Package:
 
 1. Download the latest version of the package [here](https://github.com/adobeio/solutions-ioevents-aem-setup-documentation/files/1470817/aem-event-proxy-0.27.200.zip).
 
-2. Open AEM Package Manager at http://localhost:4502/crx/packmgr/index.jsp; or click the **Tools** icon and then click **Deployment** and **Packages**.
+2. Open AEM Package Manager by clicking the **Tools** icon and then click **Deployment** and **Packages**.
 
    ![package manager navi](https://user-images.githubusercontent.com/29133525/32855537-36c7cd72-c9ff-11e7-9098-a5aba8f4493f.png)
 
