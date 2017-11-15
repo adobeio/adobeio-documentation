@@ -357,9 +357,9 @@ To perform a webhook health check:
       *   by publishing or unpublishing AEM pages
       *   by editing, adding, or removing an asset in the AEM DAM or by using the [AEM Assets HTTP API](https://helpx.adobe.com/experience-manager/6-3/assets/using/mac-api-assets.html)
 
-      The responses appear in your webhook.
+The responses appear in your webhook.
       
-     <img width="518" alt="webscript webhook redo" src="https://user-images.githubusercontent.com/29133525/32862648-ffb26b6e-ca15-11e7-87b2-68c017768e63.png">
+<img width="518" alt="webscript webhook redo" src="https://user-images.githubusercontent.com/29133525/32862648-ffb26b6e-ca15-11e7-87b2-68c017768e63.png">
       
       
 ## Feedback?
