@@ -249,13 +249,10 @@ Or, simply search for: **Adobe I/O Events CSM Registration**.
 3. For **Adobe I/O Events CSM Registration**, click the **Edit** button.
 
       ![edit csm registration](https://user-images.githubusercontent.com/29133525/32858063-5b408c9a-ca07-11e7-8715-1000a4caf7c8.png)
-
-
-The default paths for asset and page events are listed near the top of the configuration page.
-
+      
+      The default paths for asset and page events are listed near the top of the configuration page.
+      
       ![osgi config default path](https://user-images.githubusercontent.com/29133525/32858195-eedafdd2-ca07-11e7-8016-4d1c98457068.png)
-
-
  
 ## Perform an AEM Health and Configuration Check
 
@@ -316,8 +313,8 @@ module.exports = Webtask.fromExpress(app);
 
 You can watch the solution work by testing your integration. To do this:
 
-1. [Register your webhook with the Adobe I/O Console](#Register-it)
-2. [Perform a webhook health check](#Webhook-health-check)
+1. [Register Your Webhook with the Adobe I/O Console](#Register-it)
+2. [Perform a Webhook Health Check](#Webhook-health-check)
 
 
 ### <a name="Register-it">Register Webhook with the Adobe I/O Console</a> 
@@ -344,7 +341,7 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
 Note: Once you have registered your webhook, responses will include a [status](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md#org85f36da) field to show if it is ```VERIFIED```.
 
-### <a name="Webhook-health-check">Perform Webhook Health Check</a> 
+### <a name="Webhook-health-check">Perform a Webhook Health Check</a> 
 
 To perform a webhook health check:
 
