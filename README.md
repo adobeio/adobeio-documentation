@@ -340,7 +340,7 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
 6. Select the events you want to subscribe to and click **Save**.
 
-![integration health check](https://user-images.githubusercontent.com/29133525/31210441-8455506c-a94f-11e7-8099-1a9b766af9b8.png)
+      ![integration health check](https://user-images.githubusercontent.com/29133525/32861939-a93861b4-ca13-11e7-99b9-3ffe136d1272.png)
 
 Note: Once you have registered your webhook, responses will include a [status](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md#org85f36da) field to show if it is ```VERIFIED```.
 
