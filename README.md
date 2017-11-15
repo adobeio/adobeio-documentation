@@ -23,7 +23,7 @@ Before setting up and using AEM with Adobe I/O, you will need to do the followin
 To complete this solution, you will need authorization to use the following services:
 
 *   AEM instance with version 6.2 or 6.3, with administrative permissions
-*   Adobe I/O Console access, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
+*   [Adobe I/O Console](https://adobe.io/console) access, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
       ![admin rights 2](https://user-images.githubusercontent.com/29133525/32855060-ddbbe8cc-c9fd-11e7-88b9-1aa1fb1ab380.png)
  
@@ -211,7 +211,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 
       ![show configurations of adobe events](https://user-images.githubusercontent.com/29133525/32805318-499a990c-c946-11e7-938a-2ea8e803175b.png)
 
-3. Configure the service by specifying each field in the **Edit Component** dialog box. You can copy your credentials from the Adobe I/O Console and paste them into each required field.
+3. Configure the service by specifying each field in the **Edit Component** dialog box. You can copy your credentials from the [Adobe I/O Console](https://adobe.io/console) and paste them into each required field.
 
 *   For **AEM Link externalizer**: specify **author** (or any other alias previously configured in the AEM Link Externalizer).
 *   For **API key**: Provide the key shown on the **Integration Details** page of the Adobe I/O Console. 
