@@ -360,14 +360,15 @@ To perform a webhook health check:
       The responses appear in your webhook.
       
       ![web hook response 1](https://user-images.githubusercontent.com/29133525/32862896-d6495e26-ca16-11e7-8309-e422617654a4.png)
-
+      
+      ![web hook response 2](https://user-images.githubusercontent.com/29133525/32863030-5d9f1a14-ca17-11e7-8ceb-66e2c5d92561.png)
       
       
 ## Feedback?
 
 Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GitHub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
 
-![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
+      ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
  
  
  
