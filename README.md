@@ -263,16 +263,16 @@ You can use the [AEM Web Console Sling Health Check](http://localhost:4502/syste
 
 To verify your configurations:
 
-1. Check that all your configurations properly load by executing the Health Check tagged with [**eventproxy, conf**](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+conf&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
+1. Check that all your configurations properly load by executing the Health Check tagged with **eventproxy, conf**.
 
       ![health check conf](https://user-images.githubusercontent.com/29133525/32858796-d63878c0-ca09-11e7-9512-52ddde413f54.png)
 
-2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the Health Check tagged with [**eventproxy,ims**](http://localhost:4502/system/console/healthcheck?tags=eventproxy%2C+ims&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
+2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the Health Check tagged with **eventproxy,ims**.
 This verifies that your IMS related configurations are correct and working, including the eventproxy-service user Keystore configuration, the Adobe I/O console-originated API key, the Technical Account ID, the Organization ID and the client secret.
 
       ![health check ims](https://user-images.githubusercontent.com/29133525/32858687-8e94e7e2-ca09-11e7-945b-3ce845b6717a.png)
 
-3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the Health Check tagged with [**eventproxy,csm**](http://localhost:4502/system/console/healthchecktags=eventproxy%2C+csm&debug=true&forceInstantExecution=true&overrideGlobalTimeout=40000).
+3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the Health Check tagged with **eventproxy,csm**.
 This verifies that the AEM instance is successfully registered as an event provider with Adobe I/O CSM.
 
       ![health check csm](https://user-images.githubusercontent.com/29133525/32858496-ea6ab2a0-ca08-11e7-9272-db04454611c2.png)
