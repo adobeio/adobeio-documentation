@@ -321,11 +321,12 @@ You can watch the solution work by testing your integration. To do this:
 2. Perform a webhook health check
 
 ### Register Webhook with the Adobe I/O Console
-Once you have your webhook ready, use the adobe.io console to register it:
 
-1. On the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
+Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/console) to register it:
 
-2. Select **Subscribe to events** and click **Continue**.
+1. On the Adobe I/O Console, click **New Integration**.
+
+2. Select **Receive near-real time events** and click **Continue**.
 
 3. Select **AEM-your-day-cq-link-externalizer-base-server-url** and click **Continue**.
 
