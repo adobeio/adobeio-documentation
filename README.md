@@ -62,7 +62,7 @@ Note: If you have an older version of the package, delete it to avoid potential 
 
 5. On the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and click **Install**.
 
-![install package](https://user-images.githubusercontent.com/29133525/31085363-242d22e8-a754-11e7-9927-a8c7c43d8184.png)
+      ![install package](https://user-images.githubusercontent.com/29133525/32855829-2b1392d0-ca00-11e7-855f-e4f8ae7d7fc1.png)
 
 6. Watch the **Activity Log**. If installed, the log reports that the package is imported.
 
