@@ -359,7 +359,7 @@ To perform a webhook health check:
 
 The responses appear in your webhook.
 
-<img width="1226" alt="webscript webhook" src="https://user-images.githubusercontent.com/29133525/31210683-35593846-a951-11e7-8681-2557a0bdcdbd.png">
+      <img width="797" alt="webscript webhook" src="https://user-images.githubusercontent.com/29133525/32862296-ec642a08-ca14-11e7-9703-ad604107db30.png">
 
 <img width="908" alt="webhook report log" src="https://user-images.githubusercontent.com/29133525/31210699-57b6f6bc-a951-11e7-8199-f1731125ee35.png">
 
