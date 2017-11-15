@@ -193,7 +193,7 @@ To create an Adobe I/O Console Integration:
 
       ![create new integration option](https://user-images.githubusercontent.com/29133525/32520604-d00d9eea-c3cd-11e7-88d7-a35175ae5b91.png)
 
-5. On the **Create new integration** dialog box, specify a name for the integration and add a description. To add **Public keys**, click **Select a File** and navigate to the **certificate_pub.crt** to upload it.
+5. On the **Create new integration** dialog box, specify a name for the integration and add a description. To add **Public keys**, click **Select a File** and navigate to your **certificate_pub.crt** to upload it.
 
       ![updated create new integration](https://user-images.githubusercontent.com/29133525/32857108-1221197e-ca04-11e7-9a86-42293b6b729a.png)
 
