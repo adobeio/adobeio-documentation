@@ -330,7 +330,9 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
       ![receive near real time events](https://user-images.githubusercontent.com/29133525/32859993-63f51472-ca0d-11e7-9ce8-c5570a324c86.png)
 
-3. Select the AEM Externalizer base URL you previously specified and then click **Continue**.
+3. Select the AEM Link Externalizer base URL that you [previously specified](#Configure-the-AEM-Link-Externalizer) and then click **Continue**.
+
+      ![aem externalizer base url on marketing cloud](https://user-images.githubusercontent.com/29133525/32860382-aec87b50-ca0e-11e7-8eb6-febd13497b17.png)
 
 4. Select **Create new integration** and fill in the **Configure Integration** detail form.
 
