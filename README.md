@@ -151,7 +151,7 @@ To add the key store to the AEM Eventproxy-service user group:
 
 8. Click **Submit**.
  
- ![keystore management](https://user-images.githubusercontent.com/29133525/31192061-576fb936-a8fd-11e7-82b7-cfe36c47f320.png)
+      ![keystore management](https://user-images.githubusercontent.com/29133525/32856408-f5a370be-ca01-11e7-9e78-7ee03317d1ce.png)
  
 ### <a name="Configure-the-AEM-Link-Externalizer">Configure the AEM Link Externalizer</a>
 
