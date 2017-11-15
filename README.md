@@ -66,7 +66,7 @@ Note: If you have an older version of the package, delete it to avoid potential 
 
 6. Watch the **Activity Log**. If installed, the log reports that the package is imported.
 
-![activity log](https://user-images.githubusercontent.com/29133525/31085648-ff7f2c92-a754-11e7-832a-350e116d6f54.png)
+      ![activity log](https://user-images.githubusercontent.com/29133525/31085648-ff7f2c92-a754-11e7-832a-350e116d6f54.png)
 
 For more information on installing packages in AEM, see [How to Work with Packages](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html).
 
