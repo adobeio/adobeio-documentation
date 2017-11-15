@@ -201,7 +201,7 @@ To create an [Adobe I/O Console](https://adobe.io/console) Integration:
 
 ### <a name="Configure-Adobe-I/O-Events-as-a-Cloud-Service-in-AEM">Configure Adobe I/O Events as a Cloud Service in AEM</a>
 
-To configure Adobe I/O events as a cloud service in AEM:
+To configure Adobe I/O Events as a cloud service in AEM:
 
 1. Open the Cloud Services console, or click the **Tools** icon, then click **Deployment** and **Cloud Services**. 
 
@@ -345,7 +345,7 @@ Note: Once you have registered your webhook, responses will include a [status](h
 
 To perform a webhook health check:
 
-1. Check that events are sent to and received by Adobe I/O event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with **eventproxy, eventreceiver**.
+1. Check that events are sent to and received by Adobe I/O Event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with **eventproxy, eventreceiver**.
 
       ![check webhook evre](https://user-images.githubusercontent.com/29133525/32862094-25ec6fb6-ca14-11e7-9421-be357007bb8c.png)
 
