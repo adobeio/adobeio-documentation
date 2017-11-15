@@ -205,7 +205,7 @@ To configure Adobe I/O events as a cloud service in AEM:
 
 1. Open the [Cloud Services console](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html), or click the **Tools** icon, then click **Deployment** and **Cloud Services**. 
 
-![cloud services ui](https://user-images.githubusercontent.com/29133525/31203370-0c47c47c-a924-11e7-9951-e664f795c196.png)
+      ![cloud services ui](https://user-images.githubusercontent.com/29133525/32857472-2e76d8c4-ca05-11e7-8edf-0b878d1b7d81.png)
 
 2. Under **Adobe Marketing Cloud** on the **Cloud Services** page, click **Show Configurations** for **Adobe I/O Events**. 
 
