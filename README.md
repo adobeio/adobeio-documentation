@@ -316,11 +316,11 @@ module.exports = Webtask.fromExpress(app);
 
 You can watch the solution work by testing your integration. To do this:
 
-1. Register your webhook with the Adobe I/O Console
+1. [Register your webhook with the Adobe I/O Console](#Register-it)
+2. [Perform a webhook health check](#Webhook-health-check)
 
-2. Perform a webhook health check
 
-### Register Webhook with the Adobe I/O Console
+### <a name="Register-it">Register Webhook with the Adobe I/O Console</a> 
 
 Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/console) to register it:
 
@@ -336,7 +336,7 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
 4. Select **Create new integration** and fill in the **Integration Details** form [similar to your previous integration](#Create-new-integration-box).
 
-5. Click the **Add webhook** button and complete the **Add a new Webhook** form.
+5. Click the **Add webhook** button and complete the **Add a new webhook** form.
 
 6. Select the events you want to subscribe to and click **Save**.
 
@@ -344,7 +344,7 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
 Note: Once you have registered your webhook, responses will include a [status](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md#org85f36da) field to show if it is ```VERIFIED```.
 
-### Webhook Health Check
+### <a name="Webhook-health-check">Perform Webhook Health Check</a> 
 
 To perform a webhook health check:
 
@@ -368,7 +368,7 @@ To perform a webhook health check:
 
 Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GitHub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
 
-      ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
+   ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
  
  
  
