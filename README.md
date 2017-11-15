@@ -84,7 +84,7 @@ For more information, see AEM [User and Group Administration](https://helpx.adob
 
 3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
 
-![crxdelite](https://user-images.githubusercontent.com/29133525/31087331-dbd0ac58-a759-11e7-9a0d-199d088763f3.png)
+      ![crxdelite](https://user-images.githubusercontent.com/29133525/32855967-9de04aa6-ca00-11e7-8db2-1fcf608fc249.png)
 
 ### <a name="Configure-OAuth-and-IMS-Authentication">Configure OAuth and IMS Authentication</a>
 
