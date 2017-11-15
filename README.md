@@ -248,7 +248,8 @@ Or, simply search for: **Adobe I/O Events CSM Registration**.
 
 3. For **Adobe I/O Events CSM Registration**, click the **Edit** button.
 
-![edit csm registration](https://user-images.githubusercontent.com/29133525/31209952-da49b480-a94b-11e7-8c9e-70b12ffb7762.png)
+      ![edit csm registration](https://user-images.githubusercontent.com/29133525/32858063-5b408c9a-ca07-11e7-8715-1000a4caf7c8.png)
+
 
 The default paths for asset and page events are listed near the top of the configuration page.
 
