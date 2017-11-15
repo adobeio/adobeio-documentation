@@ -354,15 +354,13 @@ To perform a webhook health check:
 
 
 2. Test the Webhook Subscription by doing the following:
-*   by publishing or unpublishing AEM pages
-*   by editing, adding, or removing an asset in the AEM DAM or by using the [AEM Assets HTTP API](https://helpx.adobe.com/experience-manager/6-3/assets/using/mac-api-assets.html)
+      *   by publishing or unpublishing AEM pages
+      *   by editing, adding, or removing an asset in the AEM DAM or by using the [AEM Assets HTTP API](https://helpx.adobe.com/experience-manager/6-3/assets/using/mac-api-assets.html)
 
-The responses appear in your webhook.
-
-      <img width="797" alt="webscript webhook" src="https://user-images.githubusercontent.com/29133525/32862296-ec642a08-ca14-11e7-9703-ad604107db30.png">
-
-<img width="908" alt="webhook report log" src="https://user-images.githubusercontent.com/29133525/31210699-57b6f6bc-a951-11e7-8199-f1731125ee35.png">
-
+      The responses appear in your webhook.
+      
+      
+      
 ## Feedback?
 
 Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GitHub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
