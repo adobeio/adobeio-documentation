@@ -49,7 +49,7 @@ To install the AEM Event Proxy Package:
 
 2. Open AEM Package Manager at http://localhost:4502/crx/packmgr/index.jsp; or click the **Tools** icon and then click **Deployment** and **Packages**.
 
-![package manager navi](https://user-images.githubusercontent.com/29133525/31083270-7f0f6ece-a74e-11e7-87d8-da73464104d7.png)
+![package manager navi](https://user-images.githubusercontent.com/29133525/32855537-36c7cd72-c9ff-11e7-9098-a5aba8f4493f.png)
 
 3. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
 
