@@ -137,7 +137,7 @@ To add the key store to the AEM Eventproxy-service user group:
 
 2. On the **User Management** group list, click **eventproxy-service** to open it.
 
-![eventproxy service](https://user-images.githubusercontent.com/29133525/31091250-91d7788a-a767-11e7-9187-c55d8b04c4f4.png)
+      ![eventproxy service](https://user-images.githubusercontent.com/29133525/32856308-a90add0a-ca01-11e7-8112-1491ce585e0e.png)
  
 3. On **Account settings**, click **Create KeyStore** and create the key store.
 
