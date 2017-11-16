@@ -96,7 +96,7 @@ Your webhook needs to
 
 <a id="orgec22b7a"></a>
 
-### The Challenge Request
+### The challenge request
 
 When registering a webhook, Adobe I/O Events will first try to verify that the URL is valid. To do this it sends a HTTP GET request, with a `challenge` query parameter. The webhook should respond with a body containing the value of the `challenge` query parameter.
 
@@ -138,7 +138,7 @@ In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web In
 
 <a id="org926a538"></a>
 
-## Create an Integration
+## Creating an integration
 
 To create an integration:
 
@@ -164,7 +164,7 @@ To create an integration:
 
 <a id="orgef08b06"></a>
 
-## Registering the Webhook
+## Registering the webhook
 
 To complete the integration, you need to add a webhook. 
 
@@ -192,7 +192,7 @@ To complete the integration, you need to add a webhook.
 
 <a id="orgecb4ae5"></a>
 
-## Receiving Events
+## Receiving events
 
 Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console.
 
