@@ -142,7 +142,7 @@ In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web In
 
 To create an integration:
 
-1. Open the [Adobe I/O Console](http://console.adobe.io/); by default, you should be on the Integations panel. If not, select it from the top menu.  
+1. Open the [Adobe I/O Console](http://console.adobe.io/); by default, you should be on the Integrations panel. If not, select it from the top menu.  
   
   ![Adobe I/O Console](img/Console_1.png "Adobe I/O Console")  
   
@@ -154,7 +154,7 @@ To create an integration:
   
   ![Choosing Creative SDK](img/Console_3.png "Choosing Creative SDK")  
   
-4. Now you can choose between creating a brand new integration, or updating an existing one. Create a new integration.  
+4. Now you can choose between creating a brand new integration, or updating an existing one. Choose to create a new integration.  
   
   ![A brand new integration](img/Console_4.png "A brand new integration")  
   
@@ -170,11 +170,11 @@ To complete the integration, you need to add a webhook.
 
 1. Select "Add a webhook". The dialog expands to display the webhook details.  
 
-2. Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`. Also, check the boxes for the three available event types: Asset Created, Updated, and Deleted.  
+2. Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`. Also, check the boxes for the three available event types: Creative Cloud Asset Deleted, Updated, and Created.  
   
   ![Specifying the webhook](img/Console_6.png "Specifying the webhook")  
 
-3. Select "Save", click the Captcha ("I'm not a robot"), and then select "Create integration". You should see an acknowledgement that your integration has been created. 
+3. Select "Save", complete the Captcha ("I'm not a robot"), and then select "Create integration". You should see an acknowledgement that your integration has been created. 
   
   ![Completing the integration](img/Console_7.png "Completing the integration")  
 
@@ -302,7 +302,7 @@ curl https://csm.adobe.io/csm/webhooks \
 
 You can also use the API to get a list of all the webhooks, so you can verify that the webhook is really there.
 
-This uses a GET request, so there is no request body. Instead the `CLIENT_ID` is now included in the URL.
+This uses a GET request, so there is no request body. Instead, the `CLIENT_ID` is now included in the URL.
 
 ```shell
 curl https://csm.adobe.io/csm/webhooks/CLIENT_ID \
@@ -315,7 +315,7 @@ curl https://csm.adobe.io/csm/webhooks/CLIENT_ID \
 
 <a id="org5cc962d"></a>
 
-### Response
+#### Response
 
 ```json
 [
