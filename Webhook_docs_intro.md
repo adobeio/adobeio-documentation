@@ -158,7 +158,7 @@ To create an integration:
   
   ![A brand new integration](img/Console_4.png "A brand new integration")  
   
-5. Enter a name and description for the integration. As a platform, choose "Web". You also need to specifiy a Redirect URL and Redirect URL pattern. These are only relevant when using the [Creative Cloud SDK User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html). For now you can fill in `https://example.com` and `https://example\.com/.*` respectively.  
+5. Enter a name and description for the integration. As a platform, choose "Web". You also need to specifiy a default redirect URI and redirect URI pattern. These are only relevant when using the [Creative Cloud SDK User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html). For now you can fill in `https://example.com` and `https://example\.com/.*` respectively.  
   
   ![Specifying the integration](img/Console_5.png "Specifying the integration")  
 
@@ -169,28 +169,26 @@ To create an integration:
 To complete the integration, you need to add a webhook. 
 
 1. Select "Add a webhook". The dialog expands to display the webhook details.  
-  
-  ![Webhook details](img/Console_6.png "Webhook details") 
 
 2. Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`. Also, check the boxes for the three available event types: Asset Created, Updated, and Deleted.  
   
-  ![Specifying the webhook](img/Console_7.png "Specifying the webhook")  
+  ![Specifying the webhook](img/Console_6.png "Specifying the webhook")  
 
-3. Select "Save", click the Captcha ("I'm not a robot"), and then select "Create integration". 
+3. Select "Save", click the Captcha ("I'm not a robot"), and then select "Create integration". You should see an acknowledgement that your integration has been created. 
   
-  ![Completing the integration](img/Console_8.png "Completing the integration")  
+  ![Completing the integration](img/Console_7.png "Completing the integration")  
 
 4. Check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
   
   ![The webhook request received in ngrok](img/ngrok_2.png "The webhook request received in ngrok")  
 
-5. Return to the Adobe I/O Console. You should see an acknowledgement that your integration has been created. Select "Continue to integration details" and you'll be shown the Integration Overview. This is where you can see all your integration details and make updates as needed.  
+5. Return to the Adobe I/O Console. Select "Continue to integration details" and you'll be shown the Integration Overview. This is where you can see all your integration details and make updates as needed.  
   
-  ![The Integration Overview](img/Console_9.png "The Integration Overview")  
+  ![The Integration Overview](img/Console_8.png "The Integration Overview")  
 
 6. Select the Events tab. Your webhook should be listed as "Active".    
   
-  ![The active webhook in the Console](img/Console_10.png "The active webhook in the Console") 
+  ![The active webhook in the Console](img/Console_9.png "The active webhook in the Console") 
 
 <a id="orgecb4ae5"></a>
 
