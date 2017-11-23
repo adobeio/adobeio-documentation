@@ -5,7 +5,7 @@
   - [An example:](#org07fb732)
 - [Your first webhook](#orgbb36f22)
   - [The Challenge Request](#orgec22b7a)
-  - [Using webscript.io](#org1762841)
+  - [Testing with ngrok](#org1762841)
 - [Create an Integration](#org926a538)
 - [Registering the Webhook](#orgef08b06)
 - [Receiving Events](#orgecb4ae5)
