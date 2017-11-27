@@ -72,17 +72,17 @@ For more information on installing packages in AEM, see [How to Work with Packag
 
 #### Additional Package Installation Notes
 
-1. If you are upgrading the package, delete the previous .jar file from the following location: **/apps/eventproxy/install**
+1. If you are upgrading the package, delete the previous .jar file from the following location: **`/apps/eventproxy/install`**
 
 2. Verify that the Access Control Handling is properly applied by checking permissions for the eventproxy-service user group at **/useradmin**. If applied correctly, the eventproxy-service user is added to the following:
 
-*   **/home/users/system/eventproxy/eventproxy-service with jcr:read and rep:write authorizations**
-*   **/etc/cloudservices/eventproxy with jcr:read and rep:write authorizations**
-*   **/content with jcr:read authorization**
+*   **`/home/users/system/eventproxy/eventproxy-service` with `jcr:read` and `rep:write` authorizations**
+*   **/`etc/cloudservices/eventproxy` with `jcr:read` and `rep:write` authorizations**
+*   **`/content` with `jcr:read` authorization**
 
 For more information, see AEM [User, Group and Access Rights Administration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/user-group-ac-admin.html).
 
-3. You can also manually update permissions in CRXDE Lite at the following location: **/crx/de/index.jsp#/etc/cloudservices/eventproxy**.
+3. You can also manually update permissions in CRXDE Lite at the following location: **`/crx/de/index.jsp#/etc/cloudservices/eventproxy`**.
 
       ![crxdelite](https://user-images.githubusercontent.com/29133525/32855967-9de04aa6-ca00-11e7-8db2-1fcf608fc249.png)
 
@@ -222,38 +222,6 @@ To configure Adobe I/O Events as a cloud service in AEM:
     ![copy secrets](https://user-images.githubusercontent.com/29133525/32806941-7fde170a-c94b-11e7-9bf4-a237c1afb2c1.png) 
 ![edit configuration adobe io](https://user-images.githubusercontent.com/29133525/32806239-13fe90c0-c949-11e7-932d-4ba3d9d643f4.png)
 
-### <a name="Configure-Advanced-Adobe-I/O-Events">Configure Advanced Adobe I/O Events (Optional)</a>
-
-For all the Adobe I/O event types known to the Adobe I/O event model, you can change:
-*   the OSGI event **topic** 
-*   the **filter** used in the OSGI event handler
-*   the default path for asset events:  **/content/dam**
-*   the default path for page events:  **/content**
-
-The OSGI event handler intercepts the events according to these values and then maps the OSGI events to the Adobe I/O event model before forwarding them to Adobe I/O.
-
-You can also perform advanced configuration of events through the OSGI configuration panel.
-
-To use the panel:
-
-1. Click the **Tools** icon in AEM and then click **Operations** and **Web Console**.
-
-      ![web console navigation ui](https://user-images.githubusercontent.com/29133525/32857842-82113b22-ca06-11e7-9c90-52a1882c6298.png)
-
-2. In the **OSGI** menu, select **Configuration**.
-
-      ![osgi configuration](https://user-images.githubusercontent.com/29133525/32857941-e41ac81a-ca06-11e7-9592-d4289e9ce35f.png)
-
-Or, simply search for: **Adobe I/O Events CSM Registration**.
-
-3. For **Adobe I/O Events CSM Registration**, click the **Edit** button.
-
-      ![edit csm registration](https://user-images.githubusercontent.com/29133525/32858063-5b408c9a-ca07-11e7-8715-1000a4caf7c8.png)
-      
-      The default paths for asset and page events are listed near the top of the configuration page.
-      
-      ![osgi config default path](https://user-images.githubusercontent.com/29133525/32858195-eedafdd2-ca07-11e7-8016-4d1c98457068.png)
- 
 ## Perform an AEM Health and Configuration Check
 
 You can use the AEM Web Console Sling Health Check to verify that your configurations are correct.
@@ -360,6 +328,42 @@ To perform a webhook health check:
       
       ![web hook response 2](https://user-images.githubusercontent.com/29133525/32863030-5d9f1a14-ca17-11e7-8ceb-66e2c5d92561.png)
       
+
+### <a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events' OSGI to XDM Event Mapping Configurations</a>
+
+For all the Adobe I/O event types known to the Adobe I/O Event Model, 
+there is a `Adobe I/O Events' OSGI to XDM Event Mapping Configuration`
+
+for each of these you can change/edit 
+
+* The OSGI Topic you want to observe: `osgiTopic`
+* The OSGI Filter you want to apply in your osgi event observation: `osgiFilter`
+* The JCR osgiJcrPathFilter to filter the OSGI events further, if empty no resource path filtering is done: `osgiJcrPathFilter`
+* the Osgi Event Handler Type ( i.e Class Name of the Class extending [BaseAdobeIoEventHandler](https://git.corp.adobe.com/adobeio/sling-event-proxy/blob/master/src/main/java/com/day/cq/dam/eventproxy/service/impl/listener/BaseAdobeIoEventHandler.java)): `osgiEventHandlerClassName`
+* the [Adobe I/O XDM Event Type](https://git.corp.adobe.com/adobeio/xdm-event-model/tree/master/src/main/java/com/adobe/xdm/event) (i.e Class Name) you want to map the OSGI event to : `adobeIoXdmEventClassName`
+* the Adobe I/O Event Code (unique to your Event provider, i.e. unique to your AEM instance/cluster: `adobeIoEventCode`
+* the Adobe I/O Event Label as it will appear on the Adobe I/O Console: `adobeIoEventLabel`
+  
+The various OSGI event handler will intercept the events according to these value 
+and then map these OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
+
+
+The solution leverages the OSGI configuration factory pattern, hence not only can you edit these configurations but you can also remove and add such configurations.
+
+Use the panel:
+
+1. Click the **Tools** icon in AEM and then click **Operations** and **Web Console**.
+
+      ![web console navigation ui](https://user-images.githubusercontent.com/29133525/32857842-82113b22-ca06-11e7-9c90-52a1882c6298.png)
+
+2. In the **OSGI** menu, select **Configuration**.
+
+      ![osgi configuration](https://user-images.githubusercontent.com/29133525/32857941-e41ac81a-ca06-11e7-9592-d4289e9ce35f.png)
+
+Or, simply search for: **Adobe I/O Events CSM Registration**.
+
+3. For **`Adobe I/O Events' OSGI to XDM Event Mapping Configurationn**, click the **+** **Edit** or **Delete** buttons.
+
       
 ## Feedback?
 
