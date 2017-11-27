@@ -77,7 +77,7 @@ For more information on installing packages in AEM, see [How to Work with Packag
 2. Verify that the Access Control Handling is properly applied by checking permissions for the eventproxy-service user group at **/useradmin**. If applied correctly, the eventproxy-service user is added to the following:
 
 *   **`/home/users/system/eventproxy/eventproxy-service` with `jcr:read` and `rep:write` authorizations**
-*   **/`etc/cloudservices/eventproxy` with `jcr:read` and `rep:write` authorizations**
+*   **`/etc/cloudservices/eventproxy` with `jcr:read` and `rep:write` authorizations**
 *   **`/content` with `jcr:read` authorization**
 
 For more information, see AEM [User, Group and Access Rights Administration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/user-group-ac-admin.html).
@@ -329,7 +329,7 @@ To perform a webhook health check:
       ![web hook response 2](https://user-images.githubusercontent.com/29133525/32863030-5d9f1a14-ca17-11e7-8ceb-66e2c5d92561.png)
       
 
-### <a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events' OSGI to XDM Event Mapping Configurations</a>
+### Optional :<a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events' OSGI to XDM Event Mapping Configurations</a>
 
 For all the Adobe I/O event types known to the Adobe I/O Event Model, 
 there is a `Adobe I/O Events' OSGI to XDM Event Mapping Configuration`
@@ -360,7 +360,7 @@ Use the panel:
 
       ![osgi configuration](https://user-images.githubusercontent.com/29133525/32857941-e41ac81a-ca06-11e7-9592-d4289e9ce35f.png)
 
-Or, simply search for: **Adobe I/O Events CSM Registration**.
+simply search for: **Adobe I/O Events CSM Registration**.
 
 3. For **`Adobe I/O Events' OSGI to XDM Event Mapping Configurationn**, click the **+** **Edit** or **Delete** buttons.
 
