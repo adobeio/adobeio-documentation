@@ -339,8 +339,8 @@ for each of these you can change/edit
 * The OSGI Topic you want to observe: `osgiTopic`
 * The OSGI Filter you want to apply in your osgi event observation: `osgiFilter`
 * The JCR osgiJcrPathFilter to filter the OSGI events further, if empty no resource path filtering is done: `osgiJcrPathFilter`
-* the Osgi Event Handler Type ( i.e Class Name of the Class extending [BaseAdobeIoEventHandler](https://git.corp.adobe.com/adobeio/sling-event-proxy/blob/master/src/main/java/com/day/cq/dam/eventproxy/service/impl/listener/BaseAdobeIoEventHandler.java)): `osgiEventHandlerClassName`
-* the [Adobe I/O XDM Event Type](https://git.corp.adobe.com/adobeio/xdm-event-model/tree/master/src/main/java/com/adobe/xdm/event) (i.e Class Name) you want to map the OSGI event to : `adobeIoXdmEventClassName`
+* the Osgi Event Handler Type ( i.e Class Name of the Class extending BaseAdobeIoEventHandler): `osgiEventHandlerClassName`
+* the Adobe I/O XDM Event Type (i.e Class Name) you want to map the OSGI event to : `adobeIoXdmEventClassName`
 * the Adobe I/O Event Code (unique to your Event provider, i.e. unique to your AEM instance/cluster: `adobeIoEventCode`
 * the Adobe I/O Event Label as it will appear on the Adobe I/O Console: `adobeIoEventLabel`
   
