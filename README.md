@@ -313,9 +313,11 @@ Note: Once you have registered your webhook, responses will include a [status](h
 
 To perform a webhook health check:
 
-1. Check that events are sent to and received by Adobe I/O Event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with **eventproxy, eventreceiver**.
+1. Check that events are sent to and received by Adobe I/O Event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with **`eventproxy`, `eventreceiver`**.
 
       ![check webhook evre](https://user-images.githubusercontent.com/29133525/32862094-25ec6fb6-ca14-11e7-9421-be357007bb8c.png)
+
+You can also emit a custom osgi event sample by triggering the Health Check tagged with **`eventproxy`, `custom`**.
 
 
 2. Test the Webhook Subscription by doing the following:
@@ -331,18 +333,18 @@ To perform a webhook health check:
 
 ### Optional :<a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events' OSGI to XDM Event Mapping Configurations</a>
 
-For all the Adobe I/O event types known to the Adobe I/O Event Model, 
+For all the Adobe I/O event types defined by the Adobe I/O Event Model 
 there is a `Adobe I/O Events' OSGI to XDM Event Mapping Configuration`
 
 for each of these you can change/edit 
 
 * The OSGI Topic you want to observe: `osgiTopic`
-* The OSGI Filter you want to apply in your osgi event observation: `osgiFilter`
-* The JCR osgiJcrPathFilter to filter the OSGI events further, if empty no resource path filtering is done: `osgiJcrPathFilter`
-* the Osgi Event Handler Type ( i.e Class Name of the Class extending BaseAdobeIoEventHandler): `osgiEventHandlerClassName`
-* the Adobe I/O XDM Event Type (i.e Class Name) you want to map the OSGI event to : `adobeIoXdmEventClassName`
-* the Adobe I/O Event Code (unique to your Event provider, i.e. unique to your AEM instance/cluster: `adobeIoEventCode`
-* the Adobe I/O Event Label as it will appear on the Adobe I/O Console: `adobeIoEventLabel`
+* The OSGI Filter you want to apply in your osgi event observation, if left empty no osgi filtering is done: `osgiFilter`
+* The JCR osgiJcrPathFilter to filter the OSGI events further, if left empty no resource path filtering is done: `osgiJcrPathFilter`
+* The Osgi Event Handler Type (use the default `com.day.cq.dam.eventproxy.service.impl.listener.AdobeIoEventHandler`  to map any custom osgi event): `osgiEventHandlerClassName`
+* The Adobe I/O XDM Event Type to map the OSGI event to, again use the default (`com.adobe.xdm.event.OsgiEmittedEvent`) to map your custom osgi events : `adobeIoXdmEventClassName`
+* The Adobe I/O Event Code (unique to your Event provider, i.e. unique to your AEM instance/cluster: `adobeIoEventCode`
+* The Adobe I/O Event Label as it will appear on the Adobe I/O Console: `adobeIoEventLabel`
   
 The various OSGI event handler will intercept the events according to these value 
 and then map these OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
