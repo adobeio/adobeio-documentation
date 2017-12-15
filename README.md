@@ -12,7 +12,7 @@ Right now, our focus at Adobe I/O is to provide a single source for developer-fo
     - [Overview](events/event_overview.md)
     - Get Started
         - [Adobe Experience Manager Event](https://github.com/adobeio/solutions-ioevents-aem-setup-documentation)
-        - [Analytics Triggers Event] (https://github.com/adobeio/analytics-triggers-documentation)
+        - [Analytics Triggers Event](https://github.com/adobeio/analytics-triggers-documentation)
         - Creative Cloud Asset Event
 - [I/O Runtime](https://www.adobe.io/apis/cloudplatform/runtime.html)
 
