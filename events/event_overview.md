@@ -21,7 +21,7 @@ To work with event for Adobe services in Experience Cloud, you would need to hav
     - [Creative Cloud Asset Events](event-setup/cc-asset-event-setup.md)
 
 - Experience Cloud Events
-    - [AEM Events](event-setup/aem-event-setup.md)
+    - [Adobe Experience Manager Events](event-setup/aem-event-setup.md)
     - [Analytics Triggers Events (Private beta)](event-setup/analytics-triggers-event-setup.md)
 
 ## Key Concepts

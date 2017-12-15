@@ -331,7 +331,7 @@ You can also emit a custom osgi event sample by triggering the Health Check tagg
       ![web hook response 2](https://user-images.githubusercontent.com/29133525/32863030-5d9f1a14-ca17-11e7-8ceb-66e2c5d92561.png)
       
 
-### Optional :<a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events' OSGI to XDM Event Mapping Configurations</a>
+### Optional :<a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events OSGI to XDM Event Mapping Configurations</a>
 
 For all the Adobe I/O event types defined by the Adobe I/O Event Model 
 there is a `Adobe I/O Events' OSGI to XDM Event Mapping Configuration`
