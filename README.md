@@ -12,6 +12,7 @@ Right now, our focus at Adobe I/O is to provide a single source for developer-fo
     - [Overview](events/event_overview.md)
     - Get Started
         - [Adobe Experience Manager Event](https://github.com/adobeio/solutions-ioevents-aem-setup-documentation)
+        - [Analytics Triggers Event] (https://github.com/adobeio/analytics-triggers-documentation)
         - Creative Cloud Asset Event
 - [I/O Runtime](https://www.adobe.io/apis/cloudplatform/runtime.html)
 
@@ -19,4 +20,9 @@ Right now, our focus at Adobe I/O is to provide a single source for developer-fo
 - [Adobe I/O Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 
 ## Related Solutions
-- [Post your AEM Updates to Slack](https://github.com/adobeio/io-events-aem-assets)
+- APIs
+    - [Adobe Campaign Standard API](https://github.com/adobeio/API-playground-Adobe-Campaign)
+- I/O Events
+    - [Post your AEM Updates to Slack](https://github.com/adobeio/io-events-aem-assets)
+- I/O Runtime
+    - [Runtime Slackbot](https://github.com/adobeio/runtime-slackbot-framework)
