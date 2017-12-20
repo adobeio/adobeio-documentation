@@ -11,15 +11,14 @@ Through the Webhooks API you can create, retrieve, update, or delete webhook reg
 ## Prerequisites
 
 **Creative Cloud Events**
-To work with Creative Cloud event, you would need an active Adobe ID.
+To work with Creative Cloud Events, you would need an active Adobe ID.
 
 **Experience Cloud Events**
-To work with event for Adobe services in Experience Cloud, you would need to have corresponding entitlements for this Adobe service in your organization, and administrative permission for your org to create integrations. 
+To work with events for Adobe services in Experience Cloud, you would need to have corresponding entitlements for this Adobe service in your organization, and administrative permission for your org to create integrations. 
 
 ## Get Started with Available Events
 - Creative Cloud Events
     - [Creative Cloud Asset Events](event-setup/cc-asset-event-setup.md)
-
 - Experience Cloud Events
     - [Adobe Experience Manager Events](event-setup/aem-event-setup.md)
     - [Analytics Triggers Events (Private beta)](event-setup/analytics-triggers-event-setup.md)

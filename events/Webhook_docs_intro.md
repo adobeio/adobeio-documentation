@@ -125,7 +125,7 @@ Content-type: application/json
 Among other things, ngrok is a great tool for testing webhooks. Once you've downloaded and installed [ngrok](https://ngrok.com/), you run it from a command line, specifying the protocol and port you want to monitor:
 ```ngrok http 80```
 
-![ngrok on port 80](img/ngrok.png "ngrok on port 80")
+![ngrok on port 80](../img/ngrok.png "ngrok on port 80")
 
 In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
 
@@ -137,23 +137,23 @@ To create an integration:
 
 1. Open the [Adobe I/O Console](http://console.adobe.io/); by default, you should be on the Integrations panel. If not, select it from the top menu.  
   
-  ![Adobe I/O Console](img/Console_1.png "Adobe I/O Console")  
+  ![Adobe I/O Console](../img/Console_1.png "Adobe I/O Console")  
   
 2. Select [New integration](https://console.adobe.io/integrations/new). You have the choice between "Access an API" or "Receive near real-time events". Choose "Receive near real-time events" and select "Continue".  
   
-  ![Create a new integration](img/Console_2.png "Create a new integration")  
+  ![Create a new integration](../img/Console_2.png "Create a new integration")  
   
 3. Now you're given the choice of Adobe event provider for your integration. Choose "Creative Cloud Assets" and select "Continue".  
   
-  ![Choosing Creative SDK](img/Console_3.png "Choosing Creative SDK")  
+  ![Choosing Creative SDK](../img/Console_3.png "Choosing Creative SDK")  
   
 4. Now you can choose between creating a brand new integration, or updating an existing one. Choose to create a new integration.  
   
-  ![A brand new integration](img/Console_4.png "A brand new integration")  
+  ![A brand new integration](../img/Console_4.png "A brand new integration")  
   
 5. Enter a name and description for the integration. As a platform, choose "Web". You also need to specifiy a default redirect URI and redirect URI pattern. These are only relevant when using the [Creative Cloud SDK User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html). For now you can fill in `https://example.com` and `https://example\.com/.*` respectively.  
   
-  ![Specifying the integration](img/Console_5.png "Specifying the integration")  
+  ![Specifying the integration](../img/Console_5.png "Specifying the integration")  
 
 <a id="orgef08b06"></a>
 
@@ -165,23 +165,23 @@ To complete the integration, you need to add a webhook.
 
 2. Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`. Also, check the boxes for the three available event types: Creative Cloud Asset Deleted, Updated, and Created.  
   
-  ![Specifying the webhook](img/Console_6.png "Specifying the webhook")  
+  ![Specifying the webhook](../img/Console_6.png "Specifying the webhook")  
 
 3. Select "Save", complete the Captcha ("I'm not a robot"), and then select "Create integration". You should see an acknowledgement that your integration has been created. 
   
-  ![Completing the integration](img/Console_7.png "Completing the integration")  
+  ![Completing the integration](../img/Console_7.png "Completing the integration")  
 
 4. Check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
   
-  ![The webhook request received in ngrok](img/ngrok_2.png "The webhook request received in ngrok")  
+  ![The webhook request received in ngrok](../img/ngrok_2.png "The webhook request received in ngrok")  
 
 5. Return to the Adobe I/O Console. Select "Continue to integration details" and you'll be shown the Integration Overview. This is where you can see all your integration details and make updates as needed.  
   
-  ![The Integration Overview](img/Console_8.png "The Integration Overview")  
+  ![The Integration Overview](../img/Console_8.png "The Integration Overview")  
 
 6. Select the Events tab. Your webhook should be listed as "Active".    
   
-  ![The active webhook in the Console](img/Console_9.png "The active webhook in the Console") 
+  ![The active webhook in the Console](../img/Console_9.png "The active webhook in the Console") 
 
 <a id="orgecb4ae5"></a>
 
