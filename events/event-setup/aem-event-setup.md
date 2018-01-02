@@ -30,7 +30,7 @@ To complete this solution, you will need authorization to use the following serv
 
 ### <a name="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
-You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge http request](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
+You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge http request](../Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](../Webhook_docs_intro.md).
 
 ## <a name="Set-Up-Products">Set Up Products</a>
 
@@ -155,15 +155,20 @@ To add the key store to the AEM Eventproxy-service user group:
  
 ### <a name="Configure-the-AEM-Link-Externalizer">Configure the AEM Link Externalizer</a>
 
-The AEM Link Externalizer name can be **author** or any other alias specified in the Adobe Experience Manager Web Console.
+To configure AEM Link Externalizer:
 
-Note: Do not use only the word “localhost” as the default name because others may use it. This will then cause confusion and make it difficult to determine which instance is yours. 
+1. Open the Web Console, or click the **Tools** icon, then click **Operations** and **Web Console**. 
 
-The base url that you specify appears on the AEM Web Console. 
+    The AEM Link Externalizer name can be **author** or any other alias specified in the Adobe Experience Manager Web Console.
 
-![aem web console base url](https://user-images.githubusercontent.com/29133525/32803801-f3dcce30-c941-11e7-8bf4-405c43d03f74.png)
+    ![aem-console](https://user-images.githubusercontent.com/7494850/34497015-8ff19640-efb0-11e7-8145-b257dfc8fa4b.png)
 
+2. Scroll down the list to find **Day CQ Link Externalizer**, update the domain name, and click **Save** when done.
  
+    Note: The base url that you specify appears on the AEM Web Console. Do not use only the word “localhost” as the default name because others may use it. This will then cause confusion and make it difficult to determine which instance is yours. 
+
+    ![aem web console base url](https://user-images.githubusercontent.com/29133525/32803801-f3dcce30-c941-11e7-8bf4-405c43d03f74.png)
+
 ## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
 
 Use Adobe I/O to do the following:
@@ -315,11 +320,14 @@ To perform a webhook health check:
 
 1. Check that events are sent to and received by Adobe I/O Event receiver (the AEM ingress adapater). To do this, execute the Health Check tagged with **`eventproxy`, `eventreceiver`**.
 
-      ![check webhook evre](https://user-images.githubusercontent.com/29133525/32862094-25ec6fb6-ca14-11e7-9421-be357007bb8c.png)
+    ![event receiver health check](https://user-images.githubusercontent.com/7494850/34497828-08e94c5c-efb4-11e7-868d-50a3b3d3aa65.png)
 
-You can also emit a custom osgi event sample by triggering the Health Check tagged with **`eventproxy`, `custom`**.
+    You can also emit a custom osgi event sample by triggering the Health Check tagged with **`eventproxy`, `custom`**.
+    
+    ![custom event health check](https://user-images.githubusercontent.com/7494850/34497879-3648edc4-efb4-11e7-96b9-9cc27f04ef96.png)
 
-
+    You should see events posted through your webhook when you perform these health checks.
+    
 2. Test the Webhook Subscription by doing the following:
       *   by publishing or unpublishing AEM pages
       *   by editing, adding, or removing an asset in the AEM DAM or by using the [AEM Assets HTTP API](https://helpx.adobe.com/experience-manager/6-3/assets/using/mac-api-assets.html)
