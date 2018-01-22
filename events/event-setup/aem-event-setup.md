@@ -339,28 +339,25 @@ To perform a webhook health check:
       ![web hook response 2](https://user-images.githubusercontent.com/29133525/32863030-5d9f1a14-ca17-11e7-8ceb-66e2c5d92561.png)
       
 
-### Optional :<a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events OSGI to XDM Event Mapping Configurations</a>
+### Optional :<a name="Configure-Advanced-Adobe-I/O-Events">Adobe I/O Events' OSGI to XDM Event Mapping Configurations</a>
 
-For all the Adobe I/O event types defined by the Adobe I/O Event Model 
-there is a `Adobe I/O Events' OSGI to XDM Event Mapping Configuration`
+For all Adobe I/O event types defined by the Adobe I/O Event Model, there is an **Adobe I/O Events OSGI to XDM Event Mapping Configuration**.
 
-for each of these you can change/edit 
+For each of these you can change/edit:
 
 * The OSGI Topic you want to observe: `osgiTopic`
-* The OSGI Filter you want to apply in your osgi event observation, if left empty no osgi filtering is done: `osgiFilter`
-* The JCR osgiJcrPathFilter to filter the OSGI events further, if left empty no resource path filtering is done: `osgiJcrPathFilter`
-* The Osgi Event Handler Type (use the default `com.day.cq.dam.eventproxy.service.impl.listener.AdobeIoEventHandler`  to map any custom osgi event): `osgiEventHandlerClassName`
-* The Adobe I/O XDM Event Type to map the OSGI event to, again use the default (`com.adobe.xdm.event.OsgiEmittedEvent`) to map your custom osgi events : `adobeIoXdmEventClassName`
-* The Adobe I/O Event Code (unique to your Event provider, i.e. unique to your AEM instance/cluster: `adobeIoEventCode`
+* The OSGI Filter you want to apply in your osgi event observation. If left empty no osgi filtering is done: `osgiFilter`
+* The JCR osgiJcrPathFilter to filter the OSGI events further. If left empty, no resource path filtering is done: `osgiJcrPathFilter`
+* The OSGI Event Handler Type (use the default `com.day.cq.dam.eventproxy.service.impl.listener.AdobeIoEventHandler`  to map any custom osgi event): `osgiEventHandlerClassName`
+* The Adobe I/O XDM Event Type to map to the OSGI event, again, use the default (`com.adobe.xdm.event.OsgiEmittedEvent`) to map your custom osgi events : `adobeIoXdmEventClassName`
+* The Adobe I/O Event Code (unique to your Event provider, i.e. unique to your AEM instance/cluster): `adobeIoEventCode`
 * The Adobe I/O Event Label as it will appear on the Adobe I/O Console: `adobeIoEventLabel`
   
-The various OSGI event handler will intercept the events according to these value 
-and then map these OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
+The various OSGI event handler will intercept the events according to these values and then map these OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
 
+The solution leverages the OSGI configuration factory pattern, hence not only can you edit these configurations, but you can also remove and add such configurations.
 
-The solution leverages the OSGI configuration factory pattern, hence not only can you edit these configurations but you can also remove and add such configurations.
-
-Use the panel:
+To configure using the panel:
 
 1. Click the **Tools** icon in AEM and then click **Operations** and **Web Console**.
 
@@ -368,11 +365,13 @@ Use the panel:
 
 2. In the **OSGI** menu, select **Configuration**.
 
-      ![osgi configuration](https://user-images.githubusercontent.com/29133525/32857941-e41ac81a-ca06-11e7-9592-d4289e9ce35f.png)
+      ![osgi configuration](https://user-images.githubusercontent.com/29133525/32857941-e41ac81a-ca06-11e7-9592-d4289e9ce35f.png) and search for: **Adobe I/O Events CSM Registration**.
 
-simply search for: **Adobe I/O Events CSM Registration**.
+3. For **Adobe I/O Events OSGI to XDM Event Mapping Configurationn**, click the **+**, **Edit**, or **Delete** buttons.
 
-3. For **`Adobe I/O Events' OSGI to XDM Event Mapping Configurationn**, click the **+** **Edit** or **Delete** buttons.
+## Authors
+- Sarah Xu [@sarahxxu](https://github.com/sarahxxu).
+- John Wight [@johnwight](https://github.com/johnwight).
 
       
 ## Feedback?
