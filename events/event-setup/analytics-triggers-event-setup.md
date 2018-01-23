@@ -55,7 +55,7 @@ To set up Adobe products for this solution:
 
 ### <a name="Integrate-AEM">Set Up AEM</a>
 
-To integrate Analytics triggers and Dynamic Tag Management (DTM) with AEM, follow the step-by-step video shown below:
+To set up AEM with Analytics Triggers and Dynamic Tag Management (DTM), follow the [step-by-step documentation](https://github.com/johnwight/Adobe-AEM-with-DTM-and-Analytics) for that configuration. You can also follow the video shown below:
 
 
    [![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
