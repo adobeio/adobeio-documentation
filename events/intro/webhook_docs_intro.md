@@ -91,7 +91,7 @@ Your webhook needs to
 
 ### The challenge request
 
-When registering a webhook, Adobe I/O Events will first try to verify that the URL is valid. To do this it sends a HTTP GET request, with a `challenge` query parameter. The webhook should respond with a body containing the value of the `challenge` query parameter.
+When registering a webhook, Adobe I/O Events will first try to verify that the URL is valid. To do this, it sends an HTTP GET request, with a `challenge` query parameter. The webhook should respond with a body containing the value of the `challenge` query parameter.
 
 ```
 GET https://acme.example.com?challenge=8ec8d794-e0ab-42df-9017-e3dada8e84f7
