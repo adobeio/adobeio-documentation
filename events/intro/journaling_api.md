@@ -2,6 +2,8 @@
 
 For enterprise developers, Adobe offers another way to consume events besides webhooks: journaling. The Adobe I/O Events Journaling API enables enterprise integrations to consume events according to their own cadence and process them in bulk. Unlike webhooks, no additional registration or other configuration is required; every enterprise integration that is registered for events is automatically enabled for journaling.
 
+
+
 Rather than webhooks, which are a _push_ model for events, journaling is a _pull_ model, in which the integration issues an API call to pull a list of events from Adobe. As with webhooks, Adobe delivers the event list as a JSON object on the following model: 
 
 ```json
@@ -21,7 +23,7 @@ There is only one API for journaling:
 
 This API gets all events for a given event registration. 
 
-## Accessing the journaling endpoint
+## <a id="access">Accessing the journaling endpoint</a>
 
 Adobe I/O Console makes it easy to use the API by providing you with an endpoint URL with the parameters filled in:
 
@@ -33,7 +35,7 @@ Adobe I/O Console makes it easy to use the API by providing you with an endpoint
 
 4. Find the Journaling section of the event details and copy the URL for the unique endpoint. 
 
-## Calling the API
+## <a id="apicall">Calling the API</a>
 
 To issue the API call, you need to provide two additional parameters: 
 
@@ -42,9 +44,9 @@ To issue the API call, you need to provide two additional parameters:
 
 You combine the URL you got from the Journaling section of the event details with your API key and JWT token to make the call
 
-```curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b```
+`curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b`
 
-## Getting the response
+## <a id="response">Getting the response</a>
 Your call results in a response containing a JSON object listing all the events for that event registration. 
 
 **Sample output:**
@@ -136,3 +138,15 @@ Your call results in a response containing a JSON object listing all the events 
    "next":""
 }
 ```
+
+## <a id="control">Controlling the response</a>
+By default, every call to the Journaling API returns a list of the latest 100 events, or all events if there are fewer than 100. The Journaling API offers two optional query parameters you can include in your URL for controlling the response:
+
+* **pageSize:** This integer parameter lets you specify how many events to retrieve. 
+* **from:** This string parameter lets you provide the ID of the first event you want returned; the rest of events in the response will follow.
+
+Adding these two parameters to the URL:
+
+`curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b?pageSize=25&from=2159b72c-e284-4899-b572-08da250e3614`
+
+This would return a list of 25 events, beginning with event ID 2159b72c-e284-4899-b572-08da250e3614.
