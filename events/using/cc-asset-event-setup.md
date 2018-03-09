@@ -2,15 +2,15 @@
 
 These instructions describe how to set up Creative Cloud Asset events using Adobe I/O Events. You can use Adobe I/O for notification of CC Asset events.
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 
 2. [Create an Integration](#create-integration)
 
-3. [Use Adobe I/O](#Use-Adobe-I/O)
+3. [Receive Events](#receive-events)
 
 4. [Watch the Solution Work](#Watch-It-Work)
 
-<a id="Introduction">&nbsp;</a>
+<a id="introduction"></a>
 
 ## Introduction
 Creative Cloud Assets provides a simple set of events to which you can subscribe: 
@@ -22,10 +22,14 @@ There are no events for the following activities:
 - Moving a file from one folder in Creative Cloud to another.
 - Renaming a file. This is because assets are tracked in Creative Cloud by GUIDs, and the GUID doesn't change when the file is renamed. Creative Cloud recognizes that the asset hasn't changed, and can still find the asset by the same GUID. Any URL paths you create to that file, however, would change, since they do include the filename.
 
-### Getting access to Creative CLoud Assets events
+<a id="getting-access"></a>
+
+### Getting access to Creative Cloud Assets events
 Unlike other Cloud Platform event providers, Creative Cloud Assets does not require an enterprise account, or administrative status, to gain access for creating integrations or receiving events. However, the integrations you create will still need to authenticate the same way any other Adobe integrations do (see Authentication under [Introduction to Events](../intro.md)). Consider what kind of authentication your integration needs before you start, and follow the correct procedure (see [Adobe Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)) to get the access rights your integration needs.
 
-## <span id="create-integration">Create an Integration</span>
+<a id="create-integration"></a>
+
+## Create an Integration
 For the purposes of this example, you&rsquo;ll be creating an individual integration using your personal Adobe ID. 
 
 To create an integration for Creative Cloud Assets:
@@ -112,7 +116,7 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
     Notice also that the `app.get` and `app.post` functions specify a relative path, `/webhook`: you&rsquo; need to add this to the end of the webtask&rsquo; endpoint URL to reach your webhook. For example, 
 
-    `https://wt-7ef4200cf2cfff39f542f26708adb75c-0.run.webtask.io/CCAssetsEvents_webhook`**`/webhook`**
+    `https://wt-7ef4200cf2cfff39f542f26708adb75c-0.run.webtask.io/CCAssetsEvents_webhook/webhook`
 
 7. Now you're ready to complete the webhook registration process in Adobe I/O Console. Return to that window and enter the name, URL, and description for the webhook, pasting in the URL you got from Webtask with the `/webhook` term added. Select all three events to receive: 
     - Creative Cloud Asset Created (`asset-created`) 
@@ -123,7 +127,22 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
 8. Save and complete the CAPTCHA. Select &ldquo;Create  integration". At this point, Adobe Events sends a test event to your webhook's destination URL. If your webhook responds correctly with the contents of the `challenge` parameter, Adobe Events completes your integration:
 
-    ![Integration created](../../img/CCA_Events_10.png "Integration created")
+    ![Integration created](../../img/CCA_Events_11.png "Integration created")
 
     Select &ldquo;Continue to Integration details&rdquo; to view and manage your integration.
-    
+
+    >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; of your webhook would have failed; instead of seeing the confirmation screen, you'd see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook's endpoint is down. 
+
+<a id="receive-events"></a>
+
+ ## Receive events
+ Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](#https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html"). 
+ 
+ Start with the integration overview. It's the screen you see immediately after selecting &ldquo;Continue to Integration details&rdquo;
+
+ 
+ For authentication setup, you'll need to add the Creative SDK as a service, and then use the User Auth UI to build an interface for your user to log into your app and give your app authorization to access Creative Cloud Assets. 
+
+ Be
+
+ To add Creative SDK as a service, 
