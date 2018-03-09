@@ -142,7 +142,7 @@ Your call results in a response containing a JSON object listing all the events 
 ## <a id="control">Controlling the response</a>
 By default, every call to the Journaling API returns a list of the latest 100 events, or all events if there are fewer than 100. The Journaling API offers two optional query parameters you can include in your URL for controlling the response:
 
-* **pageSize:** This integer parameter lets you specify how many events to retrieve. 
+* **pageSize:** This integer parameter lets you specify how many of the most recent events to retrieve. 
 * **from:** This string parameter lets you provide the ID of the first event you want returned; the rest of events in the response will follow.
 
 Adding these two parameters to the URL:
