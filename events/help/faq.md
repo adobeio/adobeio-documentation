@@ -15,7 +15,7 @@ Currently two Adobe solutions are supported via I/O Events:
 * Adobe Analytics Triggers
 * We will soon add Creative Cloud Asset Events (create, update, delete)
 
-_**What permissions are required to use I/O Events?**_
+_**What permissions are required to use I/O Events?**_  
 To access the Adobe I/O Console and create or manage integrations for AEM and Analytics Triggers, a user must have Enterprise Administrator permissions.
 
 _**Which subscription types do I/O Events support?**_  
@@ -109,7 +109,7 @@ Here are sample payloads for all AEM events:
     "xdmCreated": "https://ns.adobe.com/xdm/common/event/created#"
   }
 }</pre>
-            <li>
+            </li>
             <li>Asset deleted:
                 <pre>
 {
@@ -143,7 +143,7 @@ Here are sample payloads for all AEM events:
     "xdmDeleted": "https://ns.adobe.com/xdm/common/event/deleted#"
   }
 }</pre>
-            <li>
+            </li>
             <li>Asset updated:
                 <pre>
 {
@@ -183,7 +183,7 @@ Here are sample payloads for all AEM events:
   }
 }
                 </pre>
-            <li>
+            </li>
         </ul>
     </li>
     <li><em>Custom OSGI events:</em><br>
