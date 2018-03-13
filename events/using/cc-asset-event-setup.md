@@ -138,11 +138,19 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
  ## Receive events
  Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](#https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html"). 
  
- Start with the integration overview. It's the screen you see immediately after selecting &ldquo;Continue to Integration details&rdquo;
+ Start with the Integration Overview. It's the screen you see immediately after selecting &ldquo;Continue to Integration details&rdquo;.
 
+![Integration Overview](../../img/CCA_Events_12.png "Integration Overview")
+
+ For authentication setup, you'll need to add the [Creative SDK](https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/getting-started.html) as a service, and then use the [User Auth UI](https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/user-auth-ui.html) to build an interface for your user to log into your app and give your app authorization to access Creative Cloud Assets. 
+
+ To add Creative SDK as a service:
  
- For authentication setup, you'll need to add the Creative SDK as a service, and then use the User Auth UI to build an interface for your user to log into your app and give your app authorization to access Creative Cloud Assets. 
+ 1. From the Integration Overview, select the Services tab:
 
- Be
+    ![Integration Services tab](../../img/CCA_Events_13.png "Integration Services tab")
 
- To add Creative SDK as a service, 
+ 2. Under Creative Cloud, select &ldquo;Creative SDK&rdquo;, then select &ldquo;Add service&rdquo;. You're now ready to implement the User Auth UI.
+
+ Adobe&rsquo;s User Auth UI lets you build into your application a login function that takes the user&rsquo;s Adobe ID and lets the user give your app permission to access the assets and Adobe Solutions to which they're subscribed. Once your app is authenticated, Adobe will begin to push events to your integration's webhook via HTTP POST messages.
+
