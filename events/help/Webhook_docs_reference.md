@@ -1,3 +1,5 @@
+# Webhooks Reference
+
 - [Introduction](#org7a914d8)
 - [Authentication and Authorization](#org8a0a008)
   - [Creating an Integration](#org56f8047)
@@ -33,7 +35,7 @@
 
 <a id="org7a914d8"></a>
 
-# Introduction
+## Introduction
 
 **Adobe I/O Events** enables building reactive, event-driven applications, based on events originating from various Adobe Services (Creative Cloud, Adobe Experience Manager, etc.)
 
@@ -48,12 +50,12 @@ For a gentle introduction you can follow the [Getting Started Guide](file://#). 
 
 <a id="org8a0a008"></a>
 
-# Authentication and Authorization
+## Authentication and Authorization
 
 
 <a id="org56f8047"></a>
 
-## Creating an Integration
+#### Creating an Integration
 
 To access the Webhooks API you first need to create a new **Integration** (also referred to as an "application") in the [Adobe I/O Console](https://console.adobe.io/).
 
@@ -62,7 +64,7 @@ See the [Creative SDK Getting Started Guide](https://creativesdk.adobe.com/docs/
 
 <a id="org223aea2"></a>
 
-## Collecting the Necessary Identifiers
+#### Collecting the Necessary Identifiers
 
 Once you have set up the integration, you will find four pieces of identifying information
 
@@ -80,7 +82,7 @@ For development and testing you can instead quickly retrieve a token linked to y
 
 <a id="orgf2e325f"></a>
 
-## Request Headers
+#### Request Headers
 
 With these pieces in hand you can now set up the necessary HTTP headers to make authenticated requests to the API. These headers must be present on each request:
 
@@ -97,7 +99,7 @@ You will also have to pass the **Client ID** along with certain Webhooks API req
 
 <a id="orgb9b3187"></a>
 
-# Registering a Webhook
+## Registering a Webhook
 
 You can register a webhook through the [Adobe I/O Console](https://console.adobe.io/) web interface, or through the Webhooks API, by POSTing a Registration JSON object.
 
@@ -134,7 +136,7 @@ Content-Type: application/json
 
 <a id="org5e8d2e9"></a>
 
-## Application Webhooks and Authorized Users
+#### Application Webhooks and Authorized Users
 
 Once a webhook is registered, your application will receive events for **all authorized users**. As soon as a users authorizes your application (using the Creative SDK Auth UI), you will start receiving events for that user.
 
@@ -143,7 +145,7 @@ In other words, you only need to register for a certain event type once for the 
 
 <a id="org5615df6"></a>
 
-# Event Types
+## Event Types
 
 When registering a webhook, you pass in a list of events you want to be notified of. Each event in the list is specified by an Event Provider, and an Event Code.
 
@@ -170,7 +172,7 @@ For example, to be notified when assets are created and updated, but not when th
 
 <a id="orgd349b92"></a>
 
-## Retrieving a List of Event Types
+#### Retrieving a List of Event Types
 
 You can get a list of all the events available to your organization by querying the API.
 
@@ -235,7 +237,7 @@ x-ams-application-id: <Your Application ID>
 
 <a id="org7fbee92"></a>
 
-# The Webhook Endpoint
+## The Webhook Endpoint
 
 When registering a webhook, you pass in a URL where events need to be delivered. For example, if your application lives at [<https://example.com>](https://example.com) then you could have a [<https://example.com/adobe_events>](https://example.com/adobe_events) endpoint that is responsible for handling incoming events.
 
@@ -246,7 +248,7 @@ The SSL certificate must be valid: this means it is not allowed to be self-signe
 
 <a id="org00dc8fb"></a>
 
-## The Challenge Request
+#### The Challenge Request
 
 When registering a webhook, Adobe I/O Events will make a pre-flight request to the webhook URL to verify that it is correctly set up. This is a HTTP GET request, with a `challenge` query parameter. The application must respond by echoing back this `challenge`.
 
@@ -280,7 +282,7 @@ If this exchange is successful, then the webhook is successfully registered, and
 
 <a id="orge065f46"></a>
 
-## Webhook Event Delivery
+#### Webhook Event Delivery
 
 When events are triggered for which you have registered a webhook, then Adobe I/O Events will perform a HTTP POST request to the webhook URL, with as request body the JSON encoded Event object.
 
@@ -316,7 +318,7 @@ Currently 5 retries are attempted, with intervals starting at 8 seconds, and inc
 
 <a id="orgf96c770"></a>
 
-# The Notification Payload
+## The Notification Payload
 
 A POST request to your webhook will have a JSON Event object as request body. It contains event metadata, and a nested object with event data.
 
@@ -349,7 +351,7 @@ The event data available depends on the type of event. Adobe Creative Cloud Asse
 
 <a id="org172d24d"></a>
 
-# Signatures
+## Signatures
 
 Your webhook URL must by necessity be accessible from the open internet. This means third party actors can send forged requests to it, tricking your application into handling fake events.
 
@@ -376,10 +378,10 @@ if (request.header('x-adobe-signature') !== hmac.digest('base64')) {
 
 <a id="org17976d4"></a>
 
-# Webhook API Endpoints
+## Webhook API Endpoints
 
 | Operation                                                 | Response              | Description                                         |
-|--------------------------------------------------------- |--------------------- |--------------------------------------------------- |
+|---------------------------------------------------------- |---------------------- |---------------------------------------------------- |
 | `POST /csm/webhooks`                                      | Registration          | Creates a Client Application's WebHook registration |
 | `GET /csm/webhooks/{clientId}`                            | Array of Registration | Get all Webhook registration details                |
 | `GET /csm/webhooks/{clientId}/{registrationId}`           | Registration          | Get a specific WebHook registration details         |
@@ -395,35 +397,35 @@ In all these calls `clientId` is the Client ID that identifies the Integration, 
 
 <a id="orgc025636"></a>
 
-## POST /csm/webhooks
+#### POST /csm/webhooks
 
 Creates a new webhook registration. The request payload is the Registration object. See [Registering a Webhook](#orgb9b3187).
 
 
 <a id="org56b68bc"></a>
 
-## GET /csm/webhooks/{clientId}
+#### GET /csm/webhooks/{clientId}
 
 Get a list of all existing webhook registrations. The response body is a JSON array of Registration objects.
 
 
 <a id="org3bf2700"></a>
 
-## GET /csm/webhooks/{clientId}/{registrationId}
+#### GET /csm/webhooks/{clientId}/{registrationId}
 
 Retrieve a single webhook Registraion object based on its UUID. The response body is the Registration object.
 
 
 <a id="orgaf0c78a"></a>
 
-## DELETE /csm/webhooks/{clientId}/{registrationId}
+#### DELETE /csm/webhooks/{clientId}/{registrationId}
 
 Delete a Registraion object based on its UUID. This returns an empty response body with a status code of 204 (No Content)
 
 
 <a id="org8928a9e"></a>
 
-## POST /csm/webhooks/{clientId}/{registrationId}/{status}
+#### POST /csm/webhooks/{clientId}/{registrationId}/{status}
 
 With this endpoint you can temporarily disable or re-enable a registration, thus halting or resuming the delivery of events. The value of `status` should be either `ENABLED` or `DISABLED`. Any value other than `ENABLED` or `DISABLED` will result in a response of 404 Not Found.
 
@@ -432,14 +434,14 @@ The response body is the updated Registration object. The current status (enable
 
 <a id="orgc147a97"></a>
 
-# Error Codes
+## Error Codes
 
 This is a partial list of possible error codes, including an indication of what might cause them. Unsuccessful API requests will return a HTTP status code in the 4XX range (client error) or in the 5XX range (server error).
 
 
 <a id="orgeb6bace"></a>
 
-## 400 Bad Request
+#### 400 Bad Request
 
 This is a generic response indicating that the API request you made is in some way invalid. The response message might contain an indication of what is wrong. Carefully check that all necessary headers are present, and that any JSON payload contains all required fields and is free of syntax errors.
 
@@ -452,7 +454,7 @@ may not be null (path = CSMResource.createUserWebhookRegistration.arg1.descripti
 
 <a id="org4a01350"></a>
 
-### Invalid JSON
+###### Invalid JSON
 
 The JSON payload is syntactically invalid. Make sure the request body conforms to the JSON specification.
 
@@ -466,7 +468,7 @@ at [Source: org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$UnCl
 
 <a id="orgfdee48e"></a>
 
-### Invalid web hook Request
+###### Invalid web hook Request
 
 Make sure the given webhook\_url is in fact a valid URL.
 
@@ -482,7 +484,7 @@ HTTP/1.1 400 Bad Request
 
 <a id="org59cdbfa"></a>
 
-### Invalid Event of Interest, no matching Event.
+###### Invalid Event of Interest, no matching Event.
 
 The given `event_code` was not recognized. See [Retrieving a List of Event Types](#orgd349b92) to fetch a list of valid event codes.
 
@@ -498,12 +500,12 @@ HTTP/1.1 400 Bad Request
 
 <a id="org3094f60"></a>
 
-## 401 Unauthorized
+#### 401 Unauthorized
 
 
 <a id="org06d46c8"></a>
 
-### 401013 Oauth token is not valid
+###### 401013 Oauth token is not valid
 
 Triggered when the `Authorization` header is missing or invalid, or if a valid header is present but the OAuth token has expired.
 
@@ -520,7 +522,7 @@ Content-Type: application/json
 
 <a id="org721b14d"></a>
 
-## 404 Not Found
+#### 404 Not Found
 
 The resource designated by the URL does not exist. This happens for instance when doing a `GET` or `DELETE` for a certain webhook registration, but the `registrationId` in the URL does not correspond with any existing registrations.
 
@@ -536,7 +538,7 @@ HTTP/1.1 404 Not Found
 
 <a id="org24e3cb1"></a>
 
-## 415 Unsupported Media Type
+#### 415 Unsupported Media Type
 
 Triggered when the `Content-Type` header is missing or invalid. For requests that include a request body, this should be set to `Content-Type: application/json; charset=UTF-8`
 
@@ -552,7 +554,7 @@ HTTP/1.1 415 Unsupported Media Type
 
 <a id="orga1bf49a"></a>
 
-## 500 Internal Server Error
+#### 500 Internal Server Error
 
 This usually means an implementation error on the side of Adobe I/O Events. Please file a support request.
 
