@@ -2,8 +2,6 @@
 
 For enterprise developers, Adobe offers another way to consume events besides webhooks: journaling. The Adobe I/O Events Journaling API enables enterprise integrations to consume events according to their own cadence and process them in bulk. Unlike webhooks, no additional registration or other configuration is required; every enterprise integration that is registered for events is automatically enabled for journaling.
 
-
-
 Rather than webhooks, which are a _push_ model for events, journaling is a _pull_ model, in which the integration issues an API call to pull a list of events from Adobe. As with webhooks, Adobe delivers the event list as a JSON object on the following model: 
 
 ```json
@@ -40,7 +38,7 @@ Adobe I/O Console makes it easy to use the API by providing you with an endpoint
 To issue the API call, you need to provide two additional parameters: 
 
 * Your integration&rsquo;s API key. This is displayed in the Overview tab for your integration in the Adobe I/O Console.
-* A JWT token. See [Authentication: Creating a JWT Token](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt.html) to see how to create a JWT token.
+* A JWT token. See [Authentication: Creating a JWT Token](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt.html) for how to create a JWT token.
 
 You combine the URL you got from the Journaling section of the event details with your API key and JWT token to make the call
 

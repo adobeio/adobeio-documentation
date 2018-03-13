@@ -383,7 +383,7 @@ if (request.header('x-adobe-signature') !== hmac.digest('base64')) {
 | Operation                                                 | Response              | Description                                         |
 |---------------------------------------------------------- |---------------------- |---------------------------------------------------- |
 | `POST /csm/webhooks`                                      | Registration          | Creates a Client Application's WebHook registration |
-| `GET /csm/webhooks/{clientId}`                            | Array of Registration | Get all Webhook registration details                |
+| `GET /csm/webhooks/{clientId}`                            | Array of Registrations | Get all Webhook registration details                |
 | `GET /csm/webhooks/{clientId}/{registrationId}`           | Registration          | Get a specific WebHook registration details         |
 | `DELETE /csm/webhooks/{clientId}/{registrationId}`        | (empty)               | Deletes webhook registration                        |
 | `POST /csm/webhooks/{clientId}/{registrationId}/{status}` | Registration          | Enables/disables a webhook registration             |
