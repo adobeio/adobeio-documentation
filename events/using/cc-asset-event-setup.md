@@ -2,17 +2,12 @@
 
 These instructions describe how to set up Creative Cloud Asset events using Adobe I/O Events. You can use Adobe I/O for notification of CC Asset events.
 
-1. [Introduction](#introduction)
+[Introduction](#introduction)  
+[Access events](#access-events)
+[Create an integration](#create-integration)  
+[Receive events](#receive-events)
 
-2. [Create an Integration](#create-integration)
-
-3. [Receive Events](#receive-events)
-
-4. [Watch the Solution Work](#Watch-It-Work)
-
-<a id="introduction"></a>
-
-## Introduction
+## <a id="introduction">Introduction</a>
 Creative Cloud Assets provides a simple set of events to which you can subscribe: 
 - **asset-updated:** Triggers when an asset is changed or modified.
 - **asset-created:** Triggers when a new asset is uploaded to Creative Cloud, or when an asset is _copied_ to a new folder (not when an asset is merely moved).
@@ -22,14 +17,10 @@ There are no events for the following activities:
 - Moving a file from one folder in Creative Cloud to another.
 - Renaming a file. This is because assets are tracked in Creative Cloud by GUIDs, and the GUID doesn't change when the file is renamed. Creative Cloud recognizes that the asset hasn't changed, and can still find the asset by the same GUID. Any URL paths you create to that file, however, would change, since they do include the filename.
 
-<a id="getting-access"></a>
-
-### Getting access to Creative Cloud Assets events
+### <a id="access-events">Access events</a>
 Unlike other Cloud Platform event providers, Creative Cloud Assets does not require an enterprise account, or administrative status, to gain access for creating integrations or receiving events. However, the integrations you create will still need to authenticate the same way any other Adobe integrations do (see Authentication under [Introduction to Events](../intro.md)). Consider what kind of authentication your integration needs before you start, and follow the correct procedure (see [Adobe Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)) to get the access rights your integration needs.
 
-<a id="create-integration"></a>
-
-## Create an Integration
+## <a id="create-integration">Create an integration</a>
 For the purposes of this example, you&rsquo;ll be creating an individual integration using your personal Adobe ID. 
 
 To create an integration for Creative Cloud Assets:
@@ -81,32 +72,32 @@ Several tools exist on the web that can be used for this purpose: [ngrok](https:
 
 5. Copy and paste this code into the Webtask editor, replacing the default contents, and select Save: 
 
-```js
-var express = require('express');
-var Webtask = require('webtask-tools');
-var bodyParser = require('body-parser');
-var app = express();
+    ```js
+    var express = require('express');
+    var Webtask = require('webtask-tools');
+    var bodyParser = require('body-parser');
+    var app = express();
 
-app.use(bodyParser.json());
-app.get('/webhook', function (req, res) {
-   var result = "No challenge";
-   if (req.query["challenge"]){
-      result = req.query["challenge"]
-      console.log("got challenge: " + req.query["challenge"]);
-   } else {
-      console.log("no challenge")
-   }
-   res.status(200).send(result)
-});
+    app.use(bodyParser.json());
+    app.get('/webhook', function (req, res) {
+    var result = "No challenge";
+    if (req.query["challenge"]){
+        result = req.query["challenge"]
+        console.log("got challenge: " + req.query["challenge"]);
+    } else {
+        console.log("no challenge")
+    }
+    res.status(200).send(result)
+    });
 
-app.post('/webhook', function (req, res) { 
-   console.log(req.body)
-   res.writeHead(200, { 'Content-Type': 'application/text' });
-   res.end("pong");
-});
+    app.post('/webhook', function (req, res) { 
+    console.log(req.body)
+    res.writeHead(200, { 'Content-Type': 'application/text' });
+    res.end("pong");
+    });
 
-module.exports = Webtask.fromExpress(app);
-```
+    module.exports = Webtask.fromExpress(app);
+    ```
 
 This simple webhook is designed merely to do what Adobe Events requires: handle an HTTPS GET request containing a `challenge` parameter by returning the value of the challenge parameter itself. 
 
@@ -133,9 +124,9 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
     >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; of your webhook would have failed; instead of seeing the confirmation screen, you'd see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook's endpoint is down. 
 
-<a id="receive-events"></a>
 
- ## Receive events
+
+ ## <a id="receive-events">Receive events</a>
  Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](#https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html"). 
  
  Start with the Integration Overview. It's the screen you see immediately after selecting &ldquo;Continue to Integration details&rdquo;.
