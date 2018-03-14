@@ -1,3 +1,5 @@
+<!-- exclude from build 
+
 # Adobe I/O Events Developer Guide
 
 ## Contents
@@ -36,4 +38,4 @@
     - [Troubleshooting Tools & Access to these tools]()
     - [Troubleshooting workflow]()
     - [Technical Enablement]()  
- 
+ -->
