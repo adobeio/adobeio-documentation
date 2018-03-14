@@ -2,13 +2,10 @@
 
 These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O Events. You can use Adobe I/O for notification of AEM events, such as page or asset changes.
 
-1. [Introduction](#Introduction)
-
-1. [Set Up Products](#Set-Up-Products)
-
-1. [Use Adobe I/O](#Use-Adobe-I/O)
-
-1. [Watch the Solution Work](#Watch-It-Work)
+[Introduction](#Introduction)  
+[Set Up Products](#Set-Up-Products)  
+[Use Adobe I/O](#Use-Adobe-I/O)  
+[Watch the Solution Work](#Watch-It-Work)
 
 ## <a id="Introduction">Introduction</a>
 
@@ -30,7 +27,7 @@ To complete this solution, you will need authorization to use the following serv
 
 ### <a id="Register-an-AEM-Event-Consumer-App">Register an AEM Event Consumer App</a>
 
-You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge http request](../Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](../Webhook_docs_intro.md).
+You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge HTTP request](../intro/Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](../intro/Webhook_docs_intro.md).
 
 ## <a id="Set-Up-Products">Set Up Products</a>
 
@@ -47,20 +44,20 @@ To install the AEM Event Proxy Package:
 
 1. Download the latest version of the package [here](https://github.com/adobeio/adobeio-documentation/files/1723221/aem-event-proxy-0.36.226.zip).
 
-2. Open AEM Package Manager by clicking the **Tools** icon and then clicking **Deployment** and **Packages**.
+2. Open AEM Package Manager by selecting the **Tools** icon and then selecting **Deployment** and **Packages**.
 
    ![package manager navi](https://user-images.githubusercontent.com/29133525/32855537-36c7cd72-c9ff-11e7-9098-a5aba8f4493f.png)
 
-3. In **Package Manager**, click **Upload Package**. Click the **Browse** button and navigate to the package zip file. Click **OK**.
+3. In **Package Manager**, select **Upload Package**. Select **Browse** and navigate to the package zip file. Select **OK**.
 
 
 Note: If you have an older version of the package, delete it to avoid potential conflicts. You can delete it from the following location: **crx/de/index.jsp#/apps/eventproxy/install**.
 
-4. Click **Install**.
+4. Select **Install**.
 
       ![package manager ui](https://user-images.githubusercontent.com/29133525/32855716-cad2c24c-c9ff-11e7-8220-3366caaa528d.png)
 
-5. On the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and click **Install**.
+5. On the **Install Package** dialog box, select **Merge** from the **Access Control Handling** drop-down list and select **Install**.
 
       ![install package](https://user-images.githubusercontent.com/29133525/32855829-2b1392d0-ca00-11e7-855f-e4f8ae7d7fc1.png)
 
@@ -91,7 +88,7 @@ For more information, see AEM [User, Group and Access Rights Administration](htt
 To configure OAuth and IMS authentication:
 
 1. [Create a Certificate and Keystore](#Create-a-Certificate-and-Keystore)
-2. [Add the Keystore to the AEM eventproxy-service User Group](#Add-the-keystore-to-the-AEM-eventproxyservice-User-Group)
+2. [Add the Keystore to the AEM eventproxy-service User Group](#Add-the-Keystore-to-the-AEM-eventproxyservice-User-Group)
 3. [Configure the AEM Link Externalizer](#Configure-the-AEM-Link-Externalizer)
 
 #### <a id="Create-a-Certificate-and-Keystore">Create a Certificate and Keystore</a>
@@ -131,17 +128,17 @@ Note: On Windows systems, this command expression may vary. For more information
 
 To add the key store to the AEM Eventproxy-service user group:
 
-1. In AEM, open the **User Management** group by clicking the **Tools** icon and then clicking **Security** and **Users**.
+1. In AEM, open the **User Management** group by selecting the **Tools** icon and then selecting **Security** and **Users**.
 
       ![user management navigation](https://user-images.githubusercontent.com/29133525/32856124-216ac180-ca01-11e7-9a57-ec815ab80fd8.png)
 
-2. On the **User Management** group list, click **eventproxy-service** to open it.
+2. On the **User Management** group list, select **eventproxy-service** to open it.
 
       ![eventproxy service](https://user-images.githubusercontent.com/29133525/32856308-a90add0a-ca01-11e7-8112-1491ce585e0e.png)
  
-3. On **Account settings**, click **Create KeyStore** and create the key store.
+3. On **Account settings**, select **Create KeyStore** and create the key store.
 
-4. Click **Manage KeyStore** and then click to expand the section for **Add Private Key for Key Store file.** 
+4. Select **Manage KeyStore** and then expand the section for **Add Private Key for Key Store file.** 
 
 5. Add the keystore.p12 file by setting the key pair alias to **eventproxy** or the alias specified previously. 
 
@@ -149,7 +146,7 @@ To add the key store to the AEM Eventproxy-service user group:
 
 7. Provide the private key password and then provide the private key alias **eventproxy**.
 
-8. Click **Submit**.
+8. Select **Submit**.
  
       ![keystore management](https://user-images.githubusercontent.com/29133525/32856408-f5a370be-ca01-11e7-9e78-7ee03317d1ce.png)
  
@@ -157,13 +154,13 @@ To add the key store to the AEM Eventproxy-service user group:
 
 To configure AEM Link Externalizer:
 
-1. Open the Web Console, or click the **Tools** icon, then click **Operations** and **Web Console**. 
+1. Open the Web Console, or select the **Tools** icon, then select **Operations** and **Web Console**. 
 
     The AEM Link Externalizer name can be **author** or any other alias specified in the Adobe Experience Manager Web Console.
 
     ![aem-console](https://user-images.githubusercontent.com/7494850/34497015-8ff19640-efb0-11e7-8145-b257dfc8fa4b.png)
 
-2. Scroll down the list to find **Day CQ Link Externalizer**, update the domain name, and click **Save** when done.
+2. Scroll down the list to find **Day CQ Link Externalizer**, update the domain name, and select **Save** when done.
  
     Note: The base url that you specify appears on the AEM Web Console. Do not use only the word “localhost” as the default name because others may use it. This will then cause confusion and make it difficult to determine which instance is yours. 
 
@@ -183,36 +180,36 @@ Use Adobe I/O to do the following:
 
 To create an [Adobe I/O Console](https://adobe.io/console) Integration:
 
-1. After signing in to the Adobe I/O Console, click **New Integration**.
+1. After signing in to the Adobe I/O Console, select **New Integration**.
 
-2. Select **Access an API** and then click **Continue**.
+2. Select **Access an API** and then select **Continue**.
 
       ![access an api](https://user-images.githubusercontent.com/29133525/32519316-9580406a-c3c9-11e7-98bf-aabba0187250.png)
 
 
-3. On the **Create a new integration** page, select **Adobe I/O Events** and then click **Continue**.
+3. On the **Create a new integration** page, select **Adobe I/O Events** and then select **Continue**.
 
       ![io events integration](https://user-images.githubusercontent.com/29133525/32520095-0967bb3c-c3cc-11e7-9c9e-8a730c07b3c9.png)
 
-4. Click **New integration**.
+4. Select **New integration**.
 
       ![create new integration option](https://user-images.githubusercontent.com/29133525/32520604-d00d9eea-c3cd-11e7-88d7-a35175ae5b91.png)
 
-5. On the <a id="Create-new-integration-box">**Create a new integration** dialog box</a>, specify a name for the integration and add a description. To add **Public keys certificates**, click **Select a File** and navigate to your **certificate_pub.crt** to upload it.
+5. On the <a id="Create-new-integration-box">**Create a new integration** dialog box</a>, specify a name for the integration and add a description. To add **Public keys certificates**, select **Select a File** and navigate to your **certificate_pub.crt** to upload it.
 
       ![updated create new integration](https://user-images.githubusercontent.com/29133525/32857108-1221197e-ca04-11e7-9a86-42293b6b729a.png)
 
-6. Click **Create Integration.**
+6. Select **Create Integration.**
 
 ### <a id="Configure-Adobe-I/O-Events-as-a-Cloud-Service-in-AEM">Configure Adobe I/O Events as a Cloud Service in AEM</a>
 
 To configure Adobe I/O Events as a cloud service in AEM:
 
-1. Open the Cloud Services console, or click the **Tools** icon, then click **Deployment** and **Cloud Services**. 
+1. Open the Cloud Services console, or select the **Tools** icon, then select **Deployment** and **Cloud Services**. 
 
       ![cloud services ui](https://user-images.githubusercontent.com/29133525/32857472-2e76d8c4-ca05-11e7-8edf-0b878d1b7d81.png)
 
-2. Under **Adobe Marketing Cloud** on the **Cloud Services** page, click **Show Configurations** for **Adobe I/O Events**. 
+2. Under **Adobe Marketing Cloud** on the **Cloud Services** page, select **Show Configurations** for **Adobe I/O Events**. 
 
       ![show configurations of adobe events](https://user-images.githubusercontent.com/29133525/32805318-499a990c-c946-11e7-938a-2ea8e803175b.png)
 
@@ -222,7 +219,7 @@ To configure Adobe I/O Events as a cloud service in AEM:
 *   For **API key**: Provide the key shown on the **Integration Details** page of the Adobe I/O Console. 
 *   For **Technical Account ID**: Provide the ID shown on the Adobe I/O Console.
 *   For **Organization ID**: Provide the ID shown on the Adobe I/O Console.
-*   For **Client Secret**: Click the **Retrieve client secret** button on the **Integration Details** page of the Adobe I/O Console and provide the secret as shown on the console.
+*   For **Client Secret**: Select **Retrieve client secret** on the **Integration Details** page of the Adobe I/O Console and provide the secret as shown on the console.
 
     ![copy secrets](https://user-images.githubusercontent.com/29133525/32806941-7fde170a-c94b-11e7-9bf4-a237c1afb2c1.png) 
 ![edit configuration adobe io](https://user-images.githubusercontent.com/29133525/32806239-13fe90c0-c949-11e7-932d-4ba3d9d643f4.png)
@@ -294,21 +291,21 @@ You can watch the solution work by testing your integration. To do this:
 
 Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/console) to register it:
 
-1. On the Adobe I/O Console, click **New Integration**.
+1. On the Adobe I/O Console, select **New Integration**.
 
-2. Select **Receive near-real time events** and click **Continue**.
+2. Select **Receive near-real time events** and select **Continue**.
 
       ![receive near real time events](https://user-images.githubusercontent.com/29133525/32859993-63f51472-ca0d-11e7-9ce8-c5570a324c86.png)
 
-3. Select the AEM Link Externalizer base URL that you [previously specified](#Configure-the-AEM-Link-Externalizer) and then click **Continue**.
+3. Select the AEM Link Externalizer base URL that you [previously specified](#Configure-the-AEM-Link-Externalizer) and then select **Continue**.
 
       ![aem externalizer base url on marketing cloud](https://user-images.githubusercontent.com/29133525/32860382-aec87b50-ca0e-11e7-8eb6-febd13497b17.png)
 
 4. Select **Create new integration** and fill in the **Integration Details** form [similar to your previous integration](#Create-new-integration-box).
 
-5. Click the **Add webhook** button and complete the **Add a new webhook** form.
+5. Select **Add webhook** and complete the **Add a new webhook** form.
 
-6. Select the events you want to subscribe to and click **Save**.
+6. Select the events you want to subscribe to and select **Save**.
 
       ![integration health check](https://user-images.githubusercontent.com/29133525/32861939-a93861b4-ca13-11e7-99b9-3ffe136d1272.png)
 
@@ -359,7 +356,7 @@ The solution leverages the OSGI configuration factory pattern, hence not only ca
 
 To configure using the panel:
 
-1. Click the **Tools** icon in AEM and then click **Operations** and **Web Console**.
+1. Select **Tools** in AEM and then select **Operations** and **Web Console**.
 
       ![web console navigation ui](https://user-images.githubusercontent.com/29133525/32857842-82113b22-ca06-11e7-9c90-52a1882c6298.png)
 
@@ -367,7 +364,7 @@ To configure using the panel:
 
       ![osgi configuration](https://user-images.githubusercontent.com/29133525/32857941-e41ac81a-ca06-11e7-9592-d4289e9ce35f.png) and search for: **Adobe I/O Events CSM Registration**.
 
-3. For **Adobe I/O Events OSGI to XDM Event Mapping Configurationn**, click the **+**, **Edit**, or **Delete** buttons.
+3. For **Adobe I/O Events OSGI to XDM Event Mapping Configuration**, select **+**, **Edit**, or **Delete**.
 
 ## Authors
 - Sarah Xu [@sarahxxu](https://github.com/sarahxxu).
@@ -376,7 +373,7 @@ To configure using the panel:
       
 ## Feedback?
 
-Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GitHub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
+Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, select the **Issues** tab on this GitHub repository and then select **New issue**. Provide a title and description for your comment and then select  **Submit new issue**.
 
    ![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
  
