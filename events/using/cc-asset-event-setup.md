@@ -3,7 +3,7 @@
 These instructions describe how to set up Creative Cloud Asset events using Adobe I/O Events. You can use Adobe I/O for notification of CC Asset events.
 
 [Introduction](#introduction)  
-[Access events](#access-events)
+[Access events](#access-events)  
 [Create an integration](#create-integration)  
 [Receive events](#receive-events)
 
