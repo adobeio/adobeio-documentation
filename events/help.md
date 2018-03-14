@@ -2,7 +2,7 @@
 
 While it's easy to get set up for using events with Adobe I/O, you may run into issues. Please check the resources below for help with Adobe I/O Events:
 
-- [Debug Common Issues](help/debug.md)
+- [Debugging Common Issues](help/debug.md)
 - [Tracing](help/tracing.md)
 - [FAQ](help/faq.md)
 <!-- - [Request docs from the Customer Care Support team - see details]()
