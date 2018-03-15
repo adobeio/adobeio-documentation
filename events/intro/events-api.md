@@ -1,3 +1,5 @@
+nav_order = 2
+
 # Working with Events Using the Adobe I/O Management API
 
 - [Events API calls in the I/O Management API](#events-calls)

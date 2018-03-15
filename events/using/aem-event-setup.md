@@ -1,4 +1,6 @@
-# Set up AEM Events with Adobe I/O Events
+nav_order = 1
+
+# Setting up AEM Events with Adobe I/O Events
 
 These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O Events. You can use Adobe I/O for notification of AEM events, such as page or asset changes.
 
@@ -224,7 +226,7 @@ To configure Adobe I/O Events as a cloud service in AEM:
     ![copy secrets](https://user-images.githubusercontent.com/29133525/32806941-7fde170a-c94b-11e7-9bf4-a237c1afb2c1.png) 
 ![edit configuration adobe io](https://user-images.githubusercontent.com/29133525/32806239-13fe90c0-c949-11e7-932d-4ba3d9d643f4.png)
 
-## Perform an AEM Health and Configuration Check
+### <a id="healthcheck-conf">Perform an AEM Health and Configuration Check</a>
 
 You can use the AEM Web Console Sling Health Check to verify that your configurations are correct.
 
@@ -235,7 +237,7 @@ To verify your configurations:
       ![health check conf](https://user-images.githubusercontent.com/29133525/32858983-6f86c61c-ca0a-11e7-8203-b5edf34d05af.png)
 
 2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the Health Check tagged with **eventproxy,ims**.
-This verifies that your IMS related configurations are correct and working, including the eventproxy-service user Keystore configuration, the Adobe I/O console-originated API key, the Technical Account ID, the Organization ID and the client secret.
+This verifies that your IMS related configurations are correct and working, including the eventproxy-service user keystore configuration, the Adobe I/O console-originated API key, the Technical Account ID, the Organization ID and the client secret.
 
       ![health check ims](https://user-images.githubusercontent.com/29133525/32858687-8e94e7e2-ca09-11e7-945b-3ce845b6717a.png)
 
@@ -249,7 +251,7 @@ This verifies that the AEM instance is successfully registered as an event provi
 
 To register an AEM event consumer App, you can set up a webhook. Your webhook should be able to accept and reply to a challenge http request parameter sent by Adobe I/O CSM.
 
-### Set up Webhook: Example
+### <a id="set-up-webhook-example">Set up Webhook: Example</a>
 To create a webhook at webtask.io, add the following code to make sure the Challenge is echoed back. This is needed for the verification by Adobe I/O CSM when we register the webhook URL later using CSM API:
 
 ```js
