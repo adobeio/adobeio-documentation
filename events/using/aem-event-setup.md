@@ -9,6 +9,10 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 [Use Adobe I/O](#Use-Adobe-I/O)  
 [Watch the Solution Work](#Watch-It-Work)
 
+**Resources**
+- [Debugging](help/debug#aem)
+- [FAQ](help/faq#aem)
+
 ## <a id="Introduction">Introduction</a>
 
 Before setting up and using AEM with Adobe I/O, you will need to do the following:

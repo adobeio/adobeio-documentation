@@ -12,6 +12,10 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 
 1. [Watch the Solution Work](#Watch-It-Work)
 
+**Resources**
+- [Debugging](help/debug#analytics)
+- [FAQ](help/faq#analytics)
+
 ## <a name="Introduction">Introduction</a>
 
 ### What are Triggers?

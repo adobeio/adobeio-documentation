@@ -4,7 +4,7 @@ nav_order = 3
 
 * [General questions](#general)
 * [AEM events](#aem)
-* [Analytics Triggers events](#atriggers)
+* [Analytics Triggers events](#analytics)
 
 ## <a id="#general">General questions</a>
 _**What are I/O Events?**_  
@@ -307,7 +307,7 @@ One possible solution is to try waiting for two minutes and checking a few more 
 
 If your health check consistently fails, check the [AEM Events](debug#aem-events) section of the Debugging Guide: &ldquo;AEM Events not firing&rdquo;.
 
-## <a id="atriggers">Analytics Triggers</a>
+## <a id="analytics">Analytics Triggers</a>
 **Where can I find instructions on setting up Analytics Triggers for I/O?**  
 You'll find it in this guide at [Integrate Analytics Triggers with Adobe I/O Events](../using/analytics-triggers-events-setup.md). 
 

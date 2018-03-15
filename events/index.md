@@ -20,6 +20,15 @@ To work with Creative Cloud Events, you would need an active Adobe ID.
 **Experience Cloud Events**
 To work with events for Adobe services in Experience Cloud, you would need to have corresponding entitlements for this Adobe service in your organization, and administrative permission for your org to create integrations. 
 
+## Key Concepts
+- [Webhook Introduction](intro/webhook_docs_intro.md)
+  - [Sample Webhook in Node.js](https://github.com/adobeio/io-event-sample-webhook)
+  <!-- - [Sample Webhook in Python]() *TK from Carmen*
+  - [Sample Webhook in PHP]() *TK* -->
+- [Adobe I/O Management API for Events](intro/events-api.md)
+- [Journaling API](intro/journaling_api.md)
+<!--- [Use cases for events](intro/use_cases.md) -->
+
 ## Get Started with Available Events
 - Creative Cloud Events
     - [Creative Cloud Asset Events (beta)](using/cc-asset-event-setup.md)
@@ -27,13 +36,9 @@ To work with events for Adobe services in Experience Cloud, you would need to ha
     - [Adobe Experience Manager Events](using/aem-event-setup.md)
     - [Analytics Triggers Events (Private beta)](using/analytics-triggers-event-setup.md)
 
-
-## Key Concepts
-- [Webhook Introduction](intro/webhook_docs_intro.md)
-  - [Sample Webhook in Node.js](https://github.com/adobeio/io-event-sample-webhook)
-  <!-- - [Sample Webhook in Python]() *TK from Carmen*
-  - [Sample Webhook in PHP]() *TK* -->
-  - [Work with Webhooks using Webhook API](help/Webhook_docs_reference.md)
-- [Adobe I/O Management API for Events](intro/events-api.md)
-- [Journaling API](intro/journaling_api.md)
-<!--- [Use cases for events](intro/use_cases.md) -->
+## Help Using Events
+- [Debugging Common Issues](help/debug.md)  
+- [Tracing](help/tracing.md)  
+- [FAQ](help/faq.md)  
+- [Webhooks Reference](help/webhook_docs_reference.md)  
+- [Release Notes](help/release_notes.md)
