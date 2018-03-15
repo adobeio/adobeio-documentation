@@ -30,8 +30,8 @@ The APIs for events management have several parameters in common, as shown in th
 
 | Parameter | Location | Type | Description |  
 |---|---|---|---|
-| `x-ims-org-id` | header | string | **TK** |  
-| `orgId` | path | string | A unique ID for your organization. |  
+| `x-ims-org-id` | header | string | Your organization's Adobe Identity Management Service ID. This is retrievable from the Overview tab of your integration, under &ldquoOrganization ID&rdquo;. |  
+| `orgId` | path | string | A unique ID for your organization, specific to Adobe I/O. |  
 | `intId` | path | string | The ID for your integration. |  
 | `registrationId` | path | string | A GUID identifying a single registration for an event provider associated with your integration. |
 | `Authorization` | path | string | A JWT token; see [Authentication: Creating a JWT Token](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt.html) for how to create a JWT token.  |
@@ -67,7 +67,7 @@ Given the Client ID (API key) and `orgId` provided, this gets a JSON array of al
 | Parameter | Type | Location | Description |
 |---|---|---|---|
 | `x-ims-org-id` | string | header | See above table |
-| `delivery_type` | string | query | **TK** |
+| `delivery_type` | string | query | Specifies the format of the JSON response as either WEBHOOK or JOURNAL. |
 
 _Response model:_
 ```json
