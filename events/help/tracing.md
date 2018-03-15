@@ -20,6 +20,6 @@ For help in debugging and analysis, Adobe offers Debug Tracing. Using Debug Trac
 
 5. Select the Response tab to view your integration's response to the event.
 
-    ![Event details showing the response headers and body](../../img/events_tracing_02.png "Event details showing the response headers and body")
+    ![Event details showing the response headers and body](../../img/events_tracing_03.png "Event details showing the response headers and body")
 
 By inspecting the details of the request and response, you can examine the communication loop between Adobe and your integration to diagnose any breakdown in the flow or processing of events. 
