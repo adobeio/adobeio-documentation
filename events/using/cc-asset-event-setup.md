@@ -33,21 +33,21 @@ To create an integration for Creative Cloud Assets:
 
     ![Create an integration](../../img/CCA_Events_01.png "Create an integration")  
 
-2. Select &ldquo;New integration&rdquo;. The &ldquo;Create a new integration" screen appears. 
+2. Select **New integration.** The &ldquo;Create a new integration" screen appears. 
 
     ![Choosing a new integration type](../../img/CCA_Events_02.png "Choosing a new integration type")
 
-3. Select &ldquo;Receive new real-time events&rdquo; and continue.
+3. Select **Receive new real-time events** and continue.
 
-4. Select an event provider: Since you&rsquo;re using your personal account, the only provider you&rsquo;ll see is Creative Cloud Assets. Choose &ldquo;Creative Cloud Assets&rdquo; and continue.
+4. Select an event provider: Since you&rsquo;re using your personal account, the only provider you&rsquo;ll see is Creative Cloud Assets. Choose **Creative Cloud Assets** and continue.
 
     ![Selecting the provider](../../img/CCA_Events_03.png "Selecting the provider")
 
-5. You&rsquo;re offered one last chance to update an existing integration, if you have any; select &ldquo;New integration&rdquo; and continue.
+5. You&rsquo;re offered one last chance to update an existing integration, if you have any; select **New integration** and continue.
 
     ![Choosing a new integration type](../../img/CCA_Events_03.png "Choosing a new integration type")
 
-6. Enter details for the integration. Console needs a name and a description; these can be whatever you want, subject only to length restrictions. Choose &ldquo;Web&rdquo; for the platform and provide a redirect URI and a redirect URI pattern.
+6. Enter details for the integration. Console needs a name and a description; these can be whatever you want, subject only to length restrictions. Choose **Web** for the platform and provide a redirect URI and a redirect URI pattern.
 
     ![Entering integration details](../../img/CCA_Events_04.png "Entering integration details")
 
@@ -58,7 +58,7 @@ When you select &ldquo;Add webhook&rdquo;, the dialog expands to provide fields 
 
 Several tools exist on the web that can be used for this purpose: [ngrok](https://ngrok.com/), [Postman](https://www.getpostman.com/), and [Webtask](https://webtask.io), for example. For this example, use Webtask.
 
-1. Go to https://webtask.io. On the home page, either sign in (if you already have an account) or select &ldquo;Try it now!&rdquo;.
+1. Go to https://webtask.io. On the home page, either sign in (if you already have an account) or select **Try it now!**.
 
     ![Webtask home page](../../img/CCA_Events_05.png "Webtask home page")
 
@@ -66,7 +66,7 @@ Several tools exist on the web that can be used for this purpose: [ngrok](https:
 
     ![Webtask home page](../../img/CCA_Events_06.png "Webtask home page")
 
-3. Select &ldquo;Create a new one&rdquo;. Once you focus on &ldquo;Webtask Function&rdquo;, the dialog expands to offer you a choice of creating an empty one, or selecting a template. 
+3. Select **Create a new one**. Once you focus on &ldquo;Webtask Function&rdquo;, the dialog expands to offer you a choice of creating an empty one or selecting a template. 
 
     ![Creating an empty webtask](../../img/CCA_Events_07.png "Creating an empty webtask")
 
@@ -109,7 +109,7 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
     ![The webtask's endpoint URL](../../img/CCA_Events_09.png "The webtask's endpoint URL")
 
-    Notice also that the `app.get` and `app.post` functions specify a relative path, `/webhook`: you&rsquo; need to add this to the end of the webtask&rsquo; endpoint URL to reach your webhook. For example, 
+    Notice also that the `app.get` and `app.post` functions specify a relative path, `/webhook`: you&rsquo;ll need to add this to the end of the webtask&rsquo; endpoint URL to reach your webhook. For example, 
 
     `https://wt-7ef4200cf2cfff39f542f26708adb75c-0.run.webtask.io/CCAssetsEvents_webhook/webhook`
 
@@ -120,18 +120,18 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
     ![Entering webhook details](../../img/CCA_Events_10.png "Entering webhook details")
 
-8. Save and complete the CAPTCHA. Select &ldquo;Create  integration&rdquo;. At this point, Adobe Events sends a test event to your webhook&rsquo;s destination URL. If your webhook responds correctly with the contents of the `challenge` parameter, your integration is successfully registered:
+8. Save and complete the CAPTCHA. Select **Create  integration**. At this point, Adobe Events sends a test event to your webhook&rsquo;s destination URL. If your webhook responds correctly with the contents of the `challenge` parameter, your integration is successfully registered:
 
     ![Integration created](../../img/CCA_Events_11.png "Integration created")
 
-    Select &ldquo;Continue to Integration details&rdquo; to view and manage your integration.
+    Select **Continue to Integration details** to view and manage your integration.
 
     >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; of your webhook would have failed; instead of seeing the confirmation screen, you&rsquo;d see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook&rsquo;s endpoint is down. 
 
  ## <a id="receive-events">Receive events</a>
  Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](#https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html). 
  
- Start with the Integration Overview. It&rsquo;s the screen you see immediately after selecting &ldquo;Continue to Integration details&rdquo;.
+ Start with the Integration Overview. It&rsquo;s the screen you see immediately after selecting **Continue to Integration details**.
 
 ![Integration Overview](../../img/CCA_Events_12.png "Integration Overview")
 
@@ -143,7 +143,7 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
     ![Integration Services tab](../../img/CCA_Events_13.png "Integration Services tab")
 
- 2. Under Creative Cloud, select &ldquo;Creative SDK&rdquo;, then select &ldquo;Add service&rdquo;. You&rsquo;re now ready to implement the User Auth UI.
+ 2. Under Creative Cloud, select **Creative SDK**, then select **Add service.** You&rsquo;re now ready to implement the User Auth UI.
 
  Adobe&rsquo;s User Auth UI lets you build into your application a login function that takes the user&rsquo;s Adobe ID and lets the user give your app permission to access the assets and Adobe Solutions to which they&rsquo;re subscribed. Once your app is authenticated, Adobe will begin to push events to your integration&rsquo;s webhook via HTTP POST messages.
 
