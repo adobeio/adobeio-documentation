@@ -56,7 +56,7 @@ Now when a file is uploaded, Adobe I/O Events performs the following HTTP reques
 
 ```json
 POST https://acme.example.com/webhook HTTP/1.1
-Content-type: application/json
+content-type: application/json
 
 {
   "id":"f9218f73-feaa-425f-11111-4940b77fb7d4",
@@ -80,7 +80,7 @@ Content-type: application/json
 
 ## Your first webhook
 
-Before you can register a webhook, the webhook needs to be online and operational. If not then the registration will fail. So you need to take care of setting that up first.
+Before you can register a webhook, the webhook needs to be online and operational. If not, then the registration will fail. So you need to take care of setting that up first.
 
 Your webhook needs to
 
@@ -101,7 +101,7 @@ GET https://acme.example.com?challenge=8ec8d794-e0ab-42df-9017-e3dada8e84f7
 
 #### Response
 
-You can either respond by placing the challenge value directly in the response body
+You can either respond by placing the challenge value directly in the response body:
 
 ```restclient
 HTTP/1.1 200 OK
@@ -109,7 +109,7 @@ HTTP/1.1 200 OK
 8ec8d794-e0ab-42df-9017-e3dada8e84f7
 ```
 
-or by responding with a JSON object, including the correct `Content-Type` header
+or by responding with a JSON object, including the correct `content-type` header:
 
 ```restclient
 HTTP/1.1 200 OK
@@ -117,6 +117,15 @@ Content-type: application/json
 
 {"challenge":"8ec8d794-e0ab-42df-9017-e3dada8e84f7"}
 ```
+Typically, you would build your webhook to respond to the Adobe challenge in a method to handle HTTP GET requests, and then include another method for handling the HTTP PUT requests that will be coming from Adobe containing actual event payloads. For testing purposes, though, you can start with something as simple as this PHP script: 
+
+```php
+<?php
+ header('Content-Type: text/plain');
+ echo $_GET['challenge']; 
+?>
+```
+
 **Note:** Make sure your response is given in the correct content-type. If your webhook script places the challenge value directly in the response body, make sure it's returned as plain text (`text/plain`). For a JSON response, make sure it's `application/json`. Returning a response in the incorrect content-type may cause extraneous code to be returned, which will not validate with Adobe I/O Events.
 
 <a id="org1762841"></a>
@@ -139,23 +148,23 @@ To create an integration:
 
 1. Open the [Adobe I/O Console](http://console.adobe.io/); by default, you should be on the Integrations panel. If not, select it from the top menu.  
   
-  ![Adobe I/O Console](../../img/Console_1.png "Adobe I/O Console")  
+  ![Adobe I/O Console](../../img/events_console_01.png "Adobe I/O Console")  
   
-2. Select [New integration](https://console.adobe.io/integrations/new). You have the choice between "Access an API" or "Receive near real-time events". Choose "Receive near real-time events" and select "Continue".  
+2. Select [New integration](https://console.adobe.io/integrations/new). You can choose **Access an API,** **Receive near real-time events,**  or **Deploy serverless actions.** Choose **Receive near real-time events** and select **Continue**.  
   
-  ![Create a new integration](../../img/Console_2.png "Create a new integration")  
+  ![Create a new integration](../../img/events_console_02.png "Create a new integration")  
   
-3. Now you're given the choice of Adobe event provider for your integration. Choose "Creative Cloud Assets" and select "Continue".  
+3. Now you're given the choice of Adobe event provider for your integration. Choose **Creative Cloud Assets** and select **Continue.**  
   
-  ![Choosing Creative SDK](../../img/Console_3.png "Choosing Creative SDK")  
+  ![Choosing Creative Cloud Assets](../../img/events_console_03.png "Choosing Creative Cloud Assets")  
   
 4. Now you can choose between creating a brand new integration, or updating an existing one. Choose to create a new integration.  
   
-  ![A brand new integration](../../img/Console_4.png "A brand new integration")  
+  ![A brand new integration](../../img/events_console_04.png "A brand new integration")  
   
-5. Enter a name and description for the integration. As a platform, choose "Web". You also need to specifiy a default redirect URI and redirect URI pattern. These are only relevant when using the [Creative Cloud SDK User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html). For now you can fill in `https://example.com` and `https://example\.com/.*` respectively.  
+5. Enter a name and description for the integration. As a platform, choose **Web.** You also need to specifiy a default redirect URI and redirect URI pattern. These are only relevant when using the [Creative Cloud SDK User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html). For now you can fill in `https://example.com` and `https://example\.com*` respectively.  
   
-  ![Specifying the integration](../../img/Console_5.png "Specifying the integration")  
+  ![Specifying the integration](../../img/events_console_05.png "Specifying the integration")  
 
 <a id="orgef08b06"></a>
 
@@ -163,27 +172,27 @@ To create an integration:
 
 To complete the integration, you need to add a webhook. 
 
-1. Select "Add a webhook". The dialog expands to display the webhook details.  
+1. Select **Add Event Registration.** The dialog expands to display the webhook details.  
 
 2. Give the webhook a name and description. As the webhook URL, fill in the URL provided by ngrok, but change the protocol to `https`; for example,  `https://595ae592.ngrok.io`. Also, check the boxes for the three available event types: Creative Cloud Asset Deleted, Updated, and Created.  
   
-  ![Specifying the webhook](../../img/Console_6.png "Specifying the webhook")  
+  ![Specifying the webhook](../../img/events_console_06.png "Specifying the webhook")  
 
-3. Select "Save", complete the Captcha ("I'm not a robot"), and then select "Create integration". You should see an acknowledgement that your integration has been created. 
+3. Select **Save,** complete the CAPTCHA (&ldquo;I'm not a robot&rdquo;), and then select **Create integration.** You should see an acknowledgement that your integration has been created. 
   
-  ![Completing the integration](../../img/Console_7.png "Completing the integration")  
+  ![Completing the integration](../../img/events_console_07.png "Completing the integration")  
 
 4. Check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
   
   ![The webhook request received in ngrok](../../img/ngrok_2.png "The webhook request received in ngrok")  
 
-5. Return to the Adobe I/O Console. Select "Continue to integration details" and you'll be shown the Integration Overview. This is where you can see all your integration details and make updates as needed.  
+5. Return to the Adobe I/O Console. Select **Continue to integration details** and you'll be shown the Integration Overview. This is where you can see all your integration details and make updates as needed.  
   
-  ![The Integration Overview](../../img/Console_8.png "The Integration Overview")  
+  ![The Integration Overview](../../img/events_console_08.png "The Integration Overview")  
 
-6. Select the Events tab. Your webhook should be listed as "Active".    
+6. Select the Events tab. Your webhook should be listed as &ldquo;Active&rdquo;.    
   
-  ![The active webhook in the Console](../../img/Console_9.png "The active webhook in the Console") 
+  ![The active webhook in the Console](../../img/events_console_09.png "The active webhook in the Console") 
 
 <a id="orgecb4ae5"></a>
 
@@ -191,6 +200,6 @@ To complete the integration, you need to add a webhook.
 
 Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console.
 
-The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real-world application, you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user.
+The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real-world application, you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user. 
 
 Now upload a file and check the ngrok logs again. If all went well, then an `asset_created` event was just delivered to your webhook.
