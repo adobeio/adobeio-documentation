@@ -1,4 +1,4 @@
-nav_order = 2
+nav_order=2
 
 # Integrate Analytics Triggers with Adobe I/O Events
 
