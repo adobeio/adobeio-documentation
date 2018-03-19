@@ -1,4 +1,4 @@
-nav_order = 1
+nav_order=1
 
 # Setting up AEM Events with Adobe I/O Events
 
