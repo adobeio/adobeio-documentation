@@ -1,4 +1,4 @@
-nav_order=1
+:navOrder: 1
 
 # Getting Started with Adobe I/O Events
 
