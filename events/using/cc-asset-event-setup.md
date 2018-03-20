@@ -1,4 +1,4 @@
-nav_order = 3
+nav_order=3
 
 # Setting Up Creative Cloud Asset Events on Adobe I/O Events
 
