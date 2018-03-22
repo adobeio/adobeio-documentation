@@ -16,7 +16,7 @@
     {
       "importedFileName": "webhook-docs-intro",
       "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/webhook-docs-intro.md",
+      "path": "adobeio/adobeio-documentation/master/events/intro/webhook_docs_intro.md",
       "title": "Introduction to Adobe I/O Events Webhooks"
     },
     {
@@ -47,19 +47,19 @@
     {
       "importedFileName": "aem-event-setup",
       "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/aem-event-setup.md",
-      "title": "Setting up AEM Events with Adobe I/O Events"
+      "path": "adobeio/adobeio-documentation/master/events/using/aem-event-setup.md",
+      "title": "Setting Up AEM Events with Adobe I/O Events"
     },
     {
       "importedFileName": "analytics-triggers-event-setup",
       "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/analytics-triggers-event-setup.md",
+      "path": "adobeio/adobeio-documentation/master/events/using/analytics-triggers-event-setup.md",
       "title": "Integrate Analytics Triggers with Adobe I/O Events"
     },
     {
       "importedFileName": "cc-asset-event-setup",
       "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/cc-asset-event-setup.md",
+      "path": "adobeio/adobeio-documentation/master/events/using/cc-asset-event-setup.md",
       "title": "Setting Up Creative Cloud Asset Events on Adobe I/O Events"
     }
 ],
@@ -68,13 +68,38 @@
 },
 {
 "importedFileName": "help",
-"pages": [],
-"path": "adobeio/adobeio-documentation/master/events/help.md",
-"title": "Adobe I/O Events Help"
-},
-{
-"importedFileName": "",
-"pages": [],
+"pages": [
+    {
+      "importedFileName": "debug",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/events/help/debug.md",
+      "title": "Debugging Adobe I/O Events"
+    },
+    {
+      "importedFileName": "tracing",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/events/help/tracing.md",
+      "title": "Tracing Adobe I/O Events"
+    },
+    {
+      "importedFileName": "faq",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/events/help/faq.md",
+      "title": "Adobe I/O Events Frequently Asked Questions (FAQ)"
+    },
+    {
+      "importedFileName": "Webhooks_docs_reference",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/events/help/Webhook_docs_reference.md",
+      "title": "Webhooks Reference"
+    },
+    {
+      "importedFileName": "release_notes",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/events/help/release_notes.md",
+      "title": "Adobe I/O Events Release Notes"
+    }
+],
 "path": "adobeio/adobeio-documentation/master/events/help.md",
 "title": "Adobe I/O Events Help"
 }
