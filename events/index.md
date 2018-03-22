@@ -1,5 +1,3 @@
-:navOrder: 1
-
 # Getting Started with Adobe I/O Events
 
 **Adobe I/O Events** offer you a powerful way to integrate your application with Adobe services and solutions. Starting with Creative Cloud Assets, Adobe Experience Manager, and Adobe Analytics Triggers, we are adding events across our entire range of technologies. 
