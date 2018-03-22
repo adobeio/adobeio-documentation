@@ -4,10 +4,10 @@ nav_order=1
 
 - [Introduction](#org3786b01)
 - [Concepts](#org81068e4)
-  - [An example:](#org07fb732)
+    - [An example](#org07fb732)
 - [Your first webhook](#orgbb36f22)
-  - [The Challenge Request](#orgec22b7a)
-  - [Testing with ngrok](#org1762841)
+    - [The Challenge Request](#orgec22b7a)
+    - [Testing with ngrok](#org1762841)
 - [Create an Integration](#org926a538)
 - [Registering the Webhook](#orgef08b06)
 - [Receiving Events](#orgecb4ae5)
@@ -37,7 +37,7 @@ You start receiving events by creating a **Webhook Registration**, providing a n
 
 <a id="org07fb732"></a>
 
-### An example:
+### An example
 
 Acme Inc. wants to be notified when a new file is uploaded to Adobe Creative Cloud Assets, so it creates the following webhook registration:
 
@@ -103,7 +103,7 @@ GET https://acme.example.com?challenge=8ec8d794-e0ab-42df-9017-e3dada8e84f7
 
 You can either respond by placing the challenge value directly in the response body:
 
-```restclient
+```
 HTTP/1.1 200 OK
 
 8ec8d794-e0ab-42df-9017-e3dada8e84f7
@@ -111,12 +111,13 @@ HTTP/1.1 200 OK
 
 or by responding with a JSON object, including the correct `content-type` header:
 
-```restclient
+```
 HTTP/1.1 200 OK
 Content-type: application/json
 
 {"challenge":"8ec8d794-e0ab-42df-9017-e3dada8e84f7"}
 ```
+
 Typically, you would build your webhook to respond to the Adobe challenge in a method to handle HTTP GET requests, and then include another method for handling the HTTP PUT requests that will be coming from Adobe containing actual event payloads. For testing purposes, though, you can start with something as simple as this PHP script: 
 
 ```php
@@ -154,7 +155,7 @@ To create an integration:
   
   ![Create a new integration](../../img/events_console_02.png "Create a new integration")  
   
-3. Now you're given the choice of Adobe event provider for your integration. Choose **Creative Cloud Assets** and select **Continue.**  
+3. Now you&rsquo;re given the choice of Adobe event provider for your integration. Choose **Creative Cloud Assets** and select **Continue.**  
   
   ![Choosing Creative Cloud Assets](../../img/events_console_03.png "Choosing Creative Cloud Assets")  
   

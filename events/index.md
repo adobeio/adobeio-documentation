@@ -22,12 +22,9 @@ To work with events for Adobe services in Experience Cloud, you would need to ha
 
 ## Key Concepts
 - [Webhook Introduction](intro/webhook_docs_intro.md)
-  - [Sample Webhook in Node.js](https://github.com/adobeio/io-event-sample-webhook)
-  <!-- - [Sample Webhook in Python]() *TK from Carmen*
-  - [Sample Webhook in PHP]() *TK* -->
+    - [Sample Webhook in Node.js](https://github.com/adobeio/io-event-sample-webhook)
 - [Adobe I/O Management API for Events](intro/events-api.md)
 - [Journaling API](intro/journaling_api.md)
-<!--- [Use cases for events](intro/use_cases.md) -->
 
 ## Get Started with Available Events
 - Creative Cloud Events

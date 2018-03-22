@@ -384,7 +384,6 @@ To configure using the panel:
 - Sarah Xu [@sarahxxu](https://github.com/sarahxxu).
 - John Wight [@johnwight](https://github.com/johnwight).
 
-      
 ## Feedback?
 
 Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, select the **Issues** tab on this GitHub repository and then select **New issue**. Provide a title and description for your comment and then select  **Submit new issue**.
