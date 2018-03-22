@@ -1,0 +1,63 @@
+{
+"name": "Events",
+"version": "1.0.0",
+"description": "Events",
+"author": "Emily Walpole",
+"view_type": "mdbook",
+"meta_keywords": "defaultkeyword,defaultkeyword2",
+"meta_description": "default description",
+"publish_date": "22/03/2018",
+"show_edit_github_banner": false,
+"base_path": "https://raw.githubusercontent.com",
+"pages": [
+{
+"importedFileName": "index",
+"pages": [
+    {
+      "importedFileName": "webhook-docs-intro",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/events/intro/webhook-docs-intro.md",
+      "title": "Introduction to Adobe I/O Events Webhooks"
+    },
+    {
+      "importedFileName": "events-api",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/events/intro/events-api.md",
+      "title": "Working with Events Using the Adobe I/O Management API"
+    },
+    {
+      "importedFileName": "journaling_api",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/events/intro/journaling_api.md",
+      "title": "Journaling API"
+    },
+    {
+      "importedFileName": "use_cases",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/events/intro/use_cases.md",
+      "title": "Use Cases for Adobe I/O Events"
+    },
+],
+"path": "adobeio/adobeio-documentation/events/index.md",
+"title": "Getting Started with Adobe I/O Events"
+},
+{
+"importedFileName": "using",
+"pages": [],
+"path": "adobeio/adobeio-documentation/events/using.md",
+"title": "Using Adobe I/O Events"
+},
+{
+"importedFileName": "help",
+"pages": [],
+"path": "adobeio/adobeio-documentation/events/help.md",
+"title": "Adobe I/O Events Help"
+},
+{
+"importedFileName": "",
+"pages": [],
+"path": "adobeio/adobeio-documentation/events/help.md",
+"title": "Adobe I/O Events Help"
+},
+]
+}
