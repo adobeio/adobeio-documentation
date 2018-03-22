@@ -4,7 +4,7 @@
 
 - [Events API calls in the I/O Management API](#events-calls)
 - [Calling APIs](#calling-apis)
-- [API Specifications](#api-specs)
+- [API Specifications:](#api-specs)
     - [GET /events/organizations/{orgId}/integrations/{intId}/registrations](#get-all-regs)
     - [POST /events/organizations/{orgId}/integrations/{intId}/registrations](#post-reg-webhook)
     - [GET /events/organizations/{orgId}/integrations/{intId}/registrations/{registrationId}](#get-reg-details)
@@ -255,7 +255,7 @@ _Response model:_
 
 ### <a id="get-journal">`GET /events/organizations/{orgId}/integrations/{intId}/{registrationId}`</a>
 Given the `orgId`, `intId`, and `registrationId`, this gets a journal (list) of events for the given registration. For more details, see 
-[Journaling API](journaling_api.md).
+[Journaling API](intro/journaling_api).
 
 **Required Parameters:**  
 `orgId`, `intId`, `registrationId`, `Authorization`, `x-api-key`
