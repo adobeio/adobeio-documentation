@@ -2,6 +2,11 @@
 
 # Journaling API
 
+- [Accessing the journaling endpoint](#access)
+- [Calling the API](#apicall)
+- [Getting the response](#response)
+- [Controlling the response](#control)
+
 For enterprise developers, Adobe offers another way to consume events besides webhooks: journaling. The Adobe I/O Events Journaling API enables enterprise integrations to consume events according to their own cadence and process them in bulk. Unlike webhooks, no additional registration or other configuration is required; every enterprise integration that is registered for events is automatically enabled for journaling.
 
 Rather than webhooks, which are a _push_ model for events, journaling is a _pull_ model, in which the integration issues an API call to pull a list of events from Adobe. As with webhooks, Adobe delivers the event list as a JSON object on the following model: 
