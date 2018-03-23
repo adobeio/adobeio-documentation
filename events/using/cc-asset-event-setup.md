@@ -2,7 +2,7 @@
 
 # Setting Up Creative Cloud Asset Events on Adobe I/O Events
 
-These instructions describe how to set up Creative Cloud Asset events using Adobe I/O Events. You can use Adobe I/O for notification of CC Asset events.
+These instructions describe how to set up Creative Cloud Asset events using Adobe I/O Events. You can use Adobe I/O for notification of CC Asset events. 
 
 - [Introduction](#introduction)  
 - [Access events](#access-events)  
@@ -136,7 +136,7 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
 <a id="receive-events">&nbsp;</a>
 
- ## Receive events
+## Receive events
  Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html). 
  
  Start with the Integration Overview. It&rsquo;s the screen you see immediately after selecting **Continue to Integration details**.
