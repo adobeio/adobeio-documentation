@@ -9,7 +9,7 @@ These instructions describe how to set up Creative Cloud Asset events using Adob
 - [Create an integration](#create-integration)  
 - [Receive events](#receive-events)
 
-## <span id="introduction">Introduction</span>
+## Introduction
 Creative Cloud Assets provides a simple set of events to which you can subscribe: 
 - **asset-updated:** Triggers when an asset is changed or modified.
 - **asset-created:** Triggers when a new asset is uploaded to Creative Cloud, or when an asset is _copied_ to a new folder (not when an asset is merely moved).
