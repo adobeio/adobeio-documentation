@@ -19,12 +19,12 @@ There are no events for the following activities:
 - Moving a file from one folder in Creative Cloud to another.
 - Renaming a file. This is because assets are tracked in Creative Cloud by GUIDs, and the GUID doesn&rsquo;t change when the file is renamed. Creative Cloud recognizes that the asset hasn&rsquo;t changed, and can still find the asset by the same GUID. Any URL paths you create to that file, however, would change, since they do include the filename.
 
-## <span id="access-events">Access events</span>
+## Access events
 Unlike other Cloud Platform event providers, Creative Cloud Assets does not require an enterprise account, or administrative status, to gain access for creating integrations or receiving events. However, the integrations you create will still need to authenticate the same way any other Adobe integrations do. Consider what kind of authentication your integration needs before you start, and follow the correct procedure (see [Adobe Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)) to get the access rights your integration needs.
 
 > **Note:** Creative Cloud Assets events are currently accessible through a managed beta program. See https://adobeio.typeform.com/to/QvEgPP to apply for access.
 
-## <span id="create-integration">Create an integration</span>
+## Create an integration
 For the purposes of this example, you&rsquo;ll be creating an individual integration using your personal Adobe ID. 
 
 To create an integration for Creative Cloud Assets:
@@ -128,7 +128,7 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
 
     >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; of your webhook would have failed; instead of seeing the confirmation screen, you&rsquo;d see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook&rsquo;s endpoint is down. 
 
-## <span id="receive-events">Receive events</span>
+## Receive events
  Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html). 
  
  Start with the Integration Overview. It&rsquo;s the screen you see immediately after selecting **Continue to Integration details**.
