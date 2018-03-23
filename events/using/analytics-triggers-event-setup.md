@@ -4,19 +4,18 @@
 
 These instructions describe how to use Adobe Analytics triggers to notify you of Adobe I/O events, including the behavior of your site's users. Follow the instructions below to try the solution yourself.
 
-1. [Introduction](#Introduction)
-
-1. [Set Up Products](#Set-Up-Products)
-
-1. [Use Adobe I/O](#Use-Adobe-I/O)
-
-1. [Watch the Solution Work](#Watch-It-Work)
+- [Introduction](#Introduction)
+- [Set Up Products](#Set-Up-Products)
+- [Use Adobe I/O](#Use-Adobe-I/O)
+- [Watch the Solution Work](#Watch-It-Work)
 
 **Resources**
 - [Debugging](help/debug#analytics)
 - [FAQ](help/faq#analytics)
 
-## <a name="Introduction">Introduction</a>
+<a id="Introduction">&nbsp;</a>
+
+## Introduction
 
 ### What are Triggers?
 Triggers is a Marketing Cloud Activation core service that enables marketers to identify, define, and monitor key consumer behaviors, and then generate cross-solution communication to re-engage visitors.
@@ -26,12 +25,11 @@ For more information on triggers, see the [Triggers Help Page](https://marketing
 Before setting up and using Adobe I/O, you will need to do the following:
 
 1. [Obtain Product Authorization](#Obtain-Product-Authorization)
-
 2. [Obtain Administrative Permissions](#Obtain-Administrative-Permissions)
 
+<a id="Obtain-Product-Authorization">&nbsp;</a>
 
-
-### <a name="Obtain-Product-Authorization">Obtain Product Authorization</a>
+### Obtain Product Authorization
 
 To complete this solution, you will need authorization to use the following services:
 *   Adobe Analytics, including Triggers
@@ -39,8 +37,9 @@ To complete this solution, you will need authorization to use the following serv
 *   Adobe Experience Manager (AEM), or an external website that connects to Analytics
 *   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not have one already
 
+<a id="Obtain-Administrative-Permissions">&nbsp;</a>
 
-### <a name="Obtain-Administrative-Permissions">Obtain Administrative Permissions</a>
+### Obtain Administrative Permissions
 
 You will also need administrative permissions for the following:
 * Adobe Analytics
@@ -51,37 +50,38 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
    ![admin rights 2](https://user-images.githubusercontent.com/29133525/32473847-d5ba50ba-c326-11e7-8443-fef38b12bcff.png)
 
-## <a name="Set-Up-Products">Set Up Products</a>
+<a id="Set-Up-Products">&nbsp;</a>
+
+## Set Up Products
 
 To set up Adobe products for this solution:
 
 1. [Set Up AEM](#Integrate-AEM)
-
 1. [Set Up Analytics](#Set-up-Triggers)
 
-### <a name="Integrate-AEM">Set Up AEM</a>
+<a id="Integrate-AEM">&nbsp;</a>
+
+### Set Up AEM
 
 To set up AEM with Analytics Triggers and Dynamic Tag Management (DTM), follow the [step-by-step documentation](https://github.com/johnwight/Adobe-AEM-with-DTM-and-Analytics) for that configuration. You can also follow the video shown below:
 
 
    [![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
 
+<a id="Set-up-Triggers">&nbsp;</a>
 
-### <a name="Set-up-Triggers">Set up Analytics</a>
+### Set up Analytics
 
 To set up Analytics:
 
 1. [Get Product Access from Admin Console](#Admin-Console)
-
 2. [Configure Reporting for Triggers](#Reporting-for-Triggers)
-
 3. [Configure DTM](#Configure-DTM)
-
 4. [Specify a New Trigger](#Specify-a-New-Trigger)
 
+<a id="Admin-Console">&nbsp;</a>
 
-
-#### <a name="Admin-Console">Get Product Access through Adobe Admin Console</a>	 
+#### Get Product Access through Adobe Admin Console	 
 
 To get access through the Adobe Admin Console:
 
@@ -116,9 +116,9 @@ To get access through the Adobe Admin Console:
 
       ![user permissions](https://user-images.githubusercontent.com/29133525/32474735-409e7d8a-c32b-11e7-879c-5f2bdf0825b2.png)
 
+<a id="Reporting-for-Triggers">&nbsp;</a>
 
-
-#### <a name="Reporting-for-Triggers">Configure Reporting for Triggers</a>
+#### Configure Reporting for Triggers
 
 To configure reporting for Triggers:
 
@@ -140,10 +140,11 @@ To configure reporting for Triggers:
     ![report suite manager](https://user-images.githubusercontent.com/29133525/32474884-36e55ee8-c32c-11e7-8a50-928b73efb2f8.png)
 
 
-#### <a name="Configure-DTM">Configure DTM</a>
+<a id="Configure-DTM">&nbsp;</a>
+
+#### Configure DTM
 
 To configure DTM:
-
 
 1.	On the Marketing Cloud home page, click the **Apps** icon and then click **Activation**.
 
@@ -178,8 +179,9 @@ To configure DTM:
 
     ![publish button](https://user-images.githubusercontent.com/29133525/32475340-7ee8d178-c32e-11e7-9ba3-cab950bf2776.png)
 
+<a id="Specify-a-New-Trigger">&nbsp;</a>
 
-#### <a name="Specify-a-New-Trigger">Specify a New Trigger</a>
+#### Specify a New Trigger
 
 You can specify triggers for many events on your site. For example, in this case, we will set notifications to be sent when  carts are abandoned. We will set a trigger for sessions when the user visits either a **cart.html**, **checkout.html** or **order.html** page, but never reaches the **thank-you.html** page within a ten minute session. The trigger indicates that the user added products to the cart, and was about to make a purchase, but later decided otherwise, or forgot to complete the purchase.
 
@@ -201,20 +203,19 @@ To specify a new trigger:
 
     ![trigger dialog](https://user-images.githubusercontent.com/29133525/32475528-7287302c-c32f-11e7-909f-b2c86313bf08.png)
 
-
-6. On the **Triggers Settings** page, define the business rules for your trigger. You can drag a dimension/metric box from the left panel to the right side of the screen and then specify the business rules for what must happen and what must not happen in a session. In this case, we set the trigger to fire after 10 minutes of inactivity after the rules are met.
+5. On the **Triggers Settings** page, define the business rules for your trigger. You can drag a dimension/metric box from the left panel to the right side of the screen and then specify the business rules for what must happen and what must not happen in a session. In this case, we set the trigger to fire after 10 minutes of inactivity after the rules are met.
 
     ![triggers settings page](https://user-images.githubusercontent.com/29133525/30291990-c37f6ff4-96f1-11e7-84ff-51559bd886c2.png)
 
-
-7. Click the **Save** button.
-
+6. Click the **Save** button.
 
 Once you save the trigger, any event in your report suite that meets the defined business rules criteria will cause a trigger to fire. You can view the status of triggers on the **Triggers** page.
 
 ![triggers listing](https://user-images.githubusercontent.com/29133525/30292257-af31b0ce-96f2-11e7-8e3c-32531e0d0d9e.png)
 
-## <a name="Use-Adobe-I/O">Use Adobe I/O</a>
+<a id="Use-Adobe-I/O">&nbsp;</a>
+
+## Use Adobe I/O
 
 Use Adobe I/O by creating a new integration with the Console. To do this:
 
@@ -225,7 +226,6 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 2. Select **Receive real-time events** and click **Continue**.
 
     ![real time events](https://user-images.githubusercontent.com/29133525/30292486-946dc812-96f3-11e7-9bc5-2aa0196f704b.png)
-
 
 3. Select **Analytics Triggers** as an event provider and click **Continue**.
 
@@ -241,9 +241,8 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 
     1. Open a terminal and execute the following command:
 
-        ```
-        openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt
-        ```
+        `openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt`
+
     2. Upload the public certificate by clicking the **Select a File** link and then by selecting the certificate from your computer:
 
         ![public certificate](https://user-images.githubusercontent.com/29133525/32476036-2e563e40-c332-11e7-9fbd-889f1ba8054f.png)
@@ -254,7 +253,9 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
     ![webhook details](https://user-images.githubusercontent.com/29133525/32476125-b55c816a-c332-11e7-8edd-a5ca7d1d5611.png)
 
 
-## <a name="Watch-It-Work">Watch the Solution Work</a>
+<a id="Watch-It-Work">&nbsp;</a>
+
+## Watch the solution work
 
 Your enterprise may have its own tool that you can use to subscribe and listen to webhook events. Alternatively, you can use the following procedure to set up notifications with Slack.
 To watch your trigger work on Slack:
