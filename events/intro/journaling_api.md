@@ -28,7 +28,9 @@ There is only one API for journaling:
 
 This API gets all events for a given event registration. 
 
-## <a id="access">Accessing the journaling endpoint</a>
+<a id="access">&nbsp;</a>
+
+## Accessing the journaling endpoint
 
 Adobe I/O Console makes it easy to use the API by providing you with an endpoint URL with the parameters filled in:
 
@@ -40,7 +42,9 @@ Adobe I/O Console makes it easy to use the API by providing you with an endpoint
 
 4. Find the Journaling section of the event details and copy the URL for the unique endpoint. 
 
-## <a id="apicall">Calling the API</a>
+<a id="apicall">&nbsp;</a>
+
+## Calling the API
 
 To issue the API call, you need to provide two additional parameters: 
 
@@ -51,7 +55,9 @@ You combine the URL you got from the Journaling section of the event details wit
 
 `curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b`
 
-## <a id="response">Getting the response</a>
+<a id="response">&nbsp;</a>
+
+## Getting the response
 Your call results in a response containing a JSON object listing all the events for that event registration. 
 
 **Sample output:**
@@ -144,7 +150,9 @@ Your call results in a response containing a JSON object listing all the events 
 }
 ```
 
-## <a id="control">Controlling the response</a>
+<a id="control">&nbsp;</a>
+
+## Controlling the response
 By default, every call to the Journaling API returns a list of the latest 100 events, or all events if there are fewer than 100. The Journaling API offers two optional query parameters you can include in your URL for controlling the response:
 
 * **pageSize:** This integer parameter lets you specify how many of the most recent events to retrieve. 

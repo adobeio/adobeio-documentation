@@ -7,7 +7,9 @@ This page captures the most common troubleshooting scenarios when working with A
 * [AEM Events](#aem)
 * [Analytics Triggers](#analytics)
 
-## <a id="aem">AEM Events</a>
+<a id="aem">&nbsp;</a>
+
+## AEM Events
 
 If your integration isn't receiving events from your installation of Adobe Experience Manager, you can perform any of several health checks on your setup to see where the communication between AEM and your integration is breaking down. For more information on health checks, see:
 
@@ -52,8 +54,10 @@ This health check emits a custom OSGI event sample to your registered webhook. I
 If this health check is failing, check the following:
 
 - Check your webhook as in health check 4.
- 
-## <a id="analytics">Analytics Triggers</a>
+
+<a id="analytics">&nbsp;</a>
+
+## Analytics Triggers
 If your Analytics Triggers events aren't coming through to your integration, a breakdown in communication may have occurred at any step in the events process. You'll need to check each step in order to verify where the breakdown has occurred and then fix your configuration accordingly.
 
 The process of communicating Analytics Triggers via I/O Events consists of the following steps:

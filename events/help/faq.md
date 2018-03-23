@@ -6,7 +6,9 @@
 * [AEM events](#aem)
 * [Analytics Triggers events](#analytics)
 
-## <a id="#general">General questions</a>
+<a id="#general">&nbsp;</a>
+
+## General questions
 _**What are I/O Events?**_  
 I/O Events make meaningful Adobe Cloud Platform events available to 1st and 3rd party developers.
 
@@ -58,8 +60,10 @@ Yes:
 - JavaScript tutorial: - https://www.jonathan-petitcolas.com/2014/11/27/creating-json-web-token-in-javascript.html
 - Javascript: http://kjur.github.io/jsrsasign/
   
+<a id="aem">&nbsp;</a>
 
-## <a id="aem">AEM events</a>
+## AEM events
+
 _**Which version of AEM is supported for I/O Events?**_  
 AEM 6.3 is the latest version supported for I/O Events.
 
@@ -307,7 +311,9 @@ One possible solution is to try waiting for two minutes and checking a few more 
 
 If your health check consistently fails, check the [AEM Events](debug#aem-events) section of the Debugging Guide: &ldquo;AEM Events not firing&rdquo;.
 
-## <a id="analytics">Analytics Triggers</a>
+<a id="analytics">&nbsp;</a>
+
+## Analytics Triggers
 **Where can I find instructions on setting up Analytics Triggers for I/O?**  
 You'll find it in this guide at [Integrate Analytics Triggers with Adobe I/O Events](../using/analytics-triggers-events-setup.md). 
 

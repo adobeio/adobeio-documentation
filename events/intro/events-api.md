@@ -15,7 +15,9 @@ As an open system, Adobe Cloud Platform allows you access through APIs to just a
 
 Adobe APIs are accessible through HTTP GET and POST methods. The API responds with the appropriate HTTP response code (200 for success) and a JSON object (response content type: `application/json`) containing the information requested.
 
-## <a id="events-calls">Events API calls in the Adobe I/O Management API</a>
+<a id="events-calls">&nbsp;</a>
+
+## Events API calls in the Adobe I/O Management API
 The following calls enable Events management in the 
 Adobe I/O Management API:
 
@@ -39,7 +41,9 @@ The APIs for events management have several parameters in common, as shown in th
 | `Authorization` | path | string | A JWT token; see [Authentication: Creating a JWT Token](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt.html) for how to create a JWT token.  |
 | `x-api-key` | path | string | Your integration&rsquo;s API key. This is displayed in the Overview tab for your integration in the Adobe I/O Console. |
 
-## <a id="calling-apis">Calling APIs</a>
+<a id="calling-apis">&nbsp;</a>
+
+## Calling APIs
 To call an API, you simply need to issue the appropriate GET or POST method with all the parameters in place. Here is a sample, issued as a curl command:
 
 `curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/registrations/fa28f4d0-3438-429f-98b8-0a25cb49498b`
@@ -56,10 +60,14 @@ To retrieve your `registrationId`, issue the API call to retrieve details of all
 
 The response will include the `registrationId` for every event registration you have associated with the given integration.
 
-## <a id="api-specs">API Specifications</a>
+<a id="api-specs">&nbsp;</a>
+
+## API Specifications
 This section provides information on parameters and responses for each API call.
 
-### <a id="get-all-regs">`GET /events/organizations/{orgId}/integrations/{intId}/registrations`</a>
+<a id="get-all-regs">&nbsp;</a>
+
+### `GET /events/organizations/{orgId}/integrations/{intId}/registrations`
 Given the Client ID (API key) and `orgId` provided, this gets a JSON array of all the event registrations associated with the integration given by `intId`.
 
 **Required Parameters:**  
@@ -97,7 +105,9 @@ _Response model:_
 ]
 ```
 
-### <a id="post-reg-webhook">`POST /events/organizations/{orgId}/integrations/{intId}/registrations`</a>
+<a id="post-reg-webhook">&nbsp;</a>
+
+### `POST /events/organizations/{orgId}/integrations/{intId}/registrations`
 Given the `orgId` and `intId`, along with a JSON object in the body of the call, registers a webhook endpoint for the given integration.
 
 **Required Parameters:**  
@@ -159,7 +169,9 @@ _Response model:_
 ]
 ```
 
-### <a id="get-reg-details">`GET /events/organizations/{orgId}/integrations/{intId}/registrations/{registrationId}`</a>
+<a id="get-reg-details">&nbsp;</a>
+
+### `GET /events/organizations/{orgId}/integrations/{intId}/registrations/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets the details for the given webhook registration.
 
 **Required Parameters:**  
@@ -193,7 +205,10 @@ _Response model:_
   "runtime_action": "string"
 }
 ```
-### <a id="get-tracing">`GET /events/organizations/{orgId}/integrations/{intId}/tracing/{registrationId}`</a>
+
+<a id="get-tracing">&nbsp;</a>
+
+### `GET /events/organizations/{orgId}/integrations/{intId}/tracing/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets webhook tracing data for the given webhook registration.
 
 **Required Parameters:**  
@@ -253,7 +268,9 @@ _Response model:_
 ]
 ```
 
-### <a id="get-journal">`GET /events/organizations/{orgId}/integrations/{intId}/{registrationId}`</a>
+<a id="get-journal">&nbsp;</a>
+
+### `GET /events/organizations/{orgId}/integrations/{intId}/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets a journal (list) of events for the given registration. For more details, see 
 [Journaling API](intro/journaling_api).
 
