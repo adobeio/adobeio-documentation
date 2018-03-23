@@ -316,6 +316,7 @@ Analytics Triggers are set up and managed via the Experience Cloud Activation UI
 
 **What does an Analytics Triggers payload look like?**  
 Here is a sample:
+<!--This is a temporary event payload; it is subject to change to conform to the XDM event model to be released later in 2018.-->
 
 ```json
 {
