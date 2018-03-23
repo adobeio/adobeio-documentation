@@ -2,11 +2,9 @@
 
 # Adobe I/O Events Frequently Asked Questions (FAQ)
 
-* [General questions](#general)
-* [AEM events](#aem)
-* [Analytics Triggers events](#analytics)
-
-<a id="#general">&nbsp;</a>
+* [General questions](#generalquestions)
+* [AEM events](#aemevents)
+* [Analytics Triggers events](#analyticstriggersevents)
 
 ## General questions
 _**What are I/O Events?**_  
@@ -59,8 +57,6 @@ Yes:
 - Node.js: https://www.npmjs.com/package/jwt-simple
 - JavaScript tutorial: - https://www.jonathan-petitcolas.com/2014/11/27/creating-json-web-token-in-javascript.html
 - Javascript: http://kjur.github.io/jsrsasign/
-  
-<a id="aem">&nbsp;</a>
 
 ## AEM events
 
@@ -311,9 +307,7 @@ One possible solution is to try waiting for two minutes and checking a few more 
 
 If your health check consistently fails, check the [AEM Events](debug#aem-events) section of the Debugging Guide: &ldquo;AEM Events not firing&rdquo;.
 
-<a id="analytics">&nbsp;</a>
-
-## Analytics Triggers
+## Analytics Triggers Events
 **Where can I find instructions on setting up Analytics Triggers for I/O?**  
 You'll find it in this guide at [Integrate Analytics Triggers with Adobe I/O Events](../using/analytics-triggers-events-setup.md). 
 

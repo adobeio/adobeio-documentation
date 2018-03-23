@@ -2,9 +2,9 @@
 
 # Working with Events Using the Adobe I/O Management API
 
-- [Events API calls in the I/O Management API](#events-calls)
-- [Calling APIs](#calling-apis)
-- [API Specifications:](#api-specs)
+- [Events API calls in the I/O Management API](#eventsapicallsintheadobiomanagementapi)
+- [Calling APIs](#callingapis)
+- [API Specifications:](#apispecs)
     - [GET /events/organizations/{orgId}/integrations/{intId}/registrations](#get-all-regs)
     - [POST /events/organizations/{orgId}/integrations/{intId}/registrations](#post-reg-webhook)
     - [GET /events/organizations/{orgId}/integrations/{intId}/registrations/{registrationId}](#get-reg-details)
@@ -14,8 +14,6 @@
 As an open system, Adobe Cloud Platform allows you access through APIs to just about any functionality you need. This includes events. The Adobe I/O Management API provides several API calls that enable you to manage events programmatically. 
 
 Adobe APIs are accessible through HTTP GET and POST methods. The API responds with the appropriate HTTP response code (200 for success) and a JSON object (response content type: `application/json`) containing the information requested.
-
-<a id="events-calls">&nbsp;</a>
 
 ## Events API calls in the Adobe I/O Management API
 The following calls enable Events management in the 
@@ -41,8 +39,6 @@ The APIs for events management have several parameters in common, as shown in th
 | `Authorization` | path | string | A JWT token; see [Authentication: Creating a JWT Token](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt.html) for how to create a JWT token.  |
 | `x-api-key` | path | string | Your integration&rsquo;s API key. This is displayed in the Overview tab for your integration in the Adobe I/O Console. |
 
-<a id="calling-apis">&nbsp;</a>
-
 ## Calling APIs
 To call an API, you simply need to issue the appropriate GET or POST method with all the parameters in place. Here is a sample, issued as a curl command:
 
@@ -59,8 +55,6 @@ To retrieve your `registrationId`, issue the API call to retrieve details of all
 `curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/registrations`
 
 The response will include the `registrationId` for every event registration you have associated with the given integration.
-
-<a id="api-specs">&nbsp;</a>
 
 ## API Specifications
 This section provides information on parameters and responses for each API call.

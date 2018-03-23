@@ -4,10 +4,8 @@
 
 This page captures the most common troubleshooting scenarios when working with Adobe Events. 
 
-* [AEM Events](#aem)
-* [Analytics Triggers](#analytics)
-
-<a id="aem">&nbsp;</a>
+* [AEM Events](#aemevents)
+* [Analytics Triggers Events](#analyticstriggersevents)
 
 ## AEM Events
 
@@ -55,9 +53,7 @@ If this health check is failing, check the following:
 
 - Check your webhook as in health check 4.
 
-<a id="analytics">&nbsp;</a>
-
-## Analytics Triggers
+## Analytics Triggers Events
 If your Analytics Triggers events aren't coming through to your integration, a breakdown in communication may have occurred at any step in the events process. You'll need to check each step in order to verify where the breakdown has occurred and then fix your configuration accordingly.
 
 The process of communicating Analytics Triggers via I/O Events consists of the following steps:

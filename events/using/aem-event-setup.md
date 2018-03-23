@@ -7,7 +7,7 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 - [Introduction](#introduction)  
 - [Set Up products](#set-up-products)  
 - [Use Adobe I/O](#use-adobe-i/o)  
-- [Watch the solution work](#watch-it-work)
+- [Watch the solution work](#watchthesolutionwork)
 
 **Resources**
 - [Debugging](../help/debug#aem)
@@ -19,11 +19,9 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 
 Before setting up and using AEM with Adobe I/O, you will need to do the following:
 
-1. [Obtain authorization](#obtain-authorization)
+1. [Obtain authorization](#obtainauthorization)
+2. [Register an AEM event consumer app](#registeranaemeventconsumerapp)
 
-1. [Register an AEM event consumer app](#register-an-aem-event-consumer-app)
-
-<a id="obtain-authorization">&nbsp;</a>
 ### Obtain authorization
 
 To complete this solution, you will need authorization to use the following services:
@@ -32,24 +30,17 @@ To complete this solution, you will need authorization to use the following serv
 *   [Adobe I/O Console](https://adobe.io/console) access, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact [ioevents-beta@adobe.com](mailto:ioevents-beta@adobe.com). After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, notifying you of your permissions:
 
       ![Admin rights email](../../img/events_aem_01.png "Admin rights email")
- 
-<a id="register-an-aem-event-consumer-app">&nbsp;</a>
 
 ### Register an AEM event consumer app
 
 You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge HTTP request](../intro/Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](../intro/Webhook_docs_intro.md).
 
-<a id="set-up-products"></a>
-
 ## Set up products
 
 To set up AEM for Adobe I/O Events:
 
-1. [Install the AEM event proxy package](#install-the-aem-pvent-proxy-package)
-
-1. [Configure OAuth and IMS authentication](#configure-oauth-and-ims-authentication)
-
-<a id="install-the-aem-event-proxy-package">&nbsp;</a>
+1. [Install the AEM event proxy package](#installtheaemeventproxypackage)
+2. [Configure OAuth and IMS authentication](#configureoauthandimsauthentication)
 
 ### Install the AEM event proxy package
 
@@ -95,17 +86,13 @@ For more information, see AEM [User, Group and Access Rights Administration](htt
 
       ![CRXDE Lite](../../img/events_aem_06.png "CRXDE Lite")
 
-<a id="configure-oauth-and-ims-authentication">&nbsp;</a>
-
 ### Configure OAuth and IMS authentication
 
 To configure OAuth and IMS authentication:
 
-1. [Create a certificate and keystore](#create-a-certificate-and-keystore)
-2. [Add the keystore to the AEM eventproxy-service user group](#add-the-keystore-to-the-aem-eventproxyservice-user-group)
-3. [Configure the AEM Link Externalizer](#configure-the-aem-link-externalizer)
-
-<a id="create-a-certificate-and-keystore">&nbsp;</a>
+1. [Create a certificate and keystore](#createacertificateandkeystore)
+2. [Add the keystore to the AEM eventproxy-service user group](#addthekeystoretotheaemeventproxyserviceusergroup)
+3. [Configure the AEM Link Externalizer](#configuretheaemlinkexternalizer)
 
 #### Create a certificate and keystore
 
@@ -139,8 +126,6 @@ To create a certificate and keystore:
       ```
       >Note: On Windows systems, this command expression may vary. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
-<a id="add-the-keystore-to-the-aem-eventproxyservice-user-group">&nbsp;</a>
-
 #### Add the keystore to the AEM eventproxy-service user group 
 
 To add the key store to the AEM eventproxy-service user group:
@@ -169,9 +154,7 @@ To add the key store to the AEM eventproxy-service user group:
  
       ![keystore management](../../img/events_aem_10.png)
 
-<a id="configure-the-aem-link-externalizer">&nbsp;</a>
-
-### Configure the AEM Link Externalizer
+#### Configure the AEM Link Externalizer
 
 To configure AEM Link Externalizer:
 
@@ -187,19 +170,14 @@ To configure AEM Link Externalizer:
 
     ![AEM Web Console base URL](../../img/events_aem_12.png  "AEM Web Console base URL")
 
-<a id="use-adobe-i/o">&nbsp;</a>
-
 ## Use Adobe I/O
 
 Use Adobe I/O to do the following:
 
-1. [Create an Adobe I/O Console integration](#create-an-adobe-i/o-console-integration)
-
-2. [Configure Adobe I/O Events as a cloud service in AEM](#configure-adobe-i/o-events-as-a-cloud-service-in-aem)
-
-3. [Register an AEM event consumer app](#register-an-aem-event-consumer-app-2)
-
-<a id="create-an-adobe-i/o-console-integration">&nbsp;</a>
+1. [Create an Adobe I/O Console integration](#createanadobeioconsoleintegration)
+2. [Configure Adobe I/O Events as a cloud service in AEM](#configureadobeioeventsasacloudserviceinaem)
+3. [Perform an AEM health and configuration check](performanaemhealthandconfigurationcheck)
+4. [Register the AEM event consumer app](#registertheaemeventconsumerapp)
 
 ### Create an Adobe I/O Console integration
 
@@ -224,8 +202,6 @@ To create an [Adobe I/O Console](https://adobe.io/console) integration:
       ![Complete the new integration](../../img/events_aem_16.png "Complete the new integration")
 
 6. Select **Create Integration.**
-
-<a id="configure-adobe-i/o-events-as-a-cloud-service-in-aem">&nbsp;</a>
 
 ### Configure Adobe I/O Events as a cloud service in AEM
 
@@ -252,8 +228,6 @@ To configure Adobe I/O Events as a cloud service in AEM:
 *   For **Organization ID**: Provide the ID shown on the Adobe I/O Console.
 *   For **Client Secret**: AEM will automatically retrieve the value from the Adobe I/O Console.
 
-<a id="healthcheck-conf">&nbsp;</a>
-
 ### Perform an AEM health and configuration check
 
 You can use the AEM Web Console Sling Health Check to verify that your configurations are correct.
@@ -274,15 +248,11 @@ This verifies that the AEM instance is successfully registered as an event provi
 
       ![Health check for eventproxy,csm](../../img/events_aem_23.png "Health check for eventproxy,csm")
 
- <a id="register-an-aem-event-consumer-app-2">&nbsp;</a>
-
-### Register an AEM event consumer app
+### Register the AEM event consumer app
 
 To register an AEM event consumer app, you can set up a webhook. Your webhook should be able to accept and reply to a challenge HTTP request parameter sent by Adobe I/O CSM.
 
-<a id="set-up-webhook-example">&nbsp;</a>
-
-#### Seting up a webhook: example
+#### Setting up a webhook: example
 To create a webhook at webtask.io, add the following code to make sure the Challenge is echoed back. This is needed for the verification by Adobe I/O CSM when you register the webhook URL later using the CSM API:
 
 ```js
@@ -312,18 +282,13 @@ app.post('/webhook', function (req, res) {
 module.exports = Webtask.fromExpress(app);
 ```
 
-<a id="watch-it-work">&nbsp;</a>
-
 ## Watch the solution work 
 
 You can watch the solution work by testing your integration. To do this:
 
-1. [Register your webhook with the Adobe I/O Console](#register-it)
-2. [Perform a webhook health check](#webhook-health-check)
-
-3. [Configure advanced Adobe I/O Events](#configure-advanced-adobe-i/o-events)
-
-<a id="register-it">&nbsp;</a>
+1. [Register your webhook with the Adobe I/O Console](#registeryourwebhookwiththeAdobeioConsole)
+2. [Perform a webhook health check](#performawebhookhealthcheck)
+3. [Optional: Adobe I/O Events OSGI to XDM event mapping configurations](#adobeioeventsosgitoxdmeventmappingconfigurations)
 
 ### Register your webhook with the Adobe I/O Console 
 
@@ -349,9 +314,7 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
 Note: Once you have registered your webhook, responses will include a [status](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md#org85f36da) field to show if it is ```VERIFIED```.
 
-<a id="webhook-health-check">&nbsp;</a>
-
-### <a id="webhook-health-check">Perform a webhook health check
+### Perform a webhook health check
 
 To perform a webhook health check:
 
@@ -377,7 +340,9 @@ To perform a webhook health check:
       
 <a id="configure-advanced-adobe-i/o-events">&nbsp;</a>
 
-### Optional: Adobe I/O Events&rsquo; OSGI to XDM event mapping configurations
+### (Optional)
+
+### Adobe I/O Events OSGI to XDM event mapping configurations
 
 For all Adobe I/O event types defined by the Adobe I/O Event Model, there is an **Adobe I/O Events OSGI to XDM event mapping configuration**.
 

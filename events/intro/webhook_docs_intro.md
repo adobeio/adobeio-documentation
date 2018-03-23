@@ -2,27 +2,21 @@
 
 # Introduction to Adobe I/O Events Webhooks
 
-- [Introduction](#org3786b01)
-- [Concepts](#org81068e4)
-    - [An example](#org07fb732)
-- [Your first webhook](#orgbb36f22)
-    - [The Challenge Request](#orgec22b7a)
-    - [Testing with ngrok](#org1762841)
-- [Create an Integration](#org926a538)
-- [Registering the Webhook](#orgef08b06)
-- [Receiving Events](#orgecb4ae5)
-
-
-<a id="org3786b01"></a>
+- [Introduction](#introduction)
+- [Concepts](#concepts)
+    - [An example](#anexample)
+- [Your first webhook](#Yourfirstwebhooy)
+    - [The Challenge Request](#thechallengerequest)
+    - [Testing with ngrok](#testingwithngrok)
+- [Create an Integration](#createanintegration)
+- [Registering the Webhook](#registeringthewebhook)
+- [Receiving Events](#receivingevents)
 
 ## Introduction
 
 With Adobe I/O Events webhooks, your application can sign up to be notified whenever certain events occur. For example, when a user uploads a file to Adobe Creative Cloud Assets, this action generates an event. With the right webhook in place, your application is instantly notified that this event happened.
 
 To start receiving events, you register a webhook, specifying a webhook URL and the types of events you want to receive. Each event will result in a HTTP request to the given URL, notifying your application.
-
-
-<a id="org81068e4"></a>
 
 ## Concepts
 
@@ -33,9 +27,6 @@ Events originate from **Event Providers**. Each event provider publishes specifi
 A **Webhook URL** receives event JSON objects as HTTP POST requests.
 
 You start receiving events by creating a **Webhook Registration**, providing a name, description, webhook URL, and a list of event types you are interested in.
-
-
-<a id="org07fb732"></a>
 
 ### An example
 
@@ -75,9 +66,6 @@ content-type: application/json
 }
 ```
 
-
-<a id="orgbb36f22"></a>
-
 ## Your first webhook
 
 Before you can register a webhook, the webhook needs to be online and operational. If not, then the registration will fail. So you need to take care of setting that up first.
@@ -87,9 +75,6 @@ Your webhook needs to
 -   be accessible from the internet (localhost won't work)
 -   be reachable over HTTPS
 -   correctly respond to a "challenge" request
-
-
-<a id="orgec22b7a"></a>
 
 ### The challenge request
 
@@ -129,8 +114,6 @@ Typically, you would build your webhook to respond to the Adobe challenge in a m
 
 **Note:** Make sure your response is given in the correct content-type. If your webhook script places the challenge value directly in the response body, make sure it's returned as plain text (`text/plain`). For a JSON response, make sure it's `application/json`. Returning a response in the incorrect content-type may cause extraneous code to be returned, which will not validate with Adobe I/O Events.
 
-<a id="org1762841"></a>
-
 ### Testing with ngrok
 [Ngrok](https://ngrok.com/) is a utility for enabling secure introspectable tunnels to your localhost. With ngrok, you can securely expose a local web server to the internet and run your own personal web services from your own machine, safely encrypted behind your local NAT or firewall. With ngrok, you can iterate quickly without redeploying your app or affecting your customers. 
 
@@ -140,8 +123,6 @@ Among other things, ngrok is a great tool for testing webhooks. Once you've down
 ![ngrok on port 80](../../img/ngrok.png "ngrok on port 80")
 
 In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
-
-<a id="org926a538"></a>
 
 ## Creating an integration
 
@@ -165,9 +146,7 @@ To create an integration:
   
 5. Enter a name and description for the integration. As a platform, choose **Web.** You also need to specifiy a default redirect URI and redirect URI pattern. These are only relevant when using the [Creative Cloud SDK User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html). For now you can fill in `https://example.com` and `https://example\.com*` respectively.  
   
-  ![Specifying the integration](../../img/events_console_05.png "Specifying the integration")  
-
-<a id="orgef08b06"></a>
+  ![Specifying the integration](../../img/events_console_05.png "Specifying the integration")
 
 ## Registering the webhook
 
@@ -193,9 +172,7 @@ To complete the integration, you need to add a webhook.
 
 6. Select the Events tab. Your webhook should be listed as &ldquo;Active&rdquo;.    
   
-  ![The active webhook in the Console](../../img/events_console_09.png "The active webhook in the Console") 
-
-<a id="orgecb4ae5"></a>
+  ![The active webhook in the Console](../../img/events_console_09.png "The active webhook in the Console")
 
 ## Receiving events
 

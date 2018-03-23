@@ -4,16 +4,14 @@
 
 These instructions describe how to use Adobe Analytics triggers to notify you of Adobe I/O events, including the behavior of your site's users. Follow the instructions below to try the solution yourself.
 
-- [Introduction](#Introduction)
-- [Set Up Products](#Set-Up-Products)
-- [Use Adobe I/O](#Use-Adobe-I/O)
-- [Watch the Solution Work](#Watch-It-Work)
+- [Introduction](#introduction)
+- [Set up products](#setupproducts)
+- [Use Adobe I/O](#useadobeio)
+- [Watch the solution work](#watchitwork)
 
 **Resources**
-- [Debugging](help/debug#analytics)
-- [FAQ](help/faq#analytics)
-
-<a id="Introduction">&nbsp;</a>
+- [Debugging](help/debug#analyticstriggersevents)
+- [FAQ](help/faq#analyticstriggersevents)
 
 ## Introduction
 
@@ -24,12 +22,10 @@ For more information on triggers, see the [Triggers Help Page](https://marketing
 
 Before setting up and using Adobe I/O, you will need to do the following:
 
-1. [Obtain Product Authorization](#Obtain-Product-Authorization)
-2. [Obtain Administrative Permissions](#Obtain-Administrative-Permissions)
+1. [Obtain product authorization](#obtainproductauthorization)
+2. [Obtain administrative permissions](#obtainadministrativepermissions)
 
-<a id="Obtain-Product-Authorization">&nbsp;</a>
-
-### Obtain Product Authorization
+### Obtain product authorization
 
 To complete this solution, you will need authorization to use the following services:
 *   Adobe Analytics, including Triggers
@@ -37,9 +33,7 @@ To complete this solution, you will need authorization to use the following serv
 *   Adobe Experience Manager (AEM), or an external website that connects to Analytics
 *   An [Adobe ID](https://helpx.adobe.com/x-productkb/global/adobe-id-account-change.html), if you do not have one already
 
-<a id="Obtain-Administrative-Permissions">&nbsp;</a>
-
-### Obtain Administrative Permissions
+### Obtain administrative permissions
 
 You will also need administrative permissions for the following:
 * Adobe Analytics
@@ -52,36 +46,30 @@ If you do not have administrative permissions, please contact ioevents-beta@adob
 
 <a id="Set-Up-Products">&nbsp;</a>
 
-## Set Up Products
+## Set up products
 
 To set up Adobe products for this solution:
 
-1. [Set Up AEM](#Integrate-AEM)
-1. [Set Up Analytics](#Set-up-Triggers)
+1. [Set up AEM](#setupaem)
+1. [Set up Analytics Triggers](#setupanalyticstriggers)
 
-<a id="Integrate-AEM">&nbsp;</a>
-
-### Set Up AEM
+### Set up AEM
 
 To set up AEM with Analytics Triggers and Dynamic Tag Management (DTM), follow the [step-by-step documentation](https://github.com/johnwight/Adobe-AEM-with-DTM-and-Analytics) for that configuration. You can also follow the video shown below:
 
 
    [![Video: Integrate AEM](../../img/events_atrig_02.jpg)](https://youtu.be/vtcZCS-LFeg "Video: Integrate AEM")
 
-<a id="Set-up-Triggers">&nbsp;</a>
+### Set up Analytics Triggers
 
-### Set up Analytics
+To set up Analytics Triggers:
 
-To set up Analytics:
+1. [Get product access through Adobe Admin Console](#getproductaccessthroughadobeadminconsole)
+2. [Configure reporting for Triggers](#configurereportingfortriggers)
+3. [Configure DTM](#configuredtm)
+4. [Specify a new trigger](#specifyanewtrigger)
 
-1. [Get Product Access through Admin Console](#Admin-Console)
-2. [Configure Reporting for Triggers](#Reporting-for-Triggers)
-3. [Configure DTM](#Configure-DTM)
-4. [Specify a New Trigger](#Specify-a-New-Trigger)
-
-<a id="Admin-Console">&nbsp;</a>
-
-#### Get Product Access through Adobe Admin Console	 
+#### Get product access through Adobe Admin Console	 
 
 To get access through the Adobe Admin Console:
 
@@ -116,9 +104,7 @@ To get access through the Adobe Admin Console:
 
       ![user permissions](../../img/events_atrig_06.png)
 
-<a id="Reporting-for-Triggers">&nbsp;</a>
-
-#### Configure Reporting for Triggers
+#### Configure reporting for Triggers
 
 To configure reporting for Triggers:
 
@@ -134,13 +120,9 @@ To configure reporting for Triggers:
 
     ![admin tab for report suites](../../img/events_atrig_09.png)
 
-
 4. On the Reports Suites Manager page, click **Create New** and select **Report Suite**. Configure the new report suite so that it is accessible in Adobe Analytics.
 
     ![report suite manager](../../img/events_atrig_10.png)
-
-
-<a id="Configure-DTM">&nbsp;</a>
 
 #### Configure DTM
 
@@ -179,9 +161,7 @@ To configure DTM:
 
     ![publish button](../../img/events_atrig_16.png)
 
-<a id="Specify-a-New-Trigger">&nbsp;</a>
-
-#### Specify a New Trigger
+#### Specify a new trigger
 
 You can specify triggers for many events on your site. For example, in this case, we will set notifications to be sent when  carts are abandoned. We will set a trigger for sessions when the user visits either a **cart.html**, **checkout.html** or **order.html** page, but never reaches the **thank-you.html** page within a ten minute session. The trigger indicates that the user added products to the cart, and was about to make a purchase, but later decided otherwise, or forgot to complete the purchase.
 
@@ -212,8 +192,6 @@ To specify a new trigger:
 Once you save the trigger, any event in your report suite that meets the defined business rules criteria will cause a trigger to fire. You can view the status of triggers on the **Triggers** page.
 
 ![triggers listing](../../img/events_atrig_22.png)
-
-<a id="Use-Adobe-I/O">&nbsp;</a>
 
 ## Use Adobe I/O
 
@@ -251,9 +229,6 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 7. Add Webhook details and Click **Save**. For information on creating and registering webhooks, see [Introduction to Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
 
     ![webhook details](../../img/events_atrig_28.png)
-
-
-<a id="Watch-It-Work">&nbsp;</a>
 
 ## Watch the solution work
 
