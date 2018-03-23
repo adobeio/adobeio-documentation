@@ -48,7 +48,7 @@ You will also need administrative permissions for the following:
 
 If you do not have administrative permissions, please contact ioevents-beta@adobe.com. After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, as shown:
 
-   ![admin rights 2](https://user-images.githubusercontent.com/29133525/32473847-d5ba50ba-c326-11e7-8443-fef38b12bcff.png)
+   ![Admin rights email](../../img/events_atrig_01.png)
 
 <a id="Set-Up-Products">&nbsp;</a>
 
@@ -66,7 +66,7 @@ To set up Adobe products for this solution:
 To set up AEM with Analytics Triggers and Dynamic Tag Management (DTM), follow the [step-by-step documentation](https://github.com/johnwight/Adobe-AEM-with-DTM-and-Analytics) for that configuration. You can also follow the video shown below:
 
 
-   [![Integrate AEM](https://img.youtube.com/vi/vtcZCS-LFeg/0.jpg)](https://youtu.be/vtcZCS-LFeg)
+   [![Video: Integrate AEM](../../img/events_atrig_02.jpg)](https://youtu.be/vtcZCS-LFeg "Video: Integrate AEM")
 
 <a id="Set-up-Triggers">&nbsp;</a>
 
@@ -74,7 +74,7 @@ To set up AEM with Analytics Triggers and Dynamic Tag Management (DTM), follow t
 
 To set up Analytics:
 
-1. [Get Product Access from Admin Console](#Admin-Console)
+1. [Get Product Access through Admin Console](#Admin-Console)
 2. [Configure Reporting for Triggers](#Reporting-for-Triggers)
 3. [Configure DTM](#Configure-DTM)
 4. [Specify a New Trigger](#Specify-a-New-Trigger)
@@ -91,7 +91,7 @@ To get access through the Adobe Admin Console:
 
 3.	On the Products page of the console, verify that your requested products have been added to the site and then click the Adobe Analytics icon.
 
-      ![admin products page](https://user-images.githubusercontent.com/29133525/32474273-0b6c2272-c329-11e7-81be-aeb232549191.png)
+      ![admin products page](../../img/events_atrig_03.png)
 
 4.	Click the **Configuration Details** tab and do the following:
 
@@ -103,18 +103,18 @@ To get access through the Adobe Admin Console:
 
     4.	Under **Enabled Services**, select the option for **Triggers**.
 
-     ![admin console configure product](https://user-images.githubusercontent.com/29133525/32474470-df2f94c2-c329-11e7-8db1-7b06a211fca8.png)
+     ![admin console configure product](../../img/events_atrig_04.png)
 
   5. To give permissions to users who want access to Adobe services in the cloud:
 
      1. Click **User management** and then click **Users**.
      2. Click on user's name.
      
-      ![user name](https://user-images.githubusercontent.com/29133525/32474586-7a7be066-c32a-11e7-80f1-5419d548d194.png)
+      ![user name](../../img/events_atrig_05.png)
 
      3. For the user's **Access and rights**, provide **Product Access** and **Admin Rights** from the drop-down for the available products and services.
 
-      ![user permissions](https://user-images.githubusercontent.com/29133525/32474735-409e7d8a-c32b-11e7-879c-5f2bdf0825b2.png)
+      ![user permissions](../../img/events_atrig_06.png)
 
 <a id="Reporting-for-Triggers">&nbsp;</a>
 
@@ -124,20 +124,20 @@ To configure reporting for Triggers:
 
 1. On the Marketing Cloud home page, click the **App** button on top right corner.
 
-    ![new apps icon](https://user-images.githubusercontent.com/29133525/30260555-554e9dbe-9685-11e7-9ecd-86b239f007f9.png)
+    ![new apps icon](../../img/events_atrig_07.png)
 
 2. Click on Analytics Launcher.
 
-    ![analytics launcher](https://user-images.githubusercontent.com/29133525/30260673-01c26c88-9686-11e7-8b31-5203c6386591.png)
+    ![analytics launcher](../../img/events_atrig_08.png)
 
 3. On the **Admin** tab of the Analytics home screen, click the **Report Suites** option. You must have administrative privileges for the **Admin** tab to appear on your screen.
 
-    ![admin tab for report suites](https://user-images.githubusercontent.com/29133525/32473097-075ec802-c323-11e7-9f4e-371acf9f4914.png)
+    ![admin tab for report suites](../../img/events_atrig_09.png)
 
 
 4. On the Reports Suites Manager page, click **Create New** and select **Report Suite**. Configure the new report suite so that it is accessible in Adobe Analytics.
 
-    ![report suite manager](https://user-images.githubusercontent.com/29133525/32474884-36e55ee8-c32c-11e7-8a50-928b73efb2f8.png)
+    ![report suite manager](../../img/events_atrig_10.png)
 
 
 <a id="Configure-DTM">&nbsp;</a>
@@ -148,15 +148,15 @@ To configure DTM:
 
 1.	On the Marketing Cloud home page, click the **Apps** icon and then click **Activation**.
 
-    ![dtm 1 icon](https://user-images.githubusercontent.com/29133525/30288083-b9ca747a-96e4-11e7-9c23-5f97daf4233c.png)
+    ![dtm 1 icon](../../img/events_atrig_11.png)
 
 2.	On the Activation page, click **Dynamic Tag Management**.
 
-    ![dtm card](https://user-images.githubusercontent.com/29133525/32474786-9157a9fe-c32b-11e7-9126-3423d132d243.png)
+    ![dtm card](../../img/events_atrig_12.png)
 
 3.	On the **Overview** tab, click the **Settings** icon.
 
-    ![settings icon](https://user-images.githubusercontent.com/29133525/32475040-fdcf1454-c32c-11e7-8e13-c5b1073b5325.png)
+    ![settings icon](../../img/events_atrig_13.png)
 
 4. On the Settings page, set the variable as follows:
 
@@ -169,15 +169,15 @@ To configure DTM:
         ```
     5. Click **Save eVar**.
 
-        ![set evar](https://user-images.githubusercontent.com/29133525/32475180-b6967356-c32d-11e7-8485-e761c5a4d323.png)
+        ![set evar](../../img/events_atrig_14.png)
 
 5. On the **Approvals** tab, click the **Approve** button.    
 
-    ![approve button](https://user-images.githubusercontent.com/29133525/32475284-36a8221a-c32e-11e7-8cba-62823e6e7038.png)
+    ![approve button](../../img/events_atrig_15.png)
 
 6. On the **Overview** tab, click the **Publish Queue** button.
 
-    ![publish button](https://user-images.githubusercontent.com/29133525/32475340-7ee8d178-c32e-11e7-9ba3-cab950bf2776.png)
+    ![publish button](../../img/events_atrig_16.png)
 
 <a id="Specify-a-New-Trigger">&nbsp;</a>
 
@@ -189,29 +189,29 @@ To specify a new trigger:
 
 1. On the Marketing Cloud home page, click the **Apps** icon and then click **Activation**.
 
-    ![dtm 1 icon](https://user-images.githubusercontent.com/29133525/30290835-1765ebf6-96ee-11e7-880c-46177a716ac5.png)
+    ![dtm 1 icon](../../img/events_atrig_17.png)
 
 2. On the Triggers card, click the **Launch** button.
     
-    ![resize 2 dtm card](https://user-images.githubusercontent.com/29133525/32473778-715a6588-c326-11e7-9114-f4a2b7da2fbf.png)
+    ![resize 2 dtm card](../../img/events_atrig_18.png)
 
 3. On the **Triggers** page, click the **New Triggers** button and select **Abandonment**.
 
-    ![abandonment trigger](https://user-images.githubusercontent.com/29133525/32475431-ee36a582-c32e-11e7-9803-f0216855b290.png)
+    ![abandonment trigger](../../img/events_atrig_19.png)
 
 4. On the **New Trigger** box, specify a **Name** and provide a **Description** for your trigger. Select the **Report Suite** that you previously setup from the drop-down field.
 
-    ![trigger dialog](https://user-images.githubusercontent.com/29133525/32475528-7287302c-c32f-11e7-909f-b2c86313bf08.png)
+    ![trigger dialog](../../img/events_atrig_20.png)
 
 5. On the **Triggers Settings** page, define the business rules for your trigger. You can drag a dimension/metric box from the left panel to the right side of the screen and then specify the business rules for what must happen and what must not happen in a session. In this case, we set the trigger to fire after 10 minutes of inactivity after the rules are met.
 
-    ![triggers settings page](https://user-images.githubusercontent.com/29133525/30291990-c37f6ff4-96f1-11e7-84ff-51559bd886c2.png)
+    ![triggers settings page](../../img/events_atrig_21.png)
 
 6. Click the **Save** button.
 
 Once you save the trigger, any event in your report suite that meets the defined business rules criteria will cause a trigger to fire. You can view the status of triggers on the **Triggers** page.
 
-![triggers listing](https://user-images.githubusercontent.com/29133525/30292257-af31b0ce-96f2-11e7-8e3c-32531e0d0d9e.png)
+![triggers listing](../../img/events_atrig_22.png)
 
 <a id="Use-Adobe-I/O">&nbsp;</a>
 
@@ -221,21 +221,21 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 
 1. After signing in to the [Adobe I/O Console](https://adobe.io/console), click **New Integration**.
 
-    ![new integration button](https://user-images.githubusercontent.com/29133525/30292388-2ccdd986-96f3-11e7-93bd-93f74bb4e3a4.png)
+    ![new integration button](../../img/events_atrig_23.png)
 
 2. Select **Receive real-time events** and click **Continue**.
 
-    ![real time events](https://user-images.githubusercontent.com/29133525/30292486-946dc812-96f3-11e7-9bc5-2aa0196f704b.png)
+    ![real time events](../../img/events_atrig_24.png)
 
 3. Select **Analytics Triggers** as an event provider and click **Continue**.
 
-    ![create io trigger](https://user-images.githubusercontent.com/29133525/30292595-064305ec-96f4-11e7-9e60-3ee811c7949a.png)
+    ![create io trigger](../../img/events_atrig_25.png)
 
 4. Click **Continue** to move on to the next page without making any changes.
 
 5. Provide the **Name** and **Description** for your integration.
 
-    ![name integration box](https://user-images.githubusercontent.com/29133525/30292714-6d00a8ac-96f4-11e7-8449-f93bb2fccfcb.png)
+    ![name integration box](../../img/events_atrig_26.png)
 
 6. Generate a public certificate. To do this:
 
@@ -245,12 +245,12 @@ Use Adobe I/O by creating a new integration with the Console. To do this:
 
     2. Upload the public certificate by clicking the **Select a File** link and then by selecting the certificate from your computer:
 
-        ![public certificate](https://user-images.githubusercontent.com/29133525/32476036-2e563e40-c332-11e7-9fbd-889f1ba8054f.png)
+        ![public certificate](../../img/events_atrig_27.png)
 
 
 7. Add Webhook details and Click **Save**. For information on creating and registering webhooks, see [Introduction to Webhooks](https://github.com/adobeio/adobeio-events-documentation/blob/master/Webhook_docs_intro.md).
 
-    ![webhook details](https://user-images.githubusercontent.com/29133525/32476125-b55c816a-c332-11e7-8edd-a5ca7d1d5611.png)
+    ![webhook details](../../img/events_atrig_28.png)
 
 
 <a id="Watch-It-Work">&nbsp;</a>
@@ -266,7 +266,7 @@ To watch your trigger work on Slack:
 
 3. Run the application and create a **triggers2** listener, then click **Connect**.
 
-    ![listen to webhook](https://user-images.githubusercontent.com/29133525/30293183-e0657718-96f5-11e7-8696-86153cc4d5ff.png)
+    ![listen to webhook](../../img/events_atrig_29.png)
 
 
 Trigger messages are received as `POST` requests on this thread.
@@ -279,4 +279,4 @@ Trigger messages are received as `POST` requests on this thread.
 
 Please help make this solution as useful as possible. If you find a problem in the documentation or have a suggestion, click the **Issues** tab on this GiHhub repository and then click the **New issue** button. Provide a title and description for your comment and then click the **Submit new issue** button.
 
-![submit new issue](https://user-images.githubusercontent.com/29133525/32515298-f344bd5a-c3bc-11e7-9978-34516f964f9f.png)
+![submit new issue](../../img/events_atrig_30.png)
