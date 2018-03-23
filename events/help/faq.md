@@ -422,6 +422,7 @@ Here is a sample:
     }
   }
   ```
+  
 **I receive errors trying to access Triggers.**  
 The company/org is entitled for Analytics Triggers but I receive the following errors when trying to set up a Trigger:
 
