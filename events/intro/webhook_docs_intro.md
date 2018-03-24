@@ -91,7 +91,7 @@ You can either respond by placing the challenge value directly in the response b
 ```http
 HTTP/1.1 200 OK
 
-8ec8d794-e0ab-42df-9017-e3dada8e84f7
+"8ec8d794-e0ab-42df-9017-e3dada8e84f7"
 ```
 
 or by responding with a JSON object, including the correct `content-type` header:
