@@ -5,8 +5,8 @@
 These instructions describe how to set up Adobe Experience Manager (AEM) for Adobe I/O Events. You can use Adobe I/O for notification of AEM events, such as page or asset changes.
 
 - [Introduction](#introduction)  
-- [Set Up products](#set-up-products)  
-- [Use Adobe I/O](#use-adobe-i/o)  
+- [Set Up products](#setupproducts)  
+- [Use Adobe I/O](#useadobeio)  
 - [Watch the solution work](#watchthesolutionwork)
 
 **Resources**
