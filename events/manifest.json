@@ -31,12 +31,6 @@
       "path": "adobeio/adobeio-documentation/master/events/intro/journaling_api.md",
       "title": "Journaling API"
     },
-    {
-      "importedFileName": "use_cases",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/use_cases.md",
-      "title": "Use Cases"
-    }
 ],
 "path": "adobeio/adobeio-documentation/master/events/index.md",
 "title": "Getting Started"
