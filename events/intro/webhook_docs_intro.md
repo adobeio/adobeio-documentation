@@ -5,10 +5,10 @@
 - [Introduction](#introduction)
 - [Concepts](#concepts)
     - [An example](#anexample)
-- [Your first webhook](#Yourfirstwebhooy)
+- [Your first webhook](#yourfirstwebhook)
     - [The Challenge Request](#thechallengerequest)
     - [Testing with ngrok](#testingwithngrok)
-- [Create an Integration](#createanintegration)
+- [Create an Integration](#creatinganintegration)
 - [Registering the Webhook](#registeringthewebhook)
 - [Receiving Events](#receivingevents)
 
