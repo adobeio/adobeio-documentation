@@ -2,9 +2,9 @@
 
 # Working with Events Using the Adobe I/O Management API
 
-- [Events API calls in the I/O Management API](#eventsapicallsintheadobiomanagementapi)
+- [Events API calls in the I/O Management API](#eventsapicallsintheadobeiomanagementapi)
 - [Calling APIs](#callingapis)
-- [API Specifications:](#apispecs)
+- [API Specifications:](#apispecifications)
     - [GET /events/organizations/{orgId}/integrations/{intId}/registrations](#get-all-regs)
     - [POST /events/organizations/{orgId}/integrations/{intId}/registrations](#post-reg-webhook)
     - [GET /events/organizations/{orgId}/integrations/{intId}/registrations/{registrationId}](#get-reg-details)
@@ -60,7 +60,6 @@ The response will include the `registrationId` for every event registration you 
 This section provides information on parameters and responses for each API call.
 
 <a id="get-all-regs">&nbsp;</a>
-
 ### `GET /events/organizations/{orgId}/integrations/{intId}/registrations`
 Given the Client ID (API key) and `orgId` provided, this gets a JSON array of all the event registrations associated with the integration given by `intId`.
 
@@ -100,7 +99,6 @@ _Response model:_
 ```
 
 <a id="post-reg-webhook">&nbsp;</a>
-
 ### `POST /events/organizations/{orgId}/integrations/{intId}/registrations`
 Given the `orgId` and `intId`, along with a JSON object in the body of the call, registers a webhook endpoint for the given integration.
 
@@ -164,7 +162,6 @@ _Response model:_
 ```
 
 <a id="get-reg-details">&nbsp;</a>
-
 ### `GET /events/organizations/{orgId}/integrations/{intId}/registrations/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets the details for the given webhook registration.
 
@@ -201,7 +198,6 @@ _Response model:_
 ```
 
 <a id="get-tracing">&nbsp;</a>
-
 ### `GET /events/organizations/{orgId}/integrations/{intId}/tracing/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets webhook tracing data for the given webhook registration.
 
@@ -263,10 +259,9 @@ _Response model:_
 ```
 
 <a id="get-journal">&nbsp;</a>
-
 ### `GET /events/organizations/{orgId}/integrations/{intId}/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets a journal (list) of events for the given registration. For more details, see 
-[Journaling API](intro/journaling_api).
+[Journaling API](./journaling_api).
 
 **Required Parameters:**  
 `orgId`, `intId`, `registrationId`, `Authorization`, `x-api-key`
