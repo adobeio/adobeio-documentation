@@ -182,7 +182,7 @@ Events are part of an Event Provider, which are in turn organized in Event Provi
 
 **Request**
 
-```restclient
+```http
 GET https://csm.adobe.io/csm/events/metadata
 Authorization: Bearer <Your Token>
 x-ams-consumer-id: <Your Consumer ID>
@@ -256,7 +256,7 @@ When registering a webhook, Adobe I/O Events will make a pre-flight request to t
 
 **Challenge Request**
 
-```restclient
+```http
 GET https://example.com/adobe_events?challenge=6d9445-f41025fed66-332ef104f446
 ```
 
@@ -264,7 +264,7 @@ GET https://example.com/adobe_events?challenge=6d9445-f41025fed66-332ef104f446
 
 You can either respond by placing the challenge value directly in the response body
 
-```restclient
+```http
 HTTP/1.1 200 OK
 
 6d9445-f41025fed66-332ef104f446
@@ -272,7 +272,7 @@ HTTP/1.1 200 OK
 
 or by responding with a JSON object with a `"challenge"`. Make sure to include the correct `Content-Type` header.
 
-```restclient
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
@@ -290,7 +290,7 @@ When events are triggered for which you have registered a webhook, then Adobe I/
 
 **Webhook Request**
 
-```restclient
+```http
 POST https://example.com/adobe_events
 x-adobe-signature: 5gme7hUx+DedKsfGMiCpiVZubv9neXyIGv1JNYbc5IDmf4KYd6jE5HEQpAIuo/N83tLp9jrNwoP0Brrk1ltEXA==
 
@@ -447,7 +447,7 @@ This is a partial list of possible error codes, including an indication of what 
 
 This is a generic response indicating that the API request you made is in some way invalid. The response message might contain an indication of what is wrong. Carefully check that all necessary headers are present, and that any JSON payload contains all required fields and is free of syntax errors.
 
-```json
+```http
 HTTP/1.1 400 Bad Request
 
 may not be null (path = CSMResource.createUserWebhookRegistration.arg1.description, invalidValue = null)
@@ -460,7 +460,7 @@ may not be null (path = CSMResource.createUserWebhookRegistration.arg1.descripti
 
 The JSON payload is syntactically invalid. Make sure the request body conforms to the JSON specification.
 
-```json
+```http
 HTTP/1.1 400 Bad Request
 
 Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
@@ -474,7 +474,7 @@ at [Source: org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$UnCl
 
 Make sure the given webhook\_url is in fact a valid URL.
 
-```json
+```http
 HTTP/1.1 400 Bad Request
 
 {
@@ -490,7 +490,7 @@ HTTP/1.1 400 Bad Request
 
 The given `event_code` was not recognized. See [Retrieving a List of Event Types](#orgd349b92) to fetch a list of valid event codes.
 
-```
+```http
 HTTP/1.1 400 Bad Request
 
 {
@@ -511,7 +511,7 @@ HTTP/1.1 400 Bad Request
 
 Triggered when the `Authorization` header is missing or invalid, or if a valid header is present but the OAuth token has expired.
 
-```json
+```http
 HTTP/1.1 401 Unauthorized
 Content-Type: application/json
 
@@ -528,7 +528,7 @@ Content-Type: application/json
 
 The resource designated by the URL does not exist. This happens for instance when doing a `GET` or `DELETE` for a certain webhook registration, but the `registrationId` in the URL does not correspond with any existing registrations.
 
-```
+```http
 HTTP/1.1 404 Not Found
 
 {
@@ -544,7 +544,7 @@ HTTP/1.1 404 Not Found
 
 Triggered when the `Content-Type` header is missing or invalid. For requests that include a request body, this should be set to `Content-Type: application/json; charset=UTF-8`
 
-```json
+```http
 HTTP/1.1 415 Unsupported Media Type
 
 {
@@ -560,7 +560,7 @@ HTTP/1.1 415 Unsupported Media Type
 
 This usually means an implementation error on the side of Adobe I/O Events. Please file a support request.
 
-```json
+```http
 {
   "reason": "There was an error processing your request. Request id: gdkhJeSutvjC0PzC0Rg3jir43BH3grjd.",
   "message": "System error"
