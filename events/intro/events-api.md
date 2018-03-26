@@ -261,7 +261,7 @@ _Response model:_
 <a id="get-journal">&nbsp;</a>
 ### `GET /events/organizations/{orgId}/integrations/{intId}/{registrationId}`
 Given the `orgId`, `intId`, and `registrationId`, this gets a journal (list) of events for the given registration. For more details, see 
-[Journaling API](./journaling_api).
+[Journaling API](./journaling_api.md).
 
 **Required Parameters:**  
 `orgId`, `intId`, `registrationId`, `Authorization`, `x-api-key`
