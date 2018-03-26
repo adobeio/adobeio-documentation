@@ -309,7 +309,7 @@ If your health check consistently fails, check the [AEM Events](debug#aem-events
 
 ## Analytics Triggers Events
 **Where can I find instructions on setting up Analytics Triggers for I/O?**  
-You'll find it in this guide at [Integrate Analytics Triggers with Adobe I/O Events](../using/analytics-triggers-events-setup.md). 
+You'll find it in this guide at [Integrate Analytics Triggers with Adobe I/O Events](../using/analytics-triggers-event-setup.md). 
 
 **Where do I configure Analytics Triggers for I/O?**  
 Analytics Triggers are set up and managed via the Experience Cloud Activation UI. Once a Trigger has been created, it will appear in Adobe I/O Console under the available I/O Events list.
