@@ -88,7 +88,7 @@ For development and testing you can instead quickly retrieve a token linked to y
 
 With these pieces in hand you can now set up the necessary HTTP headers to make authenticated requests to the API. These headers must be present on each request:
 
-```restclient
+```http
 Authorization: Bearer <Your Token>
 x-ams-consumer-id: <Your Consumer ID>
 x-ams-application-id: <Your Application ID>
