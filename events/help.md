@@ -1,6 +1,6 @@
 <!--:navOrder: 3-->
 
- # Adobe I/O Events Help
+# Adobe I/O Events Help
 
 While it's easy to get set up for using events with Adobe I/O, you may run into issues. Please check the resources below for help with Adobe I/O Events:
 
