@@ -122,7 +122,7 @@ Among other things, ngrok is a great tool for testing webhooks. Once you've down
 
 ![ngrok on port 80](../../img/ngrok.png "ngrok on port 80")
 
-In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
+In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, you can replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
 
 ## Creating an integration
 

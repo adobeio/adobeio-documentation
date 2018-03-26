@@ -45,95 +45,82 @@ To create an integration for Creative Cloud Assets:
 
 5. You&rsquo;re offered one last chance to update an existing integration, if you have any; select **New integration** and continue.
 
-    ![Choosing a new integration type](../../img/CCA_Events_03.png "Choosing a new integration type")
+    ![Choosing a new integration type](../../img/CCA_Events_04.png "Choosing a new integration type")
 
 6. Enter details for the integration. Console needs a name and a description; these can be whatever you want, subject only to length restrictions. Choose **Web** for the platform and provide a redirect URI and a redirect URI pattern.
 
-    ![Entering integration details](../../img/CCA_Events_04.png "Entering integration details")
+    ![Entering integration details](../../img/CCA_Events_05.png "Entering integration details")
 
 >Note: Your integration needs to send a redirect URI to Adobe when it authenticates on behalf of a user, to send them to your integration once authentication is complete. The redirect URI you provide here is a default, to which Adobe I/O will fall back if the redirect URI in your authentication request fails. The redirect URI pattern is used by Adobe I/O to validate the redirect URI you provide with an authentication request. **All** redirect URIs must use HTTPS.
 
 ### Add a webhook
-When you select &ldquo;Add webhook&rdquo;, the dialog expands to provide fields for you to define a webhook to receive Adobe Events. (For more on webhooks, see [Adobe I/O Events Webhooks](../intro/webhook_docs_intro.md).) The webhook you ultimately use should be part of the app you develop as your integration. For now, however, it&rsquo;s easy to set up a simple webhook to test your integration&rsquo;s connection with Adobe Events. 
+When you select &ldquo;Add Event Registration&rdquo;, the dialog expands to provide fields for you to define a webhook to receive Adobe Events. (For more on webhooks, see [Adobe I/O Events Webhooks](../intro/webhook_docs_intro.md).) The webhook you ultimately use should be part of the app you develop as your integration. For now, however, it&rsquo;s easy to set up a simple webhook to test your integration&rsquo;s connection with Adobe Events. 
 
-Several tools exist on the web that can be used for this purpose: [ngrok](https://ngrok.com/), [Postman](https://www.getpostman.com/), and [Webtask](https://webtask.io), for example. For this example, use Webtask.
+Several tools exist on the web that can be used for this purpose: [ngrok](https://ngrok.com/), [Postman](https://www.getpostman.com/), and more. For this example, use ngrok. Ngrok is a utility for enabling secure introspectable tunnels to your localhost. With ngrok, you can securely expose a local web server to the internet and run your own personal web services from your own machine, safely encrypted behind your local NAT or firewall.
 
-1. Go to https://webtask.io. On the home page, either sign in (if you already have an account) or select **Try it now!**.
+First, configure a local web server. There are a number of choices, depending on whether you're Windows, Mac, or Linux.
+Next, you'll need a simple function to respond to the Adobe I/O challenge. Try this JavaScript:
 
-    ![Webtask home page](../../img/CCA_Events_05.png "Webtask home page")
+ ```js
+var express = require('express');
+var Webtask = require('webtask-tools');
+var bodyParser = require('body-parser');
+var app = express();
 
-2. You&rsquo;ll be taken to the Webtask web UI. There&rsquo;s also a command-line tool you can install if you choose.
+app.use(bodyParser.json());
+app.get('/webhook', function (req, res) {
+var result = "No challenge";
+if (req.query["challenge"]){
+    result = req.query["challenge"]
+    console.log("got challenge: " + req.query["challenge"]);
+} else {
+    console.log("no challenge")
+}
+res.status(200).send(result)
+});
 
-    ![Webtask home page](../../img/CCA_Events_06.png "Webtask home page")
+app.post('/webhook', function (req, res) { 
+console.log(req.body)
+res.writeHead(200, { 'Content-Type': 'application/text' });
+res.end("pong");
+});
 
-3. Select **Create a new one**. Once you focus on &ldquo;Webtask Function&rdquo;, the dialog expands to offer you a choice of creating an empty one or selecting a template. 
-
-    ![Creating an empty webtask](../../img/CCA_Events_07.png "Creating an empty webtask")
-
-4. Start with an empty one. Give it a name suitable for your integration and select Save. A new webtask opens with the default template in place.
-
-    ![The new webtask open](../../img/CCA_Events_08.png "The new webtask open")
-
-5. Copy and paste this code into the Webtask editor, replacing the default contents, and select Save: 
-
-    ```js
-    var express = require('express');
-    var Webtask = require('webtask-tools');
-    var bodyParser = require('body-parser');
-    var app = express();
-
-    app.use(bodyParser.json());
-    app.get('/webhook', function (req, res) {
-    var result = "No challenge";
-    if (req.query["challenge"]){
-        result = req.query["challenge"]
-        console.log("got challenge: " + req.query["challenge"]);
-    } else {
-        console.log("no challenge")
-    }
-    res.status(200).send(result)
-    });
-
-    app.post('/webhook', function (req, res) { 
-    console.log(req.body)
-    res.writeHead(200, { 'Content-Type': 'application/text' });
-    res.end("pong");
-    });
-
-    module.exports = Webtask.fromExpress(app);
-    ```
+module.exports = Webtask.fromExpress(app);
+```
 
 This simple webhook is designed merely to do what Adobe Events requires: handle an HTTPS GET request containing a `challenge` parameter by returning the value of the challenge parameter itself. 
 
-6. With the code in the Webtask editor, you&rsquo;ll see the URL for your webtask&rsquo;s endpoint at the bottom of your browser window: 
+Now you&rsquo;re ready to configure ngrok to serve your webhook over the internet:
 
-    ![The webtask's endpoint URL](../../img/CCA_Events_09.png "The webtask's endpoint URL")
+1. Go to `https://ngrok.com/`. Download and install the application. Add the ngrok folder to your PATH, so you can invoke it from any command prompt.
 
-    Notice also that the `app.get` and `app.post` functions specify a relative path, `/webhook`: you&rsquo;ll need to add this to the end of the webtask&rsquo; endpoint URL to reach your webhook. For example, 
+2. Open a command-line window and type `ngrok http 80`; or whichever port you wish to monitor.
 
-    `https://wt-7ef4200cf2cfff39f542f26708adb75c-0.run.webtask.io/CCAssetsEvents_webhook/webhook`
+    ![ngrok on port 80](../../img/ngrok.png "ngrok on port 80")
 
-7. Now you&rsquo;re ready to complete the webhook registration process in Adobe I/O Console. Return to that window and enter the name, URL, and description for the webhook, pasting in the URL you got from Webtask with the `/webhook` term added. Select all three events to receive: 
+    In the ngrok UI, you can see the URL for viewing the ngrok logs, labeled "Web Interface", plus the public-facing URLs ngrok generates to forward HTTP and HTTPS traffic to your localhost. You can use either of those public-facing URLs to register your Webhook with Adobe I/O, so long as your application is configured to respond on your localhost accordingly. Once your testing phase is complete, you can replace the ngrok URL in your Adobe I/O integration with the public URL for your deployed app.
+
+3. Now you&rsquo;re ready to complete the webhook registration process in Adobe I/O Console. Return to that window and enter the name, URL, and description for the webhook, pasting in the URL you got from ngrok with the path under localhost to your webhook file and the `/webhook` term added. Select all three events to receive: 
     - Creative Cloud Asset Created (`asset-created`) 
     - Creative Cloud Asset Updated (`asset-updated`)
     - Creative Cloud Asset Deleted (`asset-deleted`)
 
-    ![Entering webhook details](../../img/CCA_Events_10.png "Entering webhook details")
+    ![Entering webhook details](../../img/CCA_Events_06.png "Entering webhook details")
 
 8. Save and complete the CAPTCHA. Select **Create  integration**. At this point, Adobe Events sends a test event to your webhook&rsquo;s destination URL. If your webhook responds correctly with the contents of the `challenge` parameter, your integration is successfully registered:
 
-    ![Integration created](../../img/CCA_Events_11.png "Integration created")
+    ![Integration created](../../img/CCA_Events_07.png "Integration created")
 
     Select **Continue to Integration details** to view and manage your integration.
 
-    >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; of your webhook would have failed; instead of seeing the confirmation screen, you&rsquo;d see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook&rsquo;s endpoint is down. 
+    >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; test of your webhook would have failed; instead of seeing the confirmation screen, you&rsquo;d see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook&rsquo;s endpoint is down. 
 
 ## Receive events
  Your integration is now set up, and your webhook is in place; but to receive events, your integration needs to connect to its event provider, Creative Cloud Assets, on behalf of its user. This requires authentication; see [OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html). 
  
  Start with the Integration Overview. It&rsquo;s the screen you see immediately after selecting **Continue to Integration details**.
 
-![Integration Overview](../../img/CCA_Events_12.png "Integration Overview")
+![Integration Overview](../../img/CCA_Events_08.png "Integration Overview")
 
  For authentication setup, you&rsquo;ll need to add the [Creative SDK](https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/getting-started.html) as a service, and then use the [User Auth UI](https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/user-auth-ui.html) to build an interface for your user to log into your app and give your app authorization to access Creative Cloud Assets. 
 
@@ -141,7 +128,7 @@ This simple webhook is designed merely to do what Adobe Events requires: handle 
  
  1. From the Integration Overview, select the Services tab:
 
-    ![Integration Services tab](../../img/CCA_Events_13.png "Integration Services tab")
+    ![Integration Services tab](../../img/CCA_Events_09.png "Integration Services tab")
 
  2. Under Creative Cloud, select **Creative SDK**, then select **Add service.** You&rsquo;re now ready to implement the User Auth UI.
 
