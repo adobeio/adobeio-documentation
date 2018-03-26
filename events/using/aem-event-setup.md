@@ -10,10 +10,8 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 - [Watch the solution work](#watchthesolutionwork)
 
 **Resources**
-- [Debugging](../help/debug#aem)
-- [FAQ](../help/faq#aem)
-
-<a id="introduction">&nbsp;</a>
+- [Debugging](../help/debug.md#aemevents)
+- [FAQ](../help/faq#aemevents)
 
 ## Introduction
 
@@ -33,7 +31,7 @@ To complete this solution, you will need authorization to use the following serv
 
 ### Register an AEM event consumer app
 
-You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge HTTP request](../intro/Webhook_docs_intro.md#orgec22b7a) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](../intro/Webhook_docs_intro.md).
+You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. These instructions include steps for setting up a webhook that is able to accept and reply to a [challenge HTTP request](../intro/webhook_docs_intro.md##thechallengerequest) parameter sent by Adobe I/O Channel & Subscription Management (CSM). For more information on understanding and working with webhooks, see the [Introduction to Adobe I/O Events Webhooks](../intro/webhook_docs_intro.md).
 
 ## Set up products
 
@@ -176,7 +174,7 @@ Use Adobe I/O to do the following:
 
 1. [Create an Adobe I/O Console integration](#createanadobeioconsoleintegration)
 2. [Configure Adobe I/O Events as a cloud service in AEM](#configureadobeioeventsasacloudserviceinaem)
-3. [Perform an AEM health and configuration check](performanaemhealthandconfigurationcheck)
+3. [Perform an AEM health and configuration check](#performanaemhealthandconfigurationcheck)
 4. [Register the AEM event consumer app](#registertheaemeventconsumerapp)
 
 ### Create an Adobe I/O Console integration
@@ -286,7 +284,7 @@ module.exports = Webtask.fromExpress(app);
 
 You can watch the solution work by testing your integration. To do this:
 
-1. [Register your webhook with the Adobe I/O Console](#registeryourwebhookwiththeAdobeioConsole)
+1. [Register your webhook with the Adobe I/O Console](#registeryourwebhookwiththeadobeioconsole)
 2. [Perform a webhook health check](#performawebhookhealthcheck)
 3. [Optional: Adobe I/O Events OSGI to XDM event mapping configurations](#adobeioeventsosgitoxdmeventmappingconfigurations)
 
@@ -300,7 +298,7 @@ Once you have your webhook ready, use the [Adobe I/O Console](https://adobe.io/c
 
       ![Receive near real-time events](../../img/events_aem_24.png "Receive near real-time events")
 
-3. Select the AEM Link Externalizer base URL that you [previously specified](#configure-the-aem-link-externalizer) and then select **Continue**.
+3. Select the AEM Link Externalizer base URL that you [previously specified](#configuretheaemlinkexternalizer) and then select **Continue**.
 
       ![AEM Externalizer base URL on Marketing Cloud](../../img/events_aem_25.png "AEM Externalizer base URL on Marketing Cloud")
 
