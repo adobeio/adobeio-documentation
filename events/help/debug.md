@@ -12,7 +12,7 @@ This page captures the most common troubleshooting scenarios when working with A
 If your integration isn't receiving events from your installation of Adobe Experience Manager, you can perform any of several health checks on your setup to see where the communication between AEM and your integration is breaking down. For more information on health checks, see:
 
 - [Operations Dashboard](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/operations-dashboard.html) in Adobe Help
-- [Perform an AEM Health and Configuration Check](../using/aem-event-setup#healthcheck-conf) in the topic [Setting up AEM Events with Adobe I/O Events](../using/aem-event-setup) 
+- [Perform an AEM Health and Configuration Check](../using/aem-event-setup.md#performanaemhealthandconfigurationcheck) in the topic [Setting up AEM Events with Adobe I/O Events](../using/aem-event-setup.md) 
 
 Please try the following health checks in order:
 
@@ -84,4 +84,4 @@ If 3 > 4 is working, it means that your Triggers payload is arriving at the Adob
 
 **Debug 4 > 5**
 
-If 4 > 5 is working, it means that your webhook is valid and ready to receive events. You can verify your connection by selecting **Retry** for your webhook on I/O Console UI. You should receive a challenge. Your webhook needs to be able to return the challenge to be marked as a valid webhook. If it is marked as failed on the console UI, visit the topic [Set up Webhook: Example](../using/aem-event-setup.md#set-up-webhook-example) for sample webhook code.
+If 4 > 5 is working, it means that your webhook is valid and ready to receive events. You can verify your connection by selecting **Retry** for your webhook on I/O Console UI. You should receive a challenge. Your webhook needs to be able to return the challenge to be marked as a valid webhook. If it is marked as failed on the console UI, visit the topic [Set up Webhook: Example](../using/aem-event-setup.md#settingupawebhookexample) for sample webhook code.
