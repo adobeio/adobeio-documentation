@@ -116,7 +116,7 @@ If the registration is successful, then you will get the same Registration objec
 -   `"registration_id"` A unique identifier for this registration. Use this to query, update, or delete the registration later on.
 -   `"status"` If the registration was successful, then this will equal `"VERIFIED"`. If instead the status is `"VERIFICATION_FAILED"`, then make sure your webhook is responding correctly to the challenge request. Refer to the [The Webhook Endpoint](#org7fbee92) section for details.
 
-```restclient
+```http
 POST https://csm.adobe.io/csm/webhooks
 Authorization: Bearer OAUTH2_TOKEN
 x-ams-consumer-id: CONSUMER_ID
