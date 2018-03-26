@@ -11,7 +11,7 @@ These instructions describe how to set up Adobe Experience Manager (AEM) for Ado
 
 **Resources**
 - [Debugging](../help/debug.md#aemevents)
-- [FAQ](../help/faq#aemevents)
+- [FAQ](../help/faq.md#aemevents)
 
 ## Introduction
 
