@@ -10,8 +10,8 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 - [Watch the solution work](#watchthesolutionwork)
 
 **Resources**
-- [Debugging](help/debug.md#analyticstriggersevents)
-- [FAQ](help/faq.md#analyticstriggersevents)
+- [Debugging](../help/debug.md#analyticstriggersevents)
+- [FAQ](../help/faq.md#analyticstriggersevents)
 
 ## Introduction
 
