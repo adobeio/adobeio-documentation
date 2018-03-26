@@ -5,7 +5,7 @@
 - [Introduction](#introduction)
 - [Concepts](#concepts)
     - [An example](#anexample)
-- [Your first webhook](#yourfirstwebhook)
+- [Your First Webhook](#yourfirstwebhook)
     - [The Challenge Request](#thechallengerequest)
     - [Testing with ngrok](#testingwithngrok)
 - [Create an Integration](#creatinganintegration)
