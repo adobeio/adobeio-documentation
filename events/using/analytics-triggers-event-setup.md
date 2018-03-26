@@ -7,11 +7,11 @@ These instructions describe how to use Adobe Analytics triggers to notify you of
 - [Introduction](#introduction)
 - [Set up products](#setupproducts)
 - [Use Adobe I/O](#useadobeio)
-- [Watch the solution work](#watchitwork)
+- [Watch the solution work](#watchthesolutionwork)
 
 **Resources**
-- [Debugging](help/debug#analyticstriggersevents)
-- [FAQ](help/faq#analyticstriggersevents)
+- [Debugging](help/debug.md#analyticstriggersevents)
+- [FAQ](help/faq.md#analyticstriggersevents)
 
 ## Introduction
 
