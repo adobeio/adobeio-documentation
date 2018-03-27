@@ -50,19 +50,39 @@ POST https://acme.example.com/webhook HTTP/1.1
 content-type: application/json
 
 {
-  "id":"f9218f73-feaa-425f-11111-4940b77fb7d4",
-  "category":"asset",
-  "source":"creative-cloud",
-  "asset":{
-    "type":"asset_created",
-    "url":"https://cc-api-storage.adobe.io/id/urn:aaid:sc:eu:f7f4c7b9-9216-4f23-a41e-111111111111",
-    "filename":"cat.png",
-    "pathname":"/files/cat.png",
-    "asset_id":"urn:aaid:sc:eu:f7f4c7b9-9216-4f23-a41e-185cc2e1e2b3",
-    "user_id":"ABC123@AdobeID",
-    "mime_type":"image/png"
+  "@id": "82235bac-2b81-4e70-90b5-2bd1f04b5c7b",
+  "@type": "xdmCreated",
+  "xdmEventEnvelope:objectType": "xdmAsset",
+  "activitystreams:published": "2016-07-16T19:20:30+01:00",
+  "activitystreams:to": {
+    "xdmImsOrg:id": "08B3E5CE5822FC520A494229@AdobeOrg",
+    "@type": "xdmImsOrg"
   },
-  "created_at":"2017-05-08T17:34:59.683Z"
+  "activitystreams:generator": {
+    "xdmContentRepository:root": "http://francois.corp.adobe.com:4502/",
+    "@type": "xdmContentRepository"
+  },
+  "activitystreams:actor": {
+    "xdmAemUser:id": "admin",
+    "@type": "xdmAemUser"
+  },
+  "activitystreams:object": {
+    "@type": "xdmAsset",
+    "xdmAsset:asset_id": "urn:aaid:aem:4123ba4c-93a8-4c5d-b979-ffbbe4318185",
+    "xdmAsset:asset_name": "Fx_DUKE-small.png",
+    "xdmAsset:etag": "6fc55d0389d856ae7deccebba54f110e",
+    "xdmAsset:path": "/content/dam/Fx_DUKE-small.png",
+    "xdmAsset:format": "image/png"
+  },
+  "@context": {
+    "activitystreams": "http://www.w3.org/ns/activitystreams#",
+    "xdmEventEnvelope": "https://ns.adobe.com/xdm/common/eventenvelope#",
+    "xdmAsset": "http://ns.adobe.com/xdm/assets/asset#",
+    "xdmImsOrg": "https://ns.adobe.com/xdm/ims/organization#",
+    "xdmContentRepository": "https://ns.adobe.com/xdm/content/repository",
+    "xdmAemUser": "https://ns.adobe.com/xdm/aem/user#",
+    "xdmCreated": "https://ns.adobe.com/xdm/common/event/created#"
+  }
 }
 ```
 
