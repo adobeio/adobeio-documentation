@@ -49,7 +49,10 @@ To issue the API call, you need to provide two additional parameters:
 
 You combine the URL you got from the Journaling section of the event details with your API key and JWT token to make the call
 
-`curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b`
+```
+curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY
+https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b
+```
 
 ## Getting the response
 Your call results in a response containing a JSON object listing all the events for that event registration. 
@@ -152,7 +155,11 @@ By default, every call to the Journaling API returns a list of the latest 100 ev
 
 Adding these two parameters to the URL:
 
-`curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b?pageSize=25&from=2159b72c-e284-4899-b572-08da250e3614`
+```
+curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” 
+https://api.adobe.io/events/organizations/2316/integrations/5670/fa28f4d0-3438-429f-98b8-0a25cb49498b
+?pageSize=25&from=2159b72c-e284-4899-b572-08da250e3614
+```
 
 This would return a list of 25 events, beginning with event ID 2159b72c-e284-4899-b572-08da250e3614.
 

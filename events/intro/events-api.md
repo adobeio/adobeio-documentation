@@ -42,7 +42,10 @@ The APIs for events management have several parameters in common, as shown in th
 ## Calling APIs
 To call an API, you simply need to issue the appropriate GET or POST method with all the parameters in place. Here is a sample, issued as a curl command:
 
-`curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/registrations/fa28f4d0-3438-429f-98b8-0a25cb49498b`
+```
+curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” 
+https://api.adobe.io/events/organizations/2316/integrations/5670/registrations/fa28f4d0-3438-429f-98b8-0a25cb49498b
+```
 
 To retrieve your `orgId`, `intId`, and API key (which is used for the `x-api-key` parameter), view your integration's details:
 
@@ -52,7 +55,10 @@ The `orgId` and `intId` parameters are shown in the URL for your integration, wh
 
 To retrieve your `registrationId`, issue the API call to retrieve details of all your registrations: 
 
-`curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” https://api.adobe.io/events/organizations/2316/integrations/5670/registrations`
+```
+curl -H “Authorization: Bearer $USER_TOKEN” -H “x-api-key: $API_KEY” 
+https://api.adobe.io/events/organizations/2316/integrations/5670/registrations
+```
 
 The response will include the `registrationId` for every event registration you have associated with the given integration.
 
