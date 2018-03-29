@@ -134,3 +134,8 @@ Now you&rsquo;re ready to configure ngrok to serve your webhook over the interne
 
  Adobe&rsquo;s User Auth UI lets you build into your application a login function that takes the user&rsquo;s Adobe ID and lets the user give your app permission to access the assets and Adobe Solutions to which they&rsquo;re subscribed. Once your app is authenticated, Adobe will begin to push events to your integration&rsquo;s webhook via HTTP POST messages.
 
+To authenticate your app to receive your users&rsquo; events, you&rsquo;ll need to direct your users to the Adobe Consent API:
+
+`https://ims-na1.adobelogin.com/ims/authorize/v1?response_type=code&client_id=`_`client_id_from_io_console`_`&scope=AdobeID%2Copenid%2Ccreative_sdk`
+
+A good utility for testing this process is the [Adobe IMS OAuth Playground](https://runtime.adobe.io/api/v1/web/io-solutions/adobe-oauth-playground/oauth.html). Follow instructions in the FAQ.

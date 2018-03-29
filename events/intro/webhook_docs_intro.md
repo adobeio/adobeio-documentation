@@ -184,7 +184,7 @@ To complete the integration, you need to add a webhook.
 
 4. Check the ngrok log. You should see a `GET` request, including the `challenge` that was passed along in the URL.  
   
-  ![The webhook request received in ngrok](../../img/ngrok_2.png "The webhook request received in ngrok")  
+  ![The challenge GET request received in ngrok](../../img/ngrok_2.png "The challenge GET request received in ngrok")  
 
 5. Return to the Adobe I/O Console. Select **Continue to integration details** and you'll be shown the Integration Overview. This is where you can see all your integration details and make updates as needed.  
   
@@ -195,9 +195,11 @@ To complete the integration, you need to add a webhook.
   ![The active webhook in the Console](../../img/events_console_09.png "The active webhook in the Console")
 
 ## Receiving events
+Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console. Now upload a file and check the ngrok logs again. If all went well, then an `asset_created` event was just delivered to your webhook. 
 
-Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console.
+![The POST request received in ngrok](../../img/ngrok_2.png "The POST request received in ngrok")  
 
-The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real-world application, you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user. 
+### Receiving events for users
+The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real-world application, you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user. Depending on your scenario and the Adobe service you&rsquo;re targeting, you may have to enable different types of authentication; see the [Adobe I/O Authentication Overview]() for more information on how to set up your app for authentication with your users.
 
-Now upload a file and check the ngrok logs again. If all went well, then an `asset_created` event was just delivered to your webhook.
+For Creative Cloud Asset events, you&rsquo;ll need to add the Creative Cloud SDK service to your integration and implement the User Auth UI; see [Setting Up Creative Cloud Asset Events](../using/cc-asset-event-setup) for details. 
