@@ -5,12 +5,13 @@
 - [Introduction](#introduction)
 - [Concepts](#concepts)
     - [An example](#anexample)
-- [Your First Webhook](#yourfirstwebhook)
-    - [The Challenge Request](#thechallengerequest)
+- [Your first webhook](#yourfirstwebhook)
+    - [The challenge request](#thechallengerequest)
     - [Testing with ngrok](#testingwithngrok)
-- [Create an Integration](#creatinganintegration)
-- [Registering the Webhook](#registeringthewebhook)
-- [Receiving Events](#receivingevents)
+- [Create an integration](#creatinganintegration)
+- [Registering the webhook](#registeringthewebhook)
+- [Receiving events](#receivingevents)
+- [Authenticating events](#authenticatingevents)
 
 ## Introduction
 
@@ -210,7 +211,7 @@ The webhook you created through the Adobe I/O Console uses your own credentials,
 
 For Creative Cloud Asset events, you&rsquo;ll need to add the Creative Cloud SDK service to your integration and implement the User Auth UI; see [Setting Up Creative Cloud Asset Events](../using/cc-asset-event-setup.md) for details. 
 
-## Authenticate events
+## Authenticating events
 Your webhook URL must by necessity be accessible from the open internet. This means third-party actors can send forged requests to it, tricking your application into handling fake events.
  
 To prevent this from happening, Adobe I/O Events will add a `x-adobe-signature` header to each POST request it does to your webhook URL, which allows you to verify that the request was really made by Adobe I/O Events.
