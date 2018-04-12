@@ -194,6 +194,12 @@ To complete the integration, you need to add a webhook.
   
   ![The active webhook in the Console](../../img/events_console_09.png "The active webhook in the Console")
 
+  >**Note:** If you had made an error in transcribing the URL, Adobe Events&rsquo; test of your webhook would have failed; instead of seeing the confirmation screen, you&rsquo;d see an error: &ldquo;Webhook verification failed or unreachable&rdquo;. You can also get this error if, for any reason, your webhook&rsquo;s endpoint is down. 
+  >
+  >In general, Adobe I/O Events will always confirm that your webhook received an event by means of the response code your webhook sends to each HTTP POST request. If Adobe fails to receive a 200 OK response code, it retries the request, including a special header: `x-adobe-retry-count`. The value of this header begins at 1. If the first retry request fails as well, Adobe waits, then retries again, incrementing the value of `x-adobe-retry-count` with each retry until it reaches 5. Each wait interval is the square of the previous interval. 
+  >
+  >Once five retries are attempted, Adobe sends one last challenge request, and if that fails, Adobe marks the webhook as invalid and stops sending requests. To restart the flow of requests, once you have fixed the problem preventing your webhook from responding, you must log into Adobe I/O Console and reactivate the webhook. While your webhook is marked invalid, Adobe will continue to log events, even though it isn&rsquo;t sending them; you can retrieve all your events for the past 30 days by means of the [Journaling API](../intro/journaling_api.md).
+    
 ## Receiving events
 Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console. Now upload a file and check the ngrok logs again. If all went well, then an `asset_created` event was just delivered to your webhook. 
 
@@ -203,3 +209,26 @@ Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.ad
 The webhook you created through the Adobe I/O Console uses your own credentials, and so only receives events related to your Adobe ID. In a real-world application, you would use the credentials of an authenticated user to register a webhook through the API. This way you will receive events related to that user. Depending on your scenario and the Adobe service you&rsquo;re targeting, you may have to enable different types of authentication; see the [Adobe I/O Authentication Overview]() for more information on how to set up your app for authentication with your users.
 
 For Creative Cloud Asset events, you&rsquo;ll need to add the Creative Cloud SDK service to your integration and implement the User Auth UI; see [Setting Up Creative Cloud Asset Events](../using/cc-asset-event-setup.md) for details. 
+
+## Authenticate events
+Your webhook URL must by necessity be accessible from the open internet. This means third-party actors can send forged requests to it, tricking your application into handling fake events.
+ 
+To prevent this from happening, Adobe I/O Events will add a `x-adobe-signature` header to each POST request it does to your webhook URL, which allows you to verify that the request was really made by Adobe I/O Events.
+ 
+This signature or &ldquo;message authentication code&rdquo; is computed using a cryptographic hash function and a secret key applied to the body of the HTTP request. In particular, a SHA256 [HMAC](https://en.wikipedia.org/wiki/HMAC) is computed of the JSON payload, using your **client secret** as a secret key, and then turned into a Base64 digest. You can find your client secret in the Overview tab of your integration:
+
+![Retrieve client secret](../../img/events_console_10.png "Retrieve client secret")
+ 
+Upon receiving a request, you should repeat this calculation and compare the result to the value in the `x-adobe-signature` header, and reject the request unless they match. Since the client secret is known only by you and Adobe I/O Events, this is a reliable way to verify the authenticity of the request.
+ 
+**HMAC check implementation in JavaScript (pseudo-code):**
+ 
+```javascript
+var crypto = require('crypto')
+const hmac = crypto.createHmac('sha256', ADOBE_CLIENT_SECRET)
+hmac.update(raw_request_body)
+ 
+if (request.header('x-adobe-signature') !== hmac.digest('base64')) {
+  throw new Error('x-adobe-signature HMAC check failed')
+}
+
