@@ -31,25 +31,25 @@ To create an integration for Creative Cloud Assets:
 
 1. Log into [Adobe I/O Console](https://console.adobe.io). You&rsquo;ll see a list of any integrations you&rsquo;ve created so far. If this is your first, you&rsquo;ll see a button for creating an integration.
 
-    ![Create an integration](../../img/CCA_Events_01.png "Create an integration")  
+    ![Create an integration](../../img/events_cca_01.png "Create an integration")  
 
 2. Select **New integration.** The &ldquo;Create a new integration" screen appears. 
 
-    ![Choosing a new integration type](../../img/CCA_Events_02.png "Choosing a new integration type")
+    ![Choosing a new integration type](../../img/events_cca_02.png "Choosing a new integration type")
 
 3. Select **Receive near real-time events** and continue.
 
 4. Select an event provider: Since you&rsquo;re using your personal account, the only provider you&rsquo;ll see is Creative Cloud Assets. Choose **Creative Cloud Assets** and continue.
 
-    ![Selecting the provider](../../img/CCA_Events_03.png "Selecting the provider")
+    ![Selecting the provider](../../img/events_cca_03.png "Selecting the provider")
 
 5. You&rsquo;re offered one last chance to update an existing integration, if you have any; select **New integration** and continue.
 
-    ![Choosing a new integration type](../../img/CCA_Events_04.png "Choosing a new integration type")
+    ![Choosing a new integration type](../../img/events_cca_04.png "Choosing a new integration type")
 
 6. Enter details for the integration. Console needs a name and a description; these can be whatever you want, subject only to length restrictions. Choose **Web** for the platform and provide a redirect URI and a redirect URI pattern.
 
-    ![Entering integration details](../../img/CCA_Events_05.png "Entering integration details")
+    ![Entering integration details](../../img/events_cca_05.png "Entering integration details")
 
 >**Note:** Your integration needs to send a redirect URI to Adobe when it authenticates on behalf of a user, to send them to your integration once authentication is complete. The redirect URI you provide here is a default, to which Adobe I/O will fall back if the redirect URI in your authentication request fails. The redirect URI pattern is used by Adobe I/O to validate the redirect URI you provide with an authentication request. **All** redirect URIs must use HTTPS.
 
@@ -105,11 +105,11 @@ Now you&rsquo;re ready to configure ngrok to serve your webhook over the interne
     - Creative Cloud Asset Updated (`asset-updated`)
     - Creative Cloud Asset Deleted (`asset-deleted`)
 
-    ![Entering webhook details](../../img/CCA_Events_06.png "Entering webhook details")
+    ![Entering webhook details](../../img/events_cca_06.png "Entering webhook details")
 
 8. Save and complete the CAPTCHA. Select **Create  integration**. At this point, Adobe Events sends a test event to your webhook&rsquo;s destination URL. If your webhook responds correctly with the contents of the `challenge` parameter, your integration is successfully registered:
 
-    ![Integration created](../../img/CCA_Events_07.png "Integration created")
+    ![Integration created](../../img/events_cca_07.png "Integration created")
 
     Select **Continue to Integration details** to view and manage your integration.
 
@@ -120,7 +120,7 @@ Now you&rsquo;re ready to configure ngrok to serve your webhook over the interne
  
  Start with the Integration Overview. It&rsquo;s the screen you see immediately after selecting **Continue to Integration details**.
 
-![Integration Overview](../../img/CCA_Events_08.png "Integration Overview")
+![Integration Overview](../../img/events_cca_08.png "Integration Overview")
 
  For authentication setup, you&rsquo;ll need to add the [Creative SDK](https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/getting-started.html) as a service, and then use the [User Auth UI](https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/user-auth-ui.html) to build an interface for your user to log into your app and give your app authorization to access Creative Cloud Assets. 
 
@@ -128,7 +128,7 @@ Now you&rsquo;re ready to configure ngrok to serve your webhook over the interne
  
  1. From the Integration Overview, select the Services tab:
 
-    ![Integration Services tab](../../img/CCA_Events_09.png "Integration Services tab")
+    ![Integration Services tab](../../img/events_cca_09.png "Integration Services tab")
 
  2. Under Creative Cloud, select **Creative SDK**, then select **Add service.** You&rsquo;re now ready to implement the User Auth UI.
 
