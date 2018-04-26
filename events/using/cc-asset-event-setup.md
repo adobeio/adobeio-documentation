@@ -61,7 +61,7 @@ Several tools exist on the web that can be used for this purpose: [ngrok](https:
 First, configure a local web server. There are a number of choices, depending on whether you're Windows, Mac, or Linux.
 Next, you'll need a simple function to respond to the Adobe I/O challenge. Try this JavaScript:
 
- ```js
+ ```javascript
 var express = require('express');
 var Webtask = require('webtask-tools');
 var bodyParser = require('body-parser');
