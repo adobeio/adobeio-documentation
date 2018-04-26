@@ -89,7 +89,7 @@ content-type: application/json
 
 ## Your first webhook
 
-Before you can register a webhook, the webhook needs to be online and operational. If not, then the registration will fail. So you need to take care of setting that up first.
+Before you can register a webhook, the webhook needs to be online and operational. If not, then the registration will fail. So you need to take care of setting that up first. Your webhook must be hosted on a server. For development, you may use localhost along with a tool like ngrok (see below).
 
 Your webhook needs to
 
