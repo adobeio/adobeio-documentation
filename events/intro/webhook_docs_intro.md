@@ -89,7 +89,7 @@ content-type: application/json
 
 ## Your first webhook
 
-Before you can register a webhook, the webhook needs to be online and operational. If not, then the registration will fail. So you need to take care of setting that up first.
+Before you can register a webhook, the webhook needs to be online and operational. If not, then the registration will fail. So you need to take care of setting that up first. Your webhook must be hosted on a server. For development, you may use localhost along with a tool like ngrok (see below).
 
 Your webhook needs to
 
@@ -202,6 +202,8 @@ To complete the integration, you need to add a webhook.
   >Once five retries are attempted, Adobe sends one last challenge request, and if that fails, Adobe marks the webhook as invalid and stops sending requests. To restart the flow of requests, once you have fixed the problem preventing your webhook from responding, you must log into Adobe I/O Console and reactivate the webhook. While your webhook is marked invalid, Adobe will continue to log events, even though it isn&rsquo;t sending them; you can retrieve all your events for the past 30 days by means of the [Journaling API](../intro/journaling_api.md).
     
 ## Receiving events
+For development, you must first provide consent for yourself. You must follow the last step in https://www.adobe.io/apis/cloudplatform/events/documentation.html#receiveevents, which is `https://ims-na1.adobelogin.com/ims/authorize/v1?response_type=code&client_id=api_key_from_io_console&scope=AdobeID%2Copenid%2Ccreative_sdk`, where you will replace `api_key_from_io_console` with the value from your Adobe I/O Console overview tab `API Key (Client ID)`, for this integration.
+
 Log in to [Creative Cloud Assets (<https://assets.adobe.com>)](https://assets.adobe.com). Use the same Adobe ID as the one you used in the Adobe I/O Console. Now upload a file and check the ngrok logs again. If all went well, then an `asset_created` event was just delivered to your webhook. 
 
 ![The POST request received in ngrok](../../img/ngrok_2.png "The POST request received in ngrok")  
