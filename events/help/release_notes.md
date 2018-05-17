@@ -13,5 +13,5 @@
 | Analytics Triggers | Ability to subscribe to Analytics Triggers events |
 | Journaling | Allowing developers to retrieve events via the Adobe I/O Management API |
 | Debug Tracing | Support for debug tracing via the Adobe I/O Console for each event ID |
-| Creative Cloud Events | Ability to subscribe to Creative Cloud Events as part of a managed beta program: https://adobeio.typeform.com/to/QvEgPP |
+| Creative Cloud Events | Ability to subscribe to Creative Cloud Asset Events |
 | MS Flow Connector | Support for Creative Cloud Events via dedicated MS Flow connectors |
