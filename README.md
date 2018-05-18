@@ -11,6 +11,7 @@ Right now, our focus at Adobe I/O is to provide a single source for developer-fo
 - [I/O Events](https://www.adobe.io/apis/cloudplatform/events.html)
     - [Overview and Get Started](events/index.md)
 - [I/O Runtime](https://www.adobe.io/apis/cloudplatform/runtime.html)
+- [Adobe Authentication](https://www.adobe.io/authentication.html)
     <!-- - [Overview and get Started](runtime/runtime_overview.md)-->
 
 ## Key Concepts
