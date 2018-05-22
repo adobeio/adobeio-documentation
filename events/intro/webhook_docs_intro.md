@@ -124,7 +124,7 @@ Content-type: application/json
 {"challenge":"8ec8d794-e0ab-42df-9017-e3dada8e84f7"}
 ```
 
-Typically, you would build your webhook to respond to the Adobe challenge in a method to handle HTTP GET requests, and then include another method for handling the HTTP PUT requests that will be coming from Adobe containing actual event payloads. For testing purposes, though, you can start with something as simple as this PHP script: 
+Typically, you would build your webhook to respond to the Adobe challenge in a method to handle HTTP GET requests, and then include another method for handling the HTTP POST requests that will be coming from Adobe containing actual event payloads. For testing purposes, though, you can start with something as simple as this PHP script: 
 
 ```php
 <?php
