@@ -27,16 +27,14 @@ Before setting up and using AEM with Adobe I/O, you will need to do the followin
 To complete this solution, you will need authorization to use the following services:
 
 *   An AEM instance, version `6.2.x`, `6.3.x` or `6.4.x`, with administrative permissions. (**Note:** AEM screens in this topic are captured from version 6.3.)
-*   [Adobe I/O Console](https://adobe.io/console) access, with administrative permissions for your enterprise organization. If you do not have administrative permissions, please contact [ioevents-beta@adobe.com](mailto:ioevents-beta@adobe.com). After requesting administrative permissions, watch for an email from Adobe Systems Incorporated, notifying you of your permissions:
+*   [Adobe I/O Console](https://adobe.io/console) access, with administrative permissions for your enterprise organization. 
 
-      ![Admin rights email](../../img/events_aem_01.png "Admin rights email")
 
 ### Register an AEM event consumer app
 
 You will need to register an AEM event consumer app, such as a webhook, to see responses to AEM changes. 
 These instructions include steps for setting up a webhook that is able to accept 
-and reply to a [challenge HTTP request](../intro/webhook_docs_intro.md##thechallengerequest) parameter sent 
-by Adobe I/O Channel & Subscription Management (CSM). 
+and reply to a [challenge HTTP request](../intro/webhook_docs_intro.md##thechallengerequest) parameter sent by Adobe I/O Events. 
 For more information on understanding and working with webhooks, 
 see the [Introduction to Adobe I/O Events Webhooks](../intro/webhook_docs_intro.md).
 
@@ -53,7 +51,7 @@ To install the AEM event proxy package:
 
 1. Download the latest version of the package
    * [version 6.3.6](https://github.com/adobeio/adobeio-documentation/files/2031269/aem-event-proxy-6.3.6.zip) for AEM `6.2.xx` and `6.3.xx` 
-   * [version 6.4.239](https://github.com/adobeio/adobeio-documentation/files/2031274/aem-event-proxy-6.4.239.zip) for AEM `6.4.xx`
+   * [version 6.4.250](https://github.com/adobeio/adobeio-documentation/files/2053890/aem-event-proxy-6.4.250.zip) for AEM `6.4.xx`
 
 2. Open AEM Package Manager by selecting the **Tools** icon and then selecting **Deployment** and **Packages**.
 
@@ -211,8 +209,9 @@ To create an [Adobe I/O Console](https://adobe.io/console) integration:
 
 6. Select **Create Integration.**
 
+### AEM Adobe I/O Events configuration
 
-### Create an Adobe IO Events IMS Configuration (in AEM 6.4)
+#### AEM 6.4 Configuration
 
 To configure Adobe I/O Events as a cloud service in AEM:
 
@@ -227,15 +226,15 @@ To configure Adobe I/O Events as a cloud service in AEM:
    
     ![Adobe IMS Configuration Creation](../../img/events_aem_adobe-ims-conf-2.png "Adobe IMS Configuration Creation")
 
-3. Fill in the various entry expected to configure the IMS account associated with the integration 
+3. Fill in the various entries expected to configure the IMS account associated with the integration 
  you just created in the Adobe I/O Console
 
 *   For **Title**: specify **Adobe IO Events** (or any other title that makes sense to you).
-*   For **Authorization Server**: it should be `https://ims-na1.adobelogin.com` (unless the url shown in the **JWT** tabulation of your integration page in the Adobe I/O Console is different), 
-*   For **API key**: Provide the API key shown in the **Overview** tabulation of your integration page in the Adobe I/O Console. 
-*   For **Technical Account ID**: Provide the Technical Account ID shown in the **Overview** tabulation of your integration page in the Adobe I/O Console. 
-*   For **Client Secret**: Provide the Client Secret shown in the **Overview** tabulation of your integration page in the Adobe I/O Console. 
-*   For **Payload**: Provide the JWT payload shown in the **JWT** tabulation of your integration page in the Adobe I/O Console
+*   For **Authorization Server**: it should be `https://ims-na1.adobelogin.com` (unless the url shown in the **JWT** tab of your integration page in the Adobe I/O Console is different), 
+*   For **API key**: Provide the API key shown in the **Overview** tab of your integration page in the Adobe I/O Console. 
+*   For **Technical Account ID**: Provide the Technical Account ID shown in the **Overview** tab of your integration page in the Adobe I/O Console. 
+*   For **Client Secret**: Provide the Client Secret shown in the **Overview** tab of your integration page in the Adobe I/O Console. 
+*   For **Payload**: Provide the JWT payload shown in the **JWT** tab of your integration page in the Adobe I/O Console
 
 4. Click **Create**
 
@@ -246,7 +245,7 @@ To configure Adobe I/O Events as a cloud service in AEM:
      ![Adobe IMS Configuration IMS Health Check](../../img/events_aem_adobe-ims-conf-4.png "Adobe IMS Configuration Health Check")
 
 
-### Configure Adobe I/O Events as a cloud service (in AEM 6.2 and AEM 6.3)
+#### AEM 6.2 and AEM 6.3 Configuration
 
 To configure Adobe I/O Events as a cloud service in AEM:
 
@@ -271,26 +270,6 @@ To configure Adobe I/O Events as a cloud service in AEM:
 *   For **Organization ID**: Provide the ID shown on the Adobe I/O Console.
 *   For **Client Secret**: AEM will automatically retrieve the value from the Adobe I/O Console.
 
-
-### Perform an AEM health and configuration check
-
-You can use the AEM Web Console Sling Health Check to verify that your configurations are correct.
-
-To verify your configurations:
-
-1. Check that all your configurations load properly by executing the health check tagged with **conf-events**.
-
-      ![Health check for eventproxy,conf](../../img/events_aem_21.png "Health check for conf-events")
-
-2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the health check tagged with **ims-events**.
-This verifies that your IMS-related configurations are correct and working, including the eventproxy-service user keystore configuration, the Adobe I/O console&ndash;originated API key, the Technical Account ID, the Organization ID, and the client secret.
-
-      ![Health check for eventproxy,ims](../../img/events_aem_22.png "Health check for ims-events")
-
-3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the health check tagged with **csm-events**.
-This verifies that the AEM instance is successfully registered as an event provider with Adobe I/O CSM.
-
-      ![Health check for eventproxy,csm](../../img/events_aem_23.png "Health check for csm-events")
 
 ### Register the AEM event consumer app
 
@@ -381,7 +360,27 @@ see the screenshot below:
 
 ### (Optional)
 
-### Adobe I/O Events OSGI to XDM event mapping configurations
+#### Perform AEM health check
+
+You can use the AEM Web Console Sling Health Check to verify that your configurations are correct.
+
+To verify your configurations:
+
+1. Check that all your configurations load properly by executing the health check tagged with **conf-events**.
+
+      ![Health check for eventproxy,conf](../../img/events_aem_21.png "Health check for conf-events")
+
+2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the health check tagged with **ims-events**.
+This verifies that your IMS-related configurations are correct and working, including the eventproxy-service user keystore configuration, the Adobe I/O console&ndash;originated API key, the Technical Account ID, the Organization ID, and the client secret.
+
+      ![Health check for eventproxy,ims](../../img/events_aem_22.png "Health check for ims-events")
+
+3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the health check tagged with **csm-events**.
+This verifies that the AEM instance is successfully registered as an event provider with Adobe I/O CSM.
+
+      ![Health check for eventproxy,csm](../../img/events_aem_23.png "Health check for csm-events")
+
+#### Adobe I/O Events OSGI to XDM event mapping configurations
 
 For all Adobe I/O event types defined by the Adobe I/O Event Model, there is an **Adobe I/O Events OSGI to XDM event mapping configuration**.
 
@@ -397,9 +396,7 @@ For each of these you can edit:
   
 The various OSGI event handlers will intercept the events according to these values and then map these OSGI events to the Adobe I/O Event Model before forwarding them to Adobe I/O.
 
-The solution leverages the OSGI configuration factory pattern, 
-hence can you not only edit these configurations, but you can also remove 
-and add such configurations.
+The solution leverages the OSGI configuration factory pattern, hence you can not only edit these configurations, but you can also remove and add such configurations.
 
 To configure using the panel:
 
