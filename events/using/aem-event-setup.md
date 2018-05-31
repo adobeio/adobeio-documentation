@@ -90,10 +90,6 @@ If applied correctly, the `eventproxy-service` user is added to the following:
 
 For more information, see AEM [User, Group and Access Rights Administration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/user-group-ac-admin.html).
 
-3. You can also manually update permissions in CRXDE Lite at the following location: **`/crx/de/index.jsp#/etc/cloudservices/eventproxy`**.
-
-      ![CRXDE Lite](../../img/events_aem_06.png "CRXDE Lite")
-
 ### Configure OAuth and IMS authentication
 
 To configure OAuth and IMS authentication:
@@ -406,7 +402,7 @@ To configure using the panel:
 
 2. In the **OSGI** menu, select **Configuration**.
 
-      ![OSGI configuration](../../img/events_aem_32.png "OSGI configuration)  
+      ![OSGI configuration](../../img/events_aem_32.png "OSGI configuration")  
       and search for: **Adobe I/O Events CSM Registration**.
 
 3. For **Adobe I/O Events OSGI to XDM Event Mapping Configuration**, select **+**, **Edit**, or **Delete**.
