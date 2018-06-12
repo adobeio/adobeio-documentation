@@ -68,7 +68,7 @@ The following table lists the Adobe Sign supported UI events that can be embedde
                <li>pageName: 'DELEGATION'</li>
             </ul>
          </td>
-         <td>This event fires when the page from which an agreement can be delegated gets loaded. The&nbsp;loading of the page does guarantee that delegation has or will actually occur.</td>
+         <td>This event fires when the page from which an agreement can be delegated gets loaded. The loading of the page does guarantee that delegation has or will actually occur.</td>
       </tr>
       <tr>
          <td><strong>'PAGE_LOAD'</strong></td>

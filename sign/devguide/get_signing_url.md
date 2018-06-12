@@ -2,7 +2,7 @@
 
 # Get the signing URL
 
-When the agreement is ready for signing, invoke `GET /agreements/`_`{agreementId}`_`/signingUrls` to get the signing URL:
+When the agreement is ready for signing, invoke `GET /agreements/{agreementId}/signingUrls` to get the signing URL:
 
 ```http
 POST /api/rest/v5/agreements/3AANotRealIDQN8_gg/signingUrls HTTP/1.1

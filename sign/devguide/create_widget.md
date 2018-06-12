@@ -41,6 +41,6 @@ You will get a JSON response containing details about the widget, including part
 
 You can also send a GET request to `/widgets/{widgetId}/formData` to retrieve the data entered (by the parents) in the document when it got signed.
 
-Each time a widget is signed by a person, a separate instance of a document gets created. To get the agreements created using the widget, call `/widgets/`_`{widgetID}`_`/agreements` GET where _widgetID_ is the key returned by the service while creating the widget. To retrieve the data filled by the users at the time of signing the widget, call `GET /widgets/`_`{widgetID}`_`/formData`. The service returns data in comma-separated value (CSV) file format. The first line includes the column header names, and each row represents a distinct instance of the widget.
+Each time a widget is signed by a person, a separate instance of a document gets created. To get the agreements created using the widget, call `/widgets/{widgetID}/agreements` GET where _widgetID_ is the key returned by the service while creating the widget. To retrieve the data filled by the users at the time of signing the widget, call `GET /widgets/{widgetID}/formData`. The service returns data in comma-separated value (CSV) file format. The first line includes the column header names, and each row represents a distinct instance of the widget.
 
 [TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/widgets/)

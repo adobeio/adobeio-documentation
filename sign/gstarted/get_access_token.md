@@ -32,7 +32,7 @@ https://myserver.com/?
 
 Note the code _CBNCKBAThIsIsNoTaReAlcs_sL4K32wCzs4N_ in the request. This is the authorization code that you will use to get the OAuth access token.
 
-You can send the authorization code along with the Client ID and Client Secret to the Sign Service to get the token. Use the same _api_access_point _that you got from the previous response.
+You can send the authorization code along with the Client ID and Client Secret to the Sign Service to get the token. Use the same api_access_point that you got from the previous response.
 
 ```
 POST http://api.echosign.com/oauth/token?

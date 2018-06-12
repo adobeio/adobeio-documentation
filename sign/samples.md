@@ -67,4 +67,4 @@ You may also use an IDE of your choice. In that case, you will need to create a 
 
 ### Output Path
 
-The default output path used in the sample clients is the user temp directory. If needed, this can be changed by updating the method *adobesign.api.rest.sample.util.FileUtils.getDefaultOutputPath()*.
+The default output path used in the sample clients is the user temp directory. If needed, this can be changed by updating the method `adobesign.api.rest.sample.util.FileUtils.getDefaultOutputPath()`.
