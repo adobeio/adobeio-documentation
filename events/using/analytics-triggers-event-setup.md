@@ -44,7 +44,7 @@ If you do not have administrative permissions, please contact your Adobe System 
 
    ![Admin rights email](../../img/events_atrig_01.png)
 
-### Set up Analytics Triggers
+### Set up products
 
 To set up Analytics Triggers:
 
