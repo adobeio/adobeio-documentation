@@ -199,7 +199,7 @@ To create an [Adobe I/O Console](https://adobe.io/console) integration:
 
       ![Create new integration option](../../img/events_aem_15.png "Create new integration option")
 
-5. In the <a id="Create-new-integration-box">**Create a new integration** dialog box</a>, specify a name for the integration and add a description. To add **Public keys certificates**, select **Select a File** and navigate to your **certificate_pub.crt** to upload it.
+5. In the <a id="Create-new-integration-box">**Create a new integration** </a> dialog box , specify a name for the integration and add a description. To add **Public keys certificates**, select **Select a File** and navigate to your **certificate_pub.crt** to upload it.
 
       ![Complete the new integration](../../img/events_aem_16.png "Complete the new integration")
 
