@@ -130,9 +130,9 @@ To create a certificate and keystore:
       ```
       >Note: On Windows systems, this command expression may vary. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
-#### Add the certificate into the AEM `eventproxy-service` user's keystore
+#### Add the certificate into the AEM `eventproxy-service` user&rquo;s keystore
 
-To add the certificate into the AEM `eventproxy-service` user's keystore:
+To add the certificate into the AEM `eventproxy-service` user&rsquo;s keystore:
 
 1. In AEM, open the **User Management** group by selecting the **Tools** icon and then selecting **Security** and **Users.**
 
