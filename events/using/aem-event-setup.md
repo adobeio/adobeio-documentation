@@ -433,7 +433,7 @@ Note that
   * 2 seconds retry delay
   * 15 maximum parallel jobs
     
-You can tune this configuration it according to your need: using the `OSGI > configuration` menu of AEM's `system console`
+You can tune this configuration according to your needs: using the `OSGI > configuration` menu of AEM's `system console`
 and create there a new `Apache Sling Job Queue Configuration`
 
   ![Apache Sling Job Queue Configuration UI](../../img/events_aem_job-config.png "Apache Sling Job Queue Configuration UI")
