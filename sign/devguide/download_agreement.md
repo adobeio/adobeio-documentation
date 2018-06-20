@@ -4,7 +4,7 @@
 
 Once an agreement is signed, your application can retrieve the signed copy of the PDF and store that within your application.
 
-![download the agreement](../../img/sign_devguide_4.png)
+![download the agreement](../img/sign_devguide_4.png)
 
 The signed agreement can also be retrieved by sending a GET request to `/agreements/{agreementId}/combinedDocument`. This will return a single combined PDF document for the documents associated with the agreement. To retrieve any supporting document, you can send a GET request to `/agreements/{agreementId}/documents`. This will return the IDs of all the main and supporting documents of an agreement.
 

@@ -1,6 +1,6 @@
 # Parental consent
 
-![parental consent](../../img/sign_scenarios_1.png)
+![parental consent](../img/sign_scenarios_1.png)
 
 A common scenario involves an application where users need to sign documents within the application as part of a process. For example, a partner portal for onboarding new partners that requires them to sign an NDA or an e-commerce application that requires users to sign a purchase agreement. In these cases, the document is not sent to recipients for signature, but is presented to them within your application.
 

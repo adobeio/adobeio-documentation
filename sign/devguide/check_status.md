@@ -4,7 +4,7 @@
 
 Adobe Sign can return the current status of the agreement and a complete history of events that have happened on that particular agreement. The simplest mechanism is for your application to provide a callback URL when sending the document for signature. Adobe Sign will then ping your service whenever the status of the agreement changes. Upon receiving a callback, your application can then call Adobe Sign to get the latest status on the agreement.
 
-![Checking the status of an agreement](../../img/sign_devguide_2.png)
+![Checking the status of an agreement](../img/sign_devguide_2.png)
 
 You can also get the most current status of an agreement by sending a GET request to `/agreements/{agreementid}`:
 

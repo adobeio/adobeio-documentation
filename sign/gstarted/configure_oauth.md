@@ -8,13 +8,13 @@ In the  [previous section](https://www.adobe.io/apis/documentcloud/sign/docs/ste
 
 2. Select **View/Edit** to get the Application ID and secret.  
 
-    ![Viewing the application ID and secret](../../img/sign_gstarted_4.png)  
+    ![Viewing the application ID and secret](../img/sign_gstarted_4.png)  
       
     Note down the app&rsquo;s Application ID and secret. You will be using this information to issue access tokens in the Adobe Sign API. 
 
 3. Select **Configure OAuth for Application** to enable scopes.
 
-    ![Configure OAuth](../../img/sign_gstarted_5.png)
+    ![Configure OAuth](../img/sign_gstarted_5.png)
 
     Remember to limit the scopes that you intend to request through OAuth. The scope denotes the extent of permission that your users will have on your account. 
 

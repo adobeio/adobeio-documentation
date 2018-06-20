@@ -4,7 +4,7 @@
 
 Your CRM system or document management system can send/upload documents for signing, either automatically or through user-initiated actions. When the document gets signed by all the parties, a PDF copy of the signed document(agreement) can be retrieved by your application.
 
-![Sending a document for signing](../../img/sign_devguide_1.png)
+![Sending a document for signing](../img/sign_devguide_1.png)
 
 While getting the authorization code from the Adobe Sign service, you also got the API access point as part of a query parameter (see the  [Getting Started section](../gstarted/get_access_token.md)):
 

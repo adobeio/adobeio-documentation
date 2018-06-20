@@ -19,7 +19,7 @@ For example, &ldquo;agreement_send:account user_login:self&rdquo; would allow th
 
 Next, select **Allow Access** to receive the authorization code
 
-![Receive the authorization code](../../img/sign_gstarted_6.png)
+![Receive the authorization code](../img/sign_gstarted_6.png)
 
 Once you select Allow Access, the page gets redirected to the following URL:
 

@@ -9,4 +9,4 @@ A very simple workflow:
 3. [If agreement not signed, send reminders](/devguide/send_reminders.md)
 4. [If all the signers have signed, download the agreement](/devguide/download_agreement.md)
 
-See the  [Terminology](/overview/terminology.md) section to understand the terms used by Adobe Sign.
+See the  [Terminology](terminology.md) section to understand the terms used by Adobe Sign.

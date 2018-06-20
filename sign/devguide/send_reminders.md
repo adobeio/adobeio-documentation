@@ -4,7 +4,7 @@
 
 A signing reminder can be sent to all the signers if they have not signed the agreement. When you send a reminder, the signers will get the same notification email that was originally sent.
 
-![Sending a reminder](../../img/sign_devguide_3.png)
+![Sending a reminder](../img/sign_devguide_3.png)
 
 ```http
 POST /api/rest/v5/reminders HTTP/1.1
