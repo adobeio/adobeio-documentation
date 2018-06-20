@@ -50,8 +50,8 @@ To set up AEM for Adobe I/O Events:
 To install the AEM event proxy package:
 
 1. Download the latest version of the package
-   * [version 6.3.12](https://github.com/adobeio/adobeio-documentation/files/2062154/aem-event-proxy-6.3.12.zip) for AEM 6.2.xx and 6.3.xx 
-   * [version 6.4.252](https://github.com/adobeio/adobeio-documentation/files/2062912/aem-event-proxy-6.4.252.zip) for AEM 6.4.xx
+   * [version 6.3.14](https://github.com/adobeio/adobeio-documentation/files/2119428/aem-event-proxy-6.3.14.zip) for AEM `6.2.xx` and `6.3.xx` 
+   * [version 6.4.255](https://github.com/adobeio/adobeio-documentation/files/2119312/aem-event-proxy-6.4.255.zip) for AEM `6.4.xx`
 
 2. Open AEM Package Manager by selecting the **Tools** icon and then selecting **Deployment** and **Packages**.
 
@@ -130,9 +130,9 @@ To create a certificate and keystore:
       ```
       >Note: On Windows systems, this command expression may vary. For more information, see the [OpenSSL manpages](https://www.openssl.org/docs/manpages.html).
 
-#### Add the certificate into the AEM `eventproxy-service` user&rsquo;s keystore
+#### Add the certificate into the AEM `eventproxy-service` user's keystore
 
-To add the certificate into the AEM `eventproxy-service` user&rsquo;s keystore:
+To add the certificate into the AEM `eventproxy-service` user's keystore:
 
 1. In AEM, open the **User Management** group by selecting the **Tools** icon and then selecting **Security** and **Users.**
 
@@ -334,8 +334,11 @@ Note: Once you have registered your webhook, responses will include a [status](h
 
 ### Perform a webhook health check
 
-Now you can start testing that your AEM-originated events are emitted by Adobe I/O. To do this, first make sure your webhook is subscribed to the type of event you are testing against. For asset-related events, create, update or delete an asset in AEM DAM; 
-for page-related events, publish or unpublish a page; finally, to test our custom OSGI event type sample, you may use our custom OSGI event health check.
+Now you can start testing that your AEM-originated events are emitted by Adobe I/O. 
+To do this, first make sure your webhook is subscribed to the type of event you are testing against. 
+For asset-related events, create, update or delete an asset in AEM DAM; 
+for page-related events, publish or unpublish a page; 
+finally, to test our custom OSGI event type sample, you may use our custom OSGI event health check.
     
   ![Custom osgi event health check](../../img/events_aem_28.png "Custom osgi event health check")
 
@@ -361,7 +364,11 @@ To verify your configurations:
 
       ![Health check for eventproxy,conf](../../img/events_aem_21.png "Health check for conf-events")
 
-2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). To do this, execute the health check tagged with **ims-events**. This verifies that your IMS-related configurations are correct and working, including the `eventproxy-service` user keystore configuration, the Adobe I/O console&ndash;originated API key, the Technical Account ID, the Organization ID, and the client secret.
+2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). 
+To do this, execute the health check tagged with **ims-events**. 
+This verifies that your IMS-related configurations are correct and working, 
+including the `eventproxy-service` user keystore configuration, the Adobe I/O console&ndash;originated API key, the Technical Account ID, 
+the Organization ID, and the client secret.
 
       ![Health check for eventproxy,ims](../../img/events_aem_22.png "Health check for ims-events")
 
@@ -414,20 +421,23 @@ Adobe I/O Events `Sling Job Consumer`'s job is to send this event to Adobe I/O.
 In that case the job will be rescheduled/retried   
 * if the max number of retries is met, the process will not be rescheduled and treated like the method would have returned `JobResult.CANCEL`.
 
-Note that:
-* Adobe I/O Events Sling Job Consumer topic is `com/adobe/eventproxy/events`
-* Adobe I/O Events Sling Job Queue configuration is the default Apache Sling Job Default Queue with
+Note that 
+* Adobe I/O Events `Sling Job Consumer` topic is `com/adobe/eventproxy/events`
+* Adobe I/O Events `Sling Job Queue configuration` is the default `Apache Sling Job Default Queue` with
   * a Normal job priority
   * 10 maximum retries
   * 2 seconds retry delay
   * 15 maximum parallel jobs
     
-You can tune this configuration according to your needs using the OSGI > Configuration menu of the AEM System console
-and create there a new Apache Sling Job Queue Configuration.
+
+You can tune this configuration according to your needs: using the `OSGI > configuration` menu of AEM's `system console`
+and create there a new `Apache Sling Job Queue Configuration`
+
 
   ![Apache Sling Job Queue Configuration UI](../../img/events_aem_job-config.png "Apache Sling Job Queue Configuration UI")
 
-Note that you can use the Sling > Jobs  menu of the AEM System console to look up the statistics and health of your queues.
+Note that you can use the `Sling > Jobs`  menu of AEM `system console`, 
+to look up the statistics and health of your queues
 
  ![Apache Sling Job UI](../../img/events_aem_job-stat.png "Apache Sling Job UI")
 
