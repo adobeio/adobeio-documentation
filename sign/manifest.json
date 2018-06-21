@@ -18,7 +18,32 @@
     },
     {
       "importedFileName": "gstarted",
-      "pages": [],
+      "pages": [
+            {
+              "importedFileName": "configure_oauth",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md",
+              "title": "Configuring OAuth for Application"
+            },
+            {
+              "importedFileName": "create_app",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/create_app.md",
+              "title": "Create Application"
+            },
+            {
+              "importedFileName": "get_access_token",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/get_access_token.md",
+              "title": "Get Access Token"
+            },
+            {
+              "importedFileName": "sign_up_dev",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/sign_up_dev.md",
+              "title": "Developer Sign Up"
+            }
+      ],
       "path": "adobeio/adobeio-documentation/master/sign/gstarted.md",
       "title": "Getting Started"
     },
@@ -57,6 +82,6 @@
       "pages": [],
       "path": "adobeio/adobeio-documentation/master/sign/developerguides.md",
       "title": "Developer Guides"
-    },
+    }
 ]
 }
