@@ -27,6 +27,36 @@
       "pages": [],
       "path": "adobeio/adobeio-documentation/master/sign/devguide.md",
       "title": "Developer Guide"
-    }
+    },
+    {
+      "importedFileName": "webhooks",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/sign/webhooks.md",
+      "title": "Webhooks in Adobe Sign v6"
+    },
+    {
+      "importedFileName": "scenarios",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/sign/scenarios.md",
+      "title": "Scenarios"
+    },
+    {
+      "importedFileName": "Samples",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/sign/samples.md",
+      "title": "REST API Samples"
+    },
+    {
+      "importedFileName": "events",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/sign/events.md",
+      "title": "Events"
+    },
+    {
+      "importedFileName": "developerguides",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/sign/developerguides.md",
+      "title": "Developer Guides"
+    },
 ]
 }
