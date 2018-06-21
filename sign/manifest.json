@@ -136,7 +136,62 @@
     },
     {
       "importedFileName": "Samples",
-      "pages": [],
+      "pages": [
+            {
+              "importedFileName": "create_new_widget",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/create_new_widget.md",
+              "title": "Create New Widget"
+            },
+            {
+              "importedFileName": "download_audit_trail",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/download_audit_trail.md",
+              "title": "Download an Audit Trail"
+            },
+            {
+              "importedFileName": "download_combined_doc",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/download_combined_doc.md",
+              "title": "Download Combined Document for Agreement"
+            },
+            {
+              "importedFileName": "download_documents",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/download_documents.md",
+              "title": "Download Documents from an Agreement"
+            },
+            {
+              "importedFileName": "get_agreement_status",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/get_agreement_status.md",
+              "title": "Get Status of an Agreement"
+            },
+            {
+              "importedFileName": "get_signing_url",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/get_signing_url.md",
+              "title": "Get Signing URLs for an Agreement"
+            },
+            {
+              "importedFileName": "send_reminders",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/send_reminders.md",
+              "title": "Send Reminders to Participants"
+            },
+            {
+              "importedFileName": "send_using_library_doc",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/send_using_library_doc.md",
+              "title": "Send an Agreement Using a Library ID"
+            },
+            {
+              "importedFileName": "send_using_transient_doc",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/send_using_transient_doc.md",
+              "title": "Send an Agreement Using a Transient Document"
+            }
+      ],
       "path": "adobeio/adobeio-documentation/master/sign/samples.md",
       "title": "REST API Samples"
     },
