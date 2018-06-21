@@ -12,13 +12,44 @@
 "pages": [
     {
       "importedFileName": "readme",
-      "pages": [],
+      "pages": [
+            {
+              "importedFileName": "a_simple_workflow",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/overview/a_simple_workflow.md",
+              "title": "A Simple Workflow"
+            },
+            {
+              "importedFileName": "using_the_apis",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/overview/using_the_apis.md",
+              "title": "Using the APIs"
+            },
+            {
+              "importedFileName": "terminology",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/overview/terminology.md",
+              "title": "Terminology"
+            }
+      ],
       "path": "adobeio/adobeio-documentation/master/sign/README.md",
       "title": "Overview"
     },
     {
       "importedFileName": "gstarted",
       "pages": [
+            {
+              "importedFileName": "sign_up_dev",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/sign_up_dev.md",
+              "title": "Developer Sign Up"
+            },
+            {
+              "importedFileName": "get_access_token",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/get_access_token.md",
+              "title": "Get Access Token"
+            },
             {
               "importedFileName": "configure_oauth",
               "pages": [],
@@ -30,26 +61,64 @@
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/gstarted/create_app.md",
               "title": "Create Application"
-            },
-            {
-              "importedFileName": "get_access_token",
-              "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/gstarted/get_access_token.md",
-              "title": "Get Access Token"
-            },
-            {
-              "importedFileName": "sign_up_dev",
-              "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/gstarted/sign_up_dev.md",
-              "title": "Developer Sign Up"
             }
+        
       ],
       "path": "adobeio/adobeio-documentation/master/sign/gstarted.md",
       "title": "Getting Started"
     },
     {
       "importedFileName": "devguide",
-      "pages": [],
+      "pages": [
+            {
+              "importedFileName": "send_signing",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/send_signing.md",
+              "title": "Send for Signing"
+            },
+            {
+              "importedFileName": "check_status",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/check_status.md",
+              "title": "Check Status"
+            },
+            {
+              "importedFileName": "send_reminders",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/send_reminders.md",
+              "title": "Send Reminders"
+            },
+            {
+              "importedFileName": "download_agreement",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/download_agreement.md",
+              "title": "Download the Agreement"
+            },
+            {
+              "importedFileName": "create_widget",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/create_widget.md",
+              "title": "Create a Widget"
+            },
+            {
+              "importedFileName": "get_signing_url",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/get_signing_url.md",
+              "title": "Get the Signing URL"
+            },
+            {
+              "importedFileName": "enhancements_v6",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/enhancements_v6.md",
+              "title": "Adobe Sign v6 REST API Enhancements"
+            },
+            {
+              "importedFileName": "api_change_log",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/devguide/api_change_log.md",
+              "title": "API Change Log"
+            }
+      ],
       "path": "adobeio/adobeio-documentation/master/sign/devguide.md",
       "title": "Developer Guide"
     },
