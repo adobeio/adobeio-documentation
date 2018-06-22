@@ -68,59 +68,59 @@
       "title": "Getting Started"
     },
     {
-      "importedFileName": "devguide",
+      "importedFileName": "api_usage",
       "pages": [
             {
               "importedFileName": "send_signing",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/send_signing.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/send_signing.md",
               "title": "Send for Signing"
             },
             {
               "importedFileName": "check_status",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/check_status.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/check_status.md",
               "title": "Check Status"
             },
             {
               "importedFileName": "send_reminders",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/send_reminders.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/send_reminders.md",
               "title": "Send Reminders"
             },
             {
               "importedFileName": "download_agreement",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/download_agreement.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/download_agreement.md",
               "title": "Download the Agreement"
             },
             {
               "importedFileName": "create_widget",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/create_widget.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/create_widget.md",
               "title": "Create a Widget"
             },
             {
               "importedFileName": "get_signing_url",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/get_signing_url.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/get_signing_url.md",
               "title": "Get the Signing URL"
             },
             {
               "importedFileName": "enhancements_v6",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/enhancements_v6.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/enhancements_v6.md",
               "title": "Adobe Sign v6 REST API Enhancements"
             },
             {
               "importedFileName": "api_change_log",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/devguide/api_change_log.md",
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/api_change_log.md",
               "title": "API Change Log"
             }
       ],
-      "path": "adobeio/adobeio-documentation/master/sign/devguide.md",
-      "title": "Developer Guide"
+      "path": "adobeio/adobeio-documentation/master/sign/api_usage.md",
+      "title": "API Usage"
     },
     {
       "importedFileName": "webhooks",

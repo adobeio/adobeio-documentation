@@ -15,7 +15,7 @@ The Adobe Sign APIs can be used to:
 - Download audit trails
 - [And a lot more!](https://acrobat.adobe.com/in/en/sign/capabilities.html)
 
-See  [A Simple Workflow](/overview/a_simple_workflow.md).
+See  [A Simple Workflow](overview/a_simple_workflow.md).
 
 If you have experience developing with past versions of Adobe Sign, you may wish to start with the following resources:
  - [Version 6 Enhancements](devguide/enhancements_v6.md)
