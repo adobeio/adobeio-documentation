@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_ACTION_DELEGATED
+# Payload template: AGREEMENT\_ACTION\_DELEGATED
 
 ```json
 {  

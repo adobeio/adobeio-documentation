@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_EMAIL_VIEWED
+# Payload template: AGREEMENT\_EMAIL\_VIEWED
 
 ```json
 {  

@@ -1,4 +1,4 @@
-# Payload template: WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM
+# Payload template: WIDGET\_AUTO\_CANCELLED\_CONVERSION\_PROBLEM
 
 ```json
 {

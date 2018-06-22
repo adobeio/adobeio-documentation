@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_EXPIRED
+# Payload template: AGREEMENT\_EXPIRED
 
 ```json
 {  

@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_WORKFLOW_COMPLETED
+# Payload template: AGREEMENT\_WORKFLOW\_COMPLETED
 
 ```json
 {  
