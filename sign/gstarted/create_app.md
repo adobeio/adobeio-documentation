@@ -1,5 +1,3 @@
-<!--:navorder: 2-->
-
 # Create an application
 
 To use Adobe Sign APIs, you need to first create an application.

@@ -1,5 +1,3 @@
-:navorder: 7
-
 # Events
 
 Adobe Sign capabilities can be incorporated into external applications by directly embedding the Adobe Sign user interface (UI) within these applications. Adobe Sign also supports sending events (status updates) to the third-party application pages so that the external application is aware of the actions that the user is performing with the Adobe Sign UI. These events are passed between the controller window and a receiver window running on different domains for event communication.

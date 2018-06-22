@@ -1,5 +1,3 @@
-:navorder: 1
-
 # A simple workflow
 
 A very simple workflow:

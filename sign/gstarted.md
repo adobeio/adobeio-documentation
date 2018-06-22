@@ -1,5 +1,3 @@
-:navorder: 2
-
 # Getting Started
 
 Do you want to build desktop, web, or mobile apps based on the functionalities offered by Adobe Sign? You can quickly get started by following these steps:

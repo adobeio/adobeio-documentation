@@ -1,5 +1,3 @@
-:navorder: 2
-
 # Using the APIs
 
 See the [Getting Started](../gstarted.md) section to read about the steps involved in creating your first app!

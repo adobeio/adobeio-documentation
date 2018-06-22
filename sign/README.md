@@ -1,5 +1,3 @@
-:navorder: 1
-
 # Overview
 
 As a developer, you can build a variety of integrations with Adobe Sign using just the APIs. Once built, integrations allow you to start the Adobe Sign signing experience entirely from within the external application.

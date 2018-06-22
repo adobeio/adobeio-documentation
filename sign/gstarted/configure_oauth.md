@@ -1,5 +1,3 @@
-<!--:navorder: 3-->
-
 # Configure OAuth for the application
 
 In the  [previous section](https://www.adobe.io/apis/documentcloud/sign/docs/step-by-step-guide/create-an-application.html), you learned to create an application. Now, you must configure OAuth for your application so that the client-side applications that you build can invoke the Sign APIs.

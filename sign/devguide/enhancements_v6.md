@@ -1,5 +1,3 @@
-:navorder: 7
-
 # Adobe Sign v6 REST API Enhancements
 
 ## On this page 

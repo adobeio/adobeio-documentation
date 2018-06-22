@@ -1,5 +1,3 @@
-:navorder: 3
-
 # Developer Guide
 
 The Adobe Sign API allows you to quickly build client-side applications that can utilize the signing functionalities offered by Adobe Sign. This guide contains the most common scenarios in which you can use the API.

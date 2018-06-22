@@ -1,5 +1,3 @@
-:navorder: 3
-
 # Terminology
 
 **Transient document**  
