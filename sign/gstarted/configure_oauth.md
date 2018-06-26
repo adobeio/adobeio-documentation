@@ -1,8 +1,6 @@
-<!--:navorder: 3-->
-
 # Configure OAuth for the application
 
-In the  [previous section](https://www.adobe.io/apis/documentcloud/sign/docs/step-by-step-guide/create-an-application.html), you learned to create an application. Now, you must configure OAuth for your application so that the client-side applications that you build can invoke the Sign APIs.
+In the  [previous section](create-app.md), you learned to create an application. Now, you must configure OAuth for your application so that the client-side applications that you build can invoke the Sign APIs.
 
 1. Select **API Applications** to view the list of apps you have created; then select your app to view its action menu.
 
@@ -32,5 +30,5 @@ The OAuth process requires users of your apps to grant permissions before invoki
 
 **IMPORTANT:**  Before you begin using the Sign APIs, read  [Using OAuth to Access Adobe Sign APIs](https://secure.na1.echosign.com/public/static/oauthDoc.jsp).
 
-Next: [Get the Access Token](get_access_token.md)
+Next: [Get the access token](get_access_token.md)
 

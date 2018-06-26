@@ -1,5 +1,3 @@
-:navorder: 2
-
 # Check the status
 
 Adobe Sign can return the current status of the agreement and a complete history of events that have happened on that particular agreement. The simplest mechanism is for your application to provide a callback URL when sending the document for signature. Adobe Sign will then ping your service whenever the status of the agreement changes. Upon receiving a callback, your application can then call Adobe Sign to get the latest status on the agreement.

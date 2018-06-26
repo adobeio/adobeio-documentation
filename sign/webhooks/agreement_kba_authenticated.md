@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_KBA_AUTHENTICATED
+# Payload template: AGREEMENT\_KBA\_AUTHENTICATED
 
 ```json
 {  

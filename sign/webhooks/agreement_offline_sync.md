@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_OFFLINE_SYNC
+# Payload template: AGREEMENT\_OFFLINE\_SYNC
 
 ```json
 {  

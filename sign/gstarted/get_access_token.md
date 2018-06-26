@@ -1,8 +1,6 @@
-<!--:navorder: 4-->
-
 # Get the access token
 
-In order to invoke the Sign APIs, your application must first get an OAuth access token on behalf of an Adobe Sign user. This process uses HTTP requests to obtain the token.
+To invoke the Sign APIs, your application must first get an OAuth access token on behalf of an Adobe Sign user. This process uses HTTP requests to obtain the token.
 
 First, copy and paste the following URL in a browser window and change the values for  **redirect_uri**  and  **client_id** :
 

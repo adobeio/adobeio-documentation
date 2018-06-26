@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_EMAIL_BOUNCED
+# Payload template: AGREEMENT\_EMAIL\_BOUNCED
 
 ```json
 {  

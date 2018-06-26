@@ -6,90 +6,400 @@
 "view_type": "mdbook",
 "meta_keywords": "adobe i/o,sign",
 "meta_description": "default description",
-"publish_date": "22/03/2018",
+"publish_date": "21/06/2018",
 "show_edit_github_banner": false,
 "base_path": "https://raw.githubusercontent.com",
 "pages": [
-{
-"importedFileName": "index",
-"pages": [
     {
-      "importedFileName": "webhook-docs-intro",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/webhook_docs_intro.md",
-      "title": "Introduction to Webhooks"
+      "importedFileName": "readme",
+      "pages": [
+            {
+              "importedFileName": "a_simple_workflow",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/overview/a_simple_workflow.md",
+              "title": "A Simple Workflow"
+            },
+            {
+              "importedFileName": "using_the_apis",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/overview/using_the_apis.md",
+              "title": "Using the APIs"
+            },
+            {
+              "importedFileName": "terminology",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/overview/terminology.md",
+              "title": "Terminology"
+            }
+      ],
+      "path": "adobeio/adobeio-documentation/master/sign/README.md",
+      "title": "Overview"
     },
     {
-      "importedFileName": "events-api",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/events-api.md",
-      "title": "Working with Events Using Management API"
+      "importedFileName": "gstarted",
+      "pages": [
+            {
+              "importedFileName": "sign_up_dev",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/sign_up_dev.md",
+              "title": "Developer Sign Up"
+            },
+            {
+              "importedFileName": "get_access_token",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/get_access_token.md",
+              "title": "Get an Access Token"
+            },
+            {
+              "importedFileName": "configure_oauth",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md",
+              "title": "Configuring OAuth for Application"
+            },
+            {
+              "importedFileName": "create_app",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/create_app.md",
+              "title": "Create an Application"
+            }
+        
+      ],
+      "path": "adobeio/adobeio-documentation/master/sign/gstarted.md",
+      "title": "Getting Started"
     },
     {
-      "importedFileName": "journaling_api",
+      "importedFileName": "api_usage",
+      "pages": [
+            {
+              "importedFileName": "send_signing",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/send_signing.md",
+              "title": "Send for Signing"
+            },
+            {
+              "importedFileName": "check_status",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/check_status.md",
+              "title": "Check Status"
+            },
+            {
+              "importedFileName": "send_reminders",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/send_reminders.md",
+              "title": "Send Reminders"
+            },
+            {
+              "importedFileName": "download_agreement",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/download_agreement.md",
+              "title": "Download the Agreement"
+            },
+            {
+              "importedFileName": "create_widget",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/create_widget.md",
+              "title": "Create a Widget"
+            },
+            {
+              "importedFileName": "get_signing_url",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/get_signing_url.md",
+              "title": "Get the Signing URL"
+            },
+            {
+              "importedFileName": "enhancements_v6",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/enhancements_v6.md",
+              "title": "Adobe Sign v6 REST API Enhancements"
+            },
+            {
+              "importedFileName": "api_change_log",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/api_usage/api_change_log.md",
+              "title": "API Change Log"
+            }
+      ],
+      "path": "adobeio/adobeio-documentation/master/sign/api_usage.md",
+      "title": "API Usage"
+    },
+    {
+      "importedFileName": "webhooks",
+      "pages": [
+            {
+              "importedFileName": "agreement_action_completed",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_action_completed.md",
+              "title": "Agreement Action Completed"
+            },
+            {
+              "importedFileName": "agreement_action_delegated",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_action_delegated.md",
+              "title": "Agreement Action Delegated"
+            },
+            {
+              "importedFileName": "agreement_action_replaced_signer",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_replaced_signer.md",
+              "title": "Agreement Action Replaced Signer"
+            },
+            {
+              "importedFileName": "agreement_requested",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_requested.md",
+              "title": "Agreement Action Requested"
+            },
+            {
+              "importedFileName": "agreement_auto_cancelled_conversion_problem",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_auto_cancelled_conversion_problem.md",
+              "title": "Agreement Auto Cancelled Conversion Problem"
+            },
+            {
+              "importedFileName": "agreement_created",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_created.md",
+              "title": "Agreement Created"
+            },
+            {
+              "importedFileName": "agreement_documents_deleted",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_documents_deleted.md",
+              "title": "Agreement Documents Deleted"
+            },
+            {
+              "importedFileName": "agreement_email_bounced",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_email_bounced.md",
+              "title": "Agreement Email Bounced"
+            },
+            {
+              "importedFileName": "agreement_email_viewed",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_email_viewed.md",
+              "title": "Agreement Email Viewed"
+            },
+            {
+              "importedFileName": "agreement_expired",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_expired.md",
+              "title": "Agreement Expired"
+            },
+            {
+              "importedFileName": "agreement_kba_authenticated",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_kba_authenticated.md",
+              "title": "Agreement KBA Authenticated"
+            },
+            {
+              "importedFileName": "agreement_modified",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_modified.md",
+              "title": "Agreement Modified"
+            },
+            {
+              "importedFileName": "agreement_offline_sync",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_offline_sync.md",
+              "title": "Agreement Offline Sync"
+            },
+            {
+              "importedFileName": "agreement_recalled",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_recalled.md",
+              "title": "Agreement Recalled "
+            },
+            {
+              "importedFileName": "agreement_rejected",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_rejected.md",
+              "title": "Agreement Rejected"
+            },
+            {
+              "importedFileName": "agreement_shared",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_shared.md",
+              "title": "Agreement Shared"
+            },
+            {
+              "importedFileName": "agreement_uploaded_by_sender",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_uploaded_by_sender.md",
+              "title": "Agreement Uploaded by Sender"
+            },
+            {
+              "importedFileName": "agreement_user_ack_agreement_modified",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_user_ack_agreement_modified.md",
+              "title": "Agreement User Ack Agreement Modified"
+            },
+            {
+              "importedFileName": "agreement_vaulted",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_vaulted.md",
+              "title": "Agreement Vaulted"
+            },
+            {
+              "importedFileName": "agreement_web_identity_authenticated",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_web_identity_authenticated.md",
+              "title": "Agreement Web Identity Authenticated "
+            },
+            {
+              "importedFileName": "agreement_workflow_completed",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/agreement_workflow_completed.md",
+              "title": "Agreement Workflow Completed"
+            },
+            {
+              "importedFileName": "megasign_created",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/megasign_created.md",
+              "title": "Mega Sign Created "
+            },
+            {
+              "importedFileName": "megasign_recalled",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/megasign_recalled.md",
+              "title": "Mega Sign Recalled"
+            },
+            {
+              "importedFileName": "megasign_shared",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/megasign_shared.md",
+              "title": "Mega Sign Shared"
+            },
+            {
+              "importedFileName": "widget_auto_cancelled_conversion_problem",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/widget_auto_cancelled_conversion_problem.md",
+              "title": "Widget Auto Cancelled Conversion Problem"
+            },
+            {
+              "importedFileName": "widget_created",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/widget_created.md",
+              "title": "Widget Created"
+            },
+            {
+              "importedFileName": "widget_disabled",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/widget_disabled.md",
+              "title": "Widget Disabled"
+            },
+            {
+              "importedFileName": "widget_enabled",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/widget_enabled.md",
+              "title": "Widget Enabled"
+            },
+            {
+              "importedFileName": "widget_modified",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/widget_modified.md",
+              "title": "Widget Modified"
+            },
+            {
+              "importedFileName": "widget_shared",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/widget_shared.md",
+              "title": "Widget Shared"
+            }
+      ],
+      "path": "adobeio/adobeio-documentation/master/sign/webhooks.md",
+      "title": "Webhooks in Adobe Sign v6"
+    },
+    {
+      "importedFileName": "scenarios",
+      "pages": [
+            {
+              "importedFileName": "parental_consent",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/scenarios/parental_consent.md",
+              "title": "Parental Consent"
+            },
+            {
+              "importedFileName": "photo_rights",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/scenarioes/photo_rights.md",
+              "title": "Photo Rights"
+            }
+      ],
+      "path": "adobeio/adobeio-documentation/master/sign/scenarios.md",
+      "title": "Scenarios"
+    },
+    {
+      "importedFileName": "Samples",
+      "pages": [
+            {
+              "importedFileName": "create_new_widget",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/create_new_widget.md",
+              "title": "Create New Widget"
+            },
+            {
+              "importedFileName": "download_audit_trail",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/download_audit_trail.md",
+              "title": "Download an Audit Trail"
+            },
+            {
+              "importedFileName": "download_combined_doc",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/download_combined_doc.md",
+              "title": "Download Combined Document for Agreement"
+            },
+            {
+              "importedFileName": "download_documents",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/download_documents.md",
+              "title": "Download Documents from an Agreement"
+            },
+            {
+              "importedFileName": "get_agreement_status",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/get_agreement_status.md",
+              "title": "Get Status of an Agreement"
+            },
+            {
+              "importedFileName": "get_signing_url",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/get_signing_url.md",
+              "title": "Get Signing URLs for an Agreement"
+            },
+            {
+              "importedFileName": "send_reminders",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/send_reminders.md",
+              "title": "Send Reminders to Participants"
+            },
+            {
+              "importedFileName": "send_using_library_doc",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/send_using_library_doc.md",
+              "title": "Send an Agreement Using a Library ID"
+            },
+            {
+              "importedFileName": "send_using_transient_doc",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/samples/send_using_transient_doc.md",
+              "title": "Send an Agreement Using a Transient Document"
+            }
+      ],
+      "path": "adobeio/adobeio-documentation/master/sign/samples.md",
+      "title": "REST API Samples"
+    },
+    {
+      "importedFileName": "events",
       "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/intro/journaling_api.md",
-      "title": "Journaling API"
+      "path": "adobeio/adobeio-documentation/master/sign/events.md",
+      "title": "Events"
+    },
+    {
+      "importedFileName": "developerguides",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/sign/developerguides.md",
+      "title": "Developer Guides"
     }
-],
-"path": "adobeio/adobeio-documentation/master/events/index.md",
-"title": "Getting Started"
-},
-{
-"importedFileName": "using",
-"pages": [    
-    {
-      "importedFileName": "aem-event-setup",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/using/aem-event-setup.md",
-      "title": "Setting Up AEM Events"
-    },
-    {
-      "importedFileName": "analytics-triggers-event-setup",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/using/analytics-triggers-event-setup.md",
-      "title": "Integrate Analytics Triggers"
-    },
-    {
-      "importedFileName": "cc-asset-event-setup",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/using/cc-asset-event-setup.md",
-      "title": "Setting Up Creative Cloud Asset Events"
-    }
-],
-"path": "adobeio/adobeio-documentation/master/events/using.md",
-"title": "Using Adobe I/O Events"
-},
-{
-"importedFileName": "help",
-"pages": [
-    {
-      "importedFileName": "debug",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/help/debug.md",
-      "title": "Debugging"
-    },
-    {
-      "importedFileName": "tracing",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/help/tracing.md",
-      "title": "Tracing"
-    },
-    {
-      "importedFileName": "faq",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/help/faq.md",
-      "title": "Frequently Asked Questions (FAQ)"
-    },
-    {
-      "importedFileName": "release_notes",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/events/help/release_notes.md",
-      "title": "Release Notes"
-    }
-],
-"path": "adobeio/adobeio-documentation/master/events/help.md",
-"title": "Help"
-}
 ]
 }

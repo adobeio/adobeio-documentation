@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_WEB_IDENTITY_AUTHENTICATED
+# Payload template: AGREEMENT\_WEB\_IDENTITY\_AUTHENTICATED
 
 ```json
 {

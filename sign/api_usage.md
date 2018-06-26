@@ -1,6 +1,4 @@
-:navorder: 3
-
-# Developer Guide
+# API Usage: Developer Guide
 
 The Adobe Sign API allows you to quickly build client-side applications that can utilize the signing functionalities offered by Adobe Sign. This guide contains the most common scenarios in which you can use the API.
 
@@ -14,6 +12,6 @@ Download the REST samples for Adobe Sign.
 
 A 3-step basic signing workflow involves:
 
-- [Sending a document for signing (creating an agreement)](devguide/send_signing.md)
-- [Checking the signing status](devguide/check_status.md)
-- [Downloading the signed agreement](devguide/download_agreeement.md)
+- [Sending a document for signing (creating an agreement)](api_usage/send_signing.md)
+- [Checking the signing status](api_usage/check_status.md)
+- [Downloading the signed agreement](api_usage/download_agreement.md)

@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_ACTION_REPLACED_SIGNER
+# Payload template: AGREEMENT\_ACTION\_REPLACED\_SIGNER
 
 ```json
 {  

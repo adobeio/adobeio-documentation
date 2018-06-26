@@ -1,4 +1,4 @@
-# Payload template: AGREEMENT_ACTION_REQUESTED
+# Payload template: AGREEMENT\_ACTION\_REQUESTED
 
 ```json
 {  
