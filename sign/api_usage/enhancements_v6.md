@@ -118,7 +118,7 @@ Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
 ```
 
-Update or delete operations will have a similar workflow. The client is required to provide the ETag of the resource version that they want to update in the If-Match request header. The update will only be successful if the ETag in the request header represents the latest version of the resource on the server. Otherwise, this will result in a **412 (Precondition Failed)** response. In this example, we are trying to update the status of the agreement fetched above:
+Update or delete operations will have a similar workflow. The clients are required to provide the ETag of the resource version that they want to update in the If-Match request header. The update will only be successful if the ETag in the request header represents the latest version of the resource on the server. Otherwise, this will result in a **412 (Precondition Failed)** response. In this example, we are trying to update the status of the agreement fetched above:
 
 **Sample PUT Operation (ETag In Request Header)**
 
@@ -132,7 +132,7 @@ Headers : Authorization: Bearer <access-token>
           If-Match: CBJCHBCAABAA-mdO9PI7WFmHNkXFUIEYIOYGrnM3vVK_ 
 ```
 
-The response below indicates that we are trying to update an older version (_observe the ETag in the request_) of this resource. Along with this response body, the response header contains the response code 412(Precondition Failed).
+The response below indicates that we are trying to update an older version (_observe the ETag in the request_) of this resource. Along with this response body, the response header contains the HTTP status code 412(Precondition Failed).
 
 **Sample PUT Operation (ETag In Request Header)**
 
@@ -143,6 +143,30 @@ The response below indicates that we are trying to update an older version (_obs
 }
 ```
 
+The ETag value required to be passed in any PUT or DELETE API can be obtained from a corresponding GET operation on the same entity. The table below mentions these modification (PUT or DELETE) APIs along with the corresponding GET APIs that provides the ETag value for these modification requests.
+
+| Update/Deletion API | Corresponding GET endpoint |
+| --- | --- |
+| PUT /agreements/{agreementId} | GET /agreements/{agreementId} |
+| PUT /agreements/{agreementId}/formFields | GET /agreements/{agreementId}/formFields |
+| PUT /agreements/{agreementId}/formFields/mergeInfo | GET /agreements/{agreementId}/formFields/mergeInfo |
+| PUT /agreements/{agreementId}/members/participantSets/{participantSetId} | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
+| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/acknowledgement | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
+| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues | GET /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues |
+| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/reject | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
+| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/status | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
+| PUT /agreements/{agreementId}/state | GET /agreements/{agreementId} |
+| DELETE /agreements/{agreementId}/documents | GET /agreements/{agreementId}/documents |
+| PUT /libraryDocuments/{libraryDocumentId} | GET /libraryDocuments/{libraryDocumentId} |
+| PUT /libraryDocuments/{libraryDocumentId}/state | GET /libraryDocuments/{libraryDocumentId} |
+| PUT /widgets/{widgetId} | GET /widgets/{widgetId} |
+| PUT /widgets/{widgetId}/state | GET /widgets/{widgetId} |
+| PUT /megaSigns/{megaSignId}/state | GET /megaSigns/{megaSignId} |
+| DELETE /users/{userId}/signatures/{signatureId} | GET /users/{userId}/signatures/{signatureId} |
+| PUT /webhooks/{webhookId} | GET /webhooks/{webhookId} |
+| PUT /webhooks/{webhookId}/state | GET /webhooks/{webhookId} |
+| DELETE /webhooks/{webhookId} | GET /webhooks/{webhookId} |
+
 ### GET, PUT, POST consistency
 
 Current REST APIs, due to their tight coupling with SOAP, have a different interface for POST (resource creation), GET (fetching), and PUT (update). This can complicate clients who have to manage different models for each of these operations. The Version 6 REST APIs solve this by explicitly focusing on GET, PUT and POST consistency in our interfaces. For  more elaboration on this please refer to the  [agreement model](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo) in GET, PUT and POST operations.
@@ -151,7 +175,7 @@ Current REST APIs, due to their tight coupling with SOAP, have a different inter
 
 The internal re-architecture of the backend implementation and decoupling of SOAP and REST has allowed us to take a fresh look at the implementation and get rid of redundant checks and calls to the database. This, in general, has resulted in the improvement of the client experience. Also, we have migrated to the asynchronous creation of resources, which has significantly improved our response time. The client experience of using the APIs has significantly improved due to these performance enhancmenents.
 
-However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource.
+However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation,` the initial status is DOCUMENTS_NOT_YET_PROCESSED` which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
 
 ## Features
 
@@ -268,8 +292,15 @@ The next step finalizes the draft into an agreement.
 
 ### Notes management
 
-The v6 Adobe Sign APIs includes an endpoint to manage notes in an agreement. Clients can add notes to an agreement and retrieve them using this API call:  
-[GET /agreements/{agreementId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementNoteForApiUser)
+The v6 Adobe Sign APIs has endpoints to manage notes in an agreement. Clients can add notes to an agreement and retrieve them using these API's. The table below lists all these APIs and their operation.
+
+
+
+| **Notes API** | **Functionality** |
+| --- | --- |
+| [GET /agreements/{agreementId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementNoteForApiUser) | Retrieves the latest note on an agreement for the user. |
+| [GET /libraryDocuments/{libraryDocumentId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocumentNoteForApiUser) | Retrieves the latest note on a library template for the user. |
+
 
 ### Reminders
 

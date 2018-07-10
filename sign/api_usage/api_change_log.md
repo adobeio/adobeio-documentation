@@ -29,14 +29,38 @@ Lists all the reminders on an agreement.
 [GET /agreements/{agreementId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView)  
 Returns all the views associated with an agreement, such as the manage page view, the agreement view, and the post send page view.
 
+[GET /libraryDocuments/{libraryDocumentId}/events](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getEvents)  
+This is a dedicated API to retrieve all the events of a library template.
+
+[GET /libraryDocuments/{libraryDocumentId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocumentNoteForApiUser)  
+Retrieves the latest note on a library template for the user.
+
 [GET /users/{userId}/groups](https://secure.echosign.com/public/docs/restapi/v6#!/users/getGroupsOfUser)  
 This is a new endpoint to list all the groups associated with users. Functionalities from groups were moved to this API.
+
+[GET /users/{userId}/signatures/{signatureId}](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserSignature)  
+Returns the default signature of a user. Signature here includes initials, stamps, and signatures associated with the user.
 
 [GET /users/{userId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserViews)  
 Returns all the views related to a user; for example, account view, manage view and user profile view.
 
-[GET /users/{userId}/signatures/{signatureId}](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserSignature)  
-Returns the default signature of a user. Signature here includes initials, stamps, and signatures associated with the user.
+[POST/agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/postFormFields)  
+Part of the authoring API set: helps in creating a form field in the agreement document.
+
+[POST/agreements/{agreementId}/members/share](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createShareOnAgreement)  
+Allows users to share agreements with other users.
+
+[POST /agreements/{agreementId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView)  
+Returns the requested views such as manage page view, agreement documents view, post send page view associated with an agreement in the requested configuration.
+
+[POST /libraryDocuments/{libraryDocumentId}/views](https://corporate.na1.echosign.com/public/docs/restapi/v6#!/libraryDocuments/createLibraryDocumentView)  
+Returns the requested views, such as manage page view, library documents view, and send page view of this library document in the requested configuration.
+
+[POST /users/{userId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserViews)  
+Returns the requested views of a user in the asked configuration; for example, account view, manage view and user profile view.
+
+[POST /widgets/{widgetId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/getWidgetView)  
+Returns the requested views, such as manage page view, widget documents view, and post send page view associated with a widget in the requested configuration.
 
 [PUT /agreements/{agreementId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreement)  
 Enables the user to build up an agreement incrementally rather than as a one-shot creation process. This maintains a consistent request model with its POST and GET counterparts.
@@ -55,34 +79,21 @@ Adds the capability to modify an existing participant set:
 - The &quot;someone else should sign&quot; functionality on the signing page is provided in this API.
 - The request body is consistent with the GET response.
 
-[POST/agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/postFormFields)  
-Part of the authoring API set: helps in creating a form field in the agreement document.
+[PUT /libraryDocuments/{libraryDocumentId}](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/updateLibraryDocument) 
+A new API to update the _name, template type_ and _sharing scope._ Allows incremental construction of a library template in the authoring state.
 
-[POST/agreements/{agreementId}/members/share](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createShareOnAgreement)  
-Allows users to share agreements with other users.
+[PUT /libraryDocuments/{libraryDocumentId}/me/visibility](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/updateLibraryDocumentVisibility)  
+A new API to control visibility of an agreement in the `GET /libraryDocuments` response.
 
-[POST /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/signingTokens](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createSigningToken)  
-Performs both participant security authentication and client capability validation:
+[PUT /libraryDocuments/{libraryDocumentId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/updateLibraryDocumentState)  
+A new API which offers an action-based semantic to transit between states of a library template.
 
-- The response is a signing token. All other APIs that are used in an agreement-signing context require a signing token.
-- The signing token can be accessed and modified through a pair of GET/PUT APIs.
-- The signing token generated has a configured lifecycle setting and expires after that.
-
-[PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/signingTokens/{signingTokenId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementSigningToken)  
-Updates the consent information associated with an agreement. Having a separate API to record user consent allows us to emulate cases where these need to be accepted before viewing an agreement. The above case was not possible through v5 APIs, as this operation was tied to the final signing API.
+[PUT /users/{userId}/groups](https://secure.echosign.com/public/docs/restapi/v6#!/users/updateGroupsOfUser)  
+Migrates the user to a different group or updates their role in the existing group.
 
 ## Updated APIs
 
-[DELETE /users/{userId}/signatures/{signatureId}](https://secure.echosign.com/public/docs/restapi/v6#!/users/deleteUserSignature)
-
-Was:
-
-- [DELETE /users/{userId}/signatures/profile](https://secure.echosign.com/public/docs/restapi/v5#!/users/deleteProfileSignature)
-- [DELETE /users/{userId}/initials/profile](https://secure.echosign.com/public/docs/restapi/v5#!/users/deleteProfileInitials)
-
-In version 6 we have a single API to delete signatures and user initials.
-
-[GET /baseUris](https://secure.na1.echosignawspreview.com/public/docs/restapi/v6#!/base_uris/getBaseUris)
+[GET /baseUris](https://secure.echosign.com/public/docs/restapi/v6#!/base_uris/getBaseUris)
 
 - The endpoint path is now changed to be consistent with the camel casing convention in Adobe Sign API (base_uri is now baseUri).
 - The response parameter is also renamed to have camel casing.
@@ -123,25 +134,36 @@ Uses participantId instead of participantEmail as filter.
 - Uses participantId instead of participantEmail as a filter.
 - There are minor changes in the field names.
 
-[GET /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementFormFieldsValues)
-
-Was: [GET /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/formFieldsData](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/getAgreementFormFieldsData)
-
-- Returns all fields (along with identity fields) assigned to the participant with their default values.
-- Can auto-save identity fields.
-- Compatible with Web App behavior.
-- Consumes the signing token in the header.
-- Conversion status of the uploaded attachment is dropped, and is handled through not allowing any update on the signing page while conversion is still under process.
-
-[GET /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/signingTokens/{signingTokenId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementSigningToken)
-
-Was: [GET /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/signingInfo](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/getAgreementSigningInfo)
-
-- The [signingInfo API](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/getAgreementSigningInfo) is dropped in version 6 and the corresponding data are returned through [GET /{signingTokenId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementSigningToken)
-- Along with the terms of use URL and consumer disclosure URL, we also provide their present acceptance status.
-
 [GET /agreements/{agreementId}/signingUrls](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/getSigningUrl)  
 Fixed existing issues in scenarios where the sender is also a signer.
+
+[GET /libraryDocuments](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocuments)  
+
+- Response is paginated.
+- Creator email and status is in the response.
+- We've added a query parameter to view/un-view all the hidden agreements.
+- The `scope` parameter in v5 is mapped to `sharingMode` in v6.
+- `PERSONAL` in v5 is now `USER` in v6.
+- `SHARED` in v5 is now `GROUP in v6.
+- The `libraryTemplateType` filter is dropped from this API. This will be available along with other filtering through search services.
+
+[GET /libraryDocuments/{libraryDocumentId}](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocumentInfo)  
+
+- Events have been removed from the response of this endpoint and are now returned through a dedicated events endpoint.
+- The `latestVersionId` parameter is now removed from here and will be available in `GET /libraryDocuments`.
+- We have removed obsolete and unnecessary parameters: `locale`, `participants`, `message` and `securityOptions`.
+- The model is consistent with the corresponding POST and PUT operations.
+
+[GET /libraryDocuments/{libraryDocumentId}/documents](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getDocuments)  
+
+- Added a `label` parameter for using in the custom workflow.
+- A `versionId` of the documents added as filter.
+
+[GET /libraryDocuments/{libraryDocumentId}/documents/{documentId}](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocument)  
+A base64 encoding option is available for the generated PDF.
+
+[GET /libraryDocuments/{libraryDocumentId}/documents/{documentId}/imageUrls](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocumentImageUrls)  
+Minor restructuring in the response.
 
 [GET /users](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUsers)
 
@@ -154,14 +176,16 @@ Fixed existing issues in scenarios where the sender is also a signer.
 - A few unusable fields were dropped.
 - We have removed capability flags from here. Clients now need to call [GET /users/{userId}/settings](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserSettings) to compute the capability flags.
 
-[POST /transientDocuments](https://secure.na1.echosignawspreview.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument)
+[GET /widgets](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets)  
+Paginated response.
 
-- Returns an UNSUPPORTED\MEDIA\TYPE error for unsupported media type in Adobe Sign
+[GET /widgets/{widgetId}](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/getWidgetInfo)  
+The model is consistent with the POST and PUT operations.
 
-[POST /agreements](https://secure.na1.echosignawspreview.com/public/docs/restapi/v6#!/agreements/createAgreement)
+[POST /agreements](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createAgreement)
 
 - The request body is now consistent with its GET/PUT counterpart. A common agreement model is used across all these APIs.
-- Interactive options have been removed from the request body and is available through the separate [GET /agreements/{agreementId}/views](https://secure.na1.echosignawspreview.com/public/docs/restapi/v6#!/agreements/getAgreementView) API.
+- Interactive options have been removed from the request body and is available through the separate [GET /agreements/{agreementId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView) API.
 - Support for form fields, form fields layer template, amd merge fields has been removed from here and will now be available through the authoring APIs.
 - The document visibility feature is available in v6.
 - This API is more responsive as it is now asynchronous.
@@ -171,11 +195,11 @@ Fixed existing issues in scenarios where the sender is also a signer.
 - You can create an agreement in different states using the transistionState field.
 - There is a separate state transitioning (from draft to agreement) API.
 
-[POST /agreements/{agreementId}/members/participantSets/{participantSetId}/delegatedParticipantSets](https://secure.na1.echosignawspreview.com/public/docs/restapi/v6#!/agreements/createDelegatedParticipantSets)
+[POST /agreements/{agreementId}/members/participantSets/{participantSetId}/delegatedParticipantSets](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createDelegatedParticipantSets)
 
 - You should specify an agent delegation role for a successful call.
 - You can delegate to multiple participants, who constitute a newly created participant set.
-- You are not allowed to perform &ldquo;Someone else should sign&rdquo; with this API, as it will now be done through [PUT /agreements/{agreementId}/members/participantSets/{participantSetId}](https://secure.na1.echosignawspreview.com/public/docs/restapi/v6#!/agreements/updateParticipantSet)
+- You are not allowed to perform &ldquo;Someone else should sign&rdquo; with this API, as it will now be done through [PUT /agreements/{agreementId}/members/participantSets/{participantSetId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateParticipantSet)
 
 [POST /agreements/{agreementId}/reminders](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createReminderOnParticipant)
 
@@ -185,41 +209,23 @@ Was: [POST /reminders](https://secure.na1.echosign.com/public/docs/restapi/v5#!/
 - Lets you set the next send date, note, frequency, and other parameters.
 - You can track each reminder through the ID returned from here.
 
-[PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/acknowledgement](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementAcknowledgement)
+[POST /libraryDocuments](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/createLibraryDocument)
 
-Was: [POST /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/modificationAcknowledgement](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/agreementModificationAck)
+- The model is consistent with the corresponding GET & PUT operations.
+- Obsolete parameters `libraryDocumentId` and `libraryDocumentName` have been removed from `fileInfosstructure`. This was present in prior versions, but was unusable, because we did not allow library template creation using an existing template through the API.
+- Interactive options have been removed from the request body; the equivalent functionality is now available through the `POST /libraryDocuments/{libraryDocumentId}/views` API.
+- You can create a library template in different states using the transition state field.
+- There is a separate state transitioning (Authoring to Active) API.
 
-- This API is also largely the same, but instead of create, it is treated as updating an agreement with an acknowledgement.
-- Requires an ETag in the request header.
+[POST /transientDocuments](https://secure.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument)
 
-[POST /users/{userId}/signatures](https://secure.echosign.com/public/docs/restapi/v6#!/users/createSignature)
+- Returns an UNSUPPORTED\MEDIA\TYPE error for unsupported media type in Adobe Sign
 
-Was:
+[POST /widgets](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)  
 
-- [PUT /users/{userId}/signatures/profile](https://secure.echosign.com/public/docs/restapi/v5#!/users/updateProfileSignature)
-- [PUT /users/{userId}/initials/profile](https://secure.echosign.com/public/docs/restapi/v5#!/users/updateProfileInitials)
-
-In v6 we have a single API to create all signatures and initials.
-
-[PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementFormFieldValues)
-
-Was: [PUT /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/formFieldsData](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/updateAgreementFormFields)
-
-This endpoint is largely kept the same except for the following:
-
-- ETag is now introduced to take care of concurrent updates in the fields.
-- The request structure has changed.
-- Identity fields such as the signer&rsquo;s full name, title, company, and more can be updated in this API itself instead of handling in a separate API.
-- All the fields that are assigned to a participant are discoverable through this API&rsquo;s GET counterpart, so update operations do not need any PDF parsing for field names.
-
-[PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/status](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/signAgreementForParticipation)
-
-Was: [PUT /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/status](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/signAgreementForParticipation)
-
-- This API in V6 only has signature data, participant status (intended final status), and device info.
-- User consent update are handled by [PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/signingTokens/{signingTokenId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementSigningToken)
-- Earlier, for updating identity field values, only this API was used, but now the following API would be used:  
-[PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementFormFieldValues)
+- The request body is now consistent with this API&rsquo;s GET/PUT counterpart. A common agreement model is used across all these APIs.
+- Form fields layer template and Merge Fields support removed in v6 for widget creation.
+- The signatureFlow parameter has been dropped and the workflow is inferred through the order in the additionalParticipantSetsInfo parameter.
 
 [PUT /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/reject](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/rejectAgreementForParticipation)  
 Enables a participant to reject an agreement.
@@ -232,6 +238,12 @@ Was: [PUT /agreements/{agreementId}/status](https://secure.echosign.com/public/d
 - The new API offers an action-based semantic to transition between states of an agreement.
 - The intended final state of the agreement is provided in the request body and the response indicates if the agreement was successfully transitioned into the intended state.
 - This API can be used by the sender to cancel the agreement.
+
+[PUT /users/{userId}](https://secure.echosign.com/public/docs/restapi/v6#!/users/modifyUser)  
+Updating the group of the user is now handled via the `PUT /users/{userId}/groups` API.
+
+[PUT /users/{userId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/users/modifyUserState)  
+This is functionally the ame as before, but the API structure is revamped to make it consistent with other state transition APIs in v6.
 
 ## Removed APIs
 
@@ -252,13 +264,6 @@ The v5 API had the redundant functionality of providing combined agreement docs,
 [GET /users/{userId}/initials/profile](https://secure.echosign.com/public/docs/restapi/v5#!/users/getProfileInitials)  
 [GET /users/{userId}/initials/profile/image](https://secure.echosign.com/public/docs/restapi/v5#!/users/getProfileInitialsImage)  
 The information returned through these APIs is available via [GET /users/{userId}/signatures/{signatureId}](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserSignature) in v6.
-
-[POST /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/signingKeys](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/getAgreementSigningKey)  
-[POST /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId/signingSecurityTokens/password](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/createSigningSecurityToken)  
-These endpoints are now dropped due to the following reasons:
-
-- The participation validation (along with any other signing validations) will be performed on all the individual signing APIs and is kept implicit like all other REST APIs in v6.
-- In version 6, the supported features and participant security validation are now achieved through a single API, [POST /signingTokens](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createSigningToken), which provides a signing token that is necessary to all other signing APIs.
 
 [POST /users](https://secure.na1.echosign.com/public/docs/restapi/v5#!/users/createUser)  
 This API has been dropped from version 6, as user creation will now be handled through Adobe Identity Management Service (IMS) and not Sign.
