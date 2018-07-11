@@ -55,7 +55,7 @@ back in the response.
 
 1.  Replace the contents of the index.js file with the following code snippet:
 
-    ``` javascript  
+    ```javascript  
     module.exports = function (context, req) {
         var clientId = req.headers['x-adobesign-clientid'];
         // Validate that the incoming ClientID is genuine
@@ -90,7 +90,7 @@ back in the response.
 In the JSON response body, pass the key `xAdobeSignClientId` with its value being the same client ID that was sent in the request header.
 
 1.  Replace the Index.js file with the following:  
-    ``` javascript
+    ```javascript
     module.exports = function (context, req) {
         var clientId = req.headers['x-adobesign-clientid'];
         // Validate that the incoming ClientID is genuine

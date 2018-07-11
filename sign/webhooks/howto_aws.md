@@ -42,7 +42,7 @@ This is the same header which was passed in the request, and it must be echoed b
 
 Replace the contents of the Index.js file with the following code snippet:
 
-``` javascript
+```javascript
 exports.handler = function index(event, context, callback) {
   // Fetch client id
   var clientid = event.headers['X-AdobeSign-ClientId'];
@@ -70,7 +70,7 @@ In the JSON response body, pass the key **xAdobeSignClientId** with its value be
 
 Replace the contents of the Index.js file with the following code snippet:
 
-``` javascript
+```javascript
 exports.handler = function index(event, context, callback) {
  // Fetch client id
  var clientid = event.headers['X-AdobeSign-ClientId'];
