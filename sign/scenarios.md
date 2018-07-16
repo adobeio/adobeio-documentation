@@ -1,6 +1,6 @@
 # Scenarios
 
-The [API Usage](devguide.md) section has a list of few trivial tasks that can be performed using the Sign APIs. However, you can also use the APIs in other simple to complex signing scenarios as mentioned in this guide.
+The [API Usage](api_usage.md) section has a list of simple tasks that can be performed using the Sign APIs. However, you can also use the APIs in other simple to complex signing scenarios as mentioned in this guide.
 
 - [**Parental Consent**](scenarios/parental_consent.md)  
 An example scenario depicting Sign Widget usage for getting consent

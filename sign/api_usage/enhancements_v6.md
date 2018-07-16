@@ -3,23 +3,23 @@
 ## On this page 
 - [Overview](#overview)
 - [Enhancements](#enhancements)
-  - [Pagination support ](#paginationsupport)
-  - [Constant secure IDs](#constantsecureids)
-  - [ETag support](h#etagsupport)
-  - [GET, PUT, POST consistency](#getputpostconsistency)
-  - [Performance improvements](#performanceimprovements)
+    - [Pagination support ](#paginationsupport)
+    - [Constant secure IDs](#constantsecureids)
+    - [ETag support](h#etagsupport)
+    - [GET, PUT, POST consistency](#getputpostconsistency)
+    - [Performance improvements](#performanceimprovements)
 - [Features](#features)
-  - [Agreement sharing](#agreementsharing)
-  - [Authoring APIs](#authoringapis)
-  - [Document visibility](#documentvisibility)
-  - [Draft](#draft)
-  - [Notes management](#notesmanagement)
-  - [Reminders](#reminders)
-  - [Resource view](#resourceview)
-  - [Resource visibility](#resourcevisibility)
-  - [Stamp support](#stampsupport)
-  - [Suppress email](#suppressemail)
-  - [Webhooks](#webhooks)
+    - [Agreement sharing](#agreementsharing)
+    - [Authoring APIs](#authoringapis)
+    - [Document visibility](#documentvisibility)
+    - [Draft](#draft)
+    - [Notes management](#notesmanagement)
+    - [Reminders](#reminders)
+    - [Resource view](#resourceview)
+    - [Resource visibility](#resourcevisibility)
+    - [Stamp support](#stampsupport)
+    - [Suppress email](#suppressemail)
+    - [Webhooks](#webhooks)
 - [API change log](api_change_log.md)
 
 ## Overview
@@ -175,7 +175,7 @@ Current REST APIs, due to their tight coupling with SOAP, have a different inter
 
 The internal re-architecture of the backend implementation and decoupling of SOAP and REST has allowed us to take a fresh look at the implementation and get rid of redundant checks and calls to the database. This, in general, has resulted in the improvement of the client experience. Also, we have migrated to the asynchronous creation of resources, which has significantly improved our response time. The client experience of using the APIs has significantly improved due to these performance enhancmenents.
 
-However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation,` the initial status is DOCUMENTS_NOT_YET_PROCESSED` which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
+However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED` which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
 
 ## Features
 

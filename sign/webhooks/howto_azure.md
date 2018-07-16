@@ -4,8 +4,8 @@
 
 - [Prerequisites](#prerequisites)
 - [Steps to create an Azure Functions Trigger that serves as an Adobe Sign Webhook](#stepstocreateanazurefunctionstriggerthatservesasanadobesignwebhook)
-  - [Create a JavaScript HttpTrigger function](#createajavascripthttptriggerfunction)
-  - [Add logic to register your Adobe Sign webhook](#addlogictoregisteryouradobesignwebhook)
+    - [Create a JavaScript HttpTrigger function](#createajavascripthttptriggerfunction)
+    - [Add logic to register your Adobe Sign webhook](#addlogictoregisteryouradobesignwebhook)
 - [Ready to use](#Readytouse)
 - [Get the function&rsquo;URL](#getthefunctionsurl)
 
@@ -90,6 +90,7 @@ back in the response.
 In the JSON response body, pass the key `xAdobeSignClientId` with its value being the same client ID that was sent in the request header.
 
 1.  Replace the Index.js file with the following:  
+
     ```javascript
     module.exports = function (context, req) {
         var clientId = req.headers['x-adobesign-clientid'];
