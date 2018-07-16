@@ -8,13 +8,13 @@ Do you want to build desktop, web, or mobile apps based on the functionalities o
 [Sign up for a developer account to start building Sign-based apps and workflows](https://www.adobe.com/go/esign-dev-create)
 
 2. **Create an application**  
-[Create an app using the Sign UI to get the keys to use in your client-side applications](gstarted/create-app.md)
+[Create an app using the Sign UI to get the keys to use in your client-side applications](gstarted/create_app.md)
 
 3. **Configure OAuth for the application**  
-[You need to configure OAuth access for your app so that clients can invoke the APIs](gstarted/configure-oauth.md)
+[You need to configure OAuth access for your app so that clients can invoke the APIs](gstarted/configure_oauth.md)
 
 4. **Get the access token**  
-[Use the access token to call any of the Sign API endpoints from your client-side applications](gstarted/get-access-token.md)
+[Use the access token to call any of the Sign API endpoints from your client-side applications](gstarted/get_access_token.md)
 
 ## See Also
 
@@ -22,5 +22,5 @@ Do you want to build desktop, web, or mobile apps based on the functionalities o
 [Learn how to use the Sign APIs for the most common digital signing workflows](https://adobe.io/products/sign/docs/scenarios)
 
 - **API Reference**  
-[Browse through the API reference to know more about the request types and formats](https://adobe.io/products/sign/docs/api-reference)
+[Browse through the API reference to know more about the request types and formats](https://secure.na1.echosign.com/public/docs/restapi/v6)
 

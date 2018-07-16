@@ -5,7 +5,7 @@ A signing reminder can be sent to all the signers if they have not signed the ag
 ![Sending a reminder](../img/sign_devguide_3.png)
 
 ```http
-POST /api/rest/v5/reminders HTTP/1.1
+POST /api/rest/v6/agreements/{agreementId}/reminders HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
@@ -31,5 +31,5 @@ Note that you need to provide the `agreementId` in the request header. You will 
 }
 ```
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/reminders/)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/createReminderOnParticipant)
 

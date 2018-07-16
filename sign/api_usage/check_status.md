@@ -7,7 +7,7 @@ Adobe Sign can return the current status of the agreement and a complete history
 You can also get the most current status of an agreement by sending a GET request to `/agreements/{agreementid}`:
 
 ```http
-GET /api/rest/v5/agreements/3AAABLblqZNOTREALAGREEMENTID5_BjiH HTTP/1.1
+GET /api/rest/v6/agreements/3AAABLblqZNOTREALAGREEMENTID5_BjiH HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: 3AAANOTREALTOKENMS-4ATH
 ```
@@ -93,4 +93,4 @@ In addition to HTTPS GET, Adobe Sign also alternatively supports PUT for receivi
 
 The second mechanism to reflect the most current or up-to-date status of an agreement sent for signature is for your application to periodically poll Adobe Sign regarding the agreement&rsquo;s status. The upside of polling is that it can be used in cases where your calling application is behind your firewall and not accessible from the Internet, thus enabling Adobe Sign to complete a callback. The down side of polling is that you have to create a scheduling mechanism within your application to periodically query the status of all documents that were not yet signed, check whether the document&rsquo;s status has changed, and update your system accordingly. If you choose to use polling, we recommend you have different policies based on document "age". In other words, you would reduce the frequency of polling for documents not signed after a certain number of days.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/agreements/_0_1_2)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/_0_1_2)

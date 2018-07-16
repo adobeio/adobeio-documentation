@@ -5,7 +5,7 @@ To create a widget through the API, you must first call /transientDocuments, the
 If the identity of the person signing the widget is known beforehand, the widget can also be personalized with the signer&rsquo;s information using the provided personalization method `PUT /widgets/{widgetId}/personalize`. When creating the widget, your application may also specify the address of the Web page that users will be redirected to when they successfully complete signing the widget.
 
 ```http
-POST /api/rest/v5/widgets HTTP/1.1
+POST /api/rest/v6/widgets HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: 3AAABLblqZNotRelaTOKEN
 Content-Type: application/json
@@ -41,4 +41,4 @@ You can also send a GET request to `/widgets/{widgetId}/formData` to retrieve th
 
 Each time a widget is signed by a person, a separate instance of a document gets created. To get the agreements created using the widget, call `/widgets/{widgetID}/agreements` GET where _widgetID_ is the key returned by the service while creating the widget. To retrieve the data filled by the users at the time of signing the widget, call `GET /widgets/{widgetID}/formData`. The service returns data in comma-separated value (CSV) file format. The first line includes the column header names, and each row represents a distinct instance of the widget.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/widgets/)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/)

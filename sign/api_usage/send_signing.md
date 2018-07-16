@@ -19,7 +19,7 @@ For all future service calls, we will be sending the requests to this access poi
 To upload a PDF document for signing, send a POST request to the `transientDocuments` endpoint. This is a multipart request consisting of filename, MIME type, and the file stream. You will get back an ID as a response that uniquely represents the document. Your application needs to specify the recipients and other sending options required for sending the document for signing. Your application can also specify a callback URL that will be used by Adobe Sign to notify when the signature process is complete.
 
 ```http
-POST /api/rest/v5/transientDocuments HTTP/1.1
+POST /api/rest/v6/transientDocuments HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: MvyABjNotARealTokenHkYyi
 Content-Type: multipart/form-data
@@ -40,7 +40,7 @@ The document uploaded through this call is termed as a _transient document_ sinc
 
 You can only upload one file at a time through this request.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/transientDocuments/createTransientDocument)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument)
 
 ## Send the document
 Once you have uploaded the document, send the document to all the related parties for signing. For this to happen, you need to create an _agreement._
@@ -48,7 +48,7 @@ Once you have uploaded the document, send the document to all the related partie
 For creating an agreement, send a POST request to the `/agreements` endpoint with the following JSON body:
 
 ```json
-POST /api/rest/v5/agreements HTTP/1.1
+POST /api/rest/v6/agreements HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
@@ -98,4 +98,4 @@ You will get the following response containing the `agreementId`:
 
 The returned `agreementId` must be used to refer to the agreement in all subsequent API calls. This ID must be used to retrieve up-to-date status of the agreement, either by polling or when Adobe Sign notifies your application of any status change.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/agreements/)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/)

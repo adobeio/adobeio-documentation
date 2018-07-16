@@ -11,7 +11,7 @@ The returned document ID can be used in the `/agreements/{agreementId}/documents
 Send the following GET request to retrieve the signed agreement:
 
 ```http
-GET /api/rest/v5/agreements/3AAA5NOTREALIDiH/combinedDocument HTTP/1.1
+GET /api/rest/v6/agreements/3AAA5NOTREALIDiH/combinedDocument HTTP/1.1
 Host: api.na1.echosign.com:443
 Access-Token: 3AAABLblqZhB9BF
 ```
@@ -20,5 +20,5 @@ The response body will contain the content of the PDF file, which you can save l
 
 Note that the agreement can be downloaded even before it gets signed. Provide the `versionId` attribute when invoking `GET /agreements/{agreementId}/combinedDocument/` to get the correct version of the agreement. For example, when the agreement is sent to two entities for signing, and when only one entity signs, the document can still be downloaded. If the `versionId` is not specified, the document in the latest state is returned.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v5#!/agreements/_0_1_2_3_4_5_6)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/_0_1_2_3_4_5_6)
 
