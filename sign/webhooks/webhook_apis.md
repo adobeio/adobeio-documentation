@@ -40,8 +40,8 @@ Adobe Sign APIs include the following endpoints:
     </tr>
     <tr>
       <td>Request object</td>
-      <td>:<code>WebhookInfo:</code>
-        <pre>
+      <td><code>WebhookInfo:</code>
+        <pre><code class="javascript language-javascript hljs">
 {
    "name": "",
    "scope": "",
@@ -76,8 +76,7 @@ Adobe Sign APIs include the following endpoints:
          "includeParticipantsInfo": false
       }
    }
-}
-</pre></td>
+}</code></pre></td>
     </tr>
     <tr>
       <td>Response header</td>
@@ -90,9 +89,9 @@ Adobe Sign APIs include the following endpoints:
     <tr>
       <td>Response object </td>
       <td><code>WebhookCreationResponse</code>
-        <pre>{
+        <pre><code class="javascript language-javascript hljs">{
    "id" : ""
-}</pre></td>
+}</code></pre></td>
     </tr>
     <tr>
       <td>HTTPS status code</td>
@@ -211,7 +210,7 @@ The `HTTP Location` header field is returned in the response to provide informat
     <tr>
       <td>Response object </td>
       <td><code>WebhooksInfo</code>
-         <pre>{
+         <pre><code class="javascript language-javascript hljs">{
    "userWebhookList": [
       {
          "applicationName": "Application for REST Swagger Documentation",
@@ -250,7 +249,7 @@ The `HTTP Location` header field is returned in the response to provide informat
       "nextCursor": " "
    }
 }
-        </pre></td>
+        </code></pre></td>
     </tr>
     <tr>
       <td>HTTPS status code</td>
@@ -318,7 +317,7 @@ The `HTTP Location` header field is returned in the response to provide informat
     <tr>
       <td>Response object</td>
       <td><code>WebhookInfo</code>
-        <pre>{
+        <pre><code class="javascript language-javascript hljs">{
     "scope": "",
     "webhookSubscriptionEvents": [
         ""
@@ -351,7 +350,7 @@ The `HTTP Location` header field is returned in the response to provide informat
             "includeParticipantsInfo": false
         }
     }
-}</pre></td>
+}</code></pre></td>
     </tr>
     <tr>
       <td>HTTPS status code</td>
@@ -414,7 +413,7 @@ The `HTTP Location` header field is returned in the response to provide informat
     <tr>
       <td>Request body</td>
       <td><code>WebhookInfo</code>
-        <pre>{
+        <pre><code class="javascript language-javascript hljs">{
    "name": "",
    "scope": "",
    "state": "",
@@ -448,7 +447,7 @@ The `HTTP Location` header field is returned in the response to provide informat
          "includeParticipantsInfo": false
       }
    }
-}</pre></td>
+}</code></pre></td>
     </tr>
     <tr>
       <td>Response content type</td>
@@ -562,9 +561,9 @@ Only events and conditional parameters can be  modified. The webhook URL can&rsq
     <tr>
       <td>Request body</td>
       <td><code>WebhookInfo</code>
-        <pre>{
+        <pre><code class="javascript language-javascript hljs">{
    "state": ""
-}</pre></td>
+}</code></pre></td>
     </tr>
     <tr>
       <td>Response content type</td>

@@ -56,7 +56,7 @@ following prerequisites:
 
 **OAuth scopes for webhooks**
 
-To call webhook APIs, you must enable webhook scopes for your application. The scopes webhook_read, webhook_write, and webhook_retention are needed to call GET, POST/PUT and DELETE APIs respectively.
+To call webhook APIs, you must enable webhook scopes for your application. The scopes webhook\_read, webhook\_write, and webhook\_retention are needed to call GET, POST/PUT and DELETE APIs respectively.
 
 ### Configure a webhook and subscribe to events
 
@@ -355,9 +355,9 @@ When you register or update a webhook, you can specify whether you want to recei
 
 -   includeDocumentsInfo: Determines whether document info will be returned in the response payload. This might or might not be applicable in a specific event’s payload.
 
--   includeParticipantsInfo: Determines whether participants info will be returned in the response payload; the participants info JSON keys will change based on the event being notified. For example, an AGREEMENT_CREATED event does not contain the key for nextParticipant, while the ACTION_REQUESTED event will have it.
+-   includeParticipantsInfo: Determines whether participants info will be returned in the response payload; the participants info JSON keys will change based on the event being notified. For example, an AGREEMENT\_CREATED event does not contain the key for nextParticipant, while the ACTION\_REQUESTED event will have it.
 
--   includeSignedDocuments: Determines whether signed documents will be returned in the webhook response payload. If set to true, the signed document will be returned in **base64-encoded format** in JSON when signing is complete. This will be sent only in the notification for the AGREEMENT_WORKFLOW_COMPLETED event.
+-   includeSignedDocuments: Determines whether signed documents will be returned in the webhook response payload. If set to true, the signed document will be returned in **base64-encoded format** in JSON when signing is complete. This will be sent only in the notification for the AGREEMENT\_WORKFLOW\_COMPLETED event.
 
 **Widget**
 
