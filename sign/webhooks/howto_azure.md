@@ -39,10 +39,9 @@ To create and host a webhook in Azure Functions, you need:
     
     ![Creating a new function](../img/sign_webhooks_azure_2.png)
 
-5.  Select "Webhook + API" as the scenario and "JavaScript" as the language;     then select "Create this function".
+5.  Select "Webhook + API" as the scenario and "JavaScript" as the language; then select "Create this function".
 
-This will create a new function that has the capability of handling incoming API
-requests.
+This will create a new function that has the capability of handling incoming API requests.
 
 ### Add logic to register your Adobe Sign webhook
 
@@ -53,7 +52,7 @@ Before registering a webhook successfully, Adobe Sign verifies that the webhook 
 This is the same header which was passed in the request, and it must be echoed
 back in the response.
 
-1.  Replace the contents of the index.js file with the following code snippet:
+1.  Replace the contents of the index.js file with the following code snippet:  
 
     ```javascript  
     module.exports = function (context, req) {
@@ -82,14 +81,13 @@ back in the response.
     - Mock the dummy request:  
       ![The dummy request](../img/sign_webhooks_azure_3.png)
         
-    Although the response headers are not shown above, you can observe them by mocking the request with developer tools such as
-[Postman](https://www.getpostman.com/).
+    Although the response headers are not shown above, you can observe them by mocking the request with developer tools such as [Postman](https://www.getpostman.com/).
 
 **Case 2: Pass the client ID in the response body with the key `xAdobeSignClientId`**
 
 In the JSON response body, pass the key `xAdobeSignClientId` with its value being the same client ID that was sent in the request header.
 
-1.  Replace the Index.js file with the following:  
+1.  Replace the index.js file with the following:  
 
     ```javascript
     module.exports = function (context, req) {

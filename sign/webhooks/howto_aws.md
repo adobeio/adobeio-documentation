@@ -6,7 +6,7 @@
 - [Add logic to register your Adobe Sign webhook](#addlogictoregisteryouradobesignwebhook)
 - [Configure the AWS API Gateway](#configuretheawsapigateway)
 - [Deploy the API](#deploytheapi)
-- [Ready to use](#Readytouse)
+- [Ready to use](#readytouse)
 
 AWS Lambda Functions is a serverless computing service offered by Amazon Web Services. AWS Lambda Functions offer you a platform in which you can execute function code on demand over the internet without the need to manage your own web servers. This gives you a no-overhead solution for hosting functions in the cloud, such as webhooks for Adobe Sign. AWS Lambda Functions support Node.js (JavaScript), Java, Python, C\#, and Go.
 
@@ -34,7 +34,7 @@ To create an AWS Lambda function:
 
 ## Add logic to register your Adobe Sign webhook
 
-Before registering a webhook, Adobe Sign verifies that the webhook URL that is provided in the registration request really intends to receive notifications; see [Verification of Intent](../webhooks.md#verificationofintentofthewebhookURL). For this purpose, when a new webhook registration request is received by Adobe Sign, it first makes an HTTPS GET verification request to the webhook URL with a custom HTTP header, `X-AdobeSign-ClientId`. The value in this header is set to the client ID of the application that is requesting to create and register the webhook. The webhook URL must respond to this verification request with a **2XX response code**, and it must send back the same client ID value in one of the following two ways: Also note the same behaviour for clientID is expected when the Webhook URL receives POST notifications.
+Before registering a webhook, Adobe Sign verifies that the webhook URL that is provided in the registration request really intends to receive notifications; see [Verification of Intent](../webhooks.md#verificationofintentofthewebhookurl). For this purpose, when a new webhook registration request is received by Adobe Sign, it first makes an HTTPS GET verification request to the webhook URL with a custom HTTP header, `X-AdobeSign-ClientId`. The value in this header is set to the client ID of the application that is requesting to create and register the webhook. The webhook URL must respond to this verification request with a **2XX response code**, and it must send back the same client ID value in one of the following two ways: Also note the same behaviour for clientID is expected when the Webhook URL receives POST notifications.
 
 **Case 1: Pass the client ID as X-AdobeSign-ClientId in the response header**
 

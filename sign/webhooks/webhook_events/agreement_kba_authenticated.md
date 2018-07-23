@@ -42,13 +42,6 @@
          "deviceTime":""
       },
       "documentVisibilityEnabled":"",
-      "emailOption":{  
-         "sendTarget":{  
-            "completionEmails":"",
-            "inFlightEmails":"",
-            "initEmails":""
-         }
-      },
       "createdDate":"",
       "expirationTime":"",
       "externalId":{  

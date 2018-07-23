@@ -22,7 +22,7 @@ This table displays the events and payload which will be sent in webhook notific
 | --- | --- |
 | `AGREEMENT_ACTION_COMPLETED` | When an agreement is signed by the participant. [View Payload](webhook_events/agreement_action_completed.md) |
 | `AGREEMENT_ACTION_DELEGATED` | When an agreement is delegated by the participant. [View Payload](webhook_events/agreement_action_delegated.md) |
-| `AGREEMENT_ACTION_REPLACED_SIGNER` | When an agreement&rsquo;s signer is replaced. [View Payload](webhook_events/agreement_action_replaced_signer.md) |
+| `AGREEMENT_ACTION_REPLACED_SIGNER` | When an agreement&rsquo;s signer is replaced. [View Payload](webhook_events/agreement_action_replaced_signer.md)(webhook_events/agreement_action_replaced_signer.md) |
 | `AGREEMENT_ACTION_REQUESTED` | When an agreement action is requested. [View Payload](webhook_events/agreement_action_requested.md) |
 | `AGREEMENT_AUTO_CANCELLED_CONVERSION_PROBLEM` | When an agreement is auto-cancelled due to a conversion problem. [View Payload](webhook_events/agreement_auto_cancelled_conversion_problem.md) |
 | `AGREEMENT_CREATED` | When an agreement is created. [View Payload](webhook_events/agreement_created.md) |
