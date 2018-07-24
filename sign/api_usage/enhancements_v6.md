@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [Enhancements](#enhancements)
     - [Pagination support ](#paginationsupport)
-    - [Constant secure IDs](#constantsecureids)
+    - [Constant IDs](#constantids)
     - [ETag support](h#etagsupport)
     - [GET, PUT, POST consistency](#getputpostconsistency)
     - [Performance improvements](#performanceimprovements)
@@ -24,13 +24,13 @@
 
 ## Overview
 
-This page is a comprehensive guide for Adobe developers who are looking to plug Adobe Sign Version 6 REST APIs in their solutions. We list out all the enhancements and new features that will be part of the v6 Adobe Sign APIs. To facilitate developers who are already using older versions of our APIs in migrating to Version 6, we have tabulated the v6 APIs against their closest counterparts in previous versions in our [API Change Log](api_change_log.md). In the change log, we have also documented enhancements, features, and any changes from the prior version. In addition to the information compiled here, you can also refer to our  [Swagger documentation page](https://secure.echosign.com/public/docs/restapi/v6) to get a quick reference for the Adobe Sign APIs. This page lists all our APIs in a easily discoverable format and lets you try them out without having to write any code!
+This page is a comprehensive guide for Adobe developers who are looking to plug Adobe Sign Version 6 REST APIs in their solutions. We list out all the enhancements and new features that are part of the v6 Adobe Sign APIs. To facilitate developers who are already using older versions of our APIs in migrating to Version 6, we have tabulated the v6 APIs against their closest counterparts in previous versions in our [API Change Log](api_change_log.md). In the change log, we have also documented enhancements, features, and any changes from the prior version. In addition to the information compiled here, you can also refer to our  [Swagger documentation page](https://secure.echosign.com/public/docs/restapi/v6) to get a quick reference for the Adobe Sign APIs. This page lists all our APIs in a easily discoverable format and lets you try them out without having to write any code!
 
 ## Enhancements
 
 ### Pagination Support
 
-Existing Adobe Sign APIs return the entire list of resources (agreements, widgets, and library documents) that a user has in a GET call. For any user with even decent transactions, this list soon becomes huge. The v6 APIs have introduced pagination support to all these resources with a client-configurable page size. This will be especially useful to our mobile clients and integrations who are constrained by their consumption capacity. This sample shows pagination in a request and response:
+Existing Adobe Sign APIs return the entire list of resources (agreements, widgets, and library documents) that a user has in a GET call. For any user with even a decent number of transactions, this list soon becomes huge. The v6 APIs have introduced pagination support to all these resources with a client-configurable page size. This will be especially useful to our mobile clients and integrations who are constrained by their consumption capacity. This sample shows pagination in a request and response:
 
 **Sample Request**
 
@@ -46,9 +46,9 @@ Existing Adobe Sign APIs return the entire list of resources (agreements, widget
         {
           "displayUserSetMemberInfos": [
             {
-              "company": "TestAccNaman",
-              "email": "es.auto+a2@hotmail.com",
-              "fullName": "a2 Admin"
+              "company": "My Company",
+              "email": "myname@mycompany.com",
+              "fullName": "My Name"
             }
           ]
         }
@@ -75,15 +75,15 @@ The subsequent GET /resources calls would just need to add  **nextCursor**  as  
 
 ```GET https://api.na1.echosign.com:443/api/rest/v6/agreements?pageSize=50&cursor=qJXXj2UAUX1X9rTSqoUOUOlkhsdo*```
 
-### Constant secure IDs
+### Constant IDs
 
-A major issue that our partners and integrators have reported is that the identifiers (IDs) of our resources can change. Partner integrations tend to store these resource IDs and do a match later, which can break with ID changes. This can be due to the encryption algorithm changing or key rotation. Also, at present our IDs are tied to the API caller (which means the same resource can have different IDs) and can get fairly long due to encapsulating resource information. The v6 APIs address this by ensuring that IDs stay constant through time and across all API callers for a given resource. This will enable clients to build their own metadata associated with an Adobe Sign resource ID.
+Our Partners and Integrators have requested that the identifiers remain constant in the lifetime of a resource. This is because they tend to store these resource IDs and do a match later, which can break with ID changes. The v6 APIs address this by ensuring that IDs stay constant through time and across all API callers for a given resource. This will enable clients to build their own metadata associated with an Adobe Sign resource ID.
 
-We do guarantee the forward capability for this change: in other words, **older identifiers will continue working in v6 Sign APIs.** However, new identifiers generated through v6 APIs **will only be compatible with Adobe Sign v6 or any higher version.** Therefore, we do not recommend partial upgrade to v6 APIs as it might break things.
+Identifiers are forward-compatible: **older identifiers will continue working in v6 Sign APIs.** However, new identifiers generated through v6 APIs **will only be compatible with Adobe Sign v6 or any higher version.**
 
 ### ETag support
 
-Polling on a resource is a common operation; for instance, in the case of agreements, where a client application is attempting to check the latest status. In fact, the count of corresponding REST and SOAP APIs for this polling supersedes the entire remaining set of calls combined. The v6 REST APIs significantly optimize this by adding support for an ETag, which will only fetch the full body response if the resource has been modified. This saves the client from loading the same response as well as its unnecessary parsing.
+Polling on a resource is a common operation; for instance, in the case of agreements, where a client application is attempting to check the latest status. The v6 REST APIs significantly optimize this by adding support for an ETag, which will only fetch the full body response if the resource has been modified. This saves the client from loading the same response as well as its unnecessary parsing.
 
 In addition, this also helps to resolve conflicts in the case of concurrent update operations by only allowing the updates with the ETag of the latest version of the resource in their request header (_If-match_).  This example explains the functioning of ETags in detail:
 
@@ -109,10 +109,7 @@ Date: Mon, 12 Feb 2018 09:45:24 GMT
 Server: Apache
 ETag: D27e5290dc3a748068e42a59f4dfc6f6b1d5eaba1
 Content-Length: 661
-Strict-Transport-Security: max-age=31536000;
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-X-Robots-Tag: noneP3P: CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+...
 Keep-Alive: timeout=15, max=200
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -169,13 +166,13 @@ The ETag value required to be passed in any PUT or DELETE API can be obtained fr
 
 ### GET, PUT, POST consistency
 
-Current REST APIs, due to their tight coupling with SOAP, have a different interface for POST (resource creation), GET (fetching), and PUT (update). This can complicate clients who have to manage different models for each of these operations. The Version 6 REST APIs solve this by explicitly focusing on GET, PUT and POST consistency in our interfaces. For  more elaboration on this please refer to the  [agreement model](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo) in GET, PUT and POST operations.
+In building the Adobe Sign v6 APIs, we have enabled more simplicity in the design of client applications by creating consistency across GET, POST, and PUT operations in each API, thereby enabling clients to reuse the same model across these APIs. For more elaboration on this please refer to the [agreement model](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo) in GET, PUT and POST operations.
 
 ### Performance improvements
 
-The internal re-architecture of the backend implementation and decoupling of SOAP and REST has allowed us to take a fresh look at the implementation and get rid of redundant checks and calls to the database. This, in general, has resulted in the improvement of the client experience. Also, we have migrated to the asynchronous creation of resources, which has significantly improved our response time. The client experience of using the APIs has significantly improved due to these performance enhancmenents.
+In Adobe Sign v6, we've taken a fresh look at the system architecture to eliminate redundant database checks; this has improved the performance of the interface. Also, we have migrated to the asynchronous creation of resources, which has significantly improved our response time. The client experience of using the APIs has significantly improved due to these performance enhancmenents.
 
-However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED` which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
+However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED`, which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
 
 ## Features
 
@@ -185,14 +182,13 @@ This feature enables users associated with an agreement to share the agreement a
 
 ### Authoring APIs
 
-The authoring APIs are a set of APIs that allow a user to _author_ the documents of an agreement before sending them out. The authoring operation here refers to creating, editing or placing form fields along with their configurations (assignee, conditions, data type, and more) in the agreement documents. The v6 APIs have these capabilities and a client can now exploit these APIs to create their own agreement authoring experience. The table below lists the APIs in this set along with the functionality that they provide.
+The authoring APIs are a set of APIs that allow a user to _author_ the documents of an agreement before sending them out. The authoring operation here refers to creating, editing or placing form fields along with their configurations (assignee, conditions, data type, and more) in the agreement documents. The v6 APIs have these capabilities and a client can now leverage these APIs to create their own agreement authoring experience. The table below lists the APIs in this set along with the functionality that they provide.
 
 | **Authoring API** | **Functionality** |
 | --- | --- |
-| [POST /agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/postFormFields) | Adds forms to an agreement from the given template. The response would contain the information of all the newly added form fields. |
+| [POST /agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/addTemplateFieldsToAgreement) | Adds forms to an agreement from the given template. The response would contain the information of all the newly added form fields. |
 | [GET /agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getFormFields) | Retrieves all the form fields present in an agreement. |
 | [PUT /agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateFormFields) | Updates and configures(say location, default value, background, etc.) the present form fields in the agreement documents. |
-| [DELETE /agreements/{agreementId}/formFields](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/deleteFormFields) | Removes a _list_ of form fields identified by their name from an agreement. |
 
 ### Document visibility
 
@@ -240,7 +236,7 @@ The new document visibility feature allows senders to control the exposure of ag
 
 ### Draft
 
-One of the problem that clients have faced while creating resources (say, agreements) was that the creation process needed to be single-shot. The incremental creation of any resource is really helpful, especially when it constitutes one of many complex components. To achieve this capability, we have introduced the concept of draft for all resources. Draft is a temporary or primitive stage of the final intended resource that can be updated in steps to create the final resource.
+The v6 APIs provides for an incremental creation of resource by introducing the concept of “DRAFT”. The incremental creation of any resource is really helpful, especially when it constitutes one of many complex components. Draft is a temporary or primitive stage of the final intended resource that can be updated in steps to create the final resource.
 
 This example illustrates a stepwise creation of an agreement:
 
