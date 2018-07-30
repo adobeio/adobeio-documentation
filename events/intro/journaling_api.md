@@ -28,7 +28,9 @@ There is only one API for journaling:
 
 `/events/organizations/{orgId}/integrations/{intId}/{registrationId}`
 
-This API gets all events for a given event registration. 
+This API gets all events for a given event registration.
+
+Make sure that the `I/O Management API` is added as a service in your integration (using the `Services` tab in the I/O Console), in order to be able to invoke the journaling API.
 
 ## Accessing the journaling endpoint
 
