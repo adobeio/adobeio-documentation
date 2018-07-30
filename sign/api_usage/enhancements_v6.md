@@ -24,13 +24,13 @@
 
 ## Overview
 
-This page is a comprehensive guide for Adobe developers who are looking to plug Adobe Sign Version 6 REST APIs in their solutions. We list out all the enhancements and new features that are part of the v6 Adobe Sign APIs. To facilitate developers who are already using older versions of our APIs in migrating to Version 6, we have tabulated the v6 APIs against their closest counterparts in previous versions in our [API Change Log](api_change_log.md). In the change log, we have also documented enhancements, features, and any changes from the prior version. In addition to the information compiled here, you can also refer to our  [Swagger documentation page](https://secure.echosign.com/public/docs/restapi/v6) to get a quick reference for the Adobe Sign APIs. This page lists all our APIs in a easily discoverable format and lets you try them out without having to write any code!
+This page is a comprehensive guide for developers who are looking to plug Adobe Sign Version 6 REST APIs in their solutions. We list out all the enhancements and new features that are part of the v6 Adobe Sign APIs. To facilitate developers who are already using older versions of our APIs in migrating to Version 6, we have tabulated the v6 APIs against their closest counterparts in previous versions in the [API Change Log](api_change_log.md). In the change log, we have documented enhancements, features, and any changes from the prior version. In addition to the information compiled here, you can also refer to our  [Swagger documentation page](https://secure.echosign.com/public/docs/restapi/v6) to get a quick reference for the Adobe Sign APIs. This page lists all our APIs in a easily discoverable format and lets you try them out without having to write any code!
 
 ## Enhancements
 
 ### Pagination Support
 
-Existing Adobe Sign APIs return the entire list of resources (agreements, widgets, and library documents) that a user has in a GET call. For any user with even a decent number of transactions, this list soon becomes huge. The v6 APIs have introduced pagination support to all these resources with a client-configurable page size. This will be especially useful to our mobile clients and integrations who are constrained by their consumption capacity. This sample shows pagination in a request and response:
+Existing Adobe Sign APIs return the entire list of resources (agreements, widgets, or library documents) that a user has in a GET call. For any user with even a decent number of transactions, this list soon becomes huge. The v6 APIs have introduced pagination support to all these resources with a client-configurable page size. This will be especially useful to our mobile clients and integrations who are constrained by their consumption capacity. This sample shows pagination in a request and response:
 
 **Sample Request**
 
@@ -46,9 +46,9 @@ Existing Adobe Sign APIs return the entire list of resources (agreements, widget
         {
           "displayUserSetMemberInfos": [
             {
-              "company": "My Company",
-              "email": "myname@mycompany.com",
-              "fullName": "My Name"
+              "company": "Adobe",
+              "email": "adobe.sign.user@adobe.com",
+              "fullName": "AdobeSign User"
             }
           ]
         }
@@ -145,6 +145,7 @@ The ETag value required to be passed in any PUT or DELETE API can be obtained fr
 | Update/Deletion API | Corresponding GET endpoint |
 | --- | --- |
 | PUT /agreements/{agreementId} | GET /agreements/{agreementId} |
+| POST /agreements/{agreementId}/formFields | GET /agreements/{agreementId}/formFields |
 | PUT /agreements/{agreementId}/formFields | GET /agreements/{agreementId}/formFields |
 | PUT /agreements/{agreementId}/formFields/mergeInfo | GET /agreements/{agreementId}/formFields/mergeInfo |
 | PUT /agreements/{agreementId}/members/participantSets/{participantSetId} | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
@@ -178,7 +179,7 @@ However, due to the asynchronous nature of the creation APIs, the clients must *
 
 ### Agreement sharing
 
-This feature enables users associated with an agreement to share the agreement at any point of time through Adobe Sign APIs. This feature brings the agreement sharing capability in Adobe Sign web app and Adobe Sign APIs up to par. The  [POST /agreements/{agreementId}/members/share](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createShareOnAgreement) API exposes the agreement sharing feature.
+This feature enables users associated with an agreement to share the agreement at any point of time through Adobe Sign APIs. This feature brings the agreement sharing capability in Adobe Sign web app and Adobe Sign APIs at par. The  [POST /agreements/{agreementId}/members/share](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createShareOnAgreement) API exposes the agreement sharing feature.
 
 ### Authoring APIs
 
@@ -255,7 +256,7 @@ This example illustrates a stepwise creation of an agreement:
 
 The step above creates a draft. Notice that we have not assigned any participant to this agreement yet.
 
-**Step 2: PUT /agreements/agreementId to complete this draft**
+**Step 2: PUT /agreements/{agreementId} to complete this draft**
 
 ```json
 {
@@ -279,9 +280,10 @@ Notice the addition of a participant and an update in the `name` field. This ste
 
 The next step finalizes the draft into an agreement.
 
-**Step 3: PUT /agreements/&lt;agreementId&gt;/state to complete this draft/**
+**Step 3: PUT /agreements/{agreementId}/state to complete this draft**
 
-```json{
+```json
+{
   "state": "IN_PROCESS"
 }
 ```
@@ -305,11 +307,11 @@ The reminder APIs in v6 enable clients to create reminders for _any_ participant
 | **Authoring API** | **Functionality** |
 | --- | --- |
 | [POST /agreements/{agreementId}/reminders](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createReminderOnParticipant) | Sets reminders for a list of participant. |
-| [GET /agreements/{agreementId}/reminders](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementReminders) | Retrieves all the reminders set in an agreement. |
+| [GET /agreements/{agreementId}/reminders](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementReminders) | Retrieves all the reminders set on an agreement. |
 
-### Resource view
+### Resource views
 
-There are a number of _views_ associated with a resource. For example, an agreement may have an authoring view, agreement documents view, signing page view, or a manage page view with the agreement selected. The availaibility of all these views depends on both the state of the resource and also the relationship of the user with the resource. To access and parameterize these resource views, the v6 Adobe Sign API includes this endpoint to list all such views in their desired configuration:  
+There are a number of _views_ associated with a resource. For example, an agreement may have an authoring view, agreement documents view, signing page view, or a manage page view with the agreement selected. The availaibility of all these views depends on both the state of the resource and also the relationship of the user with the resource. To access and customize these resource views, the v6 Adobe Sign API includes this endpoint to list all such views in their desired configuration:  
 [POST /resource/{resourceId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView)
 
 **Sample request/response:**
@@ -319,7 +321,7 @@ _Request - POST /agreements/{agreementId}/views_
 ```java
 {
     "names": "DOCUMENT",
-    "commonConfiguration": {
+    "commonViewConfiguration": {
         "autoLoginUser": false,
         "noChrome": true,
         "locale": "en"
@@ -333,15 +335,15 @@ _Response - POST /agreements/{agreementId}/views_
 [  
     {
         "name": "DOCUMENT",
-        "url": "https://secure.echosign.com/account/agreements?aid=CBJCHBCAABAA0RVdUCYoR5kU9vh4-b4qHhYW_1r10hKw&pid=CBJCHBCAABAAH-F0jK3mHa53G7gr0SiftgdqE-jjwNVq&client_id=pUQL757H2R2&noChrome=true",
-        "embeddedCode": "<script type='text/javascript' language='JavaScript' src='https://secure.echosign.com/embed/account/agreements?aid=CBJCHBCAABAA0RVdUCYoR5kU9vh4-b4qHhYW_1r10hKw&pid=CBJCHBCAABAAH-F0jK3mHa53G7gr0SiftgdqE-jjwNVq&client_id=pUQL757H2R2&noChrome=true'></script>"
+        "url": "https://secure.echosign.com/account/agreements?aid=CBJCHBCAABAA0RVdUCYoR5kU9vh4-b4qHhYW_1r10hKw&pid=CBJCHBCAABAAH-F0jK3mHa53G7gr0SiftgdqE-jjwNVq&noChrome=true",
+        "embeddedCode": "<script type='text/javascript' language='JavaScript' src='https://secure.echosign.com/embed/account/agreements?aid=CBJCHBCAABAA0RVdUCYoR5kU9vh4-b4qHhYW_1r10hKw&pid=CBJCHBCAABAAH-F0jK3mHa53G7gr0SiftgdqE-jjwNVq&noChrome=true'></script>"
     }
 ]
 ```
 
 ### Resource visibility
 
-The agreement visibility feature enables a client to control which resources are included in the response body of the enumeration/reource listing APIs. This helps users to hide all resources from their view that they don&rsquo;t want to focus on. The  [PUT /resource/{resourceId}/me/visibility](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementVisibility) API exposes this functionality, wherein a resource can be an agreement, widget, template or megasign in Adobe Sign.
+The agreement visibility feature enables a client to control which resources are included in the response body of the enumeration/reource listing APIs like `GET /agreements`. This helps users to hide all resources from their view that they don&rsquo;t want to focus on. The  [PUT /resource/{resourceId}/me/visibility](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementVisibility) API exposes this functionality, wherein a resource can be an agreement, widget, template or megasign in Adobe Sign.
 
 ### Suppress email
 

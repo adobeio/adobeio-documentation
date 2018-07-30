@@ -76,6 +76,7 @@ back in the response.
         context.done();
     };
     ```
+
 2.  Test the behavior by mocking the request:
     - Select the Test button at the extreme right corner.
     - Mock the dummy request:  
