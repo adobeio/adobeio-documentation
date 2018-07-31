@@ -8,7 +8,7 @@
 - [PUT /webhooks/{webhookId}](#putwebhookswebhookid) Modifies an existing webhook.
 - [PUT /webhooks/{webhookId}/state](#putwebhookswebhookidstate) Modifies an existing webhook&rsquo;s status(ACTIVE/INACTIVE).
 - [DELETE /webhooks/{webhookId}](#deletewebhookswebhookid) Deletes a webhook.
-- [Standard error codes in every API request](#standarderrorcodesin everyapirequest)
+- [Standard error codes in every API request](#standarderrorcodesineveryapirequest)
 - [Standard headers in every API request](#standardheadersineveryapirequest)
 
 Webhook APIs are the means by which your integration communicates with the Adobe Sign service about webhooks. Use the various API endpoints to create, delete, modify, and retrieve status information about your webhooks.
