@@ -51,16 +51,16 @@
               "title": "Create an Application"
             },
             {
+              "importedFileName": "configure_oauth",
+              "pages": [],
+              "path": "adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md",
+              "title": "Configure OAuth for Application"
+            },
+            {
               "importedFileName": "get_access_token",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/gstarted/get_access_token.md",
               "title": "Get an Access Token"
-            },
-            {
-              "importedFileName": "configure_oauth",
-              "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md",
-              "title": "Configuring OAuth for Application"
             }
         
       ],
@@ -346,7 +346,7 @@
             {
               "importedFileName": "photo_rights",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/scenarioes/photo_rights.md",
+              "path": "adobeio/adobeio-documentation/master/sign/scenarios/photo_rights.md",
               "title": "Photo Rights"
             }
       ],
