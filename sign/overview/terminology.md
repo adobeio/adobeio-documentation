@@ -8,9 +8,9 @@ A library template can be reused or repurposed multiple times. Adobe Sign suppor
 
 - _Document templates:_ A document template is a reusable document that can be shared with other users in your account, allowing multiple users to send out the same document without needing to make any changes.
 - _Form field templates:_ A form field template is a reusable field layer that can be applied to any document. Form field templates can also be shared with other users in your account. Form field templates are ideal in the following situations:
-  - You have one field layout that works for multiple documents.
-  - You have a document that can be sent in a number of different ways.
-  - You need to revise a document&rsquo;s content, but the fields remain in the same place.
+  * You have one field layout that works for multiple documents.
+  * You have a document that can be sent in a number of different ways.
+  * You need to revise a document&rsquo;s content, but the fields remain in the same place.
 
 Instead of creating a new library document every time a document is updated, the same form field layer can be applied. Form field templates can be edited to facilitate changes in the arrangement of fields or field properties.
 
