@@ -1,5 +1,7 @@
 # A simple workflow
 
+![A simple workflow: overview](../img/sign_overview_2.png)
+
 A very simple workflow:
 
 1. [Send the document for signing](../api_usage/send_signing.md)

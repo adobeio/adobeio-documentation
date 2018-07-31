@@ -1,5 +1,7 @@
 # Overview
 
+![Adobe Sign Developer's Guide](img/sign_overview_1.png)
+
 As a developer, you can build a variety of integrations with Adobe Sign using just the APIs. Once built, integrations allow you to start the Adobe Sign experience entirely from within the external application.
 
 You can also incorporate the functionality of Adobe Sign into any external applications by embedding the Adobe Sign UI within those applications. External applications can also receive status updates in real time for transactions initiated using Adobe Sign. These external applications can retrieve and store copies of the signed agreements.
