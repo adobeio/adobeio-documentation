@@ -10,19 +10,19 @@
 
 Events are the reason for webhooks: webhooks are a way for your Adobe Sign integration to listen for and respond to Adobe Sign events. This page provides the info you need to determine what events your integration will listen for and respond to, and what details are included in event notifications so you can design your integration to extract the info you need from an event.
 
-### Notification payload for events
+## Notification payload for events
 
 When configuring a webhook, you can choose which events for which you would like to receive payloads. Subscribing only to the specific events is useful for limiting the number of HTTPS requests to the server. You can change the list of subscribed events through the API or UI anytime.
 
 Currently webhooks can be created only for agreement, widget, and megasign events. Each event has a similar JSON schema based on the resource type, but a unique payload object that is determined by its event type. The payload will be returned in JSON format.
 
-This table displays the events and payload which will be sent in webhook notification.
+This table displays the events and payload which will be sent in webhook notifications.
 
-| Event type | Description  and payload template |
+| Event type | Description and payload |
 | --- | --- |
 | `AGREEMENT_ACTION_COMPLETED` | When an agreement is signed by the participant. [View Payload](webhook_events/agreement_action_completed.md) |
 | `AGREEMENT_ACTION_DELEGATED` | When an agreement is delegated by the participant. [View Payload](webhook_events/agreement_action_delegated.md) |
-| `AGREEMENT_ACTION_REPLACED_SIGNER` | When an agreement&rsquo;s signer is replaced. [View Payload](webhook_events/agreement_action_replaced_signer.md)(webhook_events/agreement_action_replaced_signer.md) |
+| `AGREEMENT_ACTION_REPLACED_SIGNER` | When an agreement&rsquo;s signer is replaced. [View Payload](webhook_events/agreement_action_replaced_signer.md) |
 | `AGREEMENT_ACTION_REQUESTED` | When an agreement action is requested. [View Payload](webhook_events/agreement_action_requested.md) |
 | `AGREEMENT_AUTO_CANCELLED_CONVERSION_PROBLEM` | When an agreement is auto-cancelled due to a conversion problem. [View Payload](webhook_events/agreement_auto_cancelled_conversion_problem.md) |
 | `AGREEMENT_CREATED` | When an agreement is created. [View Payload](webhook_events/agreement_created.md) |
@@ -51,18 +51,6 @@ This table displays the events and payload which will be sent in webhook notific
 | `WIDGET_SHARED` | When a widget is shared. [View Payload](webhook_events/widget_shared.md) |
 | `WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM` | When a widget is auto-cancelled due to a conversion problem. [View Payload](webhook_events/widget_auto_cancelled_conversion_problem.md) |
 
-### Receiving a webhook notification
-
-Once your webhook URL is added, your app will start receiving "notification requests" every time a subscribed event is triggered in Sign. A notification request is an HTTPS POST request with a JSON body. The request's POST parameters will contain JSON data relevant to the event that triggered the request.
-
-Additionally, we perform an implicit verification of intent in each webhook notification request that we send to the webhook URL. Thus, every notification request will also include a header called `X-AdobeSign-ClientId` that includes client id of the application that created the webhook. We will consider the webhook notification successfully delivered, if an only if success response **(2XX response code)** is returned  and  the header **(X-AdobeSign-ClientId)** is echoed back in response HTTP header or in a JSON response body with key as **xAdobeSignClientId** and value as the same client id, otherwise we will retry to deliver the notification to the webhook URL until the retries are exhausted.
-
-### Reliable delivery of webhook notifications
-
-Adobe Sign incorporates an advanced, reliable strategy for delivery of webhook notifications. If there is an outage on the receiving end (suppose, for instance, the customer’s server is down), Adobe Sign will retry the notification at a later time—minutes or hours later.
-
-Undelivered events will be persisted in a retry queue and a best effort will be made over the next 72 hours to deliver the notifications in the order they occurred to the client-provided endpoints. The strategy for retrying delivery of notifications is a doubling of time between attempts, starting with a one-minute interval and doubling the interval with each attempt, up to a maximum interval of 12 hours, resulting in 15 retries in the space of 72 hours. If the webhook fails to respond and either the maximum retry time or the maximum retry interval is exceeded, the webhook will be disabled. No notifications will be sent to the webhook URL until the webhook is activated again; all the notifications between the time the webhook is disabled and enabled again will be lost.
-
 ### Payload info
 
 Webhook notification payloads will be delivered using the application/json content type.
@@ -82,7 +70,82 @@ Signed Documents(base 64 encoded format) will be truncated first if size exceeds
 
 This may happen, for example, on an agreement completion event if it includes signed document (base 64 encoded format) as well or for an agreement with multiple form fields.
 
-### Webhook uniqueness 
+### Basic webhook payload for all notifications
+
+All events will include the following common attributes in their payloads. Additional parameters returned along with basic agreement/widget/megasign info in the payload JSON object for particular keys are defined in the payload specificiations for each event; see [Notification payload for events](#notificationpayloadforevents) for links.
+
+| Parameter name | Type | Description | Possible values |
+| --- | --- | --- | --- |
+| `webhookId` | String | Webhook identifier of the webhook for which the notification is being sent |   |
+| `webhookNotificationId` | String | The unique identifier of the webhook notification. This will be helpful in identifying duplicate notifications, if any. |   |
+| `webhookUrlInfo` | Object | URL on which this HTTPS POST notification is triggered. |   |
+| `webhookScope` | String | Scope of the webhook | `ACCOUNT`,`GROUP`,`USER`,`RESOURCE` |
+| `event` | String | Event for which the webhook notification is triggered | `AGREEMENT_CREATED` |
+| `subEvent` | String | Subevent for which the webhook notification is triggered. _This field is event specific and returned with only few events, please look into individual event for the details_ |   |
+| `eventResourceType` | String | The resource type on which the event is triggered. | `AGREEMENT`,`WIDGET`,`MEGASIGN` |
+| `participantRole` | String | Role assumed by all participants in the participant set to which the participant belongs (signer, approver etc.). This is the role of the `participantUser`. This key will be returned only for the following events: `AGREEMENT_WORKFLOW_COMPLETED`, `AGREEMENT_ACTION_COMPLETED`, `AGREEMENT_ACTION_DELEGATED`, `AGREEMENT_ACTION_REQUESTED` | `SIGNER`, `DELEGATE_TO_SIGNER`, `APPROVER`, `DELEGATE_TO_APPROVER`, `ACCEPTOR`, `DELEGATE_TO_ACCEPTOR`, `FORM_FILLER`, `DELEGATE_TO_FORM_FILLER`, `CERTIFIED_RECIPIENT`, `DELEGATE_TO_CERTIFIED_RECIPIENT` or `SHARE` |
+| `actionType` | String | This key will be returned only with the event `AGREEMENT_ACTION_COMPLETED`. |   |
+| `participantUserId` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `participantUserEmail` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `actingUserId` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `actingUserEmail` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `initiatingUserId` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `initiatingUserEmail` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `agreement` | Agreement | Information about the agreement on which the event occurred. This key will be returned only if the event is an agreement event. |   |
+| `widget` | Widget | Information about the widget on which the event occurred. This key will be returned only if the event is a widget event. |   |
+| `megasign` | MegaSign | Information about the megaSign on which the event occurred. This key will be returned only if the event is a megaSign event. |   |
+
+### WebhookUrlInfo
+
+| Parameter name | REST object | Description | Sample value |
+| --- | --- | --- | --- |
+| `Url` | String | HTTPS URL of the webhook | `https://example.com/callback?guid=test` |
+
+### Agreement
+
+This is the minimal info which will be returned for an agreement event if all the conditional parameters are set to false while creating webhooks.
+
+| Parameter name | Type | Description | Possible enums |
+| --- | --- | --- | --- |
+| `id` | String | The unique identifier of agreement that can be used to query status and download signed documents. |   |
+| `name` | String | The name of the agreement that will be used to identify it, in emails and on the website. |   |
+| `status` | Enum | The current status of the agreement.  | `OUT_FOR_SIGNATURE`, `SIGNED`, `APPROVED`, `ACCEPTED`, `DELIVERED`, `FORM_FILLED`, `ABORTED`, `EXPIRED`, `OUT_FOR_APPROVAL`, `OUT_FOR_ACCEPTANCE`, `OUT_FOR_DELIVERY`, `OUT_FOR_FORM_FILLING`, or `CANCELLED` |
+
+### Widget
+
+This is the minimal info which will be returned for a widget event if all the conditional parameters are set to false while creating webhooks.
+
+| Parameter name | Type | Description | Possible enums |
+| --- | --- | --- | --- |
+| `id` | String | The unique identifier of widget that can be used to retrieve the data entered by the signers |   |
+| `name` | String | The name of the widget that will be used to identify it, in emails, website, and other places |   |
+| `status` | Enum | The current status of the widget  | `DRAFT` or `ACTIVE` or `AUTHORING` |
+
+### MegaSign
+
+This is the minimal info which will be returned for a widget event if all the conditional parameters are set to false while creating webhooks.
+
+| Parameter name | Type | Description | Possible enums |
+| --- | --- | --- | --- |
+| `id` | String | The unique identifier of the agreement; it can be used to query status and download signed documents. |   |
+| `name` | String | The name of the agreement that will be used to identify it, in emails and on the website. |   |
+| `status` | Enum | The current status of the agreement. | `OUT_FOR_SIGNATURE`, `SIGNED`, `APPROVED`, `ACCEPTED`, `DELIVERED`, `FORM_FILLED`, `ABORTED`, `EXPIRED`, `OUT_FOR_APPROVAL`, `OUT_FOR_ACCEPTANCE`, `OUT_FOR_DELIVERY`, `OUT_FOR_FORM_FILLING`, or `CANCELLED` |
+
+For different agreement events, the detailed agreement info, participant info, document info, and the signed document will be returned based on the conditional parameters specified during webhook creation.
+
+## Receiving a webhook notification
+
+Once your webhook URL is added, your app will start receiving "notification requests" every time a subscribed event is triggered in Sign. A notification request is an HTTPS POST request with a JSON body. The request's POST parameters will contain JSON data relevant to the event that triggered the request.
+
+Additionally, we perform an implicit verification of intent in each webhook notification request that we send to the webhook URL. Thus, every notification request will also include a header called `X-AdobeSign-ClientId` that includes client id of the application that created the webhook. We will consider the webhook notification successfully delivered, if an only if success response **(2XX response code)** is returned  and  the header **(X-AdobeSign-ClientId)** is echoed back in response HTTP header or in a JSON response body with key as **xAdobeSignClientId** and value as the same client id, otherwise we will retry to deliver the notification to the webhook URL until the retries are exhausted.
+
+## Reliable delivery of webhook notifications
+
+Adobe Sign incorporates an advanced, reliable strategy for delivery of webhook notifications. If there is an outage on the receiving end (suppose, for instance, the customer’s server is down), Adobe Sign will retry the notification at a later time—minutes or hours later.
+
+Undelivered events will be persisted in a retry queue and a best effort will be made over the next 72 hours to deliver the notifications in the order they occurred to the client-provided endpoints. The strategy for retrying delivery of notifications is a doubling of time between attempts, starting with a one-minute interval and doubling the interval with each attempt, up to a maximum interval of 12 hours, resulting in 15 retries in the space of 72 hours. If the webhook fails to respond and either the maximum retry time or the maximum retry interval is exceeded, the webhook will be disabled. No notifications will be sent to the webhook URL until the webhook is activated again; all the notifications between the time the webhook is disabled and enabled again will be lost.
+
+## Webhook uniqueness 
 
 Adobe Sign does not allow the creation of duplicate webhooks. The uniqueness of a webhook is based on a combination of the following attributes:
 
