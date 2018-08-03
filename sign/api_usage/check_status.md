@@ -1,6 +1,6 @@
 # Check the Status
 
-Adobe Sign can return the current status of the agreement and a complete history of events that have happened on that particular agreement. The simplest mechanism is for your application to provide a callback URL when sending the document for signature. Adobe Sign will then ping your service whenever the status of the agreement changes. Upon receiving a callback, your application can then call Adobe Sign to get the latest status on the agreement.
+Adobe Sign can return the current status of the agreement and a complete history of events that have happened on that particular agreement. The simplest mechanism is for your application to provide a webhook URL when sending the document for signature. Adobe Sign will then ping your webhook with the appropriate [webhook event](../webhooks/webhook_events.md) whenever the status of the agreement changes.
 
 ![Checking the status of an agreement](../img/sign_devguide_2.png)
 
@@ -9,10 +9,10 @@ You can also get the most current status of an agreement by sending a GET reques
 ```http
 GET /api/rest/v6/agreements/3AAABLblqZNOTREALAGREEMENTID5_BjiH HTTP/1.1
 Host: api.na1.echosign.com
-Access-Token: 3AAANOTREALTOKENMS-4ATH
+Authorization: Bearer 3AAANOTREALTOKENMS-4ATH
 ```
 
-You need to provide the access token in the header and the `agreementId` in the parameter.
+You need to provide your access token in the `Authorization` header and the `agreementId` in the API call itself.
 
 You will get the following JSON response:
 

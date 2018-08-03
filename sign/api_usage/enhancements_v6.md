@@ -8,6 +8,7 @@
     - [ETag support](h#etagsupport)
     - [GET, PUT, POST consistency](#getputpostconsistency)
     - [Performance improvements](#performanceimprovements)
+    - [Authorization header](#authorizationheader)
 - [Features](#features)
     - [Agreement sharing](#agreementsharing)
     - [Authoring APIs](#authoringapis)
@@ -174,6 +175,13 @@ In building the Adobe Sign v6 APIs, we have enabled more simplicity in the desig
 In Adobe Sign v6, we've taken a fresh look at the system architecture to eliminate redundant database checks; this has improved the performance of the interface. Also, we have migrated to the asynchronous creation of resources, which has significantly improved our response time. The client experience of using the APIs has significantly improved due to these performance enhancmenents.
 
 However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED`, which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
+
+### Authorization Header
+The Adobe Sign API accepts an authorization token in the `access-token` header; however, from v6 onwards we will be migrating to the standard `Authorization` header. The `Authorization` header will hold the user&rsquo;s authorization token in this format:
+
+`Authorization: Bearer <access-token>`
+
+Clients can continue using their older access token, but in the `authorization` header using this format. 
 
 ## Features
 
