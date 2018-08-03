@@ -1,4 +1,4 @@
-# Get signing URLs for an agreement
+# Get Signing URLs for an Agreement
 
 This sample client demonstrates how to to get the signing URL for an agreement.
 

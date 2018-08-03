@@ -1,4 +1,4 @@
-# REST API samples
+# REST API Samples
 
 The samples included in this section are Java clients of the Adobe Sign REST API that demonstrate how to use the API as well as some of its key capabilities.
 

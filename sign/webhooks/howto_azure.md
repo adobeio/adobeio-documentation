@@ -1,4 +1,4 @@
-# Using Azure Functions to create an Adobe Sign webhook
+# Using Azure Functions to Create an Adobe Sign Webhook
 
 ## On this page
 

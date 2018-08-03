@@ -1,4 +1,4 @@
-# Download the combined document for an agreement
+# Download the Combined Document for an Agreement
 
 This sample client demonstrates how to to download the combined document for the specified agreement.
 

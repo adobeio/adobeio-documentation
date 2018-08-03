@@ -1,4 +1,4 @@
-# Create a widget
+# Create a Widget
 
 To create a widget through the API, you must first call /transientDocuments, then send a POST request to upload the document. This is a multipart request consisting of filename, MIME type, and the file stream. The returned `transientDocumentId` is to be used to refer to the document in the widget creation call (`/widgets`, POST). The API endpoint, in addition to the widget key, returns an embed-code, which can be used for embedding the widget within your application, as well as a URL at which the widget gets hosted. The URL can be posted within your application for users to navigate to for signing a document.
 

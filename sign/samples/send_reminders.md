@@ -1,4 +1,4 @@
-# Send reminders to participants
+# Send Reminders to Participants
 
 This sample client demonstrates how to send reminders to active participants (those who are next in line in the signing process) of various agreements. It retrieves all agreements of the current API user and checks to see which agreements are out for signature, and if any of them has a participant that has not signed for longer than a specified amount of time. If the time limit has been crossed, all active articipants of that agreement are sent a reminder email.
 

@@ -1,4 +1,4 @@
-# Parental consent
+# Parental Consent
 
 ![parental consent](../img/sign_scenarios_1.png)
 

@@ -1,4 +1,4 @@
-# Download an audit trail
+# Download Agreement’s Audit Report
 
 This sample client demonstrates how to to download audit trail of the specified agreement.
  

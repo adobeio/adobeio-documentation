@@ -1,4 +1,4 @@
-# Create a new widget with countersigners
+# Create a New Widget with Countersigners
 
 This sample client demonstrates how to create a new widget.
 

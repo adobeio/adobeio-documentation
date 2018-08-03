@@ -1,4 +1,4 @@
-# Send an agreement using a transient document
+# Send an Agreement Using a Transient Document
 
 This sample client demonstrates how to send an agreement using a transient document ID. See the postTransientDocument method in the file /util/RestApiAgreements.java for a definition of transient documents.
 

@@ -1,4 +1,4 @@
-# Photo rights
+# Photo Rights
 
 The Sign APIs can also be used for scenarios involving in-person signing. Consider an example wherein you need to get the photo publishing rights of a celebrity. You can use the in-person signing technique to simplify the signing process for the celebrity.
 

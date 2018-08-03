@@ -1,4 +1,4 @@
-# Managing webhooks and subscriptions (webhook APIs)
+# Managing Webhooks and Subscriptions (Webhook APIs)
 
 ## On this page
 - [Endpoints](#endpoints)

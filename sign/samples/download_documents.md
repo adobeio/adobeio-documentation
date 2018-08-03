@@ -1,4 +1,4 @@
-# Download the documents from an agreement
+# Download the Documents from an Agreement
 
 This sample client demonstrates how to to download the documents from a specified agreement.
 

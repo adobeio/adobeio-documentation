@@ -1,4 +1,4 @@
-# Create an application
+# Create an Application
 
 To use Adobe Sign APIs, you need to first create an application.
 

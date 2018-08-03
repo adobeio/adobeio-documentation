@@ -1,4 +1,4 @@
-# Using AWS Lambda Functions to create an Adobe Sign webhook
+# Using AWS Lambda Functions to Create an Adobe Sign Webhook
 
 ## On this page
 

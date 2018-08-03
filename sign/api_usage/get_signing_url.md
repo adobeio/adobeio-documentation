@@ -1,4 +1,4 @@
-# Get the signing URL
+# Get the Signing URL
 
 When the agreement is ready for signing, invoke `GET /agreements/{agreementId}/signingUrls` to get the signing URL:
 

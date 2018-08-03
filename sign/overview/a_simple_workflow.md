@@ -1,4 +1,4 @@
-# A simple workflow
+# A Simple Workflow
 
 ![A simple workflow: overview](../img/sign_overview_2.png)
 

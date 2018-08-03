@@ -1,4 +1,4 @@
-# Send an agreement using a library ID
+# Send an Agreement using a Library ID
 
 This sample client demonstrates how to send an agreement using a library document ID.
 

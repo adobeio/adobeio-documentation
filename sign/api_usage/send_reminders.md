@@ -1,4 +1,4 @@
-# Send reminders
+# Send Reminders
 
 A signing reminder can be sent to all the signers if they have not signed the agreement. When you send a reminder, the signers will get the same notification email that was originally sent.
 

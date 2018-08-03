@@ -1,4 +1,4 @@
-# Get the status of an agremeent
+# Get the Status of an Agremeent
 
 This sample client demonstrates how to to get status of all agreements of an account and display their agreement ID, name and status.
 
