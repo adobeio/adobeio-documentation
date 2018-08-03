@@ -5,8 +5,8 @@ This sample client demonstrates how to send an agreement using a transient docum
 **IMPORTANT:**
 
 1. Before running this sample, check that you have modified the JSON files OAuthCredentials.json and SendAgreement.json with appropriate values. Which values need to be specified is indicated in the files.
-2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the RestApiOAuthTokens class, which will then be used as the OAuth access token for making API calls.
-3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the RestApiOAuthTokens class to refresh the OAuth access token.
+2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the `RestApiOAuthTokens` class, which will then be used as the OAuth access token for making API calls.
+3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the `RestApiOAuthTokens` class to refresh the OAuth access token.
 4. Check that the default input file in the field `fileToBeUploaded` below is suitable.
 5. Check that the name to be given to the uploaded file in the field `uploadedFileName` below is suitable. This name can be different from the original file name.
 

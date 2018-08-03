@@ -1,12 +1,12 @@
-# Download the Documents from an Agreement
+# Download Documents from an Agreement
 
-This sample client demonstrates how to to download the documents from a specified agreement.
+This sample client demonstrates how to to download documents from a specified agreement.
 
 **IMPORTANT:**
 
 1. Before running this sample, check that you have modified the JSON file OAuthCredentials.json with appropriate values. Which values need to be specified is indicated in the file.
-2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the RestApiOAuthTokens class, which will then be used as the OAuth access token for making API calls.
-3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the RestApiOAuthTokens class to refresh the OAuth access token.
+2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the `RestApiOAuthTokens` class, which will then be used as the OAuth access token for making API calls.
+3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the `RestApiOAuthTokens` class to refresh the OAuth access token.
 4. Make sure that you have specified a valid agreement ID in `agreementId` below.
 5. Check that the default output location in the field `OUTPUT_PATH` of FileUtils.java is suitable.
 

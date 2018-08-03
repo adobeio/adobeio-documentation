@@ -5,8 +5,8 @@ This sample client demonstrates how to send reminders to active participants (th
 **IMPORTANT:**
 
 1. Before running this sample, check that you have modified the JSON files OAuthCredentials.json and SendReminder.json with appropriate values. Which values need to be specified is indicated in the files.
-2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the RestApiOAuthTokens class, which will then be used as the OAuth access token for making API calls.
-3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the RestApiOAuthTokens class to refresh the OAuth access token.
+2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the `RestApiOAuthTokens` class, which will then be used as the OAuth access token for making API calls.
+3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the `RestApiOAuthTokens` class to refresh the OAuth access token.
 4. The constant `WAITING_TIME_LIMIT` below determines how long a participant needs to have been waiting before a reminder becomes necessary. Any suitable value can be set here.
 
 ```java

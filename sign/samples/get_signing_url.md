@@ -1,12 +1,12 @@
-# Get Signing URLs for an Agreement
+# Get an Agreement’s Signing URL
 
 This sample client demonstrates how to to get the signing URL for an agreement.
 
 **IMPORTANT:**
 
 1. Before running this sample, check that you have modified the JSON file OAuthCredentials.json with appropriate values. Which values need to be specified is indicated in the file.
-2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the RestApiOAuthTokens class, which will then be used as the OAuth access token for making API calls.
-3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the RestApiOAuthTokens class to refresh the OAuth access token.
+2. You can also provide your OAuth access token in the `OAUTH_ACCESS_TOKEN` constant in the `RestApiOAuthTokens` class, which will then be used as the OAuth access token for making API calls.
+3. You can also provide a refresh token in the `OAUTH_REFRESH_TOKEN constant` in the `RestApiOAuthTokens` class to refresh the OAuth access token.
 
 ```java
 /*************************************************************************

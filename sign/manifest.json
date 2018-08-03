@@ -360,19 +360,19 @@
               "importedFileName": "create_new_widget",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/samples/create_new_widget.md",
-              "title": "Create New Widget"
+              "title": "Create a New Widget"
             },
             {
-              "importedFileName": "download_audit_trail",
+              "importedFileName": "download_audit_report",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/samples/download_audit_trail.md",
-              "title": "Download an Audit Trail"
+              "title": "Download an Agreement’s Audit Report"
             },
             {
               "importedFileName": "download_combined_doc",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/samples/download_combined_doc.md",
-              "title": "Download Combined Document for Agreement"
+              "title": "Download the Combined Document for an Agreement"
             },
             {
               "importedFileName": "download_documents",
@@ -384,13 +384,13 @@
               "importedFileName": "get_agreement_status",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/samples/get_agreement_status.md",
-              "title": "Get Status of an Agreement"
+              "title": "Get an Agreement’s Status"
             },
             {
               "importedFileName": "get_signing_url",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/samples/get_signing_url.md",
-              "title": "Get Signing URLs for an Agreement"
+              "title": "Get an Agreement’s Signing URL"
             },
             {
               "importedFileName": "send_reminders",
@@ -402,7 +402,7 @@
               "importedFileName": "send_using_library_doc",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/samples/send_using_library_doc.md",
-              "title": "Send an Agreement Using a Library ID"
+              "title": "Send an Agreement Using a Library Document"
             },
             {
               "importedFileName": "send_using_transient_doc",
