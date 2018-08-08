@@ -37,8 +37,7 @@ Response | Description
 -------- | -----------
 400 invalid_client | Integration does not exist. This applies both to the **client_id** parameter and the **aud** in the JWT. The **client_id** parameter and the **aud** field in the JWT do not match.
 401 invalid_client | Integration does not have the **exchange_jwt** scope. This indicates an improper client configuration. Contact Adobe I/O team to resolve it. The client ID and client secret combination is invalid.
-400 invalid_token | JWT is missing or cannot be decoded. JWT has expired. In this case, the **error_description** contains more details.
-The exp or jti field of the JWT is not an integer.
+400 invalid_token | JWT is missing or cannot be decoded. JWT has expired. In this case, the **error_description** contains more details. The exp or jti field of the JWT is not an integer.
 400 invalid_signature |The JWT signature does not match any certificates attached to the integration. The signature does not match the algorithm specified in the JWT header.
 400 invalid_jti | The binding requires a JTI, but the jti field is missing or was previously used.
 400 invalid_scope | Indicates a problem with the requested scope for the token. The JWT must include **"https://ims-na1.adobelogin.com/s/ent_user_sdk": true**. Specific scope problems can be: Metascopes in the JWT do not match metascopes in the binding. Metascopes in the JWT do not match target client scopes. Metascopes in the JWT contain a scope or scopes that do not exist. The JWT has no metascopes.
