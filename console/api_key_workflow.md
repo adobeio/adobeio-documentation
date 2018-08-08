@@ -17,11 +17,11 @@ This article will walk you through the steps to set up an API Key integration.
 ### Step 1: Subscribe to a Service or Event Provider
 To create a new API Key integration, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and click New Integration. (Notice that you may also choose existing integrations and edit their details from here.)
 
-!Integration list (/img/1496166474093.png)
+! Integration list (/img/1496166474093.png)
 
 Choose the type of service you want to include in your integration. You can get API access to several Adobe services or subscribe to real-time events. An integration can access multiple services and event sources. Simply perform these steps for each service or event you want to add to your integration.
 
-!Access an API (/img/1496166488285.png)
+! Access an API (/img/1496166488285.png)
 
 Select **Access an API** to create an integration that will access an Adobe product API or service, or select **Receive real-time events** to be notified of events in real time. You will have an opportunity to subscribe to additional services and events once you have created the integration.
 
@@ -33,7 +33,7 @@ Adobe I/O Events allow you to build integrations that respond to changes in a us
 
 Choose the service or event source that you would like to add to your integration. APIs and products available through Adobe I/O are typically listed by cloud. However, some services span multiple clouds, such as User Management and I/O Events.
 
-!Services (/img/1496166497502.png)
+! Services (/img/1496166497502.png)
 
 Many services are only available through the purchase of a product. For example: Adobe Campaign and Document Cloud PDF Services. If your organization has not been entitled to these services, the options are disabled. If you believe you should have access to a disabled service please contact your Adobe sales representative.
 
@@ -41,7 +41,7 @@ Some services (such as Adobe Stock) can be accessed with different types of auth
 
 If you are integrating with events, choose the event source.
 
-!Events (/img/1496166510744.png)
+! Events (/img/1496166510744.png)
 
 If you have an existing integration that is compatible with the service you have selected, you can update that integration with access to the selected service.
 
@@ -62,7 +62,7 @@ The configuration page lets you provide all of the required details for a new in
 
 When creation is confirmed, visit the overview section for your new integration. The overview section contains the newly generated API Key, and allows you to subscribe to additional services or events.
 
-!OAuth (/img/1496166526927.png)
+! OAuth (/img/1496166526927.png)
 
 <a id="secure"></a>
 ### Step 3: Secure your Client Credentials
