@@ -1,4 +1,4 @@
-#Adobe I/O Authentication Overview
+# Adobe I/O Authentication Overview
 Adobe is committed to privacy and security. Nearly all Adobe services require your application to authenticate through the Adobe Identity Management System (IMS) to receive client credentials. The client credentials determine the access and permissions granted to your application.
 
 Any API that accesses a service or content on behalf of an end user authenticates using the OAuth and JSON Web Token standards.
@@ -12,7 +12,7 @@ Use the [Adobe I/O Console](https://console.adobe.io/) to obtain client credenti
 
 An integration can be subscribed to one or more services. In many cases, you will use the same client credentials to access multiple Adobe services. In addition to APIs, you may also subscribe your integration to I/O Events so that your applications can access content and services in real-time.
 
-##Creating an Integration
+## Creating an Integration
 There are different options for integrations, based on the type of application you are building and the services you need to access. Many services and events are only available through a specific type of integration. Check the service or product documentation to learn more.
 
 * **OAuth Authentication**
@@ -42,7 +42,7 @@ The Adobe Stock Search API can be accessed through any of the three types of int
 
 To create an integration of this type, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID or Enterprise ID. Your Enterprise ID does not require additional permissions to create an API Key integration. For more information, see [API Key Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/api_key_workflow.html).
 
-##Prerequisites
+## Prerequisites
 * In order to create a new Service Account integration, you must provide a public key certificate, also known as a digital certificate. This electronic document proves the ownership of a public key and validates the identity of your integration. You may create your own digital certificate or purchase one through a 3rd-party certificate authority. To learn more, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
 * For OAuth integrations, you must provide the **default redirect URI** and **redirect URI patterns**. Upon completion of the Adobe ID login flow, Adobe redirects the user to the specified URL.
 * For an integration that consumes Adobe I/O Events, you must provide at least one **webhook**, a URL that receives event notifications.
