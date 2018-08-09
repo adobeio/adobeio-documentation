@@ -190,7 +190,7 @@
     </tr>
     <tr>
       <td><code>conditionalParametersTrimmed</code></td>
-      <td>String</td>
+      <td>Array of Strings</td>
       <td>If event notification payload size exceeds the defined threshold, the conditional parameters will not be sent in the notification request, even if they are set to true by the webhook creator. The <code>conditionalParametersTrimmed</code> attribute will be set to the keys trimmed in this case. If no conditional parameters are specified by the webhook creator, or if they are specified, but no key is trimmed, this parameter will not be returned.</td>
       <td>&nbsp;</td>
     </tr>
