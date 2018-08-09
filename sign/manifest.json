@@ -276,19 +276,19 @@
               "importedFileName": "megasign_created",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/megasign_created.md",
-              "title": "Mega Sign Created "
+              "title": "MegaSign Created "
             },
             {
               "importedFileName": "megasign_recalled",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/megasign_recalled.md",
-              "title": "Mega Sign Recalled"
+              "title": "MegaSign Recalled"
             },
             {
               "importedFileName": "megasign_shared",
               "pages": [],
               "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/megasign_shared.md",
-              "title": "Mega Sign Shared"
+              "title": "MegaSign Shared"
             },
             {
               "importedFileName": "widget_auto_cancelled_conversion_problem",
