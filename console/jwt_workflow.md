@@ -44,7 +44,7 @@ To generate client credentials needed to access an Adobe service or event, creat
 
 To create an integration of this type, sign in to the [Console](https://console.adobe.io/) with your Enterprise ID, and click **New Integration**.
 
-!Integration list (/img/1496167043844.png)
+![Integration list](./img/1496167043844.png)
 
 > Your Enterprise ID must have administrative privileges for your organization to be able to create a new Service Account 
 > integration. If you do not have the required permissions, contact an IT Administrator at your company for help. This is 
@@ -52,7 +52,7 @@ To create an integration of this type, sign in to the [Console](https://console.
 
 Select **Consume services** to create an integration that will access an Adobe product or service, or select **Subscribe to events** to receive event notifications in real-time. You will have an opportunity to subscribe to additional events and services once you have created the integration.
 
-!Access an API (/img/1496167052277.png)
+![Access an API](./img/1496167052277.png)
 
 * Consume services
 Services are the primary way your integration can access Adobe APIs and content. Some services are product specific, while other services provide unique functionality that can be used across products. We encourage you to mix and match services to build the best experience possible for your end users.
@@ -62,7 +62,7 @@ Adobe I/O Events allow you to build integrations that respond to changes in a us
 
 Choose the service you want to add to your integration. APIs and products available through Adobe I/O are typically listed by cloud. However, some services span multiple clouds, such as User Management and I/O Events.
 
-!Integration (/img/1496167065685.png)
+![Integration](./img/1496167065685.png)
 
 Many services are only available through the purchase of a product; for example, Adobe Campaign and Document Cloud PDF Services. If your organization has not been entitled to these services, the options are disabled. If you believe you should have access to a disabled service please contact your Adobe sales representative.
 
@@ -70,11 +70,11 @@ Some services (such as Adobe Stock) can be accessed with different types of auth
 
 If you are integrating with events, choose the event source.
 
-!Events (/img/1496167072379.png)
+![Events](./img/1496167072379.png)
 
 If you have an existing integration that is compatible with the service you have selected, you can update that integration with access to the selected service.
 
-!Create or update (/img/1496167083095.png)
+![Create or update](./img/1496167083095.png)
 
 To update an existing integration, simply select it and click Continue.
 If you would like to create a brand new integration, select that option and click Continue.
@@ -84,7 +84,7 @@ If you would like to create a brand new integration, select that option and clic
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
 
-!Service Account (/img/1496167099810.png)
+![Service Account](./img/1496167099810.png)
 
 On this page:
 
@@ -92,7 +92,7 @@ On this page:
 1. Upload the **public key certificate** that you created or purchased. You can upload more than one certificate now, or edit the integration later to add more certificates, or remove a certificate.
 1. Click **Create integration**.
 
-!Integration created (/img/1496167207472.png)
+![Integration created](./img/1496167207472.png)
 
 When creation is confirmed, visit the overview section for your new integration. The overview shows your generated credentials, and allows you to subscribe to additional services or events.
 
@@ -101,7 +101,7 @@ When creation is confirmed, visit the overview section for your new integration.
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
 
-!Service Account Overview (/img/1496167339876.png)
+![Service Account Overview](./img/1496167339876.png)
 
 * The API Key (or Client ID) should be considered public information. It is passed with every API request to identify your integration.
 * Technical Account ID and Organization ID are technical details used to create your JSON Web Token (JWT).
@@ -109,7 +109,7 @@ Each integration contains a unique set of generated client credentials. These cr
 
 (Note that the example values shown here are for illustration only. You must use the credential values assigned to your own integration.)
 
-!Credentials (/img/1496167347267.png)
+![Credentials](./img/1496167347267.png)
 
 The Client Secret must be kept confidential and should be treated like a private password or the private key of your certificate. If a Client Secret is not properly secured it can result in malicious activity which may require Adobe to block access to all services and products associated with the integration. Adobe recommends that you store this information in a credential management system or implement strict permissions that only permit access to authorized users.
 
