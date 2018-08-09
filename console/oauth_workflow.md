@@ -20,11 +20,11 @@ If your integration needs to access Adobe services or content on behalf of an or
 
 To create a new OAuth Integration, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and click **New Integration**. (Notice that you can also choose existing Integrations and edit their details from here.)
 
-!Integration list (/img/1496166741030.png)
+![Integration list](./img/1496166741030.png)
 
 Choose the type of service or event source you want to include in your integration. You can get API access to several Adobe services or subscribe to real-time events. An integration can access multiple services and event sources. Simply perform these steps for each service or event you want to add to your integration.
 
-!Access an API (/img/1496166757286.png)
+![Access an API](./img/1496166757286.png)
 
 Select **Access an API** to create an integration that will access an Adobe product API or service, or select **Receive real-time events** to be notified of events in real time. You will have an opportunity to subscribe to additional services and events once you have created the integration.
 
@@ -36,7 +36,7 @@ Adobe I/O Events allow you to build integrations that respond to changes in a us
 
 Choose the service that you would like to add to your integration. APIs and products available through Adobe I/O are typically listed by cloud. However, some services span multiple clouds, such as User Management and I/O Events.
 
-!Services (/img/1496166764261.png)
+![Services](./img/1496166764261.png)
 
 Many services are only available through the purchase of a product, for example Adobe Campaign and Document Cloud PDF Services. If your organization has not been entitled to these services, the options are disabled. If you believe you should have access to a disabled service, please contact your Adobe sales representative.
 
@@ -44,11 +44,11 @@ Some services (such as Adobe Stock) can be accessed with different types of auth
 
 If you are integrating with events, choose the event source.
 
-!Events (/img/1496166775217.png)
+![Events](./img/1496166775217.png)
 
 If you have an existing integration that is compatible with the service you have selected, you can update that integration with access to the selected service.
 
-!Create or update (/img/1496166789898.png)
+![Create or update](./img/1496166789898.png)
 
 * To update an existing integration, simply select it and click **Continue**.
 * If you would like to create a brand new integration, select that option and click **Continue**.
@@ -58,7 +58,7 @@ If you have an existing integration that is compatible with the service you have
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
 
-!OAuth (/img/1496166810530.png)
+![OAuth](./img/1496166810530.png)
 
 On this page:
 
@@ -68,11 +68,11 @@ On this page:
 1. Prove that you are not a robot. If you are a robot, please contact the Adobe I/O team to negotiate a peaceful alternative to your impending rebellion against humanity.
 1. Click **Create integration*.
 
-!Integration (/img/1496167459947.png)
+![Integration](./img/1496167459947.png)
 
 When creation is confirmed, visit the Overview page for your new integrations that contains the newly generated credentials, and allows you to subscribe to additional services or events.
 
-!Overview- OAuth (/img/1496166924157.png)
+![Overview- OAuth](./img/1496166924157.png)
 
 <a id="secure"></a>
 ### Step 3: Secure your Client Credentials
@@ -83,7 +83,7 @@ The API Key (or Client ID) should be considered public information. It will be p
 
 By default, the Client Secret will not be displayed. Click Retrieve Client Secret to temporarily display the property.
 
-!Credentials (/img/1496166970768.png)
+![Credentials](./img/1496166970768.png)
 
 The Client Secret must be kept confidential and should be treated like a private password. If a Client Secret is not properly secured it can result in malicious activity, which may require Adobe to block access to all services and products associated with the integration. Adobe recommends that you store this information in a credential management system or implement strict permissions that only permit access to authorized users.
 
