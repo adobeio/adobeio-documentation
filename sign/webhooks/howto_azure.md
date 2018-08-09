@@ -54,7 +54,7 @@ back in the response.
 
 1.  Replace the contents of the index.js file with the following code snippet:  
 
-    ```javascript  
+    ```javascript
     module.exports = function (context, req) {
         var clientId = req.headers['x-adobesign-clientid'];
         // Validate that the incoming ClientID is genuine
