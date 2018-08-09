@@ -10,7 +10,6 @@
       <th>Parameter name</th>
       <th>Type</th>
       <th>Description</th>
-      <th>Possible Enums</th>
     </tr>
   </thead>
   <tbody>
@@ -322,3 +321,4 @@
       }
    }
 }
+```

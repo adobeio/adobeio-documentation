@@ -7,9 +7,9 @@
 <table>
   <thead>
     <tr>
-      <td>Parameter name</td>
-      <td>Type</td>
-      <td>Description</td>
+      <th>Parameter name</th>
+      <th>Type</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>

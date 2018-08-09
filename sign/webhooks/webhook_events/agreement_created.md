@@ -22,7 +22,6 @@
     <tr>
       <td><code>participantUserEmail</code></td>
       <td>String</td>
-      <td><br></td>
     </tr>
     <tr>
       <td><code>actingUserId</code></td>
