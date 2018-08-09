@@ -54,6 +54,10 @@
       "pages": [],
       "path": "adobeio/adobeio-documentation/master/console/connect.md",
       "title": "JWT Authentication Reference"
-    }
-]
+	}
+	],
+	 "path": "adobeio/adobeio-documentation/master/console/gettingstarted.md",
+     "title": "Adobe I/O Authentication Overview"
+	 }
+	 ]
 }
