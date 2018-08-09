@@ -98,6 +98,6 @@ Currently, OAuth client credentials are supported only for Creative Cloud. The C
 
 For a complete discussion and examples of how to tie into the Auth UI Component of Creative SDK, see the Creative SDK documentation:
 
-For Web: [User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html).
-For Android: [User Auth UI](https://creativesdk.adobe.com/docs/android/#/articles/userauth/index.html).
-For iOS: [Integrating the Authentication Component](https://creativesdk.adobe.com/docs/ios/#/articles/gettingstarted/index.html#integrating_auth).
+* For Web: [User Auth UI](https://creativesdk.adobe.com/docs/web/#/articles/userauthui/index.html).
+* For Android: [User Auth UI](https://creativesdk.adobe.com/docs/android/#/articles/userauth/index.html).
+* For iOS: [Integrating the Authentication Component](https://creativesdk.adobe.com/docs/ios/#/articles/gettingstarted/index.html#integrating_auth).
