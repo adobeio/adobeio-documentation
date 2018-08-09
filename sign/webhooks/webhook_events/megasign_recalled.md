@@ -34,7 +34,7 @@
     <tr>
       <td><code>initiatingUserId</code></td>
       <td>String</td>
-      <td rowspan="2">Details (user ID and email) of the <strong>sharee of the creator of the megaMegaSignsign</strong> who recalled the MegaSign on behalf of the creator in the case of account sharing.</td>
+      <td rowspan="2">Details (user ID and email) of the <strong>sharee of the creator of the MegaSign</strong> who recalled the MegaSign on behalf of the creator in the case of account sharing.</td>
     </tr>
     <tr>
       <td><code>initiatingUserEmail</code></td>
