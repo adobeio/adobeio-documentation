@@ -161,13 +161,13 @@
             {
               "importedFileName": "agreement_action_replaced_signer",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/agreement_replaced_signer.md",
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/agreement_action_replaced_signer.md",
               "title": "Agreement Action Replaced Signer"
             },
             {
-              "importedFileName": "agreement_requested",
+              "importedFileName": "agreement_action_requested",
               "pages": [],
-              "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/agreement_requested.md",
+              "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/agreement_action_requested.md",
               "title": "Agreement Action Requested"
             },
             {
