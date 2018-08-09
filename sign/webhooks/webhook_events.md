@@ -123,7 +123,7 @@ This is the minimal info which will be returned for a widget event if all the co
 
 ### MegaSign
 
-This is the minimal info which will be returned for a widget event if all the conditional parameters are set to false while creating webhooks.
+This is the minimal info which will be returned for a MegaSign event if all the conditional parameters are set to false while creating webhooks.
 
 | Parameter name | Type | Description | Possible enums |
 | --- | --- | --- | --- |
@@ -131,7 +131,7 @@ This is the minimal info which will be returned for a widget event if all the co
 | `name` | String | The name of the agreement that will be used to identify it, in emails and on the website. |   |
 | `status` | Enum | The current status of the agreement. | `OUT_FOR_SIGNATURE`, `SIGNED`, `APPROVED`, `ACCEPTED`, `DELIVERED`, `FORM_FILLED`, `ABORTED`, `EXPIRED`, `OUT_FOR_APPROVAL`, `OUT_FOR_ACCEPTANCE`, `OUT_FOR_DELIVERY`, `OUT_FOR_FORM_FILLING`, or `CANCELLED` |
 
-For different agreement events, the detailed agreement info, participant info, document info, and the signed document will be returned based on the conditional parameters specified during webhook creation.
+For different MegaSign events, the detailed agreement info, participant info, document info, and the signed document will be returned based on the conditional parameters specified during webhook creation.
 
 ## Receiving a webhook notification
 
