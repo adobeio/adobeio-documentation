@@ -7,10 +7,10 @@
 <table>
   <thead>
     <tr>
-      <th>Parameter name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Possible enums</th>
+      <th><strong>Parameter name</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Possible enums</strong></th>
     </tr>
   <thead>
   <tbody>
@@ -63,10 +63,10 @@
 <table>
   <thead>
     <tr>
-      <th>Parameter name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Possible enums</th>
+      <th><strong>Parameter name</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Possible enums</strong></th>
     </tr>
   </thead>
   <tbody>
