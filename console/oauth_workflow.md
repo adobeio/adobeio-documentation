@@ -10,10 +10,10 @@ If your integration needs to access Adobe services or content on behalf of an or
 
 ## The OAuth Authorization Workflow
 
-1. [Subscribe to a Service or Events](/#step-1-subscribe-to-a-service-or-events)
-1. [Configure an OAuth Integration](/#step-2-configure-an-oauth-integration)
-1. [Secure your Client Credentials](/#step-3-secure-your-client-credentials)
-1. [Initiate User Authentication](/#step-4-initiate-user-authentication)
+1. [Subscribe to a Service or Events](/console/oauth_workflow.md#step-1-subscribe-to-a-service-or-events)
+1. [Configure an OAuth Integration](/console/oauth_workflow.md#step-2-configure-an-oauth-integration)
+1. [Secure your Client Credentials](/console/oauth_workflow.md#step-3-secure-your-client-credentials)
+1. [Initiate User Authentication](/console/oauth_workflow.md#step-4-initiate-user-authentication)
 
 ### Step 1: Subscribe to a Service or Events
 
