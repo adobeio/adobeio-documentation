@@ -9,11 +9,10 @@ This article will walk you through the steps to set up an API Key integration.
 * If your integration needs to access Adobe services or content on behalf of a user or an Adobe enterprise organization, it needs additional credentials for authentication. For more information, check out the articles on [OAuth Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html) and [Service Account Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html).
 
 ## API Key Integration Workflow
-* [Subscribe to a Service or Event Provider](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html#subscribe)
-* [Configure an API Key Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html#config)
-* [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html#secure)
+1. [Subscribe to a Service or Event Provider](/console/api_key_workflow.md#step-1-subscribe-to-a-service-or-event-provider)
+1. [Configure an API Key Integration](/console/api_key_workflow.md#step-2-configure-an-api-key-integration)
+1. [Secure your Client Credentials](/console/api_key_workflow.md#step-3-secure-your-client-credentials)
 
-<a id="subscribe"></a>
 ### Step 1: Subscribe to a Service or Event Provider
 To create a new API Key integration, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and click New Integration. (Notice that you may also choose existing integrations and edit their details from here.)
 
@@ -50,7 +49,6 @@ If you have an existing integration that is compatible with the service you have
 To update an existing integration, simply select it and click **Continue**.
 If you would like to create a brand new integration, select that option and click **Continue**.
 
-<a id="config"></a>
 ### Step 2: Configure an API Key Integration
 
 The configuration page lets you provide all of the required details for a new integration, or add new information to update an existing integration. On this page:
@@ -64,7 +62,6 @@ When creation is confirmed, visit the overview section for your new integration.
 
 ![OAuth](./img/1496166526927.png)
 
-<a id="secure"></a>
 ### Step 3: Secure your Client Credentials
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
