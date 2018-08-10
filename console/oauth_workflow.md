@@ -10,12 +10,11 @@ If your integration needs to access Adobe services or content on behalf of an or
 
 ## The OAuth Authorization Workflow
 
-1. [Subscribe to a Service or Events](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#create)
+1. [Subscribe to a Service or Events](#step1:subscribetoaserviceorevents)
 1. [Configure an OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#config)
 1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#secure)
 1. [Initiate User Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#token)
 
-<a id="create"></a>
 ### Step 1: Subscribe to a Service or Events
 
 To create a new OAuth Integration, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and click **New Integration**. (Notice that you can also choose existing Integrations and edit their details from here.)
