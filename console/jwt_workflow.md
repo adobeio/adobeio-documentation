@@ -12,14 +12,13 @@ Your integrated application will begin each API session by exchanging the JWT fo
 
 ## The JWT Workflow
 
-1. [Create a Public Key Certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#cert)
-1. [Subscribe to a Service or Event Provider](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#create)
-1. [Configure a Service Account Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#config)
-1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#secure)
-1. [Create your JSON Web Token (JWT)](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt)
-1. [Exchange your JWT for an Access Token](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#token)
+1. [Create a Public Key Certificate](/console/jwt_workflow.md#step-1-create-a-public-key-certificate)
+1. [Subscribe to a Service or Event Provider](/console/jwt_workflow.md#step-2-subscribe-to-a-service-or-event-provider)
+1. [Configure a Service Account Integration](/console/jwt_workflow.md#step-3-configure-a-service-account-integration)
+1. [Secure your Client Credentials](/console/jwt_workflow.md#step-4-secure-your-client-credentials)
+1. [Create your JSON Web Token (JWT)](/console/jwt_workflow.md#step-5-create-your-json-web-token)
+1. [Exchange your JWT for an Access Token](/console/jwt_workflow.md#step-6-exchange-your-jwt-for-an-access-token)
 
-<a id="cert"></a>
 ### Step 1: Create a Public Key Certificate
 
 Each Service Account integration must be associated with at least one valid public key certificate (commonly known as digital certificate) that verifies the identity of your application.
@@ -37,7 +36,6 @@ Adobe does not check for revocation or trust chains of the certificate. If you w
 To add or remove certificates, simply edit and update your Integration using the  [Adobe I/O Console](https://console.adobe.io/).
 For more information about creating self-signed certificates and extracting keys from purchased certificates, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
 
-<a id="create"></a>
 ## Step 2: Subscribe to a Service or Event Provider
 
 To generate client credentials needed to access an Adobe service or event, create a new **Service Account Integration**. An integration can subscribe to multiple services and events. If you want to use an existing integration, simply subscribe to the new service.
@@ -79,7 +77,6 @@ If you have an existing integration that is compatible with the service you have
 To update an existing integration, simply select it and click Continue.
 If you would like to create a brand new integration, select that option and click Continue.
 
-<a id="config"></a>
 ### Step 3: Configure a Service Account Integration
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
@@ -96,7 +93,6 @@ On this page:
 
 When creation is confirmed, visit the overview section for your new integration. The overview shows your generated credentials, and allows you to subscribe to additional services or events.
 
-<a id="secure"></a>
 ### Step 4: Secure your Client Credentials
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
@@ -115,7 +111,6 @@ The Client Secret must be kept confidential and should be treated like a private
 
 To keep your credentials secure, make sure you do NOT include them in your source code, or inject them through environment variables. Similarly, you should never send credentials through unsecured email or other unsecured communications.
 
-<a id="JWT"></a>
 ### Step 5: Create your JSON Web Token
 
 Use your client credentials generated for your integration to create a JWT, and sign it with your private key. The JWT encodes all of the identity and security information that Adobe needs to verify your identity and grant you access to Adobe services and events.
@@ -124,7 +119,6 @@ Several public libraries are available for creating a JWT. The JWT must be digit
 
 You are responsible for securing your JWT along with your other access credentials.
 
-<a id="token"></a>
 ### Step 6: Exchange your JWT for an Access Token
 
 To initiate an API session, you use the JWT to obtain an access token from Adobe, by making a POST request to Adobe's Identity Management Service (IMS).
