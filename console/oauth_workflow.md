@@ -10,10 +10,10 @@ If your integration needs to access Adobe services or content on behalf of an or
 
 ## The OAuth Authorization Workflow
 
-1. [Subscribe to a Service or Events](#step1:subscribetoaserviceorevents)
-1. [Configure an OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#config)
-1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#secure)
-1. [Initiate User Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#token)
+1. [Subscribe to a Service or Events](/#step-1-subscribe-to-a-service-or-events)
+1. [Configure an OAuth Integration](/#step-2-configure-an-oauth-integration)
+1. [Secure your Client Credentials](/#step-3-secure-your-client-credentials)
+1. [Initiate User Authentication](/#step-4-initiate-user-authentication)
 
 ### Step 1: Subscribe to a Service or Events
 
@@ -52,7 +52,6 @@ If you have an existing integration that is compatible with the service you have
 * To update an existing integration, simply select it and click **Continue**.
 * If you would like to create a brand new integration, select that option and click **Continue**.
 
-<a id="config"></a>
 ### Step 2: Configure an OAuth Integration
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
@@ -73,7 +72,6 @@ When creation is confirmed, visit the Overview page for your new integrations th
 
 ![Overview- OAuth](./img/1496166924157.png)
 
-<a id="secure"></a>
 ### Step 3: Secure your Client Credentials
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
@@ -88,7 +86,6 @@ The Client Secret must be kept confidential and should be treated like a private
 
 To keep your credentials secure, make sure you do NOT include them in your source code, or inject them through environment variables. Similarly, you should never send credentials through unsecured email or other unsecured communications.
 
-<a id="token"></a>
 ### Step 4: Initiate User Authentication
 
 An access token is required for every API request made on behalf of an end user. Your application will gain a unique access token following the successful login of an end user.
