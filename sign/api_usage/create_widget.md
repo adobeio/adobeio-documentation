@@ -2,29 +2,28 @@
 
 To create a widget through the API, you must first call /transientDocuments, then send a POST request to upload the document. This is a multipart request consisting of filename, MIME type, and the file stream. The returned `transientDocumentId` is to be used to refer to the document in the widget creation call (`/widgets`, POST). The API endpoint, in addition to the widget key, returns an embed-code, which can be used for embedding the widget within your application, as well as a URL at which the widget gets hosted. The URL can be posted within your application for users to navigate to for signing a document.
 
-If the identity of the person signing the widget is known beforehand, the widget can also be personalized with the signer&rsquo;s information using the provided personalization method `PUT /widgets/{widgetId}/personalize`. When creating the widget, your application may also specify the address of the Web page that users will be redirected to when they successfully complete signing the widget.
-
 ```http
 POST /api/rest/v6/widgets HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: 3AAABLblqZNotRelaTOKEN
 Content-Type: application/json
 {
-"widgetCreationInfo":
-     {    "fileInfos":[
-        {        "transientDocumentId":"3AAABLblqZNotRealID"
-        }],    "name": "TripWidget",    "signatureFlow": ""
-     }
- }
+    "name": "MyTestWidget",
+    "widgetParticipantSetInfo": {
+        "memberInfos": [{
+            "email": ""
+        }],
+    "role": "A valid role of the widget signer (SIGNER/APPROVER)"
+    },
+    "state": "A valid state in which the widget should land (ACTIVE/AUTHORING/DRAFT)"
+}
 ```
 
 You will get the following JSON response:
 
 ```json
 {
-    "javascript":"",
-    "url":"https://secure.na1.echosign.com/public/esignWidget?wid=CBNOTREALIDkyjcE*",
-    "widgetId":"3AANoTRealIDiT6o"
+    id: <The unique identifier of widget which can be used to retrieve the data entered by the signers.>
 }
 ```
 

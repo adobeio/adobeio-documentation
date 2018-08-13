@@ -10,7 +10,11 @@ Host: api.na1.echosign.com
 Access-Token: 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
 {
-    "agreementId":"3AAABNotRealAgreementID"
+  "recipientParticipantIds": [
+    "<id of a participant>."
+  ],
+  "nextSentDate": "< The date when the reminder is scheduled to be sent next.>",
+  "status": "< valid status of reminder (ACTIVE)>"
 }
 ```
 
@@ -18,16 +22,7 @@ Note that you need to provide the `agreementId` in the request header. You will 
 
 ```json
 {
-  "participantEmailsSet":[
-    {
-      "participantEmailSetInfo":[
-        {
-          "participantEmail":"SIGNERG@COMPANY.COM"
-        }
-      ]
-    }
-  ],
-  "result":"REMINDER_SENT"
+   id: <An identifier of the reminder resource created on the server >
 }
 ```
 

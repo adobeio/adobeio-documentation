@@ -3,7 +3,7 @@
 When the agreement is ready for signing, invoke `GET /agreements/{agreementId}/signingUrls` to get the signing URL:
 
 ```http
-POST /api/rest/v6/agreements/3AANotRealIDQN8_gg/signingUrls HTTP/1.1
+GET /api/rest/v6/agreements/3AANotRealIDQN8_gg/signingUrls HTTP/1.1
 Host: api.na1.echosign.com
 Access-Token: 3AAABLblqZNotRelaTOKEN
 ```

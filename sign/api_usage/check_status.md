@@ -18,76 +18,28 @@ You will get the following JSON response:
 
 ```json
 {
-  "events":[
-    {
-      "actingUserEmail":"someone@somecomp.com",
-      "actingUserIpAddress":"103.43.112.98",
-      "date":"2016-05-11T00:30:32-07:00",
-      "description":"Document created by Frank Jennings",
-      "participantEmail":"someone@somecomp.com",
-      "type":"CREATED",
-      "versionId":"3AAANOTREALIDsb_IZ"
-    },
-    {
-      "actingUserEmail":"someone@somemail.com",
-      "date":"2016-05-11T00:30:42-07:00",
-      "description":"Sent out for signature to Phantom Jennings",
-      "participantEmail":"someid@somecompany.com",
-      "type":"SIGNATURE_REQUESTED"
-    }
-  ],
-  "latestVersionId":"3AAABLbNOTREALID1UIGbvj",
-  "locale":"en_US",
-  "name":"[DEMO USE ONLY] MyTestAgreement",
-  "participantSetInfos":[
-    {
-      "participantSetMemberInfos":[
-        {
-          "company":"Adobe Systems Inc. (CCE & DC)",
-          "email":"someid@somecompany.com",
-          "name":"Phantom Jennings"
-        }
-      ],
-      "roles":[
-        "SIGNER"
-      ],
-      "signingOrder":1,
-      "status":"WAITING_FOR_MY_SIGNATURE"
-    },
-    {
-      "participantSetMemberInfos":[
-        {
-          "company":"Adobe",
-          "email":"someid@somecompany.com",
-          "name":"Frank Jennings",
-          "title":"Approver"
-        }
-      ],
-      "roles":[
-        "SENDER"
-      ],
-      "status":"OUT_FOR_SIGNATURE"
-    }
-  ],
-  "status":"OUT_FOR_SIGNATURE",
-  "agreementId":"3AAABNOTREALIDI5_BjiH",
-  "modifiable":false,
-  "nextParticipantSetInfos":[
-    {
-      "nextParticipantSetMemberInfos":[
-        {
-          "email":"somemail@somecompany.com",
-          "name":"Phantom Jennings",
-          "waitingSince":"2016-05-11T00:30:32-07:00"
-        }
-      ]
-    }
-  ],
-  "vaultingEnabled":false
+  "id": "<an-adobe-sign-generated-id>",
+  "name": "MyTestAgreement",
+  "participantSetsInfo": [{
+    "memberInfos": [{
+      "email": "signer@somecompany.com",
+      "securityOption": {
+        "authenticationMethod": "NONE"
+      }
+    }],
+    "role": "SIGNER",
+    "order": 1
+  }],
+  "senderEmail": "sender@somecompany.com",
+  "createdDate": "2018-07-23T08:13:16Z",
+  "signatureType": "ESIGN",
+  "locale": "en_US",
+  "status": "OUT_FOR_SIGNATURE",
+  "documentVisibilityEnabled": false
 }
 ```
 
-By default, the callback URL is called whenever an event involving a particular transaction occurs in Adobe Sign. The callback includes the ID of the agreement whose status has changed, the current status of the agreement, and information on the event that resulted in the callback. Your application logic can evaluate the received status and decide whether to perform an action in the calling system.
+By default, the webhook URL is called whenever an event involving a particular transaction occurs in Adobe Sign. The webhook event includes the ID of the agreement whose status has changed, the current status of the agreement, and information on the event that resulted in the callback. Your application logic can evaluate the received status and decide whether to perform an action in the calling system.
 
 In addition to HTTPS GET, Adobe Sign also alternatively supports PUT for receiving events about the signature process. Included in the request will be the completed signed PDF. Adobe Sign uses an PUT request to return the signed PDF. Please ensure that your application can correctly handle such a request. Please contact Adobe Support or your assigned Client Success Manager to get your account configured to receive PUT events.
 

@@ -54,25 +54,19 @@ Access-Token: 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
 
 {
-    "documentCreationInfo":{
-        "fileInfos":[{
-            "transientDocumentId":"3VBRNOTREALIDl1ad36A4*"
-         }],
-        "name":"MyTestAgreement",
-        "recipientSetInfos":[
-            {
-                "recipientSetMemberInfos":[
-                    {
-                        "email":"signer@somecompany.com",
-                        "fax":""
-                    }
-                 ],
-                "recipientSetRole":"SIGNER"
-            }
-        ],
-        "signatureType":"ESIGN",
-        "signatureFlow":"SENDER_SIGNATURE_NOT_REQUIRED"
-    }
+    "fileInfos": [{
+        "transientDocumentId": "<copy-transient-from-the-upload-document-step>"
+    }],
+    "name": "MyTestAgreement",
+    "participantSetsInfo": [{
+        "memberInfos": [{
+            "email": "signer@somecompany.com"
+        }],
+        "order": 1,
+        "role": "SIGNER"
+    }],
+    "signatureType": "ESIGN",
+    "state": "IN_PROCESS"
 }
 ```
 
@@ -82,17 +76,18 @@ Replace the value for the following attributes with the correct values:
 |---|---|
 | `transientDocumentId` | The unique ID representing the uploaded document. |
 | `name` | The name of the agreement. |
-| `email` | Recipient Email address. |
-| `recipientSetRole` | The role of the recipient. The possible values are `APPROVER`, `DELEGATE_TO_APPROVER`, `DELEGATE_TO_SIGNER`, and `SIGNER`. |
+| `email` | Recipient&rsquo;s email address. |
 | `signatureType` | The type of signature you would like to request. The possible values are `ESIGN` and `WRITTEN`. |
-| `signatureFlow` | The workflow you would like to use: whether the sender needs to sign before the recipient, after the recipient, or not at all. The possible values are `SENDER_SIGNATURE_NOT_REQUIRED`, `SENDER_SIGNS_LAST`, `SENDER_SIGNS_FIRST`, `SEQUENTIAL` or `PARALLEL`. |
+| `order` | Index indicating the position at which this signing group needs to sign. Signing group to sign at first place is assigned 1 as index. |
+| `role` | Role of the participant set. The possible values are: `SIGNER`, `APPROVER`, `ACCEPTOR`, `CERTIFIED_RECIPIENT`,  `FORM_FILLER` or `DELEGATE_TO_SIGNER`, `DELEGATE_TO_APPROVER`, `DELEGATE_TO_ACCEPTOR`, `DELEGATE_TO_CERTIFIED_RECIPIENT`, `DELEGATE_TO_FORM_FILLER`, or `SHARE`. |
+| `state` | The state in which the agreement should land. The possible values are `AUTHORING`, `DRAFT`, or `IN_PROCESS`. You can use a) `DRAFT` to incrementally build the agreement before sending out, b) `AUTHORING` to add or edit form fields in the agreement, c) `IN_PROCESS` to immediately send the agreement. You can use the `PUT /agreements/{agreementId}/state` endpoint to transition an agreement between the above-mentioned states. An allowed transition would follow this sequence: `DRAFT` -&gt; `AUTHORING` -&gt; `IN_PROCESS` -&gt; `CANCELLED`.
 
 
 You will get the following response containing the `agreementId`:
 
 ```json
 {
-    "agreementId":"3AAABLbNOTTHEREALIDXtI5_BjiH"
+    "id": "<an-adobe-sign-generated-id>"
 }
 ```
 
