@@ -698,7 +698,7 @@ Only events and conditional parameters can be  modified. The webhook URL can&rsq
 
 Any API request may return any of these standard error codes:
 
-| HTTPS status code | Error code | Message |
+| **HTTPS status code** | **Error code** | **Message** |
 | --- | --- | --- |
 | 400 | `BAD_REQUEST` | The request provided is invalid. |
 | 400 | `INVALID_JSON` | An invalid JSON was specified. |
@@ -719,7 +719,7 @@ Any API request may return any of these standard error codes:
 
 Every API request will have the following standard headers. If Any API in the list above does not have one or more of the following headers, the API will explicitly document this fact.
 
-| Header Name | Description |
+| **Header Name** | **Description** |
 | --- | --- |
 | `AUTHORIZATION` | An access token with the correct scopes. |
 | `x-api-user` | The userId or email of the API caller using the account or group token in the format  `userid:{userId}` **OR** `email:{email}.`  If it is not specified, then the caller is inferred from the token. |

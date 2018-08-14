@@ -72,7 +72,7 @@ Content-Type: application/json
 
 Replace the value for the following attributes with the correct values:
 
-| Attribute | Description |
+| **Attribute** | **Description** |
 |---|---|
 | `transientDocumentId` | The unique ID representing the uploaded document. |
 | `name` | The name of the agreement. |

@@ -14,11 +14,11 @@ The following table lists the Adobe Sign supported UI events that can be embedde
 
 ### **Workflow events**
 
-| Event Type | Data | Description |
+| **Event Type** | **Data** | **Description** |
 | --- | --- | --- |
-| **'ESIGN'** | NONE | This event gets fired after a user has successfully signed an agreement. |
-| **'REJECT'** | NONE | This event is fired after a user rejects an agreement. |
-| **'PREFILL'** | NONE | This event is fired after a user completes prefilling an agreement and sends it. |
+| `ESIGN` | NONE | This event gets fired after a user has successfully signed an agreement. |
+| `REJECT` | NONE | This event is fired after a user rejects an agreement. |
+| `PREFILL` | NONE | This event is fired after a user completes prefilling an agreement and sends it. |
 
 ### **Page Load events**
 

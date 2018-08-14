@@ -143,7 +143,7 @@ The response below indicates that we are trying to update an older version (_obs
 
 The ETag value required to be passed in any PUT or DELETE API can be obtained from a corresponding GET operation on the same entity. The table below mentions these modification (PUT or DELETE) APIs along with the corresponding GET APIs that provides the ETag value for these modification requests.
 
-| Update/Deletion API | Corresponding GET endpoint |
+| **Update/Deletion API** | **Corresponding GET endpoint** |
 | --- | --- |
 | PUT /agreements/{agreementId} | GET /agreements/{agreementId} |
 | POST /agreements/{agreementId}/formFields | GET /agreements/{agreementId}/formFields |

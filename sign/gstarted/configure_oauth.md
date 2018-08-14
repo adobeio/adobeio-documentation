@@ -20,9 +20,9 @@ In the  [previous section](create_app.md), you learned to create an application.
 
     | **Modifier** | **Description** |
     | --- | --- |
-    | **self** | Perform the specified action on behalf of the authorizing user. This is the default: for example, &ldquo;agreement_send:self&rdquo; is the same scope as &ldquo;agreement_send&rdquo; |
-    | **group** | Perform the specified action on behalf of any user in the same group as the authorizing user. The authorizing user must be a group admin in order to grant this scope, and must have the Business or Enterprise edition of Adobe Sign. |
-    | **account** | Perform the specified action on behalf of any user in the same account as the authorizing user. The authorizing user must be an account admin in order to grant this scope, and must have the Business or Enterprise edition of Adobe Sign. |
+    | `self` | Perform the specified action on behalf of the authorizing user. This is the default: for example, &ldquo;agreement_send:self&rdquo; is the same scope as &ldquo;agreement_send&rdquo; |
+    | `group` | Perform the specified action on behalf of any user in the same group as the authorizing user. The authorizing user must be a group admin in order to grant this scope, and must have the Business or Enterprise edition of Adobe Sign. |
+    | `account` | Perform the specified action on behalf of any user in the same account as the authorizing user. The authorizing user must be an account admin in order to grant this scope, and must have the Business or Enterprise edition of Adobe Sign. |
 
 Now you are all set to invoke the Sign APIs from your client-side apps. Note that OAuth is widely used by developers to authorize API access. Adobe Sign&rsquo;s implementation complies with the  [OAuth 2.0 specification](https://tools.ietf.org/html/rfc6749).
 

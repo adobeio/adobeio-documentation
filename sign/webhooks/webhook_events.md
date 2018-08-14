@@ -18,7 +18,7 @@ Currently webhooks can be created only for agreement, widget, and megasign event
 
 This table displays the events and payload which will be sent in webhook notifications.
 
-| Event type | Description and payload |
+| **Event type** | **Description and payload** |
 | --- | --- |
 | `AGREEMENT_ACTION_COMPLETED` | When an agreement is signed by the participant. [View Payload](webhook_events/agreement_action_completed.md) |
 | `AGREEMENT_ACTION_DELEGATED` | When an agreement is delegated by the participant. [View Payload](webhook_events/agreement_action_delegated.md) |
