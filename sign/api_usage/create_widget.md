@@ -30,7 +30,7 @@ You will get the following JSON response:
 Now, the Widget URL can be circulated to the parents for signing. At any time, to get information about the Widget, send a GET request to `/widgets/{widgetId}`.
 
 ```http
-GET /api/rest/v5/widgets/3AAANotTheRealID6o HTTP/1.1
+GET /api/rest/v6/widgets/3AAANotTheRealID6o HTTP/1.1
 Host: api.na1.echosign.com
 ```
 

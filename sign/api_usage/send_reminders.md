@@ -7,7 +7,7 @@ A signing reminder can be sent to all the signers if they have not signed the ag
 ```http
 POST /api/rest/v6/agreements/{agreementId}/reminders HTTP/1.1
 Host: api.na1.echosign.com
-Access-Token: 3AAABLblNOTREALTOKENLDaV
+Authorization: 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
 {
   "recipientParticipantIds": [
@@ -18,11 +18,11 @@ Content-Type: application/json
 }
 ```
 
-Note that you need to provide the `agreementId` in the request header. You will get the following response from the server:
+Note that you need to provide the `agreementId` in the request URL. You will get the following response from the server:
 
 ```json
 {
-   id: <An identifier of the reminder resource created on the server >
+   id: <An identifier of the reminder resource created on the server>
 }
 ```
 

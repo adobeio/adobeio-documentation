@@ -50,7 +50,7 @@ For creating an agreement, send a POST request to the `/agreements` endpoint wit
 ```json
 POST /api/rest/v6/agreements HTTP/1.1
 Host: api.na1.echosign.com
-Access-Token: 3AAABLblNOTREALTOKENLDaV
+Authorization: 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
 
 {
@@ -83,7 +83,7 @@ Replace the value for the following attributes with the correct values:
 | `state` | The state in which the agreement should land. The possible values are `AUTHORING`, `DRAFT`, or `IN_PROCESS`. You can use a) `DRAFT` to incrementally build the agreement before sending out, b) `AUTHORING` to add or edit form fields in the agreement, c) `IN_PROCESS` to immediately send the agreement. You can use the `PUT /agreements/{agreementId}/state` endpoint to transition an agreement between the above-mentioned states. An allowed transition would follow this sequence: `DRAFT` -&gt; `AUTHORING` -&gt; `IN_PROCESS` -&gt; `CANCELLED`.
 
 
-You will get the following response containing the `agreementId`:
+You will get the following response containing the `id`:
 
 ```json
 {

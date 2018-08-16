@@ -13,7 +13,7 @@ Send the following GET request to retrieve the signed agreement:
 ```http
 GET /api/rest/v6/agreements/3AAA5NOTREALIDiH/combinedDocument HTTP/1.1
 Host: api.na1.echosign.com:443
-Access-Token: 3AAABLblqZhB9BF
+Authorization: 3AAABLblqZhB9BF
 ```
 
 The response body will contain the content of the PDF file, which you can save locally through your application.
