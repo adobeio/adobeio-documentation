@@ -1,5 +1,5 @@
 # Send Reminders
-
+ 
 A signing reminder can be sent to all the signers if they have not signed the agreement. When you send a reminder, the signers will get the same notification email that was originally sent.
 
 ![Sending a reminder](../img/sign_devguide_3.png)
@@ -7,7 +7,7 @@ A signing reminder can be sent to all the signers if they have not signed the ag
 ```http
 POST /api/rest/v6/agreements/{agreementId}/reminders HTTP/1.1
 Host: api.na1.echosign.com
-Authorization: 3AAABLblNOTREALTOKENLDaV
+Authorization: Bearer 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
 {
   "recipientParticipantIds": [

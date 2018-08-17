@@ -21,7 +21,7 @@ To upload a PDF document for signing, send a POST request to the `transientDocum
 ```http
 POST /api/rest/v6/transientDocuments HTTP/1.1
 Host: api.na1.echosign.com
-Access-Token: MvyABjNotARealTokenHkYyi
+Authorization: Bearer MvyABjNotARealTokenHkYyi
 Content-Type: multipart/form-data
 Content-Disposition: form-data; name=";File"; filename="MyPDF.pdf"
 
@@ -50,7 +50,7 @@ For creating an agreement, send a POST request to the `/agreements` endpoint wit
 ```json
 POST /api/rest/v6/agreements HTTP/1.1
 Host: api.na1.echosign.com
-Authorization: 3AAABLblNOTREALTOKENLDaV
+Authorization: Bearer 3AAABLblNOTREALTOKENLDaV
 Content-Type: application/json
 
 {
@@ -93,4 +93,4 @@ You will get the following response containing the `id`:
 
 The returned `agreementId` must be used to refer to the agreement in all subsequent API calls. This ID must be used to retrieve up-to-date status of the agreement, either by polling or when Adobe Sign notifies your application of any status change.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/) 

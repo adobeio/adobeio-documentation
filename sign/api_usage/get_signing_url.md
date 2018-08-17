@@ -1,11 +1,11 @@
 # Get the Signing URL
-
+ 
 When the agreement is ready for signing, invoke `GET /agreements/{agreementId}/signingUrls` to get the signing URL:
 
 ```http
 GET /api/rest/v6/agreements/3AANotRealIDQN8_gg/signingUrls HTTP/1.1
 Host: api.na1.echosign.com
-Authorization: 3AAABLblqZNotRelaTOKEN
+Authorization: Bearer 3AAABLblqZNotRelaTOKEN
 ```
 
 You will get the following JSON response containing the signing URL:

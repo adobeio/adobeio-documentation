@@ -45,4 +45,4 @@ In addition to HTTPS GET, Adobe Sign also alternatively supports PUT for receivi
 
 The second mechanism to reflect the most current or up-to-date status of an agreement sent for signature is for your application to periodically poll Adobe Sign regarding the agreement&rsquo;s status. The upside of polling is that it can be used in cases where your calling application is behind your firewall and not accessible from the Internet, thus enabling Adobe Sign to complete a callback. The down side of polling is that you have to create a scheduling mechanism within your application to periodically query the status of all documents that were not yet signed, check whether the document&rsquo;s status has changed, and update your system accordingly. If you choose to use polling, we recommend you have different policies based on document "age". In other words, you would reduce the frequency of polling for documents not signed after a certain number of days.
 
-[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/_0_1_2)
+[TRY IT OUT](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/_0_1_2) 

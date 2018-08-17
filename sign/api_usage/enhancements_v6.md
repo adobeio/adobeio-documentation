@@ -31,7 +31,7 @@ This page is a comprehensive guide for developers who are looking to plug Adobe 
 
 ### Pagination Support
 
-Existing Adobe Sign APIs return the entire list of resources (agreements, widgets, or library documents) that a user has in a GET call. For any user with even a decent number of transactions, this list soon becomes huge. The v6 APIs have introduced pagination support to all these resources with a client-configurable page size. This will be especially useful to our mobile clients and integrations who are constrained by their consumption capacity. This sample shows pagination in a request and response:
+Existing Adobe Sign APIs return the entire list of resources (agreements, widgets, or library documents) that a user has in a GET call. For some users with a large number of transactions this resource list becomes too big for consumption. The v6 APIs have introduced pagination support to all these resources with a client-configurable page size. This will be especially useful to our mobile clients and integrations who are constrained by their consumption capacity. This sample shows pagination in a request and response:
 
 **Sample Request**
 
@@ -93,7 +93,7 @@ In addition, this also helps to resolve conflicts in the case of concurrent upda
 ```http
 URI : GET https://api.na1.echosign.com:443/api/rest/v6/agreements/CBJCHBCAABAAQonMXhG-V6w-rheRViZNFGxmCgEEf3k0 
 
-Headers : Authroization: Bearer <access-token>
+Headers : Authorization: Bearer <access-token>
           Accept: */*
           Accept-Encoding: gzip, deflate, br
           Accept-Language: en-US,en
@@ -150,10 +150,6 @@ The ETag value required to be passed in any PUT or DELETE API can be obtained fr
 | PUT /agreements/{agreementId}/formFields | GET /agreements/{agreementId}/formFields |
 | PUT /agreements/{agreementId}/formFields/mergeInfo | GET /agreements/{agreementId}/formFields/mergeInfo |
 | PUT /agreements/{agreementId}/members/participantSets/{participantSetId} | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
-| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/acknowledgement | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
-| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues | GET /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/formFieldValues |
-| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/reject | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
-| PUT /agreements/{agreementId}/members/participantSets/{participantSetId}/participants/{participantId}/status | GET /agreements/{agreementId}/members/participantSets/{participantSetId} |
 | PUT /agreements/{agreementId}/state | GET /agreements/{agreementId} |
 | DELETE /agreements/{agreementId}/documents | GET /agreements/{agreementId}/documents |
 | PUT /libraryDocuments/{libraryDocumentId} | GET /libraryDocuments/{libraryDocumentId} |
@@ -168,15 +164,15 @@ The ETag value required to be passed in any PUT or DELETE API can be obtained fr
 
 ### GET, PUT, POST consistency
 
-In building the Adobe Sign v6 APIs, we have enabled more simplicity in the design of client applications by creating consistency across GET, POST, and PUT operations in each API, thereby enabling clients to reuse the same model across these APIs. For more elaboration on this please refer to the [agreement model](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo) in GET, PUT and POST operations.
+In building the Adobe Sign v6 APIs, we have enabled more simplicity in the design of client applications by creating consistency across GET, POST, and PUT operations in each API, thereby enabling clients to reuse the same model across these APIs. For reference see the [agreement model](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo) in the (POST|PUT|GET) /agreements API.
 
 ### Performance improvements
 
-In Adobe Sign v6, we've taken a fresh look at the system architecture to eliminate redundant database checks; this has improved the performance of the interface. Also, we have migrated to the asynchronous creation of resources, which has significantly improved our response time. The client experience of using the APIs has significantly improved due to these performance enhancmenents.
+The creation and update APIs are now asynchronous, which significantly improves their response time. This frees clients from waiting on these operations and they can move on to next steps in their workflow.
 
-However, due to the asynchronous nature of the creation APIs, the clients must **poll** on the status of the created resource before fetching _certain_ sub-resources(for example, documents in the case of agreements) or performing any modifications on the resource. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED`, which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
+Clients should now poll on the status of the newly created resource before certain sub-resource operations, such as documents in the case of agreements. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED`, which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
 
-### Authorization Header
+### Authorization header
 The Adobe Sign API accepts an authorization token in the `access-token` header; however, from v6 onwards we will be migrating to the standard `Authorization` header. The `Authorization` header will hold the user&rsquo;s authorization token in this format:
 
 `Authorization: Bearer <access-token>`
@@ -245,7 +241,7 @@ The new document visibility feature allows senders to control the exposure of ag
 
 ### Draft
 
-The v6 APIs provides for an incremental creation of resource by introducing the concept of “DRAFT”. The incremental creation of any resource is really helpful, especially when it constitutes one of many complex components. Draft is a temporary or primitive stage of the final intended resource that can be updated in steps to create the final resource.
+The v6 APIs provides the capability for an incremental creation of a resource by introducing the concept of “DRAFT”. The incremental creation of any resource is really helpful, especially when it is constituted of many complex components. Draft is a temporary or primitive stage of the final intended resource that can be updated in steps to create the final resource.
 
 This example illustrates a stepwise creation of an agreement:
 
@@ -300,13 +296,14 @@ The next step finalizes the draft into an agreement.
 
 The v6 Adobe Sign APIs has endpoints to manage notes in an agreement. Clients can add notes to an agreement and retrieve them using these API's. The table below lists all these APIs and their operation.
 
-
-
 | **Notes API** | **Functionality** |
 | --- | --- |
 | [GET /agreements/{agreementId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementNoteForApiUser) | Retrieves the latest note on an agreement for the user. |
+| [PUT /agreements/{agreementId}/me/note](https://secure.echosign.com/public/docs/restapi/v6) | Updates the latest note associated with an agreement. |
 | [GET /libraryDocuments/{libraryDocumentId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocumentNoteForApiUser) | Retrieves the latest note on a library template for the user. |
-
+| [PUT /libraryDocuments/{libraryDocumentId}/me/note](https://secure.echosign.com/public/docs/restapi/v6) | Updates the latest note of a library document for the API user. |  
+| [GET /widgets/{widgetId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/getWidgetNoteForApiUser) | Retrieves the latest note of a widget for the API user. |
+| [PUT /widgets/{widgetId}/me/note](https://secure.echosign.com/public/docs/restapi/v6) | Updates the latest note of a widget for the API user. |
 
 ### Reminders
 

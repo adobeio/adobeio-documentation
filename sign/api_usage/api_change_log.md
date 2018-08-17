@@ -64,7 +64,7 @@ Updates the data of an agreement, such as name, participants, etc.
 Edit or modify an existing form field on an agreement document.
 
 [PUT /agreements/{agreementId}/me/visibility](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementVisibility)  
-Manage the visibility of an agreement in GET /agreements.
+Manage the visibility of an agreement in `GET /agreements`.
 
 [PUT /agreements/{agreementId}/members/participantSets/{participantSetId}](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateParticipantSet)  
 Updates an existing participant set of an agreement. Adds some more capability to the existing recipient update feature:
@@ -73,7 +73,7 @@ Updates an existing participant set of an agreement. Adds some more capability t
 2. Allows sender to replace participants who are not the current signer as well.
 
 [PUT /agreements/{agreementId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementState)  
-Transitions an agreement from one state to another: for example, DRAFT to IN_PROCESS. Note that not all transitions are allowed. An allowed transition would follow the following sequence: DRAFT -&gt; AUTHORING -&gt; IN_PROCESS -&gt; CANCELLED.
+Transitions an agreement from one state to another: for example, `DRAFT` to `IN_PROCESS`. Note that not all transitions are allowed. An allowed transition would follow the following sequence: `DRAFT` -&gt; `AUTHORING` -&gt; `IN_PROCESS` -&gt; `CANCELLED`.
 
 [PUT /libraryDocuments/{libraryDocumentId}](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/updateLibraryDocument) 
 Updates the data of a library document, such as name, type, scope, etc.
@@ -82,22 +82,22 @@ Updates the data of a library document, such as name, type, scope, etc.
 A new API to control visibility of an agreement in the `GET /libraryDocuments` response.
 
 [PUT /libraryDocuments/{libraryDocumentId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/updateLibraryDocumentState)  
-Transitions a library document from one state to another: for example, AUTHORING to ACTIVE. Note that not all transitions are allowed. An allowed transition would follow the following sequence: AUTHORING -&gt; ACTIVE.
+Transitions a library document from one state to another: for example, `AUTHORING` to `ACTIVE`. Note that not all transitions are allowed. An allowed transition would follow the following sequence: `AUTHORING` -&gt; `ACTIVE`.
 
 [PUT /megaSigns/{megaSignId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/megaSigns/updateMegaSignState)  
-Transitions a MegaSign from one state to another: for example, IN_PROCESS to CANCELLED. Note that not all transition are allowed. An allowed transition would follow the following sequence: IN_PROCESS -&gt; CANCELLED.
+Transitions a MegaSign from one state to another: for example, `IN_PROCESS` to `CANCELLED`. Note that not all transition are allowed. An allowed transition would follow the following sequence: `IN_PROCESS` -&gt; `CANCELLED`.
 
 [PUT /users/{userId}/groups](https://secure.echosign.com/public/docs/restapi/v6#!/users/updateGroupsOfUser)  
 Migrates the user to a different group or updates their role in the existing group.
 
 [PUT /widgets/{widgetId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/updateWidgetState)  
-Transitions a widget from one state to another: for example, DRAFT to IN_PROCESS. Note that not all transition are allowed. An allowed transition would follow one of the following sequences: DRAFT -&gt; AUTHORING -&gt; ACTIVE,  ACTIVE &lt;-&gt; INACTIVE,  DRAFT -&gt; CANCELLED.
+Transitions a widget from one state to another: for example, `DRAFT` to `IN_PROCESS`. Note that not all transition are allowed. An allowed transition would follow one of the following sequences: `DRAFT` -&gt; `AUTHORING` -&gt; `ACTIVE`,  `ACTIVE` &lt;-&gt; `INACTIVE`,  `DRAFT` -&gt; `CANCELLED`.
 
 ## Updated APIs
 
 [GET /baseUris](https://secure.echosign.com/public/docs/restapi/v6#!/base_uris/getBaseUris)
 
-- The endpoint path is now changed to be consistent with the camel casing convention in Adobe Sign API (base_uri is now baseUri).
+- The endpoint path is now changed to be consistent with the camel casing convention in Adobe Sign API (`base_uri` is now `baseUri`).
 - The response parameter is also renamed to have camel casing.
 
 [GET /agreements](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreements)
@@ -117,29 +117,29 @@ Transitions a widget from one state to another: for example, DRAFT to IN_PROCESS
 Includes audit reports for draft creation.
 
 [GET /agreements/{agreementId}/combinedDocument](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getCombinedDocument)  
-Uses participantId instead of participantEmail as filter.
+Uses `participantId` instead of `participantEmail` as a filter.
 
 [GET /agreements/{agreementId}/documents](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAllDocuments)
 
-- Uses participantId instead of participantEmail as a filter.
+- Uses `participantId` instead of `participantEmail` as a filter.
 - There are minor changes in the field names.
 
 [GET /agreements/{agreementId}/documents/imageUrls](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAllDocumentsImageUrls)
 
-- Uses participantId instead of participantEmail as a filter.
+- Uses `participantId` instead of `participantEmail` as a filter.
 - There are minor changes in the field names.
-- Provides annotated image URLs with documentId and page number.
+- Provides annotated image URLs with `documentId` and page number.
 
 [GET /agreements/{agreementId}/documents/{documentId}/imageUrls](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getDocumentImageUrls)
 
-- Uses participantId instead of participantEmail as a filter.
+- Uses `participantId` instead of `participantEmail` as a filter.
 - There are minor changes in the field names.
 
 [GET /libraryDocuments](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocuments)  
 
 - Response is paginated.
 - Creator email and status is in the response.
-- We've added a query parameter to view/un-view all the hidden agreements.
+- We&rsquo;ve added a query parameter to view/un-view all the hidden agreements.
 - The `scope` parameter in v5 is mapped to `sharingMode` in v6.
 - `PERSONAL` in v5 is now `USER` in v6.
 - `SHARED` in v5 is now `GROUP in v6.
@@ -155,7 +155,7 @@ Uses participantId instead of participantEmail as filter.
 [GET /libraryDocuments/{libraryDocumentId}/documents](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getDocuments)  
 
 - Added a `label` parameter for using in the custom workflow.
-- A `versionId` of the documents added as filter.
+- A `versionId` of the documents has been added as a filter.
 
 [GET /libraryDocuments/{libraryDocumentId}/documents/{documentId}](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocument)  
 A base64 encoding option is available for the generated PDF.
@@ -166,7 +166,7 @@ Minor restructuring in the response.
 [GET /users](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUsers)
 
 - Paginated response.
-- The groupId is no longer returned through this API.
+- The `groupId` is no longer returned through this API.
 - Returns the new account admin information.
 
 [GET /users/{userId}](https://secure.echosign.com/public/docs/restapi/v6#!/users/getUserDetail)
@@ -188,9 +188,9 @@ The model is consistent with the POST and PUT operations.
 - The document visibility feature is available in v6.
 - This API is more responsive as it is now asynchronous.
 - Clients can build up an agreement sequentially using draft functionality.
-- The signatureFlow parameter is dropped from v6 and is now implicitly inferred through the sequence that the values of order parameter are given in all participant sets.
+- The `signatureFlow` parameter is dropped from v6 and is now implicitly inferred through the sequence that the values of other parameters are given in all participant sets.
 - The Suppress Email feature is available in v6.
-- You can create an agreement in different states using the transistionState field.
+- You can create an agreement in different states using the `transistionState` field.
 - There is a separate state transitioning (from draft to agreement) API.
 
 [POST /agreements/{agreementId}/members/participantSets/{participantSetId}/delegatedParticipantSets](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createDelegatedParticipantSets)
@@ -217,13 +217,13 @@ Was: [POST /reminders](https://secure.na1.echosign.com/public/docs/restapi/v5#!/
 
 [POST /transientDocuments](https://secure.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument)
 
-- Returns an UNSUPPORTED\MEDIA\TYPE error for unsupported media type in Adobe Sign
+- Returns an `UNSUPPORTED_MEDIA_TYPE` error for unsupported media types in Adobe Sign.
 
 [POST /widgets](https://secure.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)  
 
 - The request body is now consistent with this API&rsquo;s GET/PUT counterpart. A common agreement model is used across all these APIs.
-- Form fields layer template and Merge Fields support removed in v6 for widget creation.
-- The signatureFlow parameter has been dropped and the workflow is inferred through the order in the additionalParticipantSetsInfo parameter.
+- Form fields layer template and Merge Fields support have been removed in v6 for widget creation.
+- The `signatureFlow` parameter has been dropped and the workflow is inferred through the order in the `additionalParticipantSetsInfo` parameter.
 
 [PUT /agreements/{agreementId}/participantSets/{participantSetId}/participants/{participantId}/reject](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/rejectAgreementForParticipation)  
 Enables a participant to reject an agreement.
@@ -241,7 +241,7 @@ Was: [PUT /agreements/{agreementId}/status](https://secure.echosign.com/public/d
 Updating the group of the user is now handled via the `PUT /users/{userId}/groups` API.
 
 [PUT /users/{userId}/state](https://secure.echosign.com/public/docs/restapi/v6#!/users/modifyUserState)  
-This is functionally the ame as before, but the API structure is revamped to make it consistent with other state transition APIs in v6.
+This is functionally the same as before, but the API structure is revamped to make it consistent with other state transition APIs in v6.
 
 ## Removed APIs
 
@@ -250,7 +250,3 @@ The equivalent functionality of removing an agreement permanently from a user&rs
 
 [GET /agreements/{agreementId}/documents/{documentId}/url](https://secure.echosign.com/public/docs/restapi/v5#!/agreements/getDocumentUrl)  
 The v5 API had the redundant functionality of providing combined agreement docs, which can be achieved through the [GET /document](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getDocument) API.
-
-[POST /users](https://secure.na1.echosign.com/public/docs/restapi/v5#!/users/createUser)  
-This API has been dropped from version 6, as user creation will now be handled through Adobe Identity Management Service (IMS) and not Sign.
-

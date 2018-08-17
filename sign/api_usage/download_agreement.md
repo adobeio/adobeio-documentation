@@ -1,5 +1,5 @@
 # Download the Agreement
-
+ 
 Once an agreement is signed, your application can retrieve the signed copy of the PDF and store that within your application.
 
 ![download the agreement](../img/sign_devguide_4.png)
@@ -13,7 +13,7 @@ Send the following GET request to retrieve the signed agreement:
 ```http
 GET /api/rest/v6/agreements/3AAA5NOTREALIDiH/combinedDocument HTTP/1.1
 Host: api.na1.echosign.com:443
-Authorization: 3AAABLblqZhB9BF
+Authorization: Bearer 3AAABLblqZhB9BF
 ```
 
 The response body will contain the content of the PDF file, which you can save locally through your application.
