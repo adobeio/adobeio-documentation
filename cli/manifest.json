@@ -1,0 +1,51 @@
+{
+"name": "Adobe Command-Line Interface",
+"version": "1.0.0",
+"description": "Command-Line Interface",
+"author": "Matt Lusher",
+"view_type": "mdbook",
+"meta_keywords": "adobe i/o,command line, interface",
+"meta_description": "default description",
+"publish_date": "08/28/2018",
+"show_edit_github_banner": false,
+"base_path": "https://raw.githubusercontent.com",
+"pages": [
+    {
+      "importedFileName": "readme",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/cli/readme.md",
+      "title": "Overview"
+    },
+    {
+      "importedFileName": "readme",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/cli/config/readme.md",
+      "title": "Config Commands"
+    },
+    {
+      "importedFileName": "readme",
+      "pages": [
+        {
+            "importedFileName": "workflows",
+            "pages": [],
+            "path": "adobeio/adobeio-documentation/master/cli/console/workflows",
+            "title": "Console Workflows"
+        }
+      ],
+      "path": "adobeio/adobeio-documentation/master/cli/console/readme.md",
+      "title": "Console Commands"
+    },
+    {
+      "importedFileName": "readme",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/cli/jwt-auth/readme.md",
+      "title": "JWT Authentication"
+    },
+    {
+      "importedFileName": "releasenotes",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/cli/releasenotes.md",
+      "title": "Release Notes"
+    }
+]
+}
