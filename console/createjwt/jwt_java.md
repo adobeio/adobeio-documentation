@@ -6,7 +6,8 @@ This example illustrates how to create a JSON Web Token for a Java-language appl
 
 The private key from your signing certificate must be DER-encoded before using it to sign the JWT. The following commands create a self-signed certificate, and encode the resulting private key for use with the example:
 
-```# create the certificate and private key using openssl
+```shell
+# create the certificate and private key using openssl
 $ openssl req -nodes -text -x509 -newkey rsa:2048 -keyout secret.pem -out certificate.pem -days 356
 
 # convert private key to DER format
@@ -15,7 +16,8 @@ $ openssl pkcs8 -topk8 -inform PEM -outform DER -in secret.pem  -nocrypt > secre
 
 ## Create JWT
 
-```/**
+```java
+/**
  * Copyright 2016 Adobe Systems Incorporated
  * All Rights Reserved.
  */
@@ -45,7 +47,7 @@ public class SampleJwtTest {
         String technicalAccountId = "AABCD8DB57F4B32801234033@techacct.adobe.com";
         String apiKey = "ec9a2091e2c64f0492c612344700abcd";
 
-        // Set expirationDate in milliseconds since epoch to 24 hours ahead of now 
+        // Set expirationDate in milliseconds since epoch to 24 hours ahead of now
         Long expirationTime = System.currentTimeMillis() / 1000 + 86400L;
 
         // Metascopes associated to key
