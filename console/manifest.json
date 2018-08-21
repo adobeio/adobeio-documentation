@@ -1,24 +1,18 @@
 {
 "name": "Authentication",
-"version": "1.0.0",
+"version": "2.0.0",
 "description": "Authentication",
 "author": "Rachel Luxemburg",
 "view_type": "mdbook",
 "meta_keywords": "adobe i/o,console,authentication",
 "meta_description": "default description",
-"publish_date": "08/08/2018",
+"publish_date": "08/20/2018",
 "show_edit_github_banner": false,
 "base_path": "https://raw.githubusercontent.com",
 "pages": [
 {
 "importedFileName": "gettingstarted",
 "pages": [
-    {
-      "importedFileName": "gettingstarted",
-      "pages": [],
-      "path": "adobeio/adobeio-documentation/master/console/gettingstarted.md",
-      "title": "Adobe I/O Authentication Overview"
-    },
     {
       "importedFileName": "api_key_workflow",
       "pages": [],
@@ -42,6 +36,18 @@
       "pages": [],
       "path": "adobeio/adobeio-documentation/master/console/createjwt.md",
       "title": "Creating a JSON Web Token"
+    },
+		{
+      "importedFileName": "createjwt",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/console/createjwt/jwt_java.md",
+      "title": "Creating a JWT for a Java App"
+    },
+		{
+      "importedFileName": "createjwt",
+      "pages": [],
+      "path": "adobeio/adobeio-documentation/master/console/createjwt/jwt_nodeJS.md",
+      "title": "Creating a JWT for a Node.js App"
     },
 	{
       "importedFileName": "createcert",
