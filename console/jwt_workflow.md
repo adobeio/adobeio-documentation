@@ -20,6 +20,7 @@ Your integrated application will begin each API session by exchanging the JWT fo
 1. [Exchange your JWT for an Access Token](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#token)
 
 <a id="cert"></a>
+
 ### Step 1: Create a Public Key Certificate
 
 Each Service Account integration must be associated with at least one valid public key certificate (commonly known as digital certificate) that verifies the identity of your application.
@@ -32,12 +33,13 @@ It is extremely important to properly secure your private key. It cannot be reco
 
 Your Service Account integration must be associated with at least one valid certificate. You can associate more than one certificate with an integration. This is helpful for certificates that have an expiration. Ideally, you will provide multiple certificates on an integration with overlapping lifespans to ensure your integration is always operational. You can use the private key of any associated certificate to sign your JWT.
 
-Adobe does not check for revocation or trust chains of the certificate. If you want to revoke a certificate that you have associated with an API key, you must do so explicitly using the  [Adobe I/O Console](https://console.adobe.io/). When you have done so, you can no longer use any JWT signed with the private key for that certificate to gain access to the Adobe I/O API.
+Adobe does not check for revocation or trust chains of the certificate. If you want to revoke a certificate that you have associated with an API key, you must do so explicitly using the [Adobe I/O Console](https://console.adobe.io/). When you have done so, you can no longer use any JWT signed with the private key for that certificate to gain access to the Adobe I/O API.
 
-To add or remove certificates, simply edit and update your Integration using the  [Adobe I/O Console](https://console.adobe.io/).
+To add or remove certificates, simply edit and update your Integration using the [Adobe I/O Console](https://console.adobe.io/).
 For more information about creating self-signed certificates and extracting keys from purchased certificates, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
 
 <a id="create"></a>
+
 ## Step 2: Subscribe to a Service or Event Provider
 
 To generate client credentials needed to access an Adobe service or event, create a new **Service Account Integration**. An integration can subscribe to multiple services and events. If you want to use an existing integration, simply subscribe to the new service.
@@ -46,19 +48,19 @@ To create an integration of this type, sign in to the [Console](https://console.
 
 ![Integration list](./img/1496167043844.png)
 
-> Your Enterprise ID must have administrative privileges for your organization to be able to create a new Service Account 
-> integration. If you do not have the required permissions, contact an IT Administrator at your company for help. This is 
+> Your Enterprise ID must have administrative privileges for your organization to be able to create a new Service Account
+> integration. If you do not have the required permissions, contact an IT Administrator at your company for help. This is
 > typically the person who distributes Creative Cloud, Acrobat, or Marketing Cloud licenses within your company.
 
 Select **Consume services** to create an integration that will access an Adobe product or service, or select **Subscribe to events** to receive event notifications in real-time. You will have an opportunity to subscribe to additional events and services once you have created the integration.
 
 ![Access an API](./img/1496167052277.png)
 
-* Consume services
-Services are the primary way your integration can access Adobe APIs and content. Some services are product specific, while other services provide unique functionality that can be used across products. We encourage you to mix and match services to build the best experience possible for your end users.
+- Consume services
+  Services are the primary way your integration can access Adobe APIs and content. Some services are product specific, while other services provide unique functionality that can be used across products. We encourage you to mix and match services to build the best experience possible for your end users.
 
-* Subscribe to events
-Adobe I/O Events allow you to build integrations that respond to changes in a user's cloud data in real time. Select this option if your integration needs to instantly process content or data stored in an Adobe cloud. You must supply a **webhook**, which is the URL to which event notifications are sent.
+- Subscribe to events
+  Adobe I/O Events allow you to build integrations that respond to changes in a user's cloud data in real time. Select this option if your integration needs to instantly process content or data stored in an Adobe cloud. You must supply a **webhook**, which is the URL to which event notifications are sent.
 
 Choose the service you want to add to your integration. APIs and products available through Adobe I/O are typically listed by cloud. However, some services span multiple clouds, such as User Management and I/O Events.
 
@@ -80,6 +82,7 @@ To update an existing integration, simply select it and click Continue.
 If you would like to create a brand new integration, select that option and click Continue.
 
 <a id="config"></a>
+
 ### Step 3: Configure a Service Account Integration
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
@@ -97,15 +100,16 @@ On this page:
 When creation is confirmed, visit the overview section for your new integration. The overview shows your generated credentials, and allows you to subscribe to additional services or events.
 
 <a id="secure"></a>
+
 ### Step 4: Secure your Client Credentials
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
 
 ![Service Account Overview](./img/1496167339876.png)
 
-* The API Key (or Client ID) should be considered public information. It is passed with every API request to identify your integration.
-* Technical Account ID and Organization ID are technical details used to create your JSON Web Token (JWT).
-* By default, the Client Secret is not displayed. Click **Retrieve Client Secret** to temporarily display the property.
+- The API Key (or Client ID) should be considered public information. It is passed with every API request to identify your integration.
+- Technical Account ID and Organization ID are technical details used to create your JSON Web Token (JWT).
+- By default, the Client Secret is not displayed. Click **Retrieve Client Secret** to temporarily display the property.
 
 (Note that the example values shown here are for illustration only. You must use the credential values assigned to your own integration.)
 
@@ -116,6 +120,7 @@ The Client Secret must be kept confidential and should be treated like a private
 To keep your credentials secure, make sure you do NOT include them in your source code, or inject them through environment variables. Similarly, you should never send credentials through unsecured email or other unsecured communications.
 
 <a id="JWT"></a>
+
 ### Step 5: Create your JSON Web Token
 
 Use your client credentials generated for your integration to create a JWT, and sign it with your private key. The JWT encodes all of the identity and security information that Adobe needs to verify your identity and grant you access to Adobe services and events.
@@ -125,15 +130,17 @@ Several public libraries are available for creating a JWT. The JWT must be digit
 You are responsible for securing your JWT along with your other access credentials.
 
 <a id="token"></a>
+
 ### Step 6: Exchange your JWT for an Access Token
 
 To initiate an API session, you use the JWT to obtain an access token from Adobe, by making a POST request to Adobe's Identity Management Service (IMS).
 
-* Send a POST request to:
-> ```https://ims-na1.adobelogin.com/ims/exchange/jwt/```
+- Send a POST request to:
 
-* The body of the request should contain URL-encoded parameters with your Client ID (API Key), Client Secret, and JWT:
-> ```client_id={api_key_value}&client_secret={client_secret_value}&jwt_token={base64_encoded_JWT}```
+  > `https://ims-na1.adobelogin.com/ims/exchange/jwt/`
+
+- The body of the request should contain URL-encoded parameters with your Client ID (API Key), Client Secret, and JWT:
+  > `client_id={api_key_value}&client_secret={client_secret_value}&jwt_token={base64_encoded_JWT}`
 
 For complete details of this exchange, see [JWT Authentication Reference](https://www.adobe.io/apis/cloudplatform/console/authentication/connect.html).
 
@@ -143,16 +150,17 @@ This call is the equivalent of a log-in. The response contains an OAuth access t
 
 To validate your newly created token, use it to make a test request of the API. In the following example the actual credential and token values are represented with curly brackets.
 
-Credential | Representation | Example
----------- | -------------- | -------
-API Key | {client-id} | ec9a2091e2c64f0492c6486547003018
-Client Secret | {client-secret} | 6dd58fb8-847c-4428-ac8d-ced269914e31
-JSON Web Token | {encoded-jwt} | very long encoded value
-Access Token | {encoded-token} | very long encoded value
+| Credential     | Representation  | Example                              |
+| -------------- | --------------- | ------------------------------------ |
+| API Key        | {client-id}     | ec9a2091e2c64f0492c6486547003018     |
+| Client Secret  | {client-secret} | 6dd58fb8-847c-4428-ac8d-ced269914e31 |
+| JSON Web Token | {encoded-jwt}   | very long encoded value              |
+| Access Token   | {encoded-token} | very long encoded value              |
 
 #### Sample Request
 
-```curl -X POST \
+```shell
+curl -X POST \
   https://ims-na1.adobelogin.com/ims/exchange/v1/jwt \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/x-www-form-urlencoded' \
@@ -161,7 +169,8 @@ Access Token | {encoded-token} | very long encoded value
 
 #### Sample Response
 
-```{
+```json
+{
   "token_type": "bearer",
   "access_token": "{encoded-token}",
   "expires_in": 86399981
