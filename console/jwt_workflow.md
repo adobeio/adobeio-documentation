@@ -8,7 +8,7 @@ For this type of integration, you will create a JSON Web Token (JWT) that encaps
 
 This article walks you through the steps to set up a Service Account integration.
 
-Your integrated application will begin each API session by exchanging the JWT for an access token from the Adobe Identity Management System (IMS). The application must pass the access token with every request in the **Authorization : Bearer** header. An access token expires after 24 hours. This type of token cannot be refreshed. For complete details of this exchange, see [JWT Authentication Reference](https://www.adobe.io/apis/cloudplatform/console/authentication/connect.html).
+Your integrated application will begin each API session by exchanging the JWT for an access token from the Adobe Identity Management System (IMS). The application must pass the access token with every request in the **Authorization : Bearer** header. An access token expires after 24 hours. This type of token cannot be refreshed. For complete details of this exchange, see [JWT Authentication Reference](console/connect.md).
 
 ## The JWT Workflow
 
@@ -34,7 +34,7 @@ Your Service Account integration must be associated with at least one valid cert
 Adobe does not check for revocation or trust chains of the certificate. If you want to revoke a certificate that you have associated with an API key, you must do so explicitly using the  [Adobe I/O Console](https://console.adobe.io/). When you have done so, you can no longer use any JWT signed with the private key for that certificate to gain access to the Adobe I/O API.
 
 To add or remove certificates, simply edit and update your Integration using the  [Adobe I/O Console](https://console.adobe.io/).
-For more information about creating self-signed certificates and extracting keys from purchased certificates, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
+For more information about creating self-signed certificates and extracting keys from purchased certificates, see [Public Key Certificates for JWT](/console/createcert.md).
 
 ## Step 2: Subscribe to a Service or Event Provider
 
@@ -115,7 +115,7 @@ To keep your credentials secure, make sure you do NOT include them in your sourc
 
 Use your client credentials generated for your integration to create a JWT, and sign it with your private key. The JWT encodes all of the identity and security information that Adobe needs to verify your identity and grant you access to Adobe services and events.
 
-Several public libraries are available for creating a JWT. The JWT must be digitally signed and base-64 encoded for inclusion in the access request. For details of what libraries are available and what fields must be included in your JWT, see [Creating a JSON Web Token](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt.html).
+Several public libraries are available for creating a JWT. The JWT must be digitally signed and base-64 encoded for inclusion in the access request. For details of what libraries are available and what fields must be included in your JWT, see [Creating a JSON Web Token](/console/createjwt.md).
 
 You are responsible for securing your JWT along with your other access credentials.
 
@@ -146,7 +146,8 @@ Access Token | {encoded-token} | very long encoded value
 
 #### Sample Request
 
-```curl -X POST \
+```
+curl -X POST \
   https://ims-na1.adobelogin.com/ims/exchange/v1/jwt \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/x-www-form-urlencoded' \
@@ -155,7 +156,8 @@ Access Token | {encoded-token} | very long encoded value
 
 #### Sample Response
 
-```{
+```
+{
   "token_type": "bearer",
   "access_token": "{encoded-token}",
   "expires_in": 86399981
