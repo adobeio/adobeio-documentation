@@ -2,9 +2,9 @@
 
 A JSON web token for Service Account authentication requires a particular set of claims, and must be signed using a valid digital signing certificate. We recommend that you use one of the publicly available libraries or tools for building your JWT. Examples are provided for some popular languages.
 
-* [Required Claims for a Service Account JWT](/console/jwt_workflow.md)
-* [Sign and Encode your JWT](/console/jwt_workflow.md)
-* [Using JWT Libraries and Creation Tools](/console/jwt_workflow.md)
+* [Required Claims for a Service Account JWT](createjwt.md#required-claims-for-a-service-account-jwt)
+* [Sign and Encode your JWT](createjwt.md#sign-and-encode-your-jwt)
+* [Using JWT Libraries and Creation Tools](createjwt.md#using-jwt-libraries-and-creation-tools)
 
 ## Required Claims for a Service Account JWT
 
@@ -35,7 +35,7 @@ The following is a sample payload to be signed and encoded.
 
 The JWT must be signed and base-64 encoded for inclusion in the access request. The JWT libraries provide functions to perform these tasks.
 
-* The token must be signed using the private key for a digital signing certificate that is associated with your API key. You can associate more than one certificate with an API key. If you do so, you can use the private key of any associated certificate to sign your JWT. For more information, see [Public Key Certificates for JWT](/console/createcert.md).
+* The token must be signed using the private key for a digital signing certificate that is associated with your API key. You can associate more than one certificate with an API key. If you do so, you can use the private key of any associated certificate to sign your JWT. For more information, see [Public Key Certificates for JWT](createcert.md).
 * Adobe supports RSASSA-PKCS1-V1_5 Digital Signatures with SHA-2. The JWS algorithm ("alg") parameter value can be RS256, RS384, or RS512.
 
 
@@ -49,8 +49,8 @@ Examples are provided for several popular languages.
 
 Language | Library | Example
 -------- | ------- | -------
-Java | `atlassian-jwt` `jsontoken`  | [Creating JWTs for Java Apps](/console/createjwt/jwt_java.md)
-Node.js | `node_modules/jwt-simple` | [Creating JWTs for Node.js Apps](/console/createjwt/jwt_nodeJS.md)
+Java | `atlassian-jwt` `jsontoken`  | [Creating JWTs for Java Apps](/createjwt/jwt_java.md)
+Node.js | `node_modules/jwt-simple` | [Creating JWTs for Node.js Apps](/createjwt/jwt_nodeJS.md)
 Python | `pyjwt` | For an example Python script that creates a JWT, see the [User Management Walkthrough](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/samples.html).
 
 ### Additional JWT Libraries and Creation Tools
