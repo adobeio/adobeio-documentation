@@ -2,11 +2,10 @@
 
 A JSON web token for Service Account authentication requires a particular set of claims, and must be signed using a valid digital signing certificate. We recommend that you use one of the publicly available libraries or tools for building your JWT. Examples are provided for some popular languages.
 
-* [Required Claims for a Service Account JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#build)
-* [Sign and Encode your JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#sign)
-* [Using JWT Libraries and Creation Tools](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#examples)
+* [Required Claims for a Service Account JWT](/console/jwt_workflow.md)
+* [Sign and Encode your JWT](/console/jwt_workflow.md)
+* [Using JWT Libraries and Creation Tools](/console/jwt_workflow.md)
 
-<a id="build"></a>
 ## Required Claims for a Service Account JWT
 
 Your JWT must contain the following claims:
@@ -21,7 +20,8 @@ Claim | Description
 
 The following is a sample payload to be signed and encoded.
 
-```{
+```
+{
   "sub": "12345667EDBA435@techacct.adobe.com",
   "iss": "8765432DEAB65@AdobeOrg",
   "exp": 1473901205,
@@ -31,16 +31,14 @@ The following is a sample payload to be signed and encoded.
 }
 ```
 
-<a id="sign"></a>
 ## Sign and Encode your JWT
 
 The JWT must be signed and base-64 encoded for inclusion in the access request. The JWT libraries provide functions to perform these tasks.
 
-* The token must be signed using the private key for a digital signing certificate that is associated with your API key. You can associate more than one certificate with an API key. If you do so, you can use the private key of any associated certificate to sign your JWT. For more information, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
+* The token must be signed using the private key for a digital signing certificate that is associated with your API key. You can associate more than one certificate with an API key. If you do so, you can use the private key of any associated certificate to sign your JWT. For more information, see [Public Key Certificates for JWT](/console/createcert.md).
 * Adobe supports RSASSA-PKCS1-V1_5 Digital Signatures with SHA-2. The JWS algorithm ("alg") parameter value can be RS256, RS384, or RS512.
 
 
-<a id="examples"></a>
 ## Using JWT Libraries and Creation Tools
 
 Most modern languages have JWT libraries available. We recommend you use one of these libraries (or other JWT-compatible libraries) before trying to hand-craft the JWT.
@@ -51,8 +49,8 @@ Examples are provided for several popular languages.
 
 Language | Library | Example
 -------- | ------- | -------
-Java | `atlassian-jwt` `jsontoken`  | [Creating JWTs for Java Apps](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt/jwt_java.html)
-Node.js | `node_modules/jwt-simple` | [Creating JWTs for Node.js Apps](https://www.adobe.io/apis/cloudplatform/console/authentication/createjwt/jwt_nodeJS.html)
+Java | `atlassian-jwt` `jsontoken`  | [Creating JWTs for Java Apps](/console/createjwt/jwt_java.md)
+Node.js | `node_modules/jwt-simple` | [Creating JWTs for Node.js Apps](/console/createjwt/jwt_nodeJS.md)
 Python | `pyjwt` | For an example Python script that creates a JWT, see the [User Management Walkthrough](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/samples.html).
 
 ### Additional JWT Libraries and Creation Tools
