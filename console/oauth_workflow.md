@@ -6,7 +6,7 @@ To obtain client credentials for an app that accesses services on behalf of an e
 
 OAuth allows your end users to sign in to your integration with an Adobe ID. With an OAuth token, your integration will be able to access Adobe services or content on behalf of the logged in user.
 
-If your integration needs to access Adobe services or content on behalf of an organization (an Adobe enterprise organization), check out the [Service Account Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html) article.
+If your integration needs to access Adobe services or content on behalf of an organization (an Adobe enterprise organization), check out the [Service Account Authentication](/console/jwt_workflow.md) article.
 
 ## The OAuth Authorization Workflow
 
