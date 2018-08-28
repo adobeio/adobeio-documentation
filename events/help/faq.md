@@ -61,7 +61,7 @@ Yes:
 ## AEM events
 
 _**Which version of AEM is supported for I/O Events?**_  
-AEM 6.3 is the latest version supported for I/O Events.
+AEM 6.4 is the latest version supported for I/O Events.
 
 _**What do I need to leverage AEM events?**_  
 A separate package is required to use AEM I/O Events. You can find the latest version of that package on GitHub: [https://github.com/adobeio/adobeio-documentation/files/1723221/aem-event-proxy-0.36.226.zip](https://github.com/adobeio/adobeio-documentation/files/1723221/aem-event-proxy-0.36.226.zip)
