@@ -152,18 +152,29 @@
 ```json
 {
    "webhookId": "",
+   "webhookName":"",
    "webhookNotificationId": "",
    "webhookUrlInfo": {
       "url": ""
    },
    "webhookScope": "",
+   "webhookNotificationApplicableUsers" :[  
+    {  
+      "id":"", 
+      "email":"", 
+      "role":"", 
+      "payloadApplicable":"" 
+     } 
+   ], 
    "event": "",
    "subEvent": "",
+   "eventDate":"", 
    "eventResourceType": "",
    "participantUserId": "",
    "participantUserEmail": "",
    "actingUserId": "",
    "actingUserEmail": "",
+   "actingUserIpAddress":"", 
    "initiatingUserId": "",
    "initiatingUserEmail": "",
    "widget": {

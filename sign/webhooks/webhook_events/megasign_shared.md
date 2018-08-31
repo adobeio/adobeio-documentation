@@ -158,53 +158,64 @@
 
 ```json
 {
-   "webhookId": "",
-   "webhookNotificationId": "",
+   "webhookId":"",
+   "webhookName":"",
+   "webhookNotificationId":"",
    "webhookUrlInfo": {
-      "url": ""
+      "url":""
    },
-   "webhookScope": "",
-   "event": "",
-   "subEvent": "",
-   "eventResourceType": "",
-   "participantUserId": "",
-   "participantUserEmail": "",
-   "actingUserId": "",
-   "actingUserEmail": "",
-   "initiatingUserId": "",
-   "initiatingUserEmail": "",
+   "webhookScope":"",
+   "webhookNotificationApplicableUsers":[  
+    {  
+      "id":"", 
+      "email":"", 
+      "role":"", 
+      "payloadApplicable":"" 
+     } 
+   ], 
+   "event":"",
+   "subEvent":"",
+   "eventDate":"", 
+   "eventResourceType":"",
+   "participantUserId":"",
+   "participantUserEmail":"",
+   "actingUserId":"",
+   "actingUserEmail":"",
+   "actingUserIpAddress":"", 
+   "initiatingUserId":"",
+   "initiatingUserEmail":"",
    "megaSign": {
-      "name": "",
-      "status": "",
-      "id": "",
+      "name":"",
+      "status":"",
+      "id":"",
       "ccs": [
          {
-            "email": ""
+            "email":""
          }
       ],
       "childAgreementsInfo": {
          "fileInfo": {
-            "fileType": "",
-            "childAgreementsInfoFileId": ""
+            "fileType":"",
+            "childAgreementsInfoFileId":""
          }
       },
-      "createdDate": "",
-      "expirationTime": "",
+      "createdDate":"",
+      "expirationTime":"",
       "externalId": {
-         "id": ""
+         "id":""
       },
-      "firstReminderDelay": "",
-      "locale": "",
-      "message": "",
+      "firstReminderDelay":"",
+      "locale":"",
+      "message":"",
       "postSignOption": {
-         "redirectDelay": "",
-         "redirectUrl": ""
+         "redirectDelay":"",
+         "redirectUrl":""
       },
-      "reminderFrequency": "",
-      "senderEmail": "",
-      "signatureType": "",
+      "reminderFrequency":"",
+      "senderEmail":"",
+      "signatureType":"",
       "vaultingInfo": {
-         "enabled": ""
+         "enabled":""
       }
    }
 }

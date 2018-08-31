@@ -222,127 +222,71 @@ Events are the reason for webhooks: webhooks are a way for your Adobe Sign integ
 The following is a list of all webhook events:
 
 <table>
-   <tr>
-      <td>
-         <code>AGREEMENT_ACTION_COMPLETED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_KBA_AUTHENTICATED</code>
-      </td>
-      <td>
-         <code>MEGASIGN_ALL</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_ACTION_DELEGATED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_MODIFIED</code>
-      </td>
-      <td>
-         <code>MEGASIGN_CREATED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_ACTION_REPLACED_SIGNER</code>
-      </td>
-      <td>
-         <code>AGREEMENT_OFFLINE_SYNC</code>
-      </td>
-      <td>
-         <code>MEGASIGN_RECALLED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_ACTION_REQUESTED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_RECALLED</code>
-      </td>
-      <td>
-         <code>MEGASIGN_SHARED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_ALL</code>
-      </td>
-      <td>
-         <code>AGREEMENT_REJECTED</code>
-      </td>
-      <td>
-         <code>WIDGET_ALL</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_AUTO_CANCELLED_CONVERSION_PROBLEM</code>
-      </td>
-      <td>
-         <code>AGREEMENT_SHARED</code>
-      </td>
-      <td>
-         <code>WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_CREATED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_UPLOADED_BY_SENDER</code>
-      </td>
-      <td>
-         <code>WIDGET_CREATED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_DOCUMENTS_DELETED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_USER_ACK_AGREEMENT_MODIFIED</code>
-      </td>
-      <td>
-         <code>WIDGET_DISABLED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_EMAIL_BOUNCED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_VAULTED</code>
-      </td>
-      <td>
-         <code>WIDGET_ENABLED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_EMAIL_VIEWED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_WEB_IDENTITY_AUTHENTICATED</code>
-      </td>
-      <td>
-         <code>WIDGET_MODIFIED</code>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <code>AGREEMENT_EXPIRED</code>
-      </td>
-      <td>
-         <code>AGREEMENT_WORKFLOW_COMPLETED</code>
-      </td>
-      <td>
-         <code>WIDGET_SHARED</code>
-      </td>
-   </tr>
+  <tr>
+    <td><code>AGREEMENT_ACTION_COMPLETED</code></td>
+    <td><code>AGREEMENT_OFFLINE_SYNC</code></td>
+    <td><code>MEGASIGN_ALL</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_ACTION_DELEGATED</code></td>
+    <td><code>AGREEMENT_RECALLED</code></td>
+    <td><code>MEGASIGN_CREATED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_ACTION_REPLACED_SIGNER</code></td>
+    <td><code>AGREEMENT_REJECTED</code></td>
+    <td><code>MEGASIGN_RECALLED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_ACTION_REQUESTED</code></td>
+    <td><code>AGREEMENT_SHARED</code></td>
+    <td><code>MEGASIGN_SHARED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_ALL</code></td>
+    <td><code>AGREEMENT_UPLOADED_BY_SENDER</code></td>
+    <td><code>WIDGET_ALL</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_AUTO_CANCELLED_CONVERSION_PROBLEM</code></td>
+    <td><code>AGREEMENT_USER_ACK_AGREEMENT_MODIFIED</code></td>
+    <td><code>WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_CREATED</code></td>
+    <td><code>AGREEMENT_VAULTED</code></td>
+    <td><code>WIDGET_CREATED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_DOCUMENTS_DELETED</code></td>
+    <td><code>AGREEMENT_WEB_IDENTITY_AUTHENTICATED</code></td>
+    <td><code>WIDGET_DISABLED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_EMAIL_BOUNCED</code></td>
+    <td><code>AGREEMENT_WORKFLOW_COMPLETED</code></td>
+    <td><code>WIDGET_ENABLED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_EMAIL_VIEWED</code></td>
+    <td><code>LIBRARY_DOCUMENT_CREATED</code></td>
+    <td><code>WIDGET_MODIFIED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_EXPIRED</code></td>
+    <td><code>LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM</code></td>
+    <td><code>WIDGET_SHARED</code></td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_KBA_AUTHENTICATED</code></td>
+    <td><code>LIBRARY_DOCUMENT_MODIFIED</code></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><code>AGREEMENT_MODIFIED</code></td>
+    <td><code>LIBRARY_DOCUMENT_ALL</code></td>
+    <td>&nbsp;</td>
+  </tr>
 </table>
 
 ### Webhook conditional parameters
@@ -359,17 +303,23 @@ When you register or update a webhook, you can specify whether you want to recei
 
 -   `includeSignedDocuments`: Determines whether signed documents will be returned in the webhook response payload. If set to true, the signed document will be returned in **base64-encoded format** in JSON when signing is complete. This will be sent only in the notification for the `AGREEMENT_WORKFLOW_COMPLETED` event.
 
+**Library Document**
+
+-   `includeDetailedInfo`: Determines whether library document detailed info will be returned in the response payload. Based on the state of the library document and the event being notified, the keys in the JSON payload will change.
+
+-   `includeDocumentsInfo`: Determines whether document info will be returned in the response payload. This might or might not be applicable in a specific event’s payload.
+
 **Widget**
 
--   `includeDetailedInfo`: Determines whether widget detailed info will be returned in the response payload
+-   `includeDetailedInfo`: Determines whether widget detailed info will be returned in the response payload.
 
--   `includeDocumentsInfo`: Determines whether document info will be returned in the response payload
+-   `includeDocumentsInfo`: Determines whether document info will be returned in the response payload.
 
--   `includeParticipantsInfo`: Determines whether participants info will be returned in the response payload
+-   `includeParticipantsInfo`: Determines whether participants info will be returned in the response payload.
 
 **MegaSign**
 
--   `includeDetailedInfo`: Determines whether megasign detailed info will be returned in the response payload
+-   `includeDetailedInfo`: Determines whether megasign detailed info will be returned in the response payload.
 
 ## Managing webhooks and subscriptions (webhook APIs)
 The Adobe Sign webhook APIs are essential, as you use the `POST /webhooks` API to create your webhook, and use the other API endpoints to retrieve information about your webhooks and their status, as well as to modify or delete webhooks. Details are on the [Webhook APIs](webhooks/webhook_apis.md) page, which covers the following endpoints:
@@ -416,6 +366,10 @@ Adobe Sign secures your webhooks in the following ways:
 - **Always respond to webhook requests quickly:** Your app only has ten seconds to respond to webhook requests. For the verification request, this is never really an issue, since your app doesn&rsquo;t need to do any real work to respond. For notification requests, however, your app will usually do something that takes time in response to the request. For example, it may need to process and then store signed documents. To make sure you can always respond within ten seconds, you should always do your work on a separate thread or asynchronously, using a queue.
 - **Manage concurrency:** When a user makes a number of changes in rapid succession, your app is likely to receive multiple notifications for the same user at roughly the same time. If you&rsquo;re not careful about how you manage concurrency, your app can end up processing the same changes for the same user more than once.
 
-    To take advantage of Adobe Sign webhooks, a clear understanding of the use of the information needs to be understood. Be sure to ask questions such as: 1. What data do you want to return in payload? 2. Who will be accessing this information? 3. What decisions or reporting will be generated?
+    To take advantage of Adobe Sign webhooks, a clear understanding of the use of the information needs to be understood. Be sure to ask questions such as:
+    
+    1. What data do you want to return in payload?
+    2. Who will be accessing this information?
+    3. What decisions or reporting will be generated?
 
 - **Recommendations for receiving signed documents:** There are several factors to consider when determining how to receive agreements  (signed PDFs) from Adobe Sign in your document management system. While it is perfectly acceptable to just select the IncludeSignedDocument option while creating a webhook to include the PDF documents when an event is triggered, you might consider using the Adobe Sign API to retrieve the documents when a triggering event (such as agreement status Complete) is received.

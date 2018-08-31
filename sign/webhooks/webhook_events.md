@@ -41,6 +41,9 @@ This table displays the events and payload which will be sent in webhook notific
 | `AGREEMENT_VAULTED` | When an agreement is vaulted. [View Payload](webhook_events/agreement_vaulted.md) |
 | `AGREEMENT_WEB_IDENTITY_AUTHENTICATED` | When an agreement web identity is authenticated. [View Payload](webhook_events/agreement_web_identity_authenticated.md) |
 | `AGREEMENT_WORKFLOW_COMPLETED` | When an agreement workflow is completed. [View Payload](webhook_events/agreement_workflow_completed.md) |
+| `LIBRARY_DOCUMENT_CREATED` | When a library document is created. [View Payload](webhook_events/library_document_created.md) |
+| `LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM` | When a library document is auto-cancelled due to a conversion problem. [View Payload](webhook_events/library_document_auto_cancelled_conversion_problem.md) |
+| `LIBRARY_DOCUMENT_MODIFIED` | When a library document is modified. [View Payload](webhook_events/library_document_modified.md) |
 | `MEGASIGN_CREATED` | When a megaSign is created. [View Payload](webhook_events/megasign_created.md) |
 | `MEGASIGN_RECALLED` | When a megaSign is recalled. [View Payload](webhook_events/megasign_recalled.md) |
 | `MEGASIGN_SHARED` | When a megaSign is shared. [View Payload](webhook_events/megasign_shared.md) |
@@ -77,10 +80,15 @@ All events will include the following common attributes in their payloads. Addit
 | Parameter name | Type | Description | Possible values |
 | --- | --- | --- | --- |
 | `webhookId` | String | Webhook identifier of the webhook for which the notification is being sent |   |
+| `webhookname` | String | Name of the webhook which was provided while creating a webhook |   |
 | `webhookNotificationId` | String | The unique identifier of the webhook notification. This will be helpful in identifying duplicate notifications, if any. |   |
+| `webhookNotificationApplicableUsers` | An array of the details of the users for which this notification is delivered. For example: Say User A and User B are in a Group G1. Say User C is in Group G2. Say both these groups and all 3 users are in Account A. Assume, group level &ldquo;webhook W1&rdquo; is registered on Group G1 and group level &ldquo;webhook W2&rdquo; is registered on Group G2. Now an agreement is sent by User A and to User B. And User B delegates the signing to User C. In the above case, the sign will generate only two notifications (corresponding to W1 and W2) for the delegation event. Current field for W1 notification will be an array of details of User A and User B. Current field for W2 notification will be an array of details of User C. |   |
 | `webhookUrlInfo` | Object | URL on which this HTTPS POST notification is triggered. |   |
 | `webhookScope` | String | Scope of the webhook | `ACCOUNT`,`GROUP`,`USER`,`RESOURCE` |
 | `event` | String | Event for which the webhook notification is triggered | `AGREEMENT_CREATED` |
+| `eventDate` | String | Timestamp of when the event happened. | Example value: 2018-08-09T12:01:00Z |
+| `eventResourceParentType` | enum | In case of agreements, it is possible that the agreement is created by signing a widget or while creating a megasign. This field informs about such cases. _Only added in payloads of agreement type resources._ | `WIDGET`,`MEGASIGN` |
+| `eventResourceParentId` | String | Unique identifier of the widget or megasign from which this agreement is created. _Only added in payloads of agreement type resources._ |   |
 | `subEvent` | String | Subevent for which the webhook notification is triggered. _This field is event specific and returned with only few events, please look into individual event for the details_ |   |
 | `eventResourceType` | String | The resource type on which the event is triggered. | `AGREEMENT`,`WIDGET`,`MEGASIGN` |
 | `participantRole` | String | Role assumed by all participants in the participant set to which the participant belongs (signer, approver etc.). This is the role of the `participantUser`. This key will be returned only for the following events: `AGREEMENT_WORKFLOW_COMPLETED`, `AGREEMENT_ACTION_COMPLETED`, `AGREEMENT_ACTION_DELEGATED`, `AGREEMENT_ACTION_REQUESTED` | `SIGNER`, `DELEGATE_TO_SIGNER`, `APPROVER`, `DELEGATE_TO_APPROVER`, `ACCEPTOR`, `DELEGATE_TO_ACCEPTOR`, `FORM_FILLER`, `DELEGATE_TO_FORM_FILLER`, `CERTIFIED_RECIPIENT`, `DELEGATE_TO_CERTIFIED_RECIPIENT` or `SHARE` |
@@ -91,9 +99,18 @@ All events will include the following common attributes in their payloads. Addit
 | `actingUserEmail` | String | _This field is event-specific; please look into the individual event for details_ |   |
 | `initiatingUserId` | String | _This field is event-specific; please look into the individual event for details_ |   |
 | `initiatingUserEmail` | String | _This field is event-specific; please look into the individual event for details_ |   |
+| `actingUserIpAddress` | String | IP address of user that triggered the event | 
 | `agreement` | Agreement | Information about the agreement on which the event occurred. This key will be returned only if the event is an agreement event. |   |
 | `widget` | Widget | Information about the widget on which the event occurred. This key will be returned only if the event is a widget event. |   |
 | `megasign` | MegaSign | Information about the megaSign on which the event occurred. This key will be returned only if the event is a megaSign event. |   |
+
+### WebhookNotificationApplicableUsers
+| Parameter name | Type | Description | Possible values |
+| `id` | String	| The unique identifier of the user for which the notification is applicable. |   |
+| `email` | String |Email address of the user for which the notification is applicable. |   |
+| `role` | enum	| Role of the user in the workflow.	| `SIGNER`, `DELEGATE_TO_SIGNER`, `APPROVER`, `DELEGATE_TO_APPROVER`, `ACCEPTOR`, `DELEGATE_TO_ACCEPTOR`, `FORM_FILLER`, `DELEGATE_TO_FORM_FILLER`, `CERTIFIED_RECIPIENT`, `DELEGATE_TO_CERTIFIED_RECIPIENT`, or `SHARE`
+payloadApplicable
+boolean	Indicates whether the payload attached to this notification is fetched in the context of this user or not. The boolean will be true for one and only one of the users in the webhookNotificationApplicableUsers array.	
 
 ### WebhookUrlInfo
 
@@ -121,6 +138,16 @@ This is the minimal info which will be returned for a widget event if all the co
 | `name` | String | The name of the widget that will be used to identify it, in emails, website, and other places |   |
 | `status` | Enum | The current status of the widget  | `DRAFT` or `ACTIVE` or `AUTHORING` |
 
+### Library Document
+
+This is the minimal info which will be returned for a Library Document  event if all the conditional parameters are set to false while creating webhooks.
+
+| Parameter name | Type | Description | Possible enums |
+| --- | --- | --- | --- |
+| `id` | String | The unique identifier that is used to refer to the library template. |   |
+| `name` | String | The name of the library template that will be used to identify it, in emails and on the website. |   |	
+| `status` | Enum | The current status of the library document. | `AUTHORING`, `ACTIVE` or `REMOVED` |
+
 ### MegaSign
 
 This is the minimal info which will be returned for a MegaSign event if all the conditional parameters are set to false while creating webhooks.
@@ -130,12 +157,13 @@ This is the minimal info which will be returned for a MegaSign event if all the 
 | `id` | String | The unique identifier of the agreement; it can be used to query status and download signed documents. |   |
 | `name` | String | The name of the agreement that will be used to identify it, in emails and on the website. |   |
 | `status` | Enum | The current status of the agreement. | `OUT_FOR_SIGNATURE`, `SIGNED`, `APPROVED`, `ACCEPTED`, `DELIVERED`, `FORM_FILLED`, `ABORTED`, `EXPIRED`, `OUT_FOR_APPROVAL`, `OUT_FOR_ACCEPTANCE`, `OUT_FOR_DELIVERY`, `OUT_FOR_FORM_FILLING`, or `CANCELLED` |
+| `payloadApplicable` | boolean | Indicates whether the payload attached to this notification is fetched in the context of this user or not. The boolean will be true for one and only one of the users in the webhookNotificationApplicableUsers array. |   |
 
 For different MegaSign events, the detailed agreement info, participant info, document info, and the signed document will be returned based on the conditional parameters specified during webhook creation.
 
 ## Receiving a webhook notification
 
-Once your webhook URL is added, your app will start receiving "notification requests" every time a subscribed event is triggered in Sign. A notification request is an HTTPS POST request with a JSON body. The request's POST parameters will contain JSON data relevant to the event that triggered the request.
+Once your webhook URL is added, your app will start receiving "notification requests" every time a subscribed event is triggered in Sign. A notification request is an HTTPS POST request with a JSON body. The request&rsquo;s POST parameters will contain JSON data relevant to the event that triggered the request.
 
 Additionally, we perform an implicit verification of intent in each webhook notification request that we send to the webhook URL. Thus, every notification request will also include a header called `X-AdobeSign-ClientId` that includes client id of the application that created the webhook. We will consider the webhook notification successfully delivered, if an only if success response **(2XX response code)** is returned  and  the header **(X-AdobeSign-ClientId)** is echoed back in response HTTP header or in a JSON response body with key as **xAdobeSignClientId** and value as the same client id, otherwise we will retry to deliver the notification to the webhook URL until the retries are exhausted.
 
@@ -166,5 +194,6 @@ If you want to subscribe for all the agreement, widget or megaSign events, you c
 | Event type | Description |
 | --- | --- |
 | `AGREEMENT_ALL` | All the supported agreement events. If new agreement events are added in future, those events will be taken care automatically. |
+| `LIBRARY_ALL` | For all the supported library document events. If new library document events are added in future that are supported for webhooks, those events will be taken care of automatically. |
 | `WIDGET_ALL`  | All the supported widget events. If new widget events are added in future, those events will be taken care automatically. |
 | `MEGASIGN_ALL` | All the supported megasign events. |
