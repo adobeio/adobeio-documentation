@@ -19,8 +19,8 @@ Do you want to build desktop, web, or mobile apps based on the functionalities o
 ## See Also
 
 - **Scenarios**  
-[Learn how to use the Sign APIs for the most common digital signing workflows](https://adobe.io/products/sign/docs/scenarios)
+[Learn how to use the Sign APIs for the most common digital signing workflows](scenarios.md)
 
 - **API Reference**  
-[Browse through the API reference to know more about the request types and formats](https://secure.na1.echosign.com/public/docs/restapi/v6)
+[Browse through the API reference to know more about the request types and formats](https://secure.echosign.com/public/docs/restapi/v6)
 
