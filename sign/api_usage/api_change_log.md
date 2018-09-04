@@ -21,9 +21,6 @@ Returns a detailed participant set object.
 [GET /agreements/{agreementId}/reminders](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementReminders)  
 Lists all the reminders on an agreement.
 
-[GET /agreements/{agreementId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView)  
-Returns all the views associated with an agreement, such as the manage page view, the agreement view, and the post send page view.
-
 [GET /libraryDocuments/{libraryDocumentId}/me/note](https://secure.echosign.com/public/docs/restapi/v6#!/libraryDocuments/getLibraryDocumentNoteForApiUser)  
 Retrieves the latest note on a library template for the user.
 
@@ -183,7 +180,7 @@ The model is consistent with the POST and PUT operations.
 [POST /agreements](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/createAgreement)
 
 - The request body is now consistent with its GET/PUT counterpart. A common agreement model is used across all these APIs.
-- Interactive options have been removed from the request body and is available through the separate [GET /agreements/{agreementId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView) API.
+- Interactive options have been removed from the request body and is available through the separate [POST /agreements/{agreementId}/views](https://secure.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementView) API.
 - Support for form fields, form fields layer template, amd merge fields has been removed from here and will now be available through the authoring APIs.
 - The document visibility feature is available in v6.
 - This API is more responsive as it is now asynchronous.
