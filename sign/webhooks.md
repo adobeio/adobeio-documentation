@@ -72,7 +72,7 @@ When Adobe Sign receives a webhook creation call from your app, the Sign service
 
 ### Verification of intent of the webhook URL
 
-Before registering a webhook successfully, Adobe Sign verifies that the webhook URL that is provided in the registration request really intends to receive notifications. For this purpose, when a new webhook registration request is received by Adobe Sign, it first makes a verification request to the webhook URL. This verification request is an HTTPS GET request sent to the webhook URL with a custom HTTP header, **X-AdobeSign-ClientId**. The value in this header is set to the client ID of the application that is requesting to register the webhook. To register a webhook successfully, the webhook URL must respond to this verification request with an HTTPS 2XX response code, and it also must send back the same client ID value in one of the following two ways.
+Before registering a webhook successfully, Adobe Sign verifies that the webhook URL that is provided in the registration request really intends to receive notifications. For this purpose, when a new webhook registration request is received by Adobe Sign, it first makes a verification request to the webhook URL. This verification request is an HTTPS GET request sent to the webhook URL with a custom HTTP header, **X-AdobeSign-ClientId**. The value in this header is set to the client ID (Application ID) of the API application that is requesting to register the webhook. To register a webhook successfully, the webhook URL must respond to this verification request with an HTTPS 2XX response code, and it also MUST send back the same client ID value in one of the following two ways.
 
 -   In a custom response header, **X-AdobeSign-ClientId**. This is the same header which was passed in the request, and can be echoed back in the response.
 
@@ -161,7 +161,9 @@ The call to verify the webhook URL will be made in the following scenarios:
 -   Registering a webhook: If this verification of webhook URL call fails, the webhook will not be created.
 -   Updating a webhook: INACTIVE to ACTIVE: If this verification of webhook URL call fails, the webhook state will not be changed to ACTIVE.
 
-Additionally, Adobe Sign performs an implicit verification of intent in each webhook notification request that it sends to the webhook URL. Every notification request includes a header called **X-AdobeSign-ClientId** that includes the client ID of the application that created the webhook. We will consider the webhook notification successfully delivered, if an only if success response **(2XX response code)** is returned and the header **(X-AdobeSign-ClientId)** is echoed back in response HTTP header or in a JSON response body with key as **xAdobeSignClientId** and value as the same client ID; otherwise, Adobe Sign will retry to deliver the notification to the webhook URL until the retries are exhausted.
+### How to respond to a webhook notification
+
+Adobe Sign performs an implicit verification of intent in each webhook notification request that is sent to the webhook URL. Every webhook notification HTTPS request contains the customer HTTP header called **X-AdobeSign-ClientId.** The value of this header is the client ID (Application ID) of the application that created the webhook. We will consider the webhook notification successfully delivered, if and only if a success response **(2XX response code)** is returned and the the client ID is sent in either the HTTP header **(X-AdobeSign-ClientId)** or in a JSON response body with key as **xAdobeSignClientId** and value as the same client ID; otherwise, Adobe Sign will retry to deliver the notification to the webhook URL until the retries are exhausted.
 
 ### Hosting your webhook in the cloud
 
