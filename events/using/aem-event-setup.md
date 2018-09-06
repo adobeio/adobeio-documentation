@@ -364,6 +364,14 @@ To verify your configurations:
 
       ![Health check for eventproxy,conf](../../img/events_aem_21.png "Health check for conf-events")
 
+If this health check is failing, check the following:
+
+* Make sure you have the correct event proxy package and update it to the latest version (currently 0.32.226) if needed.
+* Verify that when you installed your package, you chose the right install settings.
+* Make sure your AEM instance is compatible with Events (must be version 6.2 or higher).
+* Check the permissions for your event proxy package.
+* Match your I/O Events configuration to the integration that you've created in the Adobe I/O Console.
+
 2. Check that the AEM instance is able to exchange JWT tokens with Adobe I/O Identity Management System (IMS). 
 To do this, execute the health check tagged with **ims-events**. 
 This verifies that your IMS-related configurations are correct and working, 
@@ -371,6 +379,12 @@ including the `eventproxy-service` user keystore configuration, the Adobe I/O co
 the Organization ID, and the client secret.
 
       ![Health check for eventproxy,ims](../../img/events_aem_22.png "Health check for ims-events")
+
+If this health check is failing, check the following:
+
+* Match your I/O Events configuration to the integration that you've created in Adobe I/O Console.
+* Make sure that the keystore you've uploaded matches the public certificate in your integration.
+
 
 3. Check that the event metadata and the provider associated with the AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM) by executing the health check tagged with **csm-events**.
 This verifies that the AEM instance is successfully registered as an event provider with Adobe I/O CSM.

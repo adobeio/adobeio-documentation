@@ -9,49 +9,15 @@ This page captures the most common troubleshooting scenarios when working with A
 
 ## AEM Events
 
-If your integration isn't receiving events from your installation of Adobe Experience Manager, you can perform any of several health checks on your setup to see where the communication between AEM and your integration is breaking down. For more information on health checks, see:
+If your integration isn't receiving events from your installation of Adobe Experience Manager, 
+you can perform any of several health checks 
+on your setup to see where the communication between AEM and your integration is breaking down. 
+
+For more information on health checks, see:
 
 - [Operations Dashboard](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/operations-dashboard.html) in Adobe Help
-- [Perform an AEM Health and Configuration Check](../using/aem-event-setup.md#performanaemhealthandconfigurationcheck) in the topic [Setting up AEM Events with Adobe I/O Events](../using/aem-event-setup.md) 
+- [Perform an AEM Health and Configuration Check](../using/aem-event-setup.md#performawebhookhealthcheck) in the topic [Setting up AEM Events with Adobe I/O Events](../using/aem-event-setup.md) 
 
-Please try the following health checks in order:
-
-**Health check 1: eventproxy, conf**  
-Conf stands for configuration. This health check makes sure that all your configurations properly load. 
-
-If this health check is failing, check the following:
-
-- Make sure you have the correct event proxy package and update it to the latest version (currently [0.32.226](https://github.com/adobeio/adobeio-documentation/files/1723221/aem-event-proxy-0.36.226.zip)) if needed.
-- Verify that when you installed your package, you chose the right install settings.
-- Make sure your AEM instance is compatible with Events (must be version 6.2 or higher).
-- Check the permissions for your event proxy package.
-- Match your I/O Events configuration to the integration that you've created in the Adobe I/O Console.
-
-**Health check 2: eventproxy, ims**  
-This health check ensures that your AEM instance is able to exchange JWT tokens with the Adobe I/O Identity Management System (IMS). This verifies that your IMS-related configurations are correct and working, including the eventproxy-service user keystore configuration, the Adobe I/O Console-originated API key, the Technical Account ID, the Organization ID and the client secret.
-
-If this health check is failing, check the following:
-
-- Match your I/O Events configuration to the integration that you've created in Adobe I/O Console.
-- Make sure that the keystore you've uploaded matches the public certificate in your integration.
-
-**Health check 3: eventproxy, csm**  
-This health check ensures that the event metadata and the provider associated with your AEM instance are registered in Adobe I/O Channel & Subscription Management (CSM). This verifies that the AEM instance is successfully registered as an event provider with Adobe I/O CSM.
-
-**Health check 4: eventproxy, eventreceiver**  
-This health check makes sure events are sent to and received by the Adobe I/O Event receiver (the AEM ingress adapater). It will result in a POST message in your webhook (if you have your webhook added to your integration in the Adobe I/O Console).
-
-If this health check is failing, check the following:
-
-- Check your webhook and make sure that it is still marked as valid in your integration. You can select **Verify** to send another GET challenge to your webhook for validation.  
- 
-**Health check 5: eventproxy, custom**
-
-This health check emits a custom OSGI event sample to your registered webhook. It will result in a message in your webhook (if you have your webhook added to your integration in the Adobe I/O Console).
-
-If this health check is failing, check the following:
-
-- Check your webhook as in health check 4.
 
 ## Analytics Triggers Events
 If your Analytics Triggers events aren't coming through to your integration, a breakdown in communication may have occurred at any step in the events process. You'll need to check each step in order to verify where the breakdown has occurred and then fix your configuration accordingly.
