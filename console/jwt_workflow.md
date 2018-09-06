@@ -12,14 +12,14 @@ Your integrated application will begin each API session by exchanging the JWT fo
 
 ## The JWT Workflow
 
-1. [Create a Public Key Certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#cert)
-1. [Subscribe to a Service or Event Provider](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#create)
-1. [Configure a Service Account Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#config)
-1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#secure)
+1. [Create a Public Key Certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt-cert)
+1. [Subscribe to a Service or Event Provider](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt-create)
+1. [Configure a Service Account Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt-config)
+1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt-secure)
 1. [Create your JSON Web Token (JWT)](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt)
-1. [Exchange your JWT for an Access Token](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#token)
+1. [Exchange your JWT for an Access Token](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html#jwt-token)
 
-<a id="cert"></a>
+<a id="jwt-cert"></a>
 
 ### Step 1: Create a Public Key Certificate
 
@@ -38,7 +38,7 @@ Adobe does not check for revocation or trust chains of the certificate. If you w
 To add or remove certificates, simply edit and update your Integration using the [Adobe I/O Console](https://console.adobe.io/).
 For more information about creating self-signed certificates and extracting keys from purchased certificates, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
 
-<a id="create"></a>
+<a id="jwt-create"></a>
 
 ## Step 2: Subscribe to a Service or Event Provider
 
@@ -81,7 +81,7 @@ If you have an existing integration that is compatible with the service you have
 To update an existing integration, simply select it and click Continue.
 If you would like to create a brand new integration, select that option and click Continue.
 
-<a id="config"></a>
+<a id="jwt-config"></a>
 
 ### Step 3: Configure a Service Account Integration
 
@@ -99,7 +99,7 @@ On this page:
 
 When creation is confirmed, visit the overview section for your new integration. The overview shows your generated credentials, and allows you to subscribe to additional services or events.
 
-<a id="secure"></a>
+<a id="jwt-secure"></a>
 
 ### Step 4: Secure your Client Credentials
 
@@ -129,7 +129,7 @@ Several public libraries are available for creating a JWT. The JWT must be digit
 
 You are responsible for securing your JWT along with your other access credentials.
 
-<a id="token"></a>
+<a id="jwt-token"></a>
 
 ### Step 6: Exchange your JWT for an Access Token
 

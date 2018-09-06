@@ -4,13 +4,14 @@ You need a valid digital signing certificate to verify your identity in the JWT 
 
 You can create a self-signed certificate, or purchase one from a Certificate Authority.
 
-- When you create your own self-signed certificate, you create two separate files. One file contains the public key and another contains the private key. The public-key file can be in CRT, CER, DER, or PEM format. See [Creating a self-signed certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html#create).
-- If you purchase a digital certificate from a Certificate Authority, you might receive a PFX or PKCS #12 (.p12) archive file that contains both keys. In this case, you can extract the public key and save it to a public-key file. See [Working with certificates from Certificate Authorities](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html#split).
+- When you create your own self-signed certificate, you create two separate files. One file contains the public key and another contains the private key. The public-key file can be in CRT, CER, DER, or PEM format. See [Creating a self-signed certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html#cert-create).
+- If you purchase a digital certificate from a Certificate Authority, you might receive a PFX or PKCS #12 (.p12) archive file that contains both keys. In this case, you can extract the public key and save it to a public-key file. See [Working with certificates from Certificate Authorities](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html#cert-split).
 
-**IMPORTANT** The files that contains the public and private keys, but especially the private key, contain sensitive information. You must retain the private key securely. It cannot be recovered or replaced. If you lose it or it is compromised, you must delete the corresponding certificate from your account. If necessary, you must create and upload a new certificate. In any case, you must replace a certificate when it expires or is compromised. See [Replacing your certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html#replace).
+**IMPORTANT** The files that contains the public and private keys, but especially the private key, contain sensitive information. You must retain the private key securely. It cannot be recovered or replaced. If you lose it or it is compromised, you must delete the corresponding certificate from your account. If necessary, you must create and upload a new certificate. In any case, you must replace a certificate when it expires or is compromised. See [Replacing your certificate](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html#cert-replace).
 
 You must protect these files at least as well as you would protect an account name and password. The best practice is to store the key files in a credential management system or use file system protection so that it can only be accessed by authorized users.
 
+<a id="cert-create"></a>
 ## Creating a self-signed certificate
 
 You can create certificates in Windows with **Cygwin**, which includes **openssl**. In Mac OS, you can use the built-in command-line tool **openssl**. To create a certificate with the command-line tool, open a terminal window in Mac OS, or a Cygwin shell window in Windows, and run the platform-specific tool. In either case, the tool creates a public key in a certificate (CRT) file, and a private key.
@@ -69,6 +70,7 @@ pqNlSLSXS26Dwu6qkBBpxdKA02qSK4lcfDkQwNR+ClrE
 
 You can learn more about Open SSL and other command parameters here: https://www.openssl.org/docs/man1.0.2/apps/req.html.
 
+<a id="cert-split"></a>
 ## Working with certificates from Certificate Authorities
 
 If you purchase a certificate or obtain one from an internal department that manages security in your company, you typically receive a single file in PKCS#12 format (PFX), containing both the public and private keys. In some cases, the file might also contain additional information that is not needed for API access, and could interfere with processing.
@@ -102,6 +104,7 @@ Open the files in a plain text editor. Do not use a word processing editor.
 - For the certificate file, remove any lines before or after the "-----BEGIN CERTIFICATE-----" and "------END CERTIFICATE-----" marker lines.
 - For the private key file, remove any lines before or after the "-----BEGIN PRIVATE KEY-----" and "------END PRIVATE KEY-----" marker lines.
 
+<a id="cert-replace"></a>
 ## Replacing your certificate
 
 You must replace a certificate when it expires or is compromised. You can plan to update certificates as part of your customer's update cycle. For a smooth transition from a certificate that is due to expire, initiate the replacement before the expiration date.
