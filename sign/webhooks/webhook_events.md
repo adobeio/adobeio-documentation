@@ -82,7 +82,7 @@ All events will include the following common attributes in their payloads. Addit
 | `webhookId` | String | Webhook identifier of the webhook for which the notification is being sent |   |
 | `webhookname` | String | Name of the webhook which was provided while creating a webhook |   |
 | `webhookNotificationId` | String | The unique identifier of the webhook notification. This will be helpful in identifying duplicate notifications, if any. |   |
-| `webhookNotificationApplicableUsers` | An array of the details of the users for which this notification is delivered. For example: Say User A and User B are in a Group G1. Say User C is in Group G2. Say both these groups and all 3 users are in Account A. Assume, group level &ldquo;webhook W1&rdquo; is registered on Group G1 and group level &ldquo;webhook W2&rdquo; is registered on Group G2. Now an agreement is sent by User A and to User B. And User B delegates the signing to User C. In the above case, the sign will generate only two notifications (corresponding to W1 and W2) for the delegation event. Current field for W1 notification will be an array of details of User A and User B. Current field for W2 notification will be an array of details of User C. |   |
+| `webhookNotificationApplicableUsers` | Object | An array of the details of the users for which this notification is delivered. For example: Say User A and User B are in a Group G1. Say User C is in Group G2. Say both these groups and all 3 users are in Account A. Assume, group level &ldquo;webhook W1&rdquo; is registered on Group G1 and group level &ldquo;webhook W2&rdquo; is registered on Group G2. Now an agreement is sent by User A and to User B. And User B delegates the signing to User C. In the above case, the sign will generate only two notifications (corresponding to W1 and W2) for the delegation event. Current field for W1 notification will be an array of details of User A and User B. Current field for W2 notification will be an array of details of User C. |   |
 | `webhookUrlInfo` | Object | URL on which this HTTPS POST notification is triggered. |   |
 | `webhookScope` | String | Scope of the webhook | `ACCOUNT`,`GROUP`,`USER`,`RESOURCE` |
 | `event` | String | Event for which the webhook notification is triggered | `AGREEMENT_CREATED` |
@@ -106,11 +106,11 @@ All events will include the following common attributes in their payloads. Addit
 
 ### WebhookNotificationApplicableUsers
 | Parameter name | Type | Description | Possible values |
+|---|---|---|---|
 | `id` | String	| The unique identifier of the user for which the notification is applicable. |   |
 | `email` | String |Email address of the user for which the notification is applicable. |   |
 | `role` | enum	| Role of the user in the workflow.	| `SIGNER`, `DELEGATE_TO_SIGNER`, `APPROVER`, `DELEGATE_TO_APPROVER`, `ACCEPTOR`, `DELEGATE_TO_ACCEPTOR`, `FORM_FILLER`, `DELEGATE_TO_FORM_FILLER`, `CERTIFIED_RECIPIENT`, `DELEGATE_TO_CERTIFIED_RECIPIENT`, or `SHARE`
-payloadApplicable
-boolean	Indicates whether the payload attached to this notification is fetched in the context of this user or not. The boolean will be true for one and only one of the users in the webhookNotificationApplicableUsers array.	
+| `payloadApplicable` | boolean | Indicates whether the payload attached to this notification is fetched in the context of this user or not. The boolean will be true for one and only one of the users in the `webhookNotificationApplicableUsers` array. |   |
 
 ### WebhookUrlInfo
 
