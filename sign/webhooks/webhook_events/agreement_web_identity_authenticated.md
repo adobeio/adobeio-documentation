@@ -200,122 +200,135 @@
 
 ```json
 {
-   "webhookId": "",
-   "webhookNotificationId": "",
+   "webhookId":"",
+   "webhookName":"",
+   "webhookNotificationId":"",
    "webhookUrlInfo": {
-      "url": ""
+      "url":""
    },
-   "webhookScope": "",
-   "event": "",
-   "subEvent": "",
-   "eventResourceType": "",
-   "participantUserId": "",
-   "participantUserEmail": "",
-   "actingUserId": "",
-   "actingUserEmail": "",
-   "initiatingUserId": "",
-   "initiatingUserEmail": "",
+   "webhookScope":"",
+   "webhookNotificationApplicableUsers":[  
+    {  
+      "id":"", 
+      "email":"", 
+      "role":"", 
+        "payloadApplicable":"" 
+      } 
+    ],
+   "event":"",
+   "subEvent":"",
+   "eventDate":"", 
+   "eventResourceType":"",
+   "eventResourceParentType":"",
+   "eventResourceParentId":"", 
+   "participantUserId":"",
+   "participantUserEmail":"",
+   "actingUserId":"",
+   "actingUserEmail":"",
+   "actingUserIpAddress":"",
+   "initiatingUserId":"",
+   "initiatingUserEmail":"",
    "agreement": {
-      "id": "",
-      "name": "",
-      "signatureType": "",
-      "status": "",
+      "id":"",
+      "name":"",
+      "signatureType":"",
+      "status":"",
       "ccs": [
          {
-            "email": "",
-            "label": "",
+            "email":"",
+            "label":"",
             "visiblePages": [
                ""
             ]
          }
       ],
       "deviceInfo": {
-         "applicationDescription": "",
-         "deviceDescription": "",
+         "applicationDescription":"",
+         "deviceDescription":"",
          "location": {
-            "latitude": "",
-            "longitude": ""
+            "latitude":"",
+            "longitude":""
          },
-         "deviceTime": ""
+         "deviceTime":""
       },
-      "documentVisibilityEnabled": "",
-      "createdDate": "",
-      "expirationTime": "",
+      "documentVisibilityEnabled":"",
+      "createdDate":"",
+      "expirationTime":"",
       "externalId": {
-         "id": ""
+         "id":""
       },
       "postSignOption": {
-         "redirectDelay": "",
-         "redirectUrl": ""
+         "redirectDelay":"",
+         "redirectUrl":""
       },
-      "firstReminderDelay": "",
-      "locale": "",
-      "message": "",
-      "reminderFrequency": "",
-      "senderEmail": "",
+      "firstReminderDelay":"",
+      "locale":"",
+      "message":"",
+      "reminderFrequency":"",
+      "senderEmail":"",
       "vaultingInfo": {
-         "enabled": ""
+         "enabled":""
       },
-      "workflowId": "",
+      "workflowId":"",
       "participantSetsInfo": {
          "participantSets": [
             {
                "memberInfos": [
                   {
-                     "id": "",
-                     "email": "",
-                     "company": "",
-                     "name": "",
-                     "privateMessage": "",
-                     "status": ""
+                     "id":"",
+                     "email":"",
+                     "company":"",
+                     "name":"",
+                     "privateMessage":"",
+                     "status":""
                   }
                ],
-               "order": "",
-               "role": "",
-               "status": "",
-               "id": "",
-               "name": "",
-               "privateMessage": ""
+               "order":"",
+               "role":"",
+               "status":"",
+               "id":"",
+               "name":"",
+               "privateMessage":""
             }
          ],
          "nextParticipantSets": [
             {
                "memberInfos": [
                   {
-                     "id": "",
-                     "email": "",
-                     "company": "",
-                     "name": "",
-                     "privateMessage": "",
-                     "status": ""
+                     "id":"",
+                     "email":"",
+                     "company":"",
+                     "name":"",
+                     "privateMessage":"",
+                     "status":""
                   }
                ],
-               "order": "",
-               "role": "",
-               "status": "",
-               "id": "",
-               "name": "",
-               "privateMessage": ""
+               "order":"",
+               "role":"",
+               "status":"",
+               "id":"",
+               "name":"",
+               "privateMessage":""
             }
          ]
       },
       "documentsInfo": {
          "documents": [
             {
-               "id": "",
-               "label": "",
-               "numPages": "",
-               "mimeType": "",
-               "name": ""
+               "id":"",
+               "label":"",
+               "numPages":"",
+               "mimeType":"",
+               "name":""
             }
          ],
          "supportingDocuments": [
             {
-               "displayLabel": "",
-               "fieldName": "",
-               "id": "",
-               "mimeType": "",
-               "numPages": ""
+               "displayLabel":"",
+               "fieldName":"",
+               "id":"",
+               "mimeType":"",
+               "numPages":""
             }
          ]
       }
