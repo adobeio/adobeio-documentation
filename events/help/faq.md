@@ -60,11 +60,12 @@ Yes:
 
 ## AEM events
 
-_**Which version of AEM is supported for I/O Events?**_  
-AEM 6.4 is the latest version supported for I/O Events.
+_**Which versions of AEM is supported for I/O Events?**_  
+
+AEM 6.2.xx, 6.3.xx as well as 6.4.xx, see [Set up AEM Events with Adobe I/O Events](../using/aem-event-setup.md##installtheaemeventproxypackage) 
 
 _**What do I need to leverage AEM events?**_  
-A separate package is required to use AEM I/O Events. You can find the latest version of that package on GitHub: [https://github.com/adobeio/adobeio-documentation/files/1723221/aem-event-proxy-0.36.226.zip](https://github.com/adobeio/adobeio-documentation/files/1723221/aem-event-proxy-0.36.226.zip)
+A separate package is required to use AEM I/O Events. 
 
 _**Where can I find instructions on setting up AEM I/O Events?**_  
 See [Set up AEM Events with Adobe I/O Events](../using/aem-event-setup.md) in this guide.
@@ -303,7 +304,8 @@ Here are sample payloads for all AEM events:
         ```
 
 **During installation, my health check is failing. What should I do?**  
-One possible solution is to try waiting for two minutes and checking a few more times. Sometimes the first health check fails even though the connection is actually working. 
+One possible solution is to try waiting for two minutes and checking a few more times. 
+Sometimes the first health check fails even though the connection is actually working. 
 
 If your health check consistently fails, check the [AEM Events](debug#aem-events) section of the Debugging Guide: &ldquo;AEM Events not firing&rdquo;.
 
