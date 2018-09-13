@@ -41,8 +41,8 @@ This table displays the events and payload which will be sent in webhook notific
 | `AGREEMENT_VAULTED` | When an agreement is vaulted. [View Payload](webhook_events/agreement_vaulted.md) |
 | `AGREEMENT_WEB_IDENTITY_AUTHENTICATED` | When an agreement web identity is authenticated. [View Payload](webhook_events/agreement_web_identity_authenticated.md) |
 | `AGREEMENT_WORKFLOW_COMPLETED` | When an agreement workflow is completed. [View Payload](webhook_events/agreement_workflow_completed.md) |
-| `LIBRARY_DOCUMENT_CREATED` | When a library document is created. [View Payload](webhook_events/library_document_created.md) |
 | `LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM` | When a library document is auto-cancelled due to a conversion problem. [View Payload](webhook_events/library_document_auto_cancelled_conversion_problem.md) |
+| `LIBRARY_DOCUMENT_CREATED` | When a library document is created. [View Payload](webhook_events/library_document_created.md) |
 | `LIBRARY_DOCUMENT_MODIFIED` | When a library document is modified. [View Payload](webhook_events/library_document_modified.md) |
 | `MEGASIGN_CREATED` | When a megaSign is created. [View Payload](webhook_events/megasign_created.md) |
 | `MEGASIGN_RECALLED` | When a megaSign is recalled. [View Payload](webhook_events/megasign_recalled.md) |

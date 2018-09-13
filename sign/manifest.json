@@ -273,10 +273,28 @@
                 "title": "Agreement Workflow Completed"
               },
               {
+                "importedFileName": "library_document_auto_cancelled_conversion_problem",
+                "pages": [],
+                "path": "adobeio/adobeio-documentation/master/sign/webhooks/library_document_auto_cancelled_conversion_problem.md",
+                "title": "Library Document Auto-Cancelled: Conversion Problem"
+              },
+              {
+                "importedFileName": "library_document_created",
+                "pages": [],
+                "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/library_document_created.md",
+                "title": "Library Document Created"
+              },
+              {
+                "importedFileName": "library_document_modified",
+                "pages": [],
+                "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/library_document_modified.md",
+                "title": "Library Document Modified"
+              },
+              {
                 "importedFileName": "megasign_created",
                 "pages": [],
                 "path": "adobeio/adobeio-documentation/master/sign/webhooks/webhook_events/megasign_created.md",
-                "title": "MegaSign Created "
+                "title": "MegaSign Created"
               },
               {
                 "importedFileName": "megasign_recalled",
