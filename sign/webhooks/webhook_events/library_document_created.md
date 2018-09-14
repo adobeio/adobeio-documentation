@@ -1,4 +1,4 @@
-# Payload: LIBRARY_DOCUMENT_CREATED
+# Payload: LIBRARY\_DOCUMENT\_CREATED
 
 ## Payload attributes
 

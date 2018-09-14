@@ -1,4 +1,4 @@
-# Payload: LIBRARY_DOCUMENT_MODIFIED
+# Payload: LIBRARY\_DOCUMENT\_MODIFIED
 
 ## Payload attributes
 
