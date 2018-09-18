@@ -5,7 +5,7 @@
 - [Enhancements](#enhancements)
     - [Pagination support ](#paginationsupport)
     - [Constant IDs](#constantids)
-    - [ETag support](h#etagsupport)
+    - [ETag support](#etagsupport)
     - [GET, PUT, POST consistency](#getputpostconsistency)
     - [Performance improvements](#performanceimprovements)
     - [Authorization header](#authorizationheader)
