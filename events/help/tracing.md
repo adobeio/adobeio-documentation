@@ -2,7 +2,7 @@
 
 # Tracing Adobe I/O Events
 
-For help in debugging and analysis, Adobe offers Debug Tracing. Using Debug Tracing, you can inspect the activity between the Adobe service and your integration to see what data is being sent and how your integration is responding. This information can be of critical importance to your debugging efforts. Tracing data is retained for 10 days.
+For help in debugging and analysis, Adobe offers Debug Tracing. Using Debug Tracing, you can inspect the activity between the Adobe service and your integration to see what data is being sent and how your integration is responding. This information can be of critical importance to your debugging efforts. Tracing data is retained for 7 days.
 
 **To access Debug Tracing:**
 
