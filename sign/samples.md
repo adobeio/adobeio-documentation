@@ -14,7 +14,7 @@ The samples included in this section are Java clients of the Adobe Sign REST API
 - [Download an audit trail](samples/download_audit_trail.md)
 
 ## The package
-All sources are under the *adobesign.api.rest.sample* package (and sub packages) as published in the [Adobe Sign GitHub repo](https://github.com/adobe-sign) and are laid out as follows:
+All sources are under the *adobesign.api.rest.sample* package (and sub packages) as published in the [Adobe Sign GitHub repo](https://www.adobe.com/go/esign-api-samples) and are laid out as follows:
 
 * **adobesign.api.rest.sample**
 
