@@ -48,9 +48,7 @@ To create an integration of this type, sign in to the [Console](https://console.
 
 ![Integration list](./img/1496167043844.png)
 
-> Your Enterprise ID must have administrative privileges for your organization to be able to create a new Service Account
-> integration. If you do not have the required permissions, contact an IT Administrator at your company for help. This is
-> typically the person who distributes Creative Cloud, Acrobat, or Marketing Cloud licenses within your company.
+Your Enterprise ID must have administrative privileges for your organization to be able to create a new Service Account integration. If you do not have the required permissions, contact an IT Administrator at your company for help. This is typically the person who distributes Creative Cloud, Acrobat, or Marketing Cloud licenses within your company.
 
 Select **Consume services** to create an integration that will access an Adobe product or service, or select **Subscribe to events** to receive event notifications in real-time. You will have an opportunity to subscribe to additional events and services once you have created the integration.
 
