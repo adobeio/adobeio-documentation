@@ -10,12 +10,12 @@ If your integration needs to access Adobe services or content on behalf of an or
 
 ## The OAuth Authorization Workflow
 
-1. [Subscribe to a Service or Events](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#create)
-1. [Configure an OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#config)
-1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#secure)
-1. [Initiate User Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#token)
+1. [Subscribe to a Service or Events](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#oauth-create)
+1. [Configure an OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#oauth-config)
+1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#oauth-secure)
+1. [Initiate User Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#oauth-token)
 
-<a id="create"></a>
+<a id="oauth-create"></a>
 ### Step 1: Subscribe to a Service or Events
 
 To create a new OAuth Integration, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and click **New Integration**. (Notice that you can also choose existing Integrations and edit their details from here.)
@@ -53,7 +53,7 @@ If you have an existing integration that is compatible with the service you have
 * To update an existing integration, simply select it and click **Continue**.
 * If you would like to create a brand new integration, select that option and click **Continue**.
 
-<a id="config"></a>
+<a id="oauth-config"></a>
 ### Step 2: Configure an OAuth Integration
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
@@ -74,7 +74,7 @@ When creation is confirmed, visit the Overview page for your new integrations th
 
 ![Overview- OAuth](./img/1496166924157.png)
 
-<a id="secure"></a>
+<a id="oauth-secure"></a>
 ### Step 3: Secure your Client Credentials
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
@@ -89,7 +89,7 @@ The Client Secret must be kept confidential and should be treated like a private
 
 To keep your credentials secure, make sure you do NOT include them in your source code, or inject them through environment variables. Similarly, you should never send credentials through unsecured email or other unsecured communications.
 
-<a id="token"></a>
+<a id="oauth-token"></a>
 ### Step 4: Initiate User Authentication
 
 An access token is required for every API request made on behalf of an end user. Your application will gain a unique access token following the successful login of an end user.
