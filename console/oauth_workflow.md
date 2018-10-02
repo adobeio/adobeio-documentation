@@ -2,20 +2,19 @@
 
 If your application needs to access Adobe services or content, you'll need a set of client credentials to authenticate your app and your user, and authorize access. The type of integration you are building will determine the type of client credentials you will need.
 
-To obtain client credentials for an app that accesses services on behalf of an end-user, you'll need to create an *OAuth Integration** using the [Adobe I/O Console](https://console.adobe.io/). You can integrate your app with more than one Adobe service. This article will walk you through the steps to set up an OAuth integration.
+To obtain client credentials for an app that accesses services on behalf of an end-user, you'll need to create an **OAuth Integration** using the [Adobe I/O Console](https://console.adobe.io/). You can integrate your app with more than one Adobe service. This article will walk you through the steps to set up an OAuth integration.
 
 OAuth allows your end users to sign in to your integration with an Adobe ID. With an OAuth token, your integration will be able to access Adobe services or content on behalf of the logged in user.
 
-If your integration needs to access Adobe services or content on behalf of an organization (an Adobe enterprise organization), check out the [Service Account Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html) article.
+If your integration needs to access Adobe services or content on behalf of an organization (an Adobe enterprise organization), check out the [Service Account Authentication](jwt_workflow.md) article.
 
 ## The OAuth Authorization Workflow
 
-1. [Subscribe to a Service or Events](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#create)
-1. [Configure an OAuth Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#config)
-1. [Secure your Client Credentials](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#secure)
-1. [Initiate User Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html#token)
+1. [Subscribe to a Service or Events](oauth_workflow.md#step-1-subscribe-to-a-service-or-events)
+1. [Configure an OAuth Integration](oauth_workflow.md#step-2-configure-an-oauth-integration)
+1. [Secure your Client Credentials](oauth_workflow.md#step-3-secure-your-client-credentials)
+1. [Initiate User Authentication](oauth_workflow.md#step-4-initiate-user-authentication)
 
-<a id="create"></a>
 ### Step 1: Subscribe to a Service or Events
 
 To create a new OAuth Integration, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and click **New Integration**. (Notice that you can also choose existing Integrations and edit their details from here.)
@@ -53,7 +52,6 @@ If you have an existing integration that is compatible with the service you have
 * To update an existing integration, simply select it and click **Continue**.
 * If you would like to create a brand new integration, select that option and click **Continue**.
 
-<a id="config"></a>
 ### Step 2: Configure an OAuth Integration
 
 The configuration page lets you provide all of the required configuration information for a new integration, or add new information to update an existing integration for access to an additional service.
@@ -74,7 +72,6 @@ When creation is confirmed, visit the Overview page for your new integrations th
 
 ![Overview- OAuth](./img/1496166924157.png)
 
-<a id="secure"></a>
 ### Step 3: Secure your Client Credentials
 
 Each integration contains a unique set of generated client credentials. These credentials are used to identify your application and grant API access to Adobe services.
