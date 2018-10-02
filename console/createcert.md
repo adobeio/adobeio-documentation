@@ -4,8 +4,8 @@ You need a valid digital signing certificate to verify your identity in the JWT 
 
 You can create a self-signed certificate, or purchase one from a Certificate Authority.
 
-- When you create your own self-signed certificate, you create two separate files. One file contains the public key and another contains the private key. The public-key file can be in CRT, CER, DER, or PEM format. See [Creating a self-signed certificate](/createcert.md#creating-a-self-signed-certificate).
-- If you purchase a digital certificate from a Certificate Authority, you might receive a PFX or PKCS #12 (.p12) archive file that contains both keys. In this case, you can extract the public key and save it to a public-key file. See [Working with certificates from Certificate Authorities](/createcert.md#working-with-certificates-from-certificate-authorities).
+- When you create your own self-signed certificate, you create two separate files. One file contains the public key and another contains the private key. The public-key file can be in CRT, CER, DER, or PEM format. See [Creating a self-signed certificate](#creating-a-self-signed-certificate).
+- If you purchase a digital certificate from a Certificate Authority, you might receive a PFX or PKCS #12 (.p12) archive file that contains both keys. In this case, you can extract the public key and save it to a public-key file. See [Working with certificates from Certificate Authorities](#working-with-certificates-from-certificate-authorities).
 
 **IMPORTANT** The files that contains the public and private keys, but especially the private key, contain sensitive information. You must retain the private key securely. It cannot be recovered or replaced. If you lose it or it is compromised, you must delete the corresponding certificate from your account. If necessary, you must create and upload a new certificate. In any case, you must replace a certificate when it expires or is compromised. See [Replacing your certificate](createcert.md#replacing-your-certificate).
 
