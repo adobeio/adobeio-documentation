@@ -20,7 +20,7 @@ If your application makes API requests to a service on behalf of an end user, or
 
 User-based services, such as the Creative SDK and Typekit, can only be added to an OAuth integration.The Creative SDK provides a User Auth UI component for mobile and web that makes it easy to include the Adobe ID workflow in your application.
 
-To create an Integration of this type, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and choose the service you want to integrate with your app. For more information, see [OAuth Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/oauth_workflow.html).
+To create an Integration of this type, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID, and choose the service you want to integrate with your app. For more information, see [OAuth Authentication](oauth_workflow.html).
 
 * **Service Account Authentication**
 If your application makes API requests to a service on behalf of itself or an enterprise organization, you will need to configure a Service Account integration. Service Accounts are similar to user accounts, but they are unique to your application and have additional security requirements.
@@ -31,7 +31,7 @@ Application and organization-based services, such as Adobe Target, Adobe Launch,
 
 To create an integration of this type, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Enterprise ID. Your Enterprise ID must have administrative privileges for your organization to be able to create a new Service Account integration. If you do not have the required permissions, contact an IT Administrator at your company for help. This is typically the person who distributes Creative Cloud, Acrobat or Marketing Cloud licenses within your company.
 
-For more information, see [Service Account Authentication](https://www.adobe.io/apis/cloudplatform/console/authentication/jwt_workflow.html).
+For more information, see [Service Account Authentication](jwt_workflow.html).
 
 * **API Key Integration**
 Some services from Adobe do not require either user-based or application-based authentication. These APIs and events can be accessed by any application that simply specifies an API Key (Client ID). Additional client credentials, such as the Client Secret, are not required.
@@ -40,9 +40,9 @@ On its own, this integration type is the least secure and API requests are consi
 
 The Adobe Stock Search API can be accessed through any of the three types of integration. When you access the API with just an API Key, the returned search results are generic, and do not take into account the user or application who made the request.
 
-To create an integration of this type, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID or Enterprise ID. Your Enterprise ID does not require additional permissions to create an API Key integration. For more information, see [API Key Integration](https://www.adobe.io/apis/cloudplatform/console/authentication/api_key_workflow.html).
+To create an integration of this type, sign in to the [Adobe I/O Console](https://console.adobe.io/) with your Adobe ID or Enterprise ID. Your Enterprise ID does not require additional permissions to create an API Key integration. For more information, see [API Key Integration](api_key_workflow.html).
 
 ## Prerequisites
-* In order to create a new Service Account integration, you must provide a public key certificate, also known as a digital certificate. This electronic document proves the ownership of a public key and validates the identity of your integration. You may create your own digital certificate or purchase one through a 3rd-party certificate authority. To learn more, see [Public Key Certificates for JWT](https://www.adobe.io/apis/cloudplatform/console/authentication/createcert.html).
+* In order to create a new Service Account integration, you must provide a public key certificate, also known as a digital certificate. This electronic document proves the ownership of a public key and validates the identity of your integration. You may create your own digital certificate or purchase one through a 3rd-party certificate authority. To learn more, see [Public Key Certificates for JWT](createcert.html).
 * For OAuth integrations, you must provide the **default redirect URI** and **redirect URI patterns**. Upon completion of the Adobe ID login flow, Adobe redirects the user to the specified URL.
 * For an integration that consumes Adobe I/O Events, you must provide at least one **webhook**, a URL that receives event notifications.
