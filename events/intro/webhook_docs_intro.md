@@ -234,4 +234,5 @@ hmac.update(raw_request_body)
 if (request.header('x-adobe-signature') !== hmac.digest('base64')) {
   throw new Error('x-adobe-signature HMAC check failed')
 }
+```
 
