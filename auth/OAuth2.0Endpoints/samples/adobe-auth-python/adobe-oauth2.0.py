@@ -20,7 +20,7 @@ def home():
 @app.route('/authorize')
 def authorize():
 	# Adobe OAuth2.0 authorization url
-	authorization_url = 'https://ims-na1.adobelogin.com/ims/authorize?'
+	authorization_url = 'https://ims-na1.adobelogin.com/ims/authorize/v1?'
 	
 	# Store required parameters in a dictionary
 	params = {
@@ -40,7 +40,7 @@ def callback():
 	authorization_code = flask.request.args.get('code')
 
 	# Adobe OAuth2.0 token url
-	token_url = 'https://ims-na1.adobelogin.com/ims/token'
+	token_url = 'https://ims-na1.adobelogin.com/ims/token/v1?'
 	
 	# Store required parameters in a dictionary
 	# And include the authorization code in it
@@ -74,7 +74,7 @@ def profile():
 		access_token = flask.session['credentials']['access_token']
 
 		# Adobe OAuth2.0 profile url
-		profile_url = 'https://ims-na1.adobelogin.com/ims/userinfo'
+		profile_url = 'https://ims-na1.adobelogin.com/ims/userinfo?'
 		
 		# Store required parameters in a dictionary
 		params = {
