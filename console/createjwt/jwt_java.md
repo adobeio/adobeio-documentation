@@ -53,7 +53,7 @@ public class SampleJwtTest {
         String metascopes[] = new String[]{"ent_marketing_sdk"};
 
         // Secret key as byte array. Secret key file should be in DER encoded format.
-        byte[] privateKeyFileContent = Files.readAllBytes(Paths.get("secret.key"));
+        byte[] privateKeyFileContent = Files.readAllBytes(Paths.get("/path/to/secret/key"));
 
         String imsHost = "ims-na1.adobelogin.com";
 
