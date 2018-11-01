@@ -42,12 +42,12 @@ public class SampleJwtTest {
         // Sample JWT creation. The example uses SHA256withRSA signature algorithm.
 
         // API key information (substitute actual credential values)
-        String orgId = "048ABCD8562023457F000101@AdobeOrg";
-        String technicalAccountId = "AABCD8DB57F4B32801234033@techacct.adobe.com";
-        String apiKey = "ec9a2091e2c64f0492c612344700abcd";
+        String orgId = "...000101@AdobeOrg";
+        String technicalAccountId = "...801234033@techacct.adobe.com";
+        String apiKey = "...0492c612344700abcd";
 
-        // Set expirationTime in milliseconds since epoch to 24 hours ahead of now
-        Long expirationTime = System.currentTimeMillis() / 1000 + 86400L;
+        // Set expirationTime in milliseconds since epoch to 10 minutes ahead of now
+        Long expirationTime = System.currentTimeMillis() / 1000 + 600;
 
         // Metascopes associated to key
         String metascopes[] = new String[]{"ent_marketing_sdk"};
