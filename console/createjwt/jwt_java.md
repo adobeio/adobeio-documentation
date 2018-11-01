@@ -24,7 +24,6 @@ $ openssl pkcs8 -topk8 -inform PEM -outform DER -in secret.pem  -nocrypt > secre
  package com.adobe.apip.tools.jwt.service;
 
 import io.jsonwebtoken.Jwts;
-
 import java.io.IOException;
 import java.nio.file.*;
 import java.security.*;
@@ -47,14 +46,14 @@ public class SampleJwtTest {
         String technicalAccountId = "AABCD8DB57F4B32801234033@techacct.adobe.com";
         String apiKey = "ec9a2091e2c64f0492c612344700abcd";
 
-        // Set expirationDate in milliseconds since epoch to 24 hours ahead of now
+        // Set expirationTime in milliseconds since epoch to 24 hours ahead of now
         Long expirationTime = System.currentTimeMillis() / 1000 + 86400L;
 
         // Metascopes associated to key
         String metascopes[] = new String[]{"ent_marketing_sdk"};
 
         // Secret key as byte array. Secret key file should be in DER encoded format.
-        byte[] privateKeyFileContent = Files.readAllBytes(Paths.get("/path/to/secret/key"));
+        byte[] privateKeyFileContent = Files.readAllBytes(Paths.get("secret.key"));
 
         String imsHost = "ims-na1.adobelogin.com";
 
@@ -67,7 +66,7 @@ public class SampleJwtTest {
         Map jwtClaims = new HashMap<>();
         jwtClaims.put("iss", orgId);
         jwtClaims.put("sub", technicalAccountId);
-        jwtClaims.put("exp", expirationDate);
+        jwtClaims.put("exp", expirationTime);
         jwtClaims.put("aud", "https://" + imsHost + "/c/" + apiKey);
         for (String metascope : metascopes) {
             jwtClaims.put("https://" + imsHost + "/s/" + metascope, TRUE);
