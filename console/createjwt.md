@@ -48,7 +48,7 @@ Examples are provided for several popular languages.
 | Language | Library                     | Example                                                                                                                                                           |
 | -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 Java | `atlassian-jwt` `jsontoken`  | [Creating JWTs for Java Apps](./createjwt/jwt_java.md)
-Node.js | `node_modules/jwt-simple` | [Creating JWTs for Node.js Apps](./createjwt/jwt_nodeJS.md)
+Node.js | `jsonwebtoken` | [Creating JWTs for Node.js Apps](./createjwt/jwt_nodeJS.md)
 Python | `pyjwt` | For an example Python script that creates a JWT, see the [User Management Walkthrough](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/samples.html).
 
 ### Additional JWT Libraries and Creation Tools

@@ -4,29 +4,20 @@ This example illustrates how to create a JSON Web Token for a node.js applicatio
 
 ```javascript
 var fs = require('fs');
-var jwt = require('jwt-simple');
+var jwt = require('jsonwebtoken');
 
-var AdobeConfig = {
-  payload: {
-    exp: Math.round(87000 + Date.now() / 1000),
-    iss: '…@AdobeOrg',
-    sub: '…@techacct.adobe.com',
-    aud: 'https://ims-na1.adobelogin.com/c/…',
-    'https://ims-na1.adobelogin.com/s/ent_smartcontent_sdk': true
-  },
-  clientid: 'API key here',
-  clientsecret: 'client secret here',
-  pem: '',
-  algorithm: 'RS256'
+//replace with actual values
+var jwtPayload = {
+    "exp": Math.round(600 + Date.now() / 1000),             // Expiration set to 10 minutes
+    "iss": "...000101@AdobeOrg",                            //org_id
+    "sub": "...34033@techacct.adobe.com",                   //technical_account_id
+    "https://ims-na1.adobelogin.com/s/ent_user_sdk": true,
+    "aud": "https://ims-na1.adobelogin.com/c/ec9a209..."
 };
 
-AdobeConfig.pem = fs
-  .readFileSync('./certificate/private-key.pem')
-  .toString('ascii');
+var private_key = fs.readFileSync('./path/to/private_key').toString('ascii');
 
-var token = jwt.encode(
-  AdobeConfig.payload,
-  AdobeConfig.pem,
-  AdobeConfig.algorithm
-);
+var token = jwt.sign(jwtPayload, private_key, {
+    algorithm: 'RS256'
+});
 ```
