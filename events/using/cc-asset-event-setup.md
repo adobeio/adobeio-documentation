@@ -1,5 +1,3 @@
-<!--:navorder: 3-->
-
 # Setting Up Creative Cloud Asset Events on Adobe I/O Events
 
 These instructions describe how to set up Creative Cloud Asset events using Adobe I/O Events. You can use Adobe I/O for notification of CC Asset events. 
@@ -15,6 +13,7 @@ Creative Cloud Assets provides a simple set of events to which you can subscribe
 - **asset-updated:** Triggers when an asset is changed or modified.
 - **asset-created:** Triggers when a new asset is uploaded to Creative Cloud, or when an asset is _copied_ to a new folder (not when an asset is merely moved).
 - **asset-deleted:** Triggers when an asset is _permanently_ deleted from Creative Cloud. Merely archiving an asset does not trigger the event. 
+- **directory-created:** Triggers when a new folder is created in Creative Cloud.
 
 There are no events for the following activities:
 - Moving a file from one folder in Creative Cloud to another.
