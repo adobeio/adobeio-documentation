@@ -1,5 +1,3 @@
-<!--:navorder: 2-->
-
 # Using Adobe I/O Events
 
 <!--  commenting out; this is redundant with webhooks intro
@@ -12,7 +10,9 @@ Setting up an integration to subscribe to Adobe I/O Events is straightforward. T
 
 [Creative Cloud Assets](using/cc-asset-event-setup.md)  
 [Adobe Experience Manager](using/aem-event-setup.md)  
-[Adobe Analytics Triggers](using/analytics-triggers-event-setup.md)
+[Adobe Analytics Triggers](using/analytics-triggers-event-setup.md)  
+[Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/create-event-integration.md)
+
 <!-- - [Adobe Stock](using/adobe-stock-event-setup.md) -->
 
 <!--  commenting out; this is not shipping yet
