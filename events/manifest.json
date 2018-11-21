@@ -55,6 +55,12 @@
       "pages": [],
       "path": "adobeio/adobeio-documentation/master/events/using/cc-asset-event-setup.md",
       "title": "Setting Up Creative Cloud Asset Events"
+    },
+    {
+      "importedFileName": "create-event-integration",
+      "pages": [],
+      "path": "https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/create-event-integration.md",
+      "title": "Cloud Manager"
     }
 ],
 "path": "adobeio/adobeio-documentation/master/events/using.md",
