@@ -74,15 +74,16 @@ To list the available integrations, run:
 
 ```
 aio console:list-integrations
+Success: Page 1 of 1, Showing 2 results of 2 results.
+<NUMBER_NUMBER> : <Integration Name 1>
+<NUMBER_NUMBER> : <Integration Name 2>
 ```
 
-If you want to select an integration as the current namespace, run:
+If you want to select an integration as the current namespace, run this command and pass as the argument the <NUMBER_NUMBER> you see listed when running `aio console:list-integrations`:
 
 ```
-aio console:select-integration <ORG-ID>_<INTEGRAION_ID>
+aio console:select-integration <NUMBER_NUMBER>
 ```
-
-You can find the ORG-ID and INTEGRATION-ID from the I/O Console Intergration Overview URL. It is something like https://console.adobe.io/integrations/<Number 1>/<Number 2>/overview. The first number is the ORG-ID and the second one  is the INTEGRATION-ID.
 
 This command will generate the `.wskprops` file in your user directory (or overwrite the file if it already exists) for accessing that given namespace. Now, you can use the `wsk` CLI to manage this namespace: create/invoke actions and so forth.
 
