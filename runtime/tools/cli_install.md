@@ -1,6 +1,8 @@
 # Setting up the `aio` CLI
 
-The `aio` CLI helps you to manage the `.wskprops` file as you use different namespaces. You need `npm` installed in order to install it:
+The `aio` CLI helps you to manage the `.wskprops` file as you use different namespaces. 
+
+You need `npm` installed in order to install it. Before you start, make sure you have the latest version of Node and npm installed.
 
 ```
 npm install -g @adobe/aio-cli
