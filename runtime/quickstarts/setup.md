@@ -4,7 +4,7 @@ Before you can create and run actions, you have to install and configure a coupl
 
 ## Step 1: Install aio CLI and wsk CLI
 
-You need `npm` installed in order to install `aio`:
+You need `npm` installed in order to install `aio` (make sure you have the latest versions of Node and npm installed):
 ```
 npm install -g @adobe/aio-cli
 ```
