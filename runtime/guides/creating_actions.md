@@ -17,8 +17,8 @@ Let&rsquo;s assume you have this function available on your machine:
 ```javascript
 // this is saved in a file named first-function.js
 function main(params) {
-    var n = params.name || 'stranger';
-    return {payload: 'Hello ' + params.name};
+    var nm = params.name || 'stranger';
+    return {payload: 'Hello ' + nm};
 }
 
 exports.main = main;
