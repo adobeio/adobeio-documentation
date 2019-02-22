@@ -172,6 +172,288 @@ The creation and update APIs are now asynchronous, which significantly improves 
 
 Clients should now poll on the status of the newly created resource before certain sub-resource operations, such as documents in the case of agreements. For example, in case of agreement creation, the initial status is `DOCUMENTS_NOT_YET_PROCESSED`, which is updated to the intended status such as `OUT_FOR_SIGNATURE` once all the background tasks are successfully completed.
 
+### **Asynchronous API's**
+
+One of the significant change in v6 API's has been to make resource intensive operations asynchronous to a larger extent. This reduces waiting/blocking time for clients in most of the scenarios. For example, in v5, workflows such as sending an agreement, creating megasign or a widgets etc. has significantly larger response time than v6. In v6, the API execution time has been improved by making the time intensive processes asynchronous and executing them in the background. Adobe Sign provides status/error codes in the GET api's for clients to know the status of these background processes and decide on their next steps accordingly. The clients can poll on these GET api's or move on to new resource creation/workflow depending on their use case.
+
+Refer the lists below all the asynchronous api's and their corresponding GET api's which clients can poll on till polling condition holds true.
+
+**Asynchronous API:** [POST /agreements](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/createAgreement)
+
+**GET API To Poll:** [GET /agreements/{agreementId}](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo)
+
+**GET Response Body:**
+{   
+    ...
+    "**status**": "<current-agreement-status>"
+}
+
+**GET HTTP Status:** 200
+
+**Polling Condition On GET:** status == DOCUMENTS_NOT_YET_PROCESSED
+
+-------------------------------------------------------------------------------------------------------
+
+**Asynchronous API:** [POST /agreements](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/createAgreement)
+
+**GET API To Poll:** [GET /agreements/{agreementId}/signingUrls](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/getSigningUrl)</span>
+
+**GET Response Body:**
+{
+"**code**": "AGREEMENT_NOT_SIGNABLE",
+"**message**": "The agreement is not currently waiting for anyone to sign it."
+}
+
+**GET HTTP Status:** 404
+
+**Polling Condition On GET:** status == DOCUMENTS_NOT_YET_PROCESSED
+
+-------------------------------------------------------------------------------------------------------
+
+**Asynchronous API:** [PUT /agreements/{agreementId}/state](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/updateAgreementState)
+
+**GET API To Poll:** [GET /agreements/{agreementId}](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo)
+
+**GET Response Body:**
+{
+ ...
+ "**status**":"<current-agreement-status>"
+}
+
+**GET HTTP Status:** 200
+
+**Polling Condition On GET:** status != IN_PROCESS
+
+-------------------------------------------------------------------------------------------------------
+
+**Asynchronous API:** [POST /widgets](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget)</span>
+
+**GET API To Poll:** [GET /widgets/{widgetId}](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgetInfo)
+
+**GET Response Body:**
+{
+...
+"**status**": "<current-widget-status>"
+}
+
+**GET HTTP Status:** 200
+
+**Polling Condition On GET:** status == DOCUMENTS_NOT_YET_PROCESSED
+
+-------------------------------------------------------------------------------------------------------
+
+**Asynchronous API:** [PUT /widgets/{widgetId}/state](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/updateWidgetState)</span>
+
+**GET API To Poll:**: [GET /widgets/{widgetId}](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgetInfo)
+
+**GET Response Body:**
+{
+...
+"**status**":"<current-widget-status>"
+}
+
+**GET HTTP Status:** 200
+
+**Polling Condition On GET:** status == DOCUMENTS_NOT_YET_PROCESSED
+
+-------------------------------------------------------------------------------------------------------
+
+**Asynchronous API:** [POST /megaSigns](https://secure.na1.echosign.com/public/docs/restapi/v6#!/megaSigns/createMegaSign)
+
+**GET API To Poll:** [GET /megaSigns/{megaSignId}/agreements](https://secure.na1.echosign.com/public/docs/restapi/v6#!/megaSigns/getMegaSignChildAgreements)
+
+**GET Response Body:**
+{
+"**megaSignList**" : [
+...
+{},
+...
+],
+
+"**page**": {
+...
+}
+}
+
+**GET HTTP Status:** 200
+
+**Polling condition on GET:** megaSignList.size() != Requested Number of Child Agreements
+
+-------------------------------------------------------------------------------------------------------
+
+#### Hosted Signing 
+
+One of the common workflows used by Adobe Sign clients is to create an agreement and get the corresponding signing url. Since, the agreement creation is asynchronous the clients needs to poll on [GET /agreements/{agreementId}/signingUrls](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/getSigningUrl) for fetching signing url. The sample code below implements this use case.
+
+**Polling For Signing Url**
+```javascript
+var APIConfig = {
+    "apiBaseUrl": "<base-uri-for-client>",
+    "accessToken": "Bearer <valid-access-token>",
+    "transientDocumentId": "<valid-transient-document-id>"
+}
+ 
+function getSigningUrlForAsyncAgreementCreation() {
+ 
+    var getSigningUrl = function(agreementId) {
+        var apiUrl = APIConfig.apiBaseUrl + "/api/rest/v6/agreements/" + agreementId + "/signingUrls";
+        jQuery.ajax({
+            url: apiUrl,
+            type: "GET",
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Authorization', APIConfig.accessToken);
+            },
+            success: function(result, status, request) {
+                // API execution is successful, the signing url is present in result
+            },
+            error: function(result, status, request) {
+                // If error occurs with HTTP status 404 and error code is AGREEMENT_NOT_SIGNABLE the background processes in agreement creation has not completed.
+                // Re attempt API after polling time period.
+                if(status === 404 && result.code == "AGREEMENT_NOT_SIGNABLE") {
+                    window.setTimeout(function() {
+                        getSigningUrl(agreementId);
+                    }, 500);
+                }
+                // In all other cases, there is a genuine failure in retrieving signing url. Parse error code and message for more detail.
+            }
+        });
+    }
+ 
+    var createAgreementAsynchronously = function() {
+         
+        var agreementCreationRequest = {
+            "fileInfos": [{
+                "transientDocumentId": APIConfig.transientDocumentId
+            }],
+            "name": "Asynchronous Agreement",
+            "participantSetsInfo": [{
+                "memberInfos": [{
+                    "email": "<signer-email>"
+                }],
+                "order": 1,
+                "role": "SIGNER"
+            }],
+            "signatureType": "ESIGN",
+            "state": "IN_PROCESS"
+        }
+ 
+        agreementCreationRequest = JSON.stringify(agreementCreationRequest);
+ 
+        jQuery.ajax({
+            url: APIConfig.apiBaseUrl + "/api/rest/v6/agreements",
+            type: "POST",
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Authorization', APIConfig.accessToken);
+ 
+            },
+            contentType: "application/json",
+            data: agreementCreationRequest,
+            success: function(result, status, request) {
+                // Call GET /agreements/{agreementId}/signingUrls api after 500ms
+                window.setTimeout(function() {
+                    getSigningUrl(result.id);
+                }, 500);                   
+            }
+        });
+    }
+ 
+    createAgreementAsynchronously();
+}
+ 
+getSigningUrlForAsyncAgreementCreation();
+```
+#### Simple Agreement Creation
+
+Some operations on a newly created agreement like downloading agreement document are not allowed until all the background processes in creating agreement is completed. The [GET /agreements/{agreementId}](https://secure.na1.echosign.com/public/docs/restapi/v6#!/agreements/getAgreementInfo) API provides the status of the agreement on which the client can poll before performing such operations. Refer the sample code below for more details.
+
+**Polling For Signing URL**
+```javascript
+var APIConfig = {
+    "apiBaseUrl": "<base-uri-for-client>",
+    "accessToken": "Bearer <valid-access-token>",
+    "transientDocumentId": "<valid-transient-document-id>"
+}
+ 
+function getAgreementInfoForAsyncAgreementCreation() {
+    var getAgreementInfo = function(agreementId) {
+        var apiUrl = APIConfig.apiBaseUrl + "/api/rest/v6/agreements/" + agreementId;
+        jQuery.ajax({
+            url: apiUrl,
+            type: "GET",
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Authorization', APIConfig.accessToken);
+            },
+            success: function(result, status, request) {
+                /** 
+                Parse API result for agreement status. If the agreement status is DOCUMENTS_NOT_YET_PROCESSED then, all the background processed in agreement creation is not complete yet.
+                */
+                if(result.status == "DOCUMENTS_NOT_YET_PROCESSED") {
+                    window.setTimeout(function() {
+                        getAgreementInfo(agreementId);
+                    }, 500);
+                }
+                else {
+                    // All the background tasks in agreement creation is completed.
+                }
+            },
+            error: function() {
+                // API execution failed.
+            }
+        });
+    }
+ 
+    var createAgreementAsynchronously = function() {
+        var agreementCreationRequest = {
+            "fileInfos": [{
+                "transientDocumentId": APIConfig.transientDocumentId
+            }],
+            "name": "Asynchronous Agreement",
+            "participantSetsInfo": [{
+                "memberInfos": [{
+                    "email": "<signer-email>"
+                }],
+                "order": 1,
+                "role": "SIGNER"
+            }],
+            "signatureType": "ESIGN",
+            "state": "IN_PROCESS"
+        }
+ 
+        agreementCreationRequest = JSON.stringify(agreementCreationRequest);
+ 
+        jQuery.ajax({
+            url: APIConfig.apiBaseUrl + "/api/rest/v6/agreements",
+            type: "POST",
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Authorization', APIConfig.accessToken);
+ 
+            },
+            contentType: "application/json",
+            data: agreementCreationRequest,
+            success: function(result, status, request) {
+                // Call GET /agreements/{agreementId} api after 500ms
+                window.setTimeout(function() {
+                    getAgreementInfo(result.id);
+                }, 500);                   
+            }
+        });
+    }
+ 
+    createAgreementAsynchronously();
+}
+ getAgreementInfoForAsyncAgreementCreation();
+```
+
+#### Polling Frequency
+The polling frequency can vary from clients to clients depending on their use case. Clients using large files in agreement creation are expected to keep time between subsequent polling calls more compared to the scenarios where the agreement files uploaded are small. The table below can be referred as a general guideline by clients to determine their polling frequency.
+
+| File Size        | Polling Time Period| 
+| ------------- |:-------------:| 
+| < 100KB     | 500 ms | 
+| > 100KB and < 2 MB      | 1s      |   
+| > 2MB | 2s     |  
+
+
 ### Authorization header
 The Adobe Sign API accepts an authorization token in the `access-token` header; however, from v6 onwards we will be migrating to the standard `Authorization` header. The `Authorization` header will hold the user&rsquo;s authorization token in this format:
 
