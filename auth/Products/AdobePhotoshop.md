@@ -1,3 +1,0 @@
-#Adobe Photoshop
-
-##Coming Soon

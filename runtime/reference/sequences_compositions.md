@@ -1,3 +1,0 @@
-# Sequences and Compositions
-
-(tk)

@@ -1,3 +1,0 @@
-#OAuth Integration
-
-## Coming soon

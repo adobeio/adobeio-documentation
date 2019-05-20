@@ -1,3 +1,0 @@
-#Adobe Stock
-
-## Coming Soon

@@ -1,3 +1,0 @@
-#Adobe Target
-
-##Coming Soon

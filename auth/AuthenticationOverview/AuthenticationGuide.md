@@ -1,3 +1,0 @@
-#Authentication Overview
-
-##Coming Soon
