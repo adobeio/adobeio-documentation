@@ -1,3 +1,0 @@
-#Adobe Launch
-
-##Coming Soon
